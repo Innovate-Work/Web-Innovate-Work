@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Manrope, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #141515;
@@ -13,6 +13,7 @@ header {
     color: white;
     height: 72px;
     padding: 0 20px;
+    border-bottom: 0.8px solid #FBFBFB;
 }
 
 .staticHeader {
@@ -54,6 +55,7 @@ nav {
 .gif-image {
     width: 653px;
     height: 619px;
+    margin-top: -70px;
 }
 
 .text-content {
@@ -72,8 +74,8 @@ nav {
 }
 
 .content-wrapper {
+    margin-top: 70px;
     display: flex;
-    align-items: center; /* вертикальное центрирование */
     justify-content: center; /* горизонтальное центрирование */
     height: 100vh; /* делаем контейнер высотой во всю высоту экрана, чтобы он был центрирован */
 }
@@ -118,6 +120,43 @@ nav {
     height: 62px; /* Высота круга */
     border-radius: 100px; /* Размер скругления для круга */
     margin: 4px; /* Отступ в 4px со всех сторон для круга */
+}
+
+/* Первоначальное состояние SVG внутри кнопки */
+.button .arrow-container svg {
+    transition: transform 0.3s; /* Плавное изменение за 0.3 секунды */
+    transform: rotate(0deg); /* Начальное положение (без поворота) */
+}
+
+/* Состояние SVG при наведении на кнопку */
+.button:hover .arrow-container svg {
+    transform: rotate(90deg); /* Поворот на 90 градусов */
+}
+
+
+
+.button {
+    position: relative;
+    overflow: hidden; /* Скрываем элементы, выходящие за границы кнопки. */
+}
+
+@keyframes rollToEnd {
+    0% {
+        left: 4px; /* начальное положение круга */
+    }
+    100% {
+        left: calc(100% - 66px); /* 66px = 62px (ширина круга) + 4px (отступ) */
+    }
+}
+
+.button.pressed .arrow-container {
+    position: absolute; /* Абсолютное позиционирование для круга внутри кнопки. */
+    animation: rollToEnd 0.8s forwards;
+}
+
+.button.pressed .text {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 

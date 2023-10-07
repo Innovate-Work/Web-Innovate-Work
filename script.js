@@ -8,3 +8,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
+const button = document.querySelector('.button');
+
+button.addEventListener('click', function() {
+    this.classList.add('pressed');
+});
+
