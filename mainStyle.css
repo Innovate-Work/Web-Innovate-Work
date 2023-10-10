@@ -6,15 +6,20 @@ body {
 }
 
 header {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #1B1D1E;
     color: white;
-    height: 72px;
+    height: 71px;
     padding: 0 20px;
-    border-bottom: 0.8px solid #FBFBFB;
+    width: calc(100% - 50px); /* 100% ширины минус 25px с каждой стороны */
+    flex-shrink: 0;
+    border-radius: 12px;
+    margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
 }
+
 
 .staticHeader {
     position: sticky;
@@ -60,7 +65,7 @@ nav {
 
 .text-content {
     color: #FBFBFB;
-    font-family: Manrope;
+    font-family: 'Manrope', sans-serif;
     font-size: 96px;
     font-style: normal;
     font-weight: 600;
@@ -80,7 +85,7 @@ nav {
     height: 100vh; /* делаем контейнер высотой во всю высоту экрана, чтобы он был центрирован */
 }
 
-.description {
+.description-main {
     color: var(--_, #FBFBFB);
     font-family: Manrope;
     font-size: 20px;
@@ -158,6 +163,100 @@ nav {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
+
+
+
+
+
+.container {
+    padding-left: 35px;  /* Отступ слева внутри контейнера */
+    padding-right: 35px;  /* Отступ справа внутри контейнера */
+    margin: 0px 25px 0 25px;
+    width: calc(100% - 50px);  /* Учитываем новые внутренние отступы (35px с каждой стороны) */
+    border-radius: 20px;
+    background-color: #1B1D1E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 550;
+}
+
+
+.text-block {
+    flex: 1;
+}
+
+.headline {
+    color: #BEFF54;
+    font-family: 'Manrope', sans-serif;
+    font-size: 100px;
+    max-width: 660px;
+    line-height: 110px;
+    text-transform: uppercase;
+}
+
+.cells-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 34px;  /* Общий отступ между ячейками (20px + 1px + 14px) */
+}
+
+.cell {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 650px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cell:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -14px;  /* Расположение линии снизу на 14px от ячейки */
+    left: 0;
+    width: 650px;
+    height: 1px;
+    background-color: #5A5F62;  /* Обновленный цвет линии */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; 
+}
+
+.title, .description {
+    color: #FBFBFB;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;  /* Убираем все отступы */
+}
+
+.title {
+    font-size: 42px;
+    font-style: normal;
+    max-width: 365px;
+    overflow-wrap: break-word;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 427px;
+    overflow-wrap: break-word;
+}
+
+.svg-container {
+    margin-left: 100px;
+}
+
+
+
+
 
 
 
