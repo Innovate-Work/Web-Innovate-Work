@@ -135,7 +135,7 @@ nav {
 
 /* Состояние SVG при наведении на кнопку */
 .button:hover .arrow-container svg {
-    transform: rotate(90deg); /* Поворот на 90 градусов */
+    transform: rotate(45deg); /* Поворот на 90 градусов */
 }
 
 
@@ -204,8 +204,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 34px;  /* Общий отступ между ячейками (20px + 1px + 14px) */
+    gap: 34px;
 }
+
+
+
+
+
 
 .cell {
     display: flex;
@@ -214,17 +219,64 @@ nav {
     width: 650px;
     box-sizing: border-box;
     position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0;
+    background-color: #1B1D1E;
+    border-radius: 8px;
+    transform: translateX(100px) scale(1);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
 }
 
 .cell:not(:last-child)::after {
     content: "";
     position: absolute;
-    bottom: -14px;  /* Расположение линии снизу на 14px от ячейки */
+    bottom: -14px;
     left: 0;
     width: 650px;
     height: 1px;
-    background-color: #5A5F62;  /* Обновленный цвет линии */
+    background-color: #5A5F62;
 }
+
+.cell:hover {
+    background: linear-gradient(45deg, #000504, #1B1D1E);
+    transform: translateX(0) scale(1.05) !important;
+    border-radius: 20px;
+    animation: gradientAnimation 3s infinite;
+}
+
+.cell.animate-in {
+    opacity: 1;
+    transform: translateX(0) scale(1.05);
+}
+
+.cell .svg-container {
+    transition: transform 0.3s ease;
+}
+
+.cell:hover .svg-container {
+    transform: rotate(45deg);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #000504, #1B1D1E);
+    }
+    50% {
+        background: linear-gradient(90deg, #000504, #1B1D1E);
+    }
+    100% {
+        background: linear-gradient(135deg, #000504, #1B1D1E);
+    }
+}
+
+
+
+
+
+
+
 
 .text-container {
     display: flex;
@@ -242,14 +294,14 @@ nav {
 .title {
     font-size: 42px;
     font-style: normal;
-    max-width: 365px;
+    max-width: 450px;
     overflow-wrap: break-word;
 }
 
 .description {
     font-size: 20px;
     line-height: 30px;
-    max-width: 427px;
+    max-width: 400px;
     overflow-wrap: break-word;
 }
 
@@ -258,6 +310,104 @@ nav {
 }
 
 
+
+
+
+
+.page-container{
+    padding: 35px;
+}
+
+.contact-form {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 290px;
+}
+
+.form-title {
+    color: var(--form-title-color, #BEFF54);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-message {
+    padding-bottom: 70px;
+    margin-left: 170px;
+    color: #FBFBFB;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    max-width: 380px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: none; 
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+    width: 538px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    color: var(--input-text-color, #fff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus {
+    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
+    caret-color: var(--input-focus-underline, #BEFF54); /* Change caret color on focus */
+}
+
+.submit-button {
+    width: 538px;
+    height: 70px;
+    flex-shrink: 0;
+    background: var(--button-background, #BEFF54);
+    color: var(--button-text-color, #000);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.submit-button:hover {
+    background: var(--button-hover-background, #5A5F62);
+    color: var(--button-hover-text-color, #fff);
+}
 
 
 
