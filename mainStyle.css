@@ -171,16 +171,19 @@ nav {
 .container {
     padding-left: 35px;  /* Отступ слева внутри контейнера */
     padding-right: 35px;  /* Отступ справа внутри контейнера */
+    padding-top: 25px;    /* Отступ сверху внутри контейнера */
+    padding-bottom: 25px; /* Отступ снизу внутри контейнера */
     margin: 0px 25px 0 25px;
-    width: calc(100% - 50px);  /* Учитываем новые внутренние отступы (35px с каждой стороны) */
+    width: calc(100% - 50px);
+    height: 550px;        /* Явно заданная высота контейнера */
     border-radius: 20px;
     background-color: #1B1D1E;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    height: 550;
 }
+
 
 
 .text-block {
