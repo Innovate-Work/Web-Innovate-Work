@@ -16,8 +16,19 @@ button.addEventListener('click', function() {
 
 
 
-// Функция обратного вызова для наблюдателя
-function handleIntersection(entries, observer) {
+// Функция обратного вызова для первого наблюдателя
+function handleIntersectionFirst(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelector('.first-line').classList.add('animate-first');
+            entry.target.querySelector('.second-line').classList.add('animate-second');
+            observer.unobserve(entry.target); // Прекратить наблюдение
+        }
+    });
+}
+
+// Функция обратного вызова для второго наблюдателя
+function handleIntersectionSecond(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-in');
@@ -26,16 +37,25 @@ function handleIntersection(entries, observer) {
     });
 }
 
-// Создаем наблюдатель
-const observer = new IntersectionObserver(handleIntersection, {
+// Настройки для наблюдателей
+const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // начать когда хотя бы 10% элемента видны
-});
+    threshold: 0.1
+};
 
-// Начнем наблюдение за каждой ячейкой
+// Создаем первый наблюдатель для контейнера
+const observerForContainer = new IntersectionObserver(handleIntersectionFirst, observerOptions);
+const container = document.querySelector('.container-animation-text');
+observerForContainer.observe(container);
+
+// Создаем второй наблюдатель для ячеек
+const observerForCells = new IntersectionObserver(handleIntersectionSecond, observerOptions);
 const cells = document.querySelectorAll('.cell');
 cells.forEach(cell => {
-    observer.observe(cell);
+    observerForCells.observe(cell);
 });
+
+
+
 

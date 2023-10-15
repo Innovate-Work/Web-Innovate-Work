@@ -1,5 +1,5 @@
 body {
-    font-family: Manrope, sans-serif;
+    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #141515;
@@ -42,6 +42,11 @@ header {
     margin-right: 20px;
 }
 
+.nav-item:active {
+    color: #BEFF54;       /* Зеленый цвет текста */
+    transform: scale(1.1); /* Увеличение на 10% */
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -51,6 +56,7 @@ nav {
     margin-right: 20px;
     text-decoration: none;
     color: white;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .nav-item:last-child {
@@ -86,10 +92,10 @@ nav {
 }
 
 .description-main {
-    color: var(--_, #FBFBFB);
-    font-family: Manrope;
+    color:  #FBFBFB;
+    font-family: 'Manrope', sans-serif;
     font-size: 20px;
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 500;
     line-height: 30px;
     padding-top: 46px; 
@@ -227,6 +233,7 @@ nav {
     border-radius: 8px;
     transform: translateX(100px) scale(1);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Добавим изначальную тень */
 }
 
 .cell:not(:last-child)::after {
@@ -241,8 +248,9 @@ nav {
 
 .cell:hover {
     background: linear-gradient(45deg, #000504, #1B1D1E);
-    transform: translateX(0) scale(1.05) !important;
+    transform: translateX(0) scale(1.1) !important; /* Увеличено масштабирование при наведении */
     border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); /* Увеличена глубина тени при наведении */
     animation: gradientAnimation 3s infinite;
 }
 
@@ -270,6 +278,7 @@ nav {
         background: linear-gradient(135deg, #000504, #1B1D1E);
     }
 }
+
 
 
 
@@ -412,5 +421,73 @@ input[type="text"]:focus {
 
 
 
+/* Define the container styles */
+.container-animation-text {
+    width: 1439px;
+    height: 160px;  /* Высота, достаточная для двух строк текста */
+    flex-shrink: 0;
+    background: #BEFF54;
+    display: flex;
+    flex-direction: column; /* Для вертикального размещения строк */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Скрыть текст, который выходит за пределы контейнера */
+    position: relative; /* Необходимо для абсолютного позиционирования текста */
+}
 
+/* Define the text styles for the first line */
+.first-line {
+    color: #101011;
+    font-family: 'Manrope';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    white-space: nowrap;  /* Предотвратить перенос текста */
+    top: 20px;  /* Позиция первой строки */
+    left: 100%; /* Начать текст с правой стороны контейнера */
+}
+
+.first-line.animate-first {
+    animation: scrollFirstText 6s linear forwards;
+}
+
+@keyframes scrollFirstText {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0; /* Остановить на левом крае */
+    }
+}
+
+/* Define the text styles for the second line */
+.second-line {
+    color: var(--_, #101011);
+    font-family: 'Manrope';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    white-space: nowrap;  /* Предотвратить перенос текста */
+    top: 90px; /* Позиция второй строки (с учетом пространства между строками) */
+    right: 100%; /* Начать текст с левой стороны контейнера */
+}
+
+.second-line.animate-second {
+    animation: scrollSecondText 6s linear forwards;
+}
+
+@keyframes scrollSecondText {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 0; /* Остановить на правом крае */
+    }
+}
 
