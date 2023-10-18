@@ -5,68 +5,6 @@ body {
     background-color: #141515;
 }
 
-.staticHeader {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1B1D1E;
-    color: white;
-    height: 71px;
-    padding: 0 20px;
-    width: calc(100% - 50px); /* 100% ширины минус 25px с каждой стороны */
-    flex-shrink: 0;
-    border-radius: 12px;
-    margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.contacts {
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-}
-
-.company-name {
-    margin-right: 20px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    margin-right: 20px;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s, color 0.2s;
-    transform: scale(1); /* Установите начальный размер */
-}
-
-.nav-item:last-child {
-    margin-right: 0;
-}
-
-.nav-item:hover {
-    color: #BEFF54; /* Зеленый цвет текста при наведении */
-    transform: scale(1.1); /* Увеличение на 10% при наведении */
-}
-
-.nav-item-active,
-.nav-item-active:active {
-    color: #BEFF54; /* Зеленый цвет текста для активной кнопки */
-    transform: scale(1.1); /* Увеличение на 10% для активной кнопки */
-}
-
-
 
 h1 {
     font-size: 60px;
@@ -76,8 +14,19 @@ h1 {
     color: #C5FF68;
 }
 
-p {
+.description {
+    margin-left: 426px;
+    margin-right: 426px;
+    text-align: center;
+    color: #FBFBFB;
+    font-family: Manrope;
     font-size: 20px;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 30px; /* 150% */ 
+    height: 60px;
+    margin-bottom: 88px;
+
 }
 
 
@@ -155,6 +104,9 @@ p {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     position: relative;
     overflow: hidden;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 .package h2 {
@@ -218,9 +170,6 @@ button::after {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
-
 
 button:hover {
     background-color: #555;

@@ -5,70 +5,6 @@ body {
     background-color: #141515;
 }
 
-header {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1B1D1E;
-    color: white;
-    height: 71px;
-    padding: 0 20px;
-    width: calc(100% - 50px); /* 100% ширины минус 25px с каждой стороны */
-    flex-shrink: 0;
-    border-radius: 12px;
-    margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
-}
-
-
-.staticHeader {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.contacts {
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-}
-
-.company-name {
-    margin-right: 20px;
-}
-
-.nav-item:active {
-    color: #BEFF54;       /* Зеленый цвет текста */
-    transform: scale(1.1); /* Увеличение на 10% */
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    margin-right: 20px;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s, color 0.2s;
-}
-
-.nav-item:last-child {
-    margin-right: 0;
-}
-
-.gif-image {
-    width: 653px;
-    height: 619px;
-    margin-top: -70px;
-}
-
 .text-content {
     color: #FBFBFB;
     font-family: 'Manrope', sans-serif;
@@ -226,37 +162,27 @@ nav {
     box-sizing: border-box;
     position: relative;
     padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 0;
     background-color: #1B1D1E;
     border-radius: 8px;
     transform: translateX(100px) scale(1);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Добавим изначальную тень */
-}
-
-.cell:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    bottom: -14px;
-    left: 0;
-    width: 650px;
-    height: 1px;
-    background-color: #5A5F62;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cell:hover {
     background: linear-gradient(45deg, #000504, #1B1D1E);
-    transform: translateX(0) scale(1.1) !important; /* Увеличено масштабирование при наведении */
+    transform: translateX(0) scale(1.05) !important;
     border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); /* Увеличена глубина тени при наведении */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
     animation: gradientAnimation 3s infinite;
 }
 
 .cell.animate-in {
     opacity: 1;
-    transform: translateX(0) scale(1.05);
+    transform: translateX(0) scale(1);
 }
 
 .cell .svg-container {
@@ -278,6 +204,7 @@ nav {
         background: linear-gradient(135deg, #000504, #1B1D1E);
     }
 }
+
 
 
 
@@ -315,7 +242,7 @@ nav {
 }
 
 .svg-container {
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 

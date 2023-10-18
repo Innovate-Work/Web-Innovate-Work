@@ -2,3 +2,64 @@
     color: #BEFF54; /* Зеленый цвет текста для активной кнопки */
     transform: scale(1.1); /* Увеличение на 10% для активной кнопки */
 }
+
+.staticHeader {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B1D1E;
+    color: white;
+    height: 71px;
+    padding: 0 20px;
+    width: calc(100% - 50px); /* 100% ширины минус 25px с каждой стороны */
+    flex-shrink: 0;
+    border-radius: 12px;
+    margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.contacts {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.company-name {
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, color 0.2s;
+    transform: scale(1); /* Установите начальный размер */
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item:hover {
+    color: #BEFF54; /* Зеленый цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение на 10% при наведении */
+}
+
+.nav-item-active,
+.nav-item-active:active {
+    color: #BEFF54; /* Зеленый цвет текста для активной кнопки */
+    transform: scale(1.1); /* Увеличение на 10% для активной кнопки */
+}
