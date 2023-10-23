@@ -33,7 +33,7 @@ const tabData = {
     "Application": [
         {
             title: "Basic",
-            features: ["Basic mobile app development for iOS or Android", "Pre-designed app templates", "Limited customization", "Standard features", "Ideal for individuals and small businesses"],
+            features: ["Basic mobile app for iOS/Android", "Pre-designed app templates", "Limited customization", "Standard features", "Ideal for individuals/small businesses"],
             price: "$5000"
         },
         {
@@ -43,7 +43,7 @@ const tabData = {
         },
         {
             title: "Business",
-            features: ["Complex mobile app development", "Highly customized solution", "Advanced features (e.g., user authentication, payment processing)", "Comprehensive testing and optimization", "Designed for larger corporations and organizations"],
+            features: ["Complex app development", "Highly customized solution", "Advanced features", "Testing and optimization", "Designed for larger corporations and organizations"],
             price: "$15000"
         }
     ],
@@ -83,6 +83,8 @@ function updatePackages(tabName) {
         }
     });
 
+    
+
     if (tabName === "Application and Website") {
         packages[0].style.width = "707px";
         packages[0].style.height = "435px";
@@ -91,6 +93,14 @@ function updatePackages(tabName) {
         packages.forEach((packageElem) => {
             packageElem.style.width = "340px"; // Возвращаем первоначальные размеры
             packageElem.style.height = "410px";
+
+            // Условие для вкладки "Application"
+            if (tabName === "Application") {
+                packageElem.style.height = "430px"; // Увеличиваем на 10px
+            } else {
+                packageElem.style.height = "410px"; // Оригинальная высота
+            }
+
             packageElem.style.margin = "0"; // Убираем стили центрирования
         });
     }
@@ -114,7 +124,14 @@ function updatePackages(tabName) {
             });
 
             title.textContent = data[index].title;
-            price.textContent = `from ${data[index].price}`;
+            const priceSpan = price.querySelector('span');
+const priceValue = document.createTextNode(data[index].price);
+if (priceSpan.nextSibling) {
+    price.replaceChild(priceValue, priceSpan.nextSibling);
+} else {
+    price.appendChild(priceValue);
+}
+
 
             setTimeout(() => {
                 packageElem.style.transform = "translateY(0)";

@@ -293,9 +293,9 @@ label {
     display: none; 
 }
 
-input[type="email"],
-input[type="tel"],
-input[type="text"] {
+input[id="email"],
+input[id="phone"],
+input[id="office-address"] {
     width: 538px;
     height: 40px;
     background: transparent;
@@ -313,9 +313,9 @@ input[type="text"] {
     transition: border-color 0.3s ease-in-out;
 }
 
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus {
+input[id="email"]:focus,
+input[id="phone"]:focus,
+input[id="office-address"]:focus {
     border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
     caret-color: var(--input-focus-underline, #BEFF54); /* Change caret color on focus */
 }
