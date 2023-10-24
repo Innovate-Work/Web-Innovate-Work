@@ -1,0 +1,63 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141515;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: start;  /* Align items to the top */
+    gap: 100px;  /* Margin between the image and text content */
+}
+
+.about-image {
+    width: 500px ;  /* Ensure the image scales nicely */
+    height: 500px;
+      /* Keep the original aspect ratio */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;  /* Margin between each text element */
+}
+
+.about-heading {
+    margin: 0;
+    margin-top: 65px;
+    color: #BEFF54;
+    font-family: Manrope, sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.textbox {
+    width: 782px;
+    margin: 0;
+    width: 782px;
+    color: #FBFBFB;
+    font-family: Manrope, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 37px;
+}
+
+.textbox2 {
+    width: 617px;
+    margin: 0;
+    width: 617px;
+    color: #5A5F62;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
