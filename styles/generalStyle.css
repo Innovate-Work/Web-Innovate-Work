@@ -162,7 +162,7 @@ nav {
     transform: translateY(-50%); /* Центрируем SVG иконку по вертикали */
     width: 26px; /* Размер SVG иконки */
     height: 26px; /* Размер SVG иконки */
-    background: url('CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
+    background: url('/src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
 }
 
 
