@@ -61,3 +61,65 @@ body {
     line-height: 30px;
 }
 
+
+
+
+
+.values-container-wrapper {
+    border-top: 1px solid #5A5F62;
+    border-bottom: 1px solid #5A5F62;
+    padding: 70px 0;  
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;  
+    margin: 0 auto;
+}
+
+.left-section-container { /* Создан новый класс для контейнера слева */
+    flex: 1.5; /* Увеличено значение flex для большего пространства слева */
+    padding-right: 50px;
+    display: flex; 
+    align-items: center; /* Чтобы содержимое было по центру */
+}
+
+.values-header {
+    color: #BEFF54;
+    font-size: 58px;  
+    font-weight: 600;
+    line-height: 62px;  
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.values-description {
+    color: #5A5F62;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;  
+    margin-bottom: 55px;  
+}
+
+.values-container {
+    flex: 2.5; /* Уменьшено значение flex, чтобы балансировать пространство с left-section-container */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;  
+}
+
+.value-title {
+    color: #BEFF54;
+    font-size: 26px;  
+    font-weight: 600;
+    line-height: 32px;  
+    margin-bottom: 25px;
+}
+
+.value-description {
+    color: #FBFBFB;
+    font-size: 21px;  
+    font-weight: 500;
+    line-height: 32px;  
+    margin-top: 15px; 
+}
+
