@@ -61,26 +61,34 @@ body {
     line-height: 30px;
 }
 
-
-
-
-
-.values-container-wrapper {
-    border-top: 1px solid #5A5F62;
-    border-bottom: 1px solid #5A5F62;
+.section-wrapper {
     padding: 70px 0;  
-    background-color: #1E1E1E;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1250px;  
-    margin: 0 auto;
+    background-color: #141515;
+     
+    margin-left: 25px;
+    margin-right: 25px;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-self: center;
+    align-self: center;
 }
 
-.left-section-container { /* Создан новый класс для контейнера слева */
-    flex: 1.5; /* Увеличено значение flex для большего пространства слева */
-    padding-right: 50px;
-    display: flex; 
-    align-items: center; /* Чтобы содержимое было по центру */
+[class^="container-section-"] { 
+    border-top: 1px solid #5A5F62;
+    display: grid;
+}
+
+.container-section-values{
+    grid-template-columns: 580px auto 350px; 
+    justify-self: start;
+    align-self: start;
+}
+
+.container-section-reasons{
+    grid-template-rows: 1fr 2fr;
+    justify-self: center;
+    align-self: center;
 }
 
 .values-header {
@@ -89,37 +97,153 @@ body {
     font-weight: 600;
     line-height: 62px;  
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
+    margin-left: 35px ;
 }
-
-.values-description {
-    color: #5A5F62;
+[class^="values-description-"]{
     font-size: 20px;
     font-weight: 500;
     line-height: 32px;  
-    margin-bottom: 55px;  
+}
+.values-description-1{
+    color: #5A5F62;
+    margin-left: 35px; 
 }
 
-.values-container {
-    flex: 2.5; /* Уменьшено значение flex, чтобы балансировать пространство с left-section-container */
+.values-description-2{
+    color: #FBFBFB; 
+    margin-top: 15px; 
+    margin-bottom: 75px;
+}
+
+.values-description-3{
+    color: #FBFBFB; 
+    margin-top: 15px; 
+    margin-bottom:75px;
+}
+
+[class^="values-container-"]{
+    /*flex: 2.5; /* Уменьшено значение flex, чтобы балансировать пространство с left-section-container */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;  
+    grid-template-rows: 1fr 1fr;
+    justify-self: start;
+    align-self: start;
+    margin-top: 100px;
 }
 
+.values-container-1{
+    margin-right: 153px;
+}
+
+.values-container-2{
+    margin-right: 120px;
+}
 .value-title {
     color: #BEFF54;
     font-size: 26px;  
     font-weight: 600;
     line-height: 32px;  
-    margin-bottom: 25px;
+    margin-bottom: 32px;
 }
 
-.value-description {
-    color: #FBFBFB;
-    font-size: 21px;  
+.why-choose-header{
+    color: #BEFF54;
+    font-family: Manrope, sans-serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    margin-top: 98px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+.reason-wrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+[class^="reason-container-"]{
+    border-radius: 20px;
+    background: #1B1D1E;
+    
+    width: 685px;
+    height: 236px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    display: grid;
+}
+
+
+.reason-container-1, .reason-container-2{
+
+    grid-template-columns: 68px auto;
+}
+
+.reason-container-3, .reason-container-4{
+
+    grid-template-columns: 300px 68px;
+}
+
+[class^="reason-number-"]{
+    color: #282A2C;
+    font-family: Manrope, sans-serif;
+    font-size: 299px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 269.1px; /* 90% */
+    text-transform: uppercase;
+    max-width: 320px;
+}
+.reason-number-1, .reason-number-2{
+    margin-top:48px;
+    margin-left:20px;
+}
+
+.reason-number-3, .reason-number-4{
+    margin-top: 48px;
+    margin-right: 20px;
+}
+
+[class^="reason-content-"] {
+    display: grid;
+    grid-template-rows: 30px auto;
+
+    margin-top: 76px;
+    max-width: 300px;
+}
+
+.reason-content-1, .reason-content-2{
+    margin-left: 340px;
+}
+.reason-content-3, .reason-content-4{
+    
+    margin-left: 41px;
+}
+
+.reason-description{
+    color:  #FBFBFB;
+    font-family: Manrope, sans-serif;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 500;
-    line-height: 32px;  
-    margin-top: 15px; 
+    line-height: 24px; /* 150% */
+
+    margin-top: 18px;
 }
 
+.reason-title{
+    color: #BEFF54;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+}
