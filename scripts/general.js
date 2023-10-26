@@ -100,3 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.service-button');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var isActive = this.getAttribute('data-active') === 'true';
+            this.setAttribute('data-active', !isActive);
+        });
+    });
+});
+

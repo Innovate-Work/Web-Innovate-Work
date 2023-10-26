@@ -126,7 +126,7 @@ h1 {
 }
 
 .package ul li::before {
-    content: url('/src/CheckCircle.svg');
+    content: url('../src/CheckCircle.svg');
     margin-right: 10px;
     font-size: 20px;
     width: 26px; /* Задайте необходимый размер */
