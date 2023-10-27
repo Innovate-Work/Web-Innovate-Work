@@ -165,6 +165,47 @@ nav {
     background: url('../src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
 }
 
+.service-hint {
+    position: relative;
+    display: inline-block; 
+}
+
+.service-icon {
+    cursor: pointer;
+    margin-bottom: -7px;
+}
+
+.service-icon:hover {
+    content: url('../src/QuestionWhite.svg');
+}
+
+.hint-text {
+    display: none; 
+    position: absolute;
+    left: 100%; /* Позиционируем слева от иконки */
+    top: 50%; 
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    width: 256px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #FBFBFB;
+    background: #1B1D1E;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.service-icon:hover + .hint-text {
+    display: block;
+}
+
+
 
 
 
@@ -294,7 +335,7 @@ input[id="company-name-pop-up"]:focus {
 .services-text-and-icon{
     display: flex; /* Изменяем на flex для горизонтального размещения элементов */
     justify-content: start; /* Выравнивание элементов слева */
-    align-items: left; /* Выравнивание элементов по вертикали по центру */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
     gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
     width: 100%;
 }
@@ -403,11 +444,44 @@ input[id="company-name-pop-up"]:focus {
     color: #BEFF54; /* Зеленый цвет текста при наведении */
     transform: scale(1.1); /* Увеличение на 10% при наведении */
 }
+
 .social-network-link {
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s;
     width: 44px;
     height: 44px;
     margin-left: 0px;
     margin-right: 8px;
+    position: relative;
+}
+
+.social-network-link:hover {
+    transform: scale(1.1);
+}
+
+.social-network-link img {
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.social-network-link:hover img {
+    opacity: 0;
+}
+
+.social-network-link.facebook:hover {
+    content: url('../src/FacebookGreen.svg');
+}
+
+.social-network-link.twitter:hover {
+    content: url('../src/TwitterGreen.svg');
+}
+
+.social-network-link.instagram:hover {
+    content: url('../src/InsagramGreen.svg');
 }
 
 .social-network-link-group {
@@ -415,6 +489,10 @@ input[id="company-name-pop-up"]:focus {
     margin-right: 58px;
     margin-left: auto;
 }
+
+
+
+
 
 /* брат, здесь футтер) */
 .footer {

@@ -15,10 +15,10 @@
         </a>
         <div class="company-name">Company Name</div>
         <nav>
-            <a href="#" class="nav-item">Works</a>
-            <a href="plans.html" class="nav-item nav-item-active">Plans</a>
-            <a href="about.html" class="nav-item">About</a>
-        </nav>
+            <a href="#" class="nav-item nav-item-active" data-link="works">Works</a>
+            <a href="plans.html" class="nav-item" data-link="plans">Plans</a>
+            <a href="about.html" class="nav-item" data-link="about">About</a>
+        </nav>        
         <div class="contacts">Contacts</div>
     </header>
     
@@ -112,7 +112,12 @@
                 <div class="additional-services">
                 <div class="services-text-and-icon">
                     <h2>Additional services you can add</h2>
-                    <img class="service-icon" src="src/Question.svg" alt="Service Icon"> 
+                    <div class="service-hint">
+                        <img class="service-icon" src="src/Question.svg" alt="Service Icon"> 
+                        <div class="hint-text">
+                            Examples: custom graphics, content creation, advanced SEO, and security audits.
+                        </div>
+                    </div>                     
                 </div>
                     <div class="services-options">
                         <button class="service-button data-active="false">Custom interface design</button>
@@ -175,9 +180,9 @@
         </div>
     </div>
     <div class="social-network-link-group">
-        <a href="#"><img class="social-network-link" src="src/Facebook.png" alt="Facebook"/></a>
-        <a href="#"><img class="social-network-link" src="src/Twitter.png" alt="Twitter"/></a>
-        <a href="#"><img class="social-network-link" src="src/Instagram.png" alt="Instagram"/></a>
+        <a href="#"><img class="social-network-link facebook" src="src/Facebook.svg" alt="Facebook"/></a>
+        <a href="#"><img class="social-network-link twitter" src="src/Twitter.svg" alt="Twitter"/></a>
+        <a href="#"><img class="social-network-link instagram" src="src/Instagram.svg" alt="Instagram"/></a>
         
         <div class="contact-info">
             <p class="contact-wrapper"><span class="contacts-title">email:</span><span class="contacts"> mail@gmail.com</span></p>

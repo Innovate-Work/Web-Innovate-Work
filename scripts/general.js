@@ -111,3 +111,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+    document.addEventListener("DOMContentLoaded", function(event) {
+        // Получаем все элементы с классом nav-item
+        const navItems = document.querySelectorAll('.nav-item');
+        let currentPage = localStorage.getItem('currentPage');
+
+        navItems.forEach((item) => {
+            if(item.getAttribute('data-link') === currentPage) {
+                item.classList.add('nav-item-active');
+            } else {
+                item.classList.remove('nav-item-active');
+            }
+
+            item.addEventListener('click', function() {
+                // Убираем класс nav-item-active со всех элементов
+                navItems.forEach((innerItem) => innerItem.classList.remove('nav-item-active'));
+                // Добавляем класс nav-item-active к нажатому элементу
+                this.classList.add('nav-item-active');
+                localStorage.setItem('currentPage', this.getAttribute('data-link'));
+            });
+        });
+
+        // Убираем выделение у всех элементов меню при нажатии на логотип
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('click', function() {
+            navItems.forEach((item) => item.classList.remove('nav-item-active'));
+            localStorage.removeItem('currentPage'); // Удаляем текущую страницу из localStorage
+        });
+    });
+
+
+
