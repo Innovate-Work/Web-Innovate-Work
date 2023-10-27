@@ -52,11 +52,11 @@ body {
 
 .tabs div {
     display: flex;
-    width: 459px;
+    width: 640px;
     height: 62px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     border-radius: 10px;
     background: #1B1D1E; /* Изначальный темный фон */
     cursor: pointer;
@@ -82,7 +82,7 @@ body {
 }
 
 .tabs div:hover {
-    transform: scale(1.03);  /* Увеличение на 5% */
+    transform: scale(1.02);  /* Увеличение на 5% */
 }
 
 

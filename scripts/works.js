@@ -1,108 +1,85 @@
-document.addEventListener('DOMContentLoaded', function() {
-    initTabs();
-    initPackages();
-    updatePackages("Website"); // default tab
+$(document).ready(function(){
+    // Сделаем первый div активным при инициализации
+    $('.tabs div:first-child').addClass('active-tab');
+
+    $('.tabs div').click(function(){
+        // Сначала удаляем класс 'active-tab' у всех div
+        $('.tabs div').removeClass('active-tab');
+        // Добавляем класс 'active-tab' к нажатому div
+        $(this).addClass('active-tab');
+        updatePackages($(this).text().trim()); // Обновляем пакеты при клике
+    });
 });
 
-function initTabs() {
-    const tabs = document.querySelectorAll('.tabs div');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            tabs.forEach(innerTab => {
-                innerTab.classList.remove('active-tab');
-            });
-
-            tab.classList.add('active-tab');
-            updatePackages(tab.textContent.trim()); // Use the tab name to determine which packages to show
-        });
-    });
-
-    // Set the first tab as active by default
-    tabs[0].classList.add('active-tab');
-}
-
-function initPackages() {
-    const packages = document.querySelectorAll('.work-package');
-    packages.forEach((packageElem, index) => {
-        setTimeout(() => {
-            packageElem.style.transform = "translateY(0)";
-            packageElem.style.opacity = "1";
-        }, 150 * (index + 1));
-    });
-}
-
-function updatePackages(tabName) {
-    const packages = document.querySelectorAll('.work-package');
-    const data = tabData[tabName] || []; // Default to an empty array if no data
-
-    // Hide all packages by default
-    packages.forEach(packageElem => {
-        packageElem.style.display = "none";
-    });
-
-    // Show the appropriate packages based on the tab
-    data.forEach((packageData, index) => {
-        if (packages[index]) {
-            packages[index].style.display = "block";
-
-            const title = packages[index].querySelector('.name-example');
-            const link = packages[index].querySelector('.link-example link');
-
-            title.textContent = packageData.title;
-            link.textContent = packageData.price; // Assuming price should be in the link for simplicity
-
-            // Here, you'd also populate any other elements in the package based on the data
-            // For example, if you have a list of features or other data, you'd populate it here.
-        }
-    });
-}
+document.addEventListener('DOMContentLoaded', initPackages);
 
 const tabData = {
     "Website": [
         {
             name: "Web site online shop for Nike",
-            link: "www.example1.com"
+            link: "www.example"
         },
         {
             name: "Web site online shop for Adidas",
-            link: "www.example2.com"
+            link: "www.example"
         },
         {
             name: "Web site online shop for Puma",
-            link: "www.example3.com"
+            link: "www.example"
+        },
+        {
+            name: "Web site online shop for Reebok",
+            link: "www.example"
         }
     ],
     "Application": [
         {
-            name: "App for Nike Store",
-            link: "www.app-example1.com"
+            name: "Mobile App for Fitness",
+            link: "www.example"
         },
         {
-            name: "App for Adidas Store",
-            link: "www.app-example2.com"
+            name: "Mobile App for Nutrition",
+            link: "www.example"
         },
         {
-            name: "App for Puma Store",
-            link: "www.app-example3.com"
+            name: "Mobile App for Meditation",
+            link: "www.example"
+        },
+        {
+            name: "Mobile App for Running",
+            link: "www.example"
         }
     ]
 };
 
-function updatePackages(tabName) {
-    const data = tabData[tabName];
-    const workPackages = document.querySelectorAll('.work-package');
-    
-    workPackages.forEach((packageElem, index) => {
-        if (data[index]) {
-            const nameElem = packageElem.querySelector('.name-example');
-            const linkElem = packageElem.querySelector('.link-example');
+function initPackages() {
+    updatePackages("Website"); // Инициализация с первой вкладкой
+}
 
-            nameElem.textContent = data[index].name;
-            linkElem.innerHTML = `<a href="http://${data[index].link}" target="_blank">${data[index].link}</a>`;
+function updatePackages(tabName) {
+    const packages = document.querySelectorAll('.work-package');
+    const data = tabData[tabName] || [];
+
+    // Устанавливаем начальные стили для анимации
+    packages.forEach((packageElem, index) => {
+        packageElem.style.transform = "translateY(-50px)";
+        packageElem.style.opacity = "0";
+    });
+
+    packages.forEach((packageElem, index) => {
+        if (data[index]) {
+            const nameExample = packageElem.querySelector('.name-example');
+            const linkExample = packageElem.querySelector('.link-example');
+
+            nameExample.textContent = data[index].name;
+            linkExample.textContent = data[index].link;
+
+            setTimeout(() => {
+                packageElem.style.transform = "translateY(0)";
+                packageElem.style.opacity = "1";
+            }, 150 * (index + 1));
         } else {
-            // If there's no data for this package, hide it
-            packageElem.style.display = "none";
+            packageElem.style.display = "none"; // Скрываем лишние элементы
         }
     });
 }
