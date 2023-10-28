@@ -1,5 +1,4 @@
 body {
-    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #141515;
@@ -104,6 +103,21 @@ body {
     border-radius: 20px;
     background: var(--, #1B1D1E);
 }
+
+
+.work-package {
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translateY(100%); /* Updated from -100% to 100% */
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.work-package.active-package {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 
 .content-works {
     background: #FBFBFB;

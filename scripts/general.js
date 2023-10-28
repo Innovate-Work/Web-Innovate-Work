@@ -54,16 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const packageNameSpan = modalText.querySelector('.package-name');
     const packageFeatures = modalText.querySelector('ul');
     const nextButton = document.querySelector('.next-button');
-
-   
+    const customInterfaceButton = document.querySelector('.service-button:nth-child(1)');
+    const maintenanceButton = document.querySelector('.service-button:nth-child(2)');
 
     let selectedPackage = null;
 
     packages.forEach(pkg => {
         pkg.addEventListener('click', function() {
-            // Убираем выделение с других пакетов
             packages.forEach(p => p.classList.remove('selected'));
-            // Добавляем выделение на текущий пакет
             pkg.classList.add('selected');
             selectedPackage = pkg;
         });
@@ -71,35 +69,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextButton.addEventListener('click', function() {
         if (selectedPackage) {
-            // Получаем имя пакета
             const packageName = selectedPackage.querySelector('h2').innerText;
-
-            // Очистка текущего списка функций в модальном окне
             while (packageFeatures.firstChild) {
                 packageFeatures.removeChild(packageFeatures.firstChild);
             }
-
-            // Заполняем имя пакета
             packageNameSpan.innerText = packageName.toUpperCase();
-
-            // Заполняем функции пакета
             const features = selectedPackage.querySelectorAll('ul li');
             features.forEach(feature => {
                 const li = document.createElement('li');
                 li.textContent = feature.textContent;
                 packageFeatures.appendChild(li);
             });
-
-            // Показываем модальное окно
             modal.style.display = 'block';
-
-            // Закрытие модального окна при нажатии на крестик
-            modal.querySelector('.close').addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
         }
     });
+
+    modal.querySelector('.close').addEventListener('click', function() {
+        modal.style.display = 'none';
+        customInterfaceButton.setAttribute('data-active', 'false');
+        maintenanceButton.setAttribute('data-active', 'false');
+        customInterfaceButton.classList.remove('active-button-class');
+        maintenanceButton.classList.remove('active-button-class');
+    });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var buttons = document.querySelectorAll('.service-button');

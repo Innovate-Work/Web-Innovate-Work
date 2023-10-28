@@ -73,17 +73,16 @@ function updatePackages(tabName) {
 
     // Устанавливаем начальные стили для анимации
     packages.forEach((packageElem, index) => {
-        packageElem.style.transform = "translateY(-50px)";
-        packageElem.style.opacity = "0";
+        packageElem.style.transition = 'none'; // Отключаем анимацию для мгновенного применения стилей
+        packageElem.style.transform = "translateY(50px)"; // Начинаем снизу
+        packageElem.style.opacity = "0"; // Полностью прозрачный
 
-        if(tabName === "Application and Website" && index > 0) {
+        if (tabName === "Application and Website" && index > 0) {
             packageElem.style.display = "none";
         } else {
             packageElem.style.display = "block";
         }
     });
-
-    
 
     if (tabName === "Application and Website") {
         packages[0].style.width = "707px";
@@ -125,21 +124,23 @@ function updatePackages(tabName) {
 
             title.textContent = data[index].title;
             const priceSpan = price.querySelector('span');
-const priceValue = document.createTextNode(data[index].price);
-if (priceSpan.nextSibling) {
-    price.replaceChild(priceValue, priceSpan.nextSibling);
-} else {
-    price.appendChild(priceValue);
-}
+            const priceValue = document.createTextNode(data[index].price);
+            if (priceSpan.nextSibling) {
+                price.replaceChild(priceValue, priceSpan.nextSibling);
+            } else {
+                price.appendChild(priceValue);
+            }
 
-
+            // Включаем анимацию и применяем конечные стили
             setTimeout(() => {
-                packageElem.style.transform = "translateY(0)";
-                packageElem.style.opacity = "1";
+                packageElem.style.transition = ''; // Включаем анимацию
+                packageElem.style.transform = "translateY(0)"; // Перемещаем в исходное положение
+                packageElem.style.opacity = "1"; // Делаем видимым
             }, 150 * (index + 1));
         }
     });
 }
+
 
 
 

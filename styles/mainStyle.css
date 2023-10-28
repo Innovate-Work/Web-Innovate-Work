@@ -12,8 +12,27 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 90px; 
-    letter-spacing: -1.92px;
+    letter-spacing: 0px;
     padding-left: 20px; 
+}
+
+.text-solutions {
+    margin-top: 10px;
+    color: var(--_, #BEFF54);
+    font-family: Manrope;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: -1.92px;
+}
+
+.animation-gif {
+    max-width: 45.21vw;
+    max-height: 42.99vw; /* высчитано как (619 / 653) * 45.21vw */
+    width: auto;
+    height: auto;
+    margin-top: -60px;
 }
 
 .text-content span {
@@ -28,14 +47,14 @@ body {
 }
 
 .description-main {
-    color:  #FBFBFB;
-    font-family: 'Manrope', sans-serif;
+    width: 538px;
+    font-family: Manrope;
     font-size: 20px;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: 500;
-    line-height: 30px;
-    padding-top: 46px; 
-    padding-right: 160px;
+    line-height: 30px; /* 150% */
+    margin-top: 46px;
+    margin-right: 160px;
 }
 
 .button {

@@ -60,13 +60,9 @@ function updatePackages(tabName) {
     const packages = document.querySelectorAll('.work-package');
     const data = tabData[tabName] || [];
 
-    // Устанавливаем начальные стили для анимации
     packages.forEach((packageElem, index) => {
-        packageElem.style.transform = "translateY(-50px)";
-        packageElem.style.opacity = "0";
-    });
+        packageElem.classList.remove('active-package');
 
-    packages.forEach((packageElem, index) => {
         if (data[index]) {
             const nameExample = packageElem.querySelector('.name-example');
             const linkExample = packageElem.querySelector('.link-example');
@@ -74,13 +70,17 @@ function updatePackages(tabName) {
             nameExample.textContent = data[index].name;
             linkExample.textContent = data[index].link;
 
+            packageElem.style.display = ""; // Ensure the element is visible
+
+            // Delay adding the active class to create the slide effect
             setTimeout(() => {
-                packageElem.style.transform = "translateY(0)";
-                packageElem.style.opacity = "1";
+                packageElem.classList.add('active-package');
             }, 150 * (index + 1));
         } else {
-            packageElem.style.display = "none"; // Скрываем лишние элементы
+            packageElem.style.display = "none";
         }
     });
 }
+
+
 
