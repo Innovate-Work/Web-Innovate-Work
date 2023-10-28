@@ -179,17 +179,22 @@ body {
     overflow: hidden;
 
     display: grid;
+    gap:30px;
+    transition: all 0.5s ease;
+}
+[class^="reason-container-"]:hover{
+    transform: scale(1.02);
 }
 
 
 .reason-container-1, .reason-container-2{
 
-    grid-template-columns: 68px auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 .reason-container-3, .reason-container-4{
 
-    grid-template-columns: 300px 68px;
+    grid-template-columns: 1fr 1fr;
 }
 
 [class^="reason-number-"]{
@@ -204,12 +209,12 @@ body {
 }
 .reason-number-1, .reason-number-2{
     margin-top:48px;
-    margin-left:20px;
+    margin-left:35px;
 }
 
 .reason-number-3, .reason-number-4{
     margin-top: 48px;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
 [class^="reason-content-"] {
@@ -221,11 +226,11 @@ body {
 }
 
 .reason-content-1, .reason-content-2{
-    margin-left: 340px;
+    margin-right: 35px;
 }
 .reason-content-3, .reason-content-4{
     
-    margin-left: 41px;
+    margin-left: 35px;
 }
 
 .reason-description{
