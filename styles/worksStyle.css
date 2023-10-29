@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #141515;
+    font-family: 'Manrope', sans-serif;
 }
 
 .works-section {
-    margin-left: 29px;  /* Left margin for the works section */
+    margin-left: 60px;  /* Left margin for the works section */
     margin-top: 65px;  /* Margin from the page header to the works title */
 }
 
@@ -43,7 +44,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 6px;
-    margin: 25px 25px 0 25px;
+    margin: 25px 60px 0 60px;
     margin-top: 88px;
     border-radius: 12px;
     background: #1B1D1E;
@@ -51,7 +52,7 @@ body {
 
 .tabs div {
     display: flex;
-    width: 640px;
+    width: 650px;
     height: 62px;
     justify-content: center;
     align-items: center;

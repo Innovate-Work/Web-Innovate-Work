@@ -141,13 +141,6 @@ function updatePackages(tabName) {
     });
 }
 
-
-
-
-
-
-
-
 document.querySelectorAll('.tabs div').forEach(tab => {
     tab.addEventListener('click', (e) => {
         const tabName = e.target.textContent.trim();
@@ -161,4 +154,17 @@ document.querySelectorAll('.tabs div').forEach(tab => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
+        const element = document.querySelector('.tabs');
+        if (element) {
+            setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    }
+});
 

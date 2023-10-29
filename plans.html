@@ -29,7 +29,7 @@
             You can choose any ready-made package at the appropriate level and add customization and accompanying maintenance.
         </div>
 
-<div class="tabs">
+<div id="tabs" class="tabs">
     <div><p>Website</p></div>
     <div><p>Application</p></div>
     <div><p>Application and Website</p></div>
@@ -128,21 +128,26 @@
             <div class="vertical-line"></div>
             <div class="right-section">
                 <p class="text-details">Please send your details and we will contact you to discuss your chosen package</p>
-                <form class="data-entrance">
+                <form class="data-entrance" id="validation-form">
+                    <div class="form-group">
+                        <input type="text" id="name-pop-up" placeholder="Name *" required autocomplete="off">
+                        <div class="error-alert" id="name-error"></div>
+                    </div>
                     <div class="pop-up-form">
-                        <input type="email" id="email-pop-up" placeholder="Email *">
+                        <input type="email" id="email-pop-up" placeholder="Email *" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}" autocomplete="off">
+                        <div class="error-alert" id="email-error"></div>
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone-pop-up" placeholder="Phone Number *">
+                        <input type="tel" id="phone-pop-up" placeholder="Phone Number *" required pattern="\d+" autocomplete="off">
+                        <div class="error-alert" id="phone-error"></div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="office-address-pop-up" placeholder="Office Address *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="company-name-pop-up" placeholder="Company Name">
+                        <input type="text" id="company-name-pop-up" placeholder="Company Name" autocomplete="off">
+                        <div class="error-alert" id="company-name-error"></div>
                     </div>
                     <button class="submit-button-pop-up" type="submit">Submit</button>
                 </form>
+                              
             </div>
         </div>
     </div>
@@ -162,18 +167,18 @@
     </div>
     <div class="about-links">
         <div class="link-group">
-            <a href="#" class="main-link">Works</a>
+            <a href="works.html" class="main-link">Works</a>
             <a href="#" class="about-link">Website</a>
             <a href="#" class="about-link">Application</a>
         </div>
         <div class="link-group">
-            <a href="#" class="main-link">Plans</a>
-            <a href="#" class="about-link">Website</a>
-            <a href="#" class="about-link">Application</a>
-            <a href="#" class="about-link">Intergrated solution</a>
-        </div>
+            <a href="plans.html" class="main-link">Plans</a>
+            <a href="plans.html" class="about-link">Website</a>
+            <a href="plans.html" class="about-link">Application</a>
+            <a href="plans.html" class="about-link">Integrated solution</a>
+        </div>        
         <div class="link-group">
-            <a href="#" class="main-link">About</a>
+            <a href="about.html" class="main-link">About</a>
             <a href="#" class="about-link">Our mission</a>
             <a href="#" class="about-link">Our values</a>
             <a href="#" class="about-link">Why choose us</a>

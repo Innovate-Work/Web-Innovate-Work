@@ -106,7 +106,7 @@ h1 {
     overflow: hidden;
 }
 .package {
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.3s ease; 
 }
 
 .package h2 {

@@ -11,6 +11,8 @@ body {
     display: flex;
     align-items: start;  /* Align items to the top */
     gap: 100px;  /* Margin between the image and text content */
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .about-image {
@@ -38,9 +40,7 @@ body {
 }
 
 .textbox {
-    width: 782px;
     margin: 0;
-    width: 782px;
     color: #FBFBFB;
     font-family: Manrope, sans-serif;
     font-size: 36px;
@@ -50,9 +50,8 @@ body {
 }
 
 .textbox2 {
-    width: 617px;
     margin: 0;
-    width: 617px;
+    max-width: 617px;
     color: #5A5F62;
     font-family: Manrope, sans-serif;
     font-size: 20px;

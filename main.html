@@ -87,22 +87,27 @@
 
         <div class="page-container">
             <h1 class="form-title">Ready to Transform Your Business?</h1>
-            <div class="contact-form">        
-                <form class="data-entrance">
+            <div class="contact-form">
+                <form class="data-entrance" id="validation-form">
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Email *">
+                        <input type="text" id="name" placeholder="Name *" required autocomplete="off">
+                        <small class="error-message" style="color: red;"></small>
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Phone Number *">
+                        <input type="email" id="email" placeholder="Email *" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}" autocomplete="off">
+                        <small class="error-message" style="color: red;"></small>
                     </div>
                     <div class="form-group">
-                    <input type="text" id="office-address" placeholder="Office Address *">
+                        <input type="tel" id="phone" placeholder="Phone Number *" required pattern="\d+" autocomplete="off">
+                        <small class="error-message" style="color: red;"></small>
                     </div>
-                    <button class= "submit-button" type="submit">Submit</button>
+                    <button class="submit-button" type="submit">Submit</button>
                 </form>
                 <div class="contact-message">
-                Contact us today and let's discuss how we can elevate your company to new heights!
+                    Contact us today and let's discuss how we can elevate your company to new heights!
                 </div>
+            </div>
+            
             </div>
         </div>
         <script src="scripts/general.js"></script>

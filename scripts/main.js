@@ -1,10 +1,23 @@
 
 const button = document.querySelector('.button');
+const targetDiv = document.querySelector('.page-container');
 
 button.addEventListener('click', function() {
-    this.classList.add('pressed');
-});
+    this.classList.add('pressed'); // добавляем класс для анимации
 
+    // Ждём 0,5 секунды после анимации кнопки и начинаем скролл к div
+    setTimeout(() => {
+        targetDiv.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Ждём окончания скролла и возвращаем кнопку в исходное состояние
+        setTimeout(() => {
+            button.classList.remove('pressed');
+        }, 1000); // предположим, что скролл займет 1 секунду, но это значение можно корректировать
+    }, 500); // 0,5 секунды ожидания после анимации
+});
 
 
 // Функция обратного вызова для первого наблюдателя
@@ -50,4 +63,40 @@ cells.forEach(cell => {
 
 
 
+document.getElementById('validation-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let hasError = false;
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+
+    if (!name.value) {
+        name.nextElementSibling.textContent = 'Name is required.';
+        hasError = true;
+    } else {
+        name.nextElementSibling.textContent = '';
+    }
+
+    if (!email.validity.valid) {
+        email.nextElementSibling.textContent = 'Please enter a valid email.';
+        hasError = true;
+    } else {
+        email.nextElementSibling.textContent = '';
+    }
+
+    if (!phone.validity.valid) {
+        phone.nextElementSibling.textContent = 'Please enter a valid phone number.';
+        hasError = true;
+    } else {
+        phone.nextElementSibling.textContent = '';
+    }
+});
+
+document.querySelectorAll('.cell').forEach(function(cell) {
+    cell.addEventListener('click', function() {
+        window.location.href = 'plans.html?scrollTo=tabs';
+    });
+});
 

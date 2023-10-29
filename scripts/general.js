@@ -104,34 +104,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        // Получаем все элементы с классом nav-item
-        const navItems = document.querySelectorAll('.nav-item');
-        let currentPage = localStorage.getItem('currentPage');
+document.addEventListener('DOMContentLoaded', function() {
+    let currentPath = window.location.pathname.split('/').pop().replace('.html', ''); // получаем имя текущего файла без расширения
+    let navLinks = document.querySelectorAll('.nav-item');
 
-        navItems.forEach((item) => {
-            if(item.getAttribute('data-link') === currentPage) {
-                item.classList.add('nav-item-active');
-            } else {
-                item.classList.remove('nav-item-active');
-            }
-
-            item.addEventListener('click', function() {
-                // Убираем класс nav-item-active со всех элементов
-                navItems.forEach((innerItem) => innerItem.classList.remove('nav-item-active'));
-                // Добавляем класс nav-item-active к нажатому элементу
-                this.classList.add('nav-item-active');
-                localStorage.setItem('currentPage', this.getAttribute('data-link'));
-            });
-        });
-
-        // Убираем выделение у всех элементов меню при нажатии на логотип
-        const logo = document.querySelector('.logo');
-        logo.addEventListener('click', function() {
-            navItems.forEach((item) => item.classList.remove('nav-item-active'));
-            localStorage.removeItem('currentPage'); // Удаляем текущую страницу из localStorage
-        });
+    navLinks.forEach(link => {
+        if (link.getAttribute('data-link') === currentPath) {
+            link.classList.add('nav-item-active'); 
+        } else {
+            link.classList.remove('nav-item-active');
+        }
     });
+});
 
 
 
+    const form = document.getElementById('validation-form');
+    const inputs = form.querySelectorAll('input');
+    
+    function showInputError(input) {
+        const errorDiv = document.getElementById(input.id + '-error');
+        if (input.validity.valueMissing) {
+            errorDiv.textContent = 'This field is required.';
+            errorDiv.style.display = 'block';
+        } else if (input.validity.patternMismatch) {
+            if (input.type === "email") {
+                errorDiv.textContent = 'Please enter a valid email.';
+            } else if (input.type === "tel") {
+                errorDiv.textContent = 'Please enter a valid phone number.';
+            }
+            errorDiv.style.display = 'block';
+        } else {
+            errorDiv.textContent = '';
+            errorDiv.style.display = 'none';
+        }
+    }
+    
+    function validateForm(e) {
+        e.preventDefault();
+    
+        let valid = true;
+        let errorMessage = "";
+    
+        inputs.forEach(input => {
+            if (!input.validity.valid) {
+                valid = false;
+                if (input.validity.valueMissing) {
+                    errorMessage += `Field ${input.placeholder} is required.\n`;
+                } else if (input.validity.patternMismatch) {
+                    if (input.type === "email") {
+                        errorMessage += 'Please enter a valid email.\n';
+                    } else if (input.type === "tel") {
+                        errorMessage += 'Please enter a valid phone number.\n';
+                    }
+                }
+                showInputError(input);
+            } else {
+                document.getElementById(input.id + '-error').style.display = 'none';
+            }
+        });
+    
+        if (!valid) {
+            alert(errorMessage);
+        } else {
+            form.submit();
+        }
+    }
+    
+    form.addEventListener('submit', validateForm);
+    
+    

@@ -314,7 +314,7 @@ label {
 
 input[id="email"],
 input[id="phone"],
-input[id="office-address"] {
+input[id="name"] {
     width: 538px;
     height: 40px;
     background: transparent;
@@ -334,7 +334,7 @@ input[id="office-address"] {
 
 input[id="email"]:focus,
 input[id="phone"]:focus,
-input[id="office-address"]:focus {
+input[id="name"]:focus {
     border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
     caret-color: var(--input-focus-underline, #BEFF54); /* Change caret color on focus */
 }
@@ -363,6 +363,11 @@ input[id="office-address"]:focus {
     background: var(--button-hover-background, #5A5F62);
     color: var(--button-hover-text-color, #fff);
 }
+
+
+
+
+
 
 
 

@@ -211,7 +211,7 @@ nav {
 
 input[id="email-pop-up"],
 input[id="phone-pop-up"],
-input[id="office-address-pop-up"],
+input[id="name-pop-up"],
 input[id="company-name-pop-up"]{
     width: 90%;
     height: 30px;
@@ -232,7 +232,7 @@ input[id="company-name-pop-up"]{
 
 input[id="email-pop-up"]:focus,
 input[id="phone-pop-up"]:focus,
-input[id="office-address-pop-up"]:focus,
+input[id="name-pop-up"]:focus,
 input[id="company-name-pop-up"]:focus {
     border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
     caret-color: var(--input-focus-underline, #BEFF54); 
@@ -303,6 +303,20 @@ input[id="company-name-pop-up"]:focus {
     margin-top: -10px;
     margin-bottom: 20px;
 }
+
+
+/* Error alert styles */
+.error-alert {
+    display: none;
+    background: red;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
 /* Ваши предыдущие стили... */
 
 .additional-services {
