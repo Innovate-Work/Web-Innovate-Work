@@ -16,9 +16,23 @@
     flex-shrink: 0;
     border-radius: 12px;
     margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
+    position: relative;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.logo-container a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* для вертикального выравнивания содержимого по центру */
+    gap: 5px;
 }
 
 .contacts {
@@ -26,19 +40,41 @@
     margin-right: 20px;
 }
 
+.contacts a {
+    color: #FBFBFB;
+    text-align: right; 
+    font-family: Manrope; 
+    font-size: 17px; 
+    font-weight: 300; 
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    color: #BEFF54; /* Зеленый цвет текста при наведении */
+    transform: scale(1.2);
+}
+
 .logo {
     width: 60px;
     height: 60px;
-    margin-right: 20px;
 }
 
 .company-name {
-    margin-right: 20px;
+    color: #FBFBFB;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 nav {
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .nav-item {
@@ -429,7 +465,7 @@ input[id="company-name-pop-up"]:focus {
     font-family: Poppins;
 }
 
-.contacts, .contacts-title{
+.contact, .contacts-title{
     font-family: Poppins;
     text-align: left;
     font-size: 16px;
@@ -446,7 +482,7 @@ input[id="company-name-pop-up"]:focus {
     margin-bottom: 4px;
 }
 
-.contacts{
+.contact{
     color: #5A5F62;
 }
 
