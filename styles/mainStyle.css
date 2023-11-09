@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #141515;
+    position: relative;
 }
 
 .text-content {

@@ -27,6 +27,7 @@
     color: inherit;
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .logo-container {
@@ -40,6 +41,10 @@
     margin-right: 20px;
 }
 
+.menu-icon {
+    display: none; 
+}
+
 .contacts a {
     color: #FBFBFB;
     text-align: right; 
@@ -47,25 +52,94 @@
     font-size: 17px; 
     font-weight: 300; 
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Стили для всплывающего окна */
+.contact-popup {
+    width: 360px;
+    height: 136px;
+    border-radius: 12px;
+    border: 1px solid #BEFF54;
+    background: #1B1D1E;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    right: 20px; /* Расположение по вашему усмотрению */
+    position: fixed; /* Changed from absolute to fixed */
+    top: 81px;
+    display: none; /* Скрыть пока не будет активирован */
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+    z-index: 100; /* Убедитесь, что окно поверх остального контента */
+    transition: top 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Стили для анимации */
+.contact-popup.active {
+    display: flex;
+    animation: slideIn 0.5s forwards; /* Имя анимации и её продолжительность */
+    margin-right: 5px;
+}
+
+/* Ключевые кадры для анимации */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .contacts a:hover {
-    color: #BEFF54; /* Зеленый цвет текста при наведении */
-    transform: scale(1.2);
+     color: #BEFF54;  
+   /* transform: scale(1.05); Увеличение размера при наведении */
 }
+.contacts a:hover {
+    color: green; /* цвет ссылки при наведении, если popup не активен */
+  }
+.contact-active {
+    color: #BEFF54; /* новый цвет для активной ссылки */
+  }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 33px;
+    height: 21px;
+}
+
+.contact-popup p {
+    color: #FBFBFB;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* Set the default text color for email and phone text */
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.contact-popup a {
+    color: #5A5F62; /* Set a different text color for email links */
+    text-decoration: none; /* Optional: removes the underline from links */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.contact-popup a:hover {
+    color: #BEFF54; /* Optional: change color on hover */
 }
 
 .company-name {
     color: #FBFBFB;
-    font-family: Kanit;
-    font-size: 20px;
+    font-family: Michroma;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 30px; 
+    margin-top: 5px;
 }
 
 nav {
@@ -540,10 +614,6 @@ input[id="company-name-pop-up"]:focus {
     margin-left: auto;
 }
 
-
-
-
-
 /* брат, здесь футтер) */
 .footer {
     margin-left: 25px;
@@ -554,4 +624,171 @@ input[id="company-name-pop-up"]:focus {
     height: 230px;
     border-radius: 12px;
     display: flex;
+}
+
+
+/* adaptive */
+
+
+@media (max-width: 768px) {
+    .staticHeader {
+        justify-content: center; /* Выравниваем логотип по центру */
+        border-bottom-left-radius: 15px; /* Закругляем нижние углы */
+        border-bottom-right-radius: 15px;
+        margin: 0 0 25px 0; /* Убираем верхние и боковые отступы, оставляем только нижний */
+        height: 91px;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    }
+  
+    .nav-item,
+    .contacts {
+        display: none; /* Скрываем элементы навигации и контакты */
+    }
+  
+    .logo-container {
+        position: absolute;
+        left: 20%;
+        transform: translateX(-50%); /* Центрируем логотип */
+        margin-top: 22px;
+    }
+  
+    .menu-icon { /* Добавляем стили для SVG иконки меню */
+        display: block; /* или inline-block в зависимости от вашего layout */
+        position: absolute;
+        right: 20px; /* Позиционируем иконку меню справа */
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container {
+        left: 23%;
+    }
+}
+
+@media (max-width: 523px) {
+    .logo-container {
+        left: 30%;
+    }
+}
+
+@media (max-width: 418px) {
+    .logo-container {
+        left: 38%;
+    }
+}
+
+
+.mobile-menu {
+    display: none; /* Скрыть меню до активации */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B1D1E; /* Цвет фона меню */
+    color: #FBFBFB; /* Цвет текста */
+    z-index: 1000; /* Должно быть выше всех других элементов */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .close-menu {
+    margin-top: 142%;
+    margin-right: 20px;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .menu-list li {
+    padding: 13px 0;
+  }
+  
+  .menu-list li a {
+    text-decoration: none;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu-list img {
+    height: 24px; /* Примерный размер */
+    margin-left: 5px; /* Отступ от текста */
+  }
+  
+  .contacts-info {
+    /* Скрываем, но не через display, чтобы позволить анимацию */
+    visibility: hidden; 
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    background: #1B1D1E;
+    color: #FBFBFB;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.contact-label {
+    color: #FBFBFB; /* Замените на желаемый цвет для слова 'email' и 'phone' */
+}
+
+.contact-value {
+    color: #5A5F62; /* Замените на желаемый цвет для значений, таких как 'lalalla@net.com' и номер телефона */
+}
+
+
+.contacts-info.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.arrow-rotate {
+    transition: transform 0.5s;
+}
+
+/* Этот класс должен соответствовать тому, что добавляется в JavaScript */
+.down {
+    transform: rotate(135deg);
+    transition: transform 0.5s;
+}
+
+
+  
+  /* Стиль для пункта меню, который открывает контакты */
+  .contacts-trigger {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .contacts-trigger img {
+    /* Ваши начальные стили для стрелки */
+    transition: transform 0.5s; /* Плавность анимации */
 }
