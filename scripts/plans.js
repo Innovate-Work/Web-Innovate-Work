@@ -168,3 +168,105 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+// pop up action
+document.addEventListener('DOMContentLoaded', function() {
+    const packages = document.querySelectorAll('.package');
+    const modal = document.querySelector('.modal');
+    const modalText = modal.querySelector('.modal-text');
+    const packageNameSpan = modalText.querySelector('.package-name');
+    const packageFeatures = modalText.querySelector('ul');
+    const nextButton = document.querySelector('.next-button');
+    const customInterfaceButton = document.querySelector('.service-button:nth-child(1)');
+    const maintenanceButton = document.querySelector('.service-button:nth-child(2)');
+
+    let selectedPackage = null;
+
+    packages.forEach(pkg => {
+        pkg.addEventListener('click', function() {
+            packages.forEach(p => p.classList.remove('selected'));
+            pkg.classList.add('selected');
+            selectedPackage = pkg;
+        });
+    });
+
+    nextButton.addEventListener('click', function() {
+        if (selectedPackage) {
+            const packageName = selectedPackage.querySelector('h2').innerText;
+            while (packageFeatures.firstChild) {
+                packageFeatures.removeChild(packageFeatures.firstChild);
+            }
+            packageNameSpan.innerText = packageName.toUpperCase();
+            const features = selectedPackage.querySelectorAll('ul li');
+            features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature.textContent;
+                packageFeatures.appendChild(li);
+            });
+            modal.style.display = 'block';
+        }
+    });
+
+    modal.querySelector('.close').addEventListener('click', function() {
+        modal.style.display = 'none';
+        customInterfaceButton.setAttribute('data-active', 'false');
+        maintenanceButton.setAttribute('data-active', 'false');
+        customInterfaceButton.classList.remove('active-button-class');
+        maintenanceButton.classList.remove('active-button-class');
+    });
+});
+
+
+const form = document.getElementById('validation-form');
+const inputs = form.querySelectorAll('input');
+
+function showInputError(input) {
+    const errorDiv = document.getElementById(input.id + '-error');
+    if (input.validity.valueMissing) {
+        errorDiv.textContent = 'This field is required.';
+        errorDiv.style.display = 'block';
+    } else if (input.validity.patternMismatch) {
+        if (input.type === "email") {
+            errorDiv.textContent = 'Please enter a valid email.';
+        } else if (input.type === "tel") {
+            errorDiv.textContent = 'Please enter a valid phone number.';
+        }
+        errorDiv.style.display = 'block';
+    } else {
+        errorDiv.textContent = '';
+        errorDiv.style.display = 'none';
+    }
+}
+
+function validateForm(e) {
+    e.preventDefault();
+
+    let valid = true;
+    let errorMessage = "";
+
+    inputs.forEach(input => {
+        if (!input.validity.valid) {
+            valid = false;
+            if (input.validity.valueMissing) {
+                errorMessage += `Field ${input.placeholder} is required.\n`;
+            } else if (input.validity.patternMismatch) {
+                if (input.type === "email") {
+                    errorMessage += 'Please enter a valid email.\n';
+                } else if (input.type === "tel") {
+                    errorMessage += 'Please enter a valid phone number.\n';
+                }
+            }
+            showInputError(input);
+        } else {
+            document.getElementById(input.id + '-error').style.display = 'none';
+        }
+    });
+
+    if (!valid) {
+        alert(errorMessage);
+    } else {
+        form.submit();
+    }
+}
+
+form.addEventListener('submit', validateForm);

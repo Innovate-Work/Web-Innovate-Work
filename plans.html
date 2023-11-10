@@ -14,7 +14,7 @@
             <a href="main.html"> 
                 <img src="src/Logo.svg" alt="Logo" class="logo">
             <div class="company-name">Innovate Work</div>
-        </a>
+            </a>
         </div>
         <nav>
             <a href="works.html" class="nav-item" data-link="works">Works</a>
@@ -24,7 +24,35 @@
         <div class="contacts">
             <a href=#>contacts</a>
         </div>
+        <div class="menu-icon">
+            <img src="src/menu-2.svg" alt="Menu">
+        </div>
+        
     </header>
+    
+    <!-- Мобильное меню -->
+    <div id="menu" class="mobile-menu">
+    <div class="menu-header">
+    <img class="close-menu" src="src/menu-2-2.svg">
+    </div>
+<ul class="menu-list">
+  <li><a href="plans.html">Plans <img src="src/arrows.svg" alt=""></a></li>
+  <li><a href="works.html">Works <img src="src/arrows.svg" alt=""></a></li>
+  <li><a href="about.html">About <img src="src/arrows.svg" alt=""></a></li>
+  <!-- При клике на этот li будут показываться контакты -->
+  <li class="contacts-trigger">Contacts <img src="src/arrows.svg" alt=""></li>
+</ul>
+<!-- Блок с контактной информацией -->
+<div class="contacts-info">
+    <p><span class="contact-label">email:</span> <span class="contact-value">lalalla@net.com</span></p>
+    <p><span class="contact-label">phone:</span> <span class="contact-value">+123456789</span></p>
+</div>
+</div>
+
+<div id="contact-popup" class="contact-popup">
+<p>email: <a href="mailto:contact@innovatework.net">contact@innovatework.net</a></p>
+<p>phone: +1 (714) 907 50 27</p>
+</div>
     
     <main>
         <h1>OUR SUGGESTIONS</h1>

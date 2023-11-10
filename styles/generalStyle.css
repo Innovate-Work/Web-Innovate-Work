@@ -97,9 +97,6 @@
      color: #BEFF54;  
    /* transform: scale(1.05); Увеличение размера при наведении */
 }
-.contacts a:hover {
-    color: green; /* цвет ссылки при наведении, если popup не активен */
-  }
 .contact-active {
     color: #BEFF54; /* новый цвет для активной ссылки */
   }
