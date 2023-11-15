@@ -504,6 +504,10 @@ input[id="company-name-pop-up"]:focus {
     margin-right: 60px;
 }
 
+.mobile-logo-text {
+    display: none;
+}
+
 .about-links{
     width: 504px;
     margin-top:58px;
@@ -626,15 +630,16 @@ input[id="company-name-pop-up"]:focus {
 
 /* adaptive */
 
-
 @media (max-width: 768px) {
     .staticHeader {
-        justify-content: center; /* Выравниваем логотип по центру */
+        justify-content: left; 
         border-bottom-left-radius: 15px; /* Закругляем нижние углы */
         border-bottom-right-radius: 15px;
         margin: 0 0 25px 0; /* Убираем верхние и боковые отступы, оставляем только нижний */
         height: 91px;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+        width: auto;
+        
     }
   
     .nav-item,
@@ -644,9 +649,10 @@ input[id="company-name-pop-up"]:focus {
   
     .logo-container {
         position: absolute;
-        left: 20%;
+        margin-left: 25px;
         transform: translateX(-50%); /* Центрируем логотип */
         margin-top: 22px;
+        margin-left: 91px;
     }
   
     .menu-icon { /* Добавляем стили для SVG иконки меню */
@@ -657,24 +663,13 @@ input[id="company-name-pop-up"]:focus {
         transform: translateY(-50%);
         margin-top: 15px;
     }
-}
 
-@media (max-width: 576px) {
-    .logo-container {
-        left: 23%;
+    .footer {
+        padding: 30px;
+        flex-direction: column;
+        text-align: start;
     }
-}
 
-@media (max-width: 523px) {
-    .logo-container {
-        left: 30%;
-    }
-}
-
-@media (max-width: 418px) {
-    .logo-container {
-        left: 38%;
-    }
 }
 
 
@@ -769,8 +764,6 @@ input[id="company-name-pop-up"]:focus {
     transition: transform 0.5s;
 }
 
-
-  
   /* Стиль для пункта меню, который открывает контакты */
   .contacts-trigger {
     cursor: pointer;
@@ -788,4 +781,66 @@ input[id="company-name-pop-up"]:focus {
   .contacts-trigger img {
     /* Ваши начальные стили для стрелки */
     transition: transform 0.5s; /* Плавность анимации */
+}
+
+@media (max-width: 576px) {
+    .about-links {
+        width: auto;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 35px;
+        flex-direction: column;
+        text-align: start;
+        height: auto;
+        margin: 0px;
+    }
+
+    .social-network-link-group {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-top: 32px;
+        justify-content: center;
+    }
+
+    .contact-info{
+        display: none;
+    }
+
+    .logo-footer {
+        width: 32.5px;
+        height: 20px;
+        margin: 0px;
+        margin-top: 8px;
+    }
+
+    .link-group {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        gap: 4px;
+    }
+
+    .mobile-logo-text {
+        display: block;
+        color: #FBFBFB;
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        padding-right: 100px;
+    }
+
+    .logo-div-footer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 25px;
+        gap: 5px;
+    }
+
 }

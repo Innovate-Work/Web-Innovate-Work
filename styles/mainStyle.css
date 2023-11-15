@@ -43,8 +43,8 @@ body {
 .content-wrapper {
     margin-top: 70px;
     display: flex;
-    justify-content: center; /* горизонтальное центрирование */
-    height: 100vh; /* делаем контейнер высотой во всю высоту экрана, чтобы он был центрирован */
+    justify-content: center;
+    height: 100vh;
 }
 
 .description-main {
@@ -144,6 +144,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    margin-bottom: 40px;
 }
 
 
@@ -445,3 +446,264 @@ input[id="name"]:focus {
 
 
 
+
+@media (max-width: 768px) { /* Adjustments for tablets */
+    .text-content {
+        font-size: 48px; /* Adjust font size */
+        line-height: 56px; /* Adjust line height */
+        padding-left: 10px;
+    }
+
+    .text-solutions {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -1px;
+    }
+
+    .description-main {
+        width: auto; /* Allow the text to flow naturally */
+        font-size: 18px;
+        line-height: 27px; /* 150% */
+        margin-right: 20px;
+    }
+
+    .button {
+        width: auto; /* Allow the button to fit content */
+        height: auto;
+        padding: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) { 
+
+    .content-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .text-content {
+        order: 1;
+        color: #FBFBFB;
+        font-family: Manrope;
+        font-size: 58px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 54px; /* 93.103% */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text-solutions {
+        order: 2;
+        color: #BEFF54;
+        font-family: Manrope;
+        font-size: 58px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 54px;
+    }
+
+    .animation-gif {
+        order: 5; /* The GIF comes last */
+        max-width: 80vw;
+        max-height: 80vw;
+        margin-top: 0;
+    }
+
+    .description-main {
+        order: 3;
+        color: #FBFBFB;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+        margin-top: 30px;
+    }
+
+    .button {
+        order: 4;
+        width: 175px;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .button .arrow-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #BEFF54;
+        width: 48px;
+        height: 48px;
+        border-radius: 100px;
+        margin: 4px;
+        margin-left: -7px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headline {
+        color: #BEFF54; 
+        font-family: Manrope;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        text-transform: uppercase;
+        text-align: center; 
+        margin-top: 10px;
+    }
+
+    .cell {
+        display: flex; 
+        flex-direction: row;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .title {
+        color: #FBFBFB; /* Color for the title */
+        font-family: Manrope;
+        font-size: 20px; /* Adjusted font size */
+        font-style: normal ;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left; 
+        padding-left: 10px;
+    }
+
+    .description {
+        color: #FBFBFB; /* Color for the description */
+        font-family: Manrope;
+        font-size: 14px; /* Adjusted font size */
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        padding-left: 10px; /* Add padding for better readability */
+        padding-top: 10px;
+    }
+
+    .svg-container {
+        height: 65px; /* Adjusted height for svg */
+        margin-left: 5px;
+    }
+
+    .container-animation-text {
+        width: 100%;
+        height: 87px;
+        flex-shrink: 0;
+        background: #BEFF54;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Define the text styles for the first line */
+    .first-line {
+        color: #000;
+        font-family: Manrope;
+        font-size: 14.727px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 14.219px; /* 96.552% */
+        letter-spacing: 0.265px;
+        text-transform: uppercase;
+        position: absolute;
+        white-space: nowrap;
+        left: 100%;
+        margin: -9px;
+        padding: 0px;
+    }
+
+    .second-line {
+        color: #000;
+        text-align: right;
+        font-family: Manrope;
+        font-size: 14.727px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 14.219px; /* 96.552% */
+        letter-spacing: 0.265px;
+        text-transform: uppercase;
+        position: absolute;
+        white-space: nowrap;
+        right: 100%;
+        padding: 0px;
+        margin: -43px;
+    }
+
+    .form-title {
+        font-size: 30px;
+    }
+
+    .form {
+        display: block;
+        margin-top: 0em;
+    }
+
+    .contact-message {
+        display: none;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px !important;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+   
+    input[id="email"], input[id="phone"], input[id="name"] {
+    width: 80vw !important;
+    height: 20px !important;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5a5f62);
+    color: var(--input-text-color, #fff);
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+
+.submit-button {
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+    background: var(--button-background, #beff54);
+    color: var(--button-text-color, #000);
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+}
