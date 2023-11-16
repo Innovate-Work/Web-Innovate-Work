@@ -86,18 +86,18 @@ function updatePackages(tabName) {
 
     if (tabName === "Application and Website") {
         packages[0].style.width = "707px";
-        packages[0].style.height = "435px";
+        packages[0].style.height = "auto";
         packages[0].style.margin = "0 auto"; // Для центрирования
     } else {
         packages.forEach((packageElem) => {
             packageElem.style.width = "340px"; // Возвращаем первоначальные размеры
-            packageElem.style.height = "410px";
+            packageElem.style.height = "auto";
 
             // Условие для вкладки "Application"
             if (tabName === "Application") {
-                packageElem.style.height = "430px"; // Увеличиваем на 10px
+                packageElem.style.height = "auto"; // Увеличиваем на 10px
             } else {
-                packageElem.style.height = "410px"; // Оригинальная высота
+                packageElem.style.height = "auto"; // Оригинальная высота
             }
 
             packageElem.style.margin = "0"; // Убираем стили центрирования
@@ -171,41 +171,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // pop up action
 document.addEventListener('DOMContentLoaded', function() {
-    const packages = document.querySelectorAll('.package');
     const modal = document.querySelector('.modal');
     const modalText = modal.querySelector('.modal-text');
     const packageNameSpan = modalText.querySelector('.package-name');
     const packageFeatures = modalText.querySelector('ul');
-    const nextButton = document.querySelector('.next-button');
     const customInterfaceButton = document.querySelector('.service-button:nth-child(1)');
     const maintenanceButton = document.querySelector('.service-button:nth-child(2)');
 
-    let selectedPackage = null;
-
-    packages.forEach(pkg => {
-        pkg.addEventListener('click', function() {
-            packages.forEach(p => p.classList.remove('selected'));
-            pkg.classList.add('selected');
-            selectedPackage = pkg;
-        });
-    });
-
-    nextButton.addEventListener('click', function() {
-        if (selectedPackage) {
-            const packageName = selectedPackage.querySelector('h2').innerText;
+    document.querySelectorAll('.package .button-view').forEach(button => {
+        button.addEventListener('click', function(event) {
+            const packageElem = event.target.closest('.package');
+            const packageName = packageElem.querySelector('h2').innerText;
+            // Clear existing features
             while (packageFeatures.firstChild) {
                 packageFeatures.removeChild(packageFeatures.firstChild);
             }
             packageNameSpan.innerText = packageName.toUpperCase();
-            const features = selectedPackage.querySelectorAll('ul li');
+            const features = packageElem.querySelectorAll('ul li');
             features.forEach(feature => {
                 const li = document.createElement('li');
                 li.textContent = feature.textContent;
                 packageFeatures.appendChild(li);
             });
             modal.style.display = 'block';
-        }
+        });
     });
+
 
     modal.querySelector('.close').addEventListener('click', function() {
         modal.style.display = 'none';
@@ -215,6 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
         maintenanceButton.classList.remove('active-button-class');
     });
 });
+
+
 
 
 const form = document.getElementById('validation-form');
