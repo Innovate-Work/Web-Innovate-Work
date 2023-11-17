@@ -205,6 +205,162 @@ h1 {
 }
 
 
+/* table */
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.feature-service {
+    padding: 100px 50px;
+  }
+  
+  .section-heading {
+    color: #282A2C;
+    font-size: 45px;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  
+  .first-heading {
+    color: #beff54;
+  }
+  
+  .feature-service-table {
+    width: 100%;
+    /* Set the table width as needed */
+    color: white;
+    table-layout: fixed;
+    /* Set table layout to fixed */
+  }
+
+  .fa-check:before {
+    content: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTUgMTJMMTAgMTdMMjAgNyIgc3Ryb2tlPSIjQkVGRjU0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+  }
+
+  .first-heading-text {
+    margin-bottom: -45px;
+    color: #BEFF54;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;   
+  }
+  
+  .fa-solid, .fas {
+    font-weight: 900;
+}
+  
+  .feature-service-table td {
+    width: 25%;
+    /* Divide the table into 4 equal parts (since you have 4 columns) */
+    text-align: center;
+    /* Center align content within cells */
+  }
+
+  .first-heading {
+    padding-bottom: 0px;
+  }
+  
+  .head-div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #1B1D1E;
+    padding-bottom: 10px;
+    border-top-left-radius: 14px; 
+    border-top-right-radius: 14px;
+  }
+
+  .head-div h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: auto;
+  }
+  
+  .head-div p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; 
+    margin-top: 13px
+  }
+
+  .head-div p span {
+    color: #5A5F62;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 5px;
+    margin-top: 13px;
+  }
+
+  .button-get-started {
+    display: block;
+    background-color: #141515;
+    color: #BEFF54;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 137px;
+    height: 40px;
+    margin: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  .button-get-started:hover {
+    background-color: #2d2e2e;
+}
+
+  .tr-body {
+    line-height: 2.5;
+  }
+  
+  .feature-service-table td {
+    width: 20%;
+    /* Set the width for the other columns */
+    text-align: center;
+  }
+  
+  .feature-service-table td:first-child {
+    width: 30%;
+    /* Set a different width for the first column */
+    text-align: left;
+    /* Align text in the first column to the left */
+    padding: 10px;
+    /* Add padding for better spacing */
+  }
+  
+  .tr-body:nth-child(odd) {
+    background-color: #1B1D1E;
+  }
+
+
+
+
 @media (max-width: 576px) {
     h1 {
         color: #BEFF54;
@@ -281,7 +437,7 @@ h1 {
 
     .package {
         background-color: #FBFBFB;
-        width: 100vw;
+        width: 100vw !important; 
         height: auto;
         padding: 35px;
         border-radius: 15px;
@@ -363,6 +519,49 @@ h1 {
         height: 1px;
         background-color: #BABCC0;
         margin: 20px 0;
+    }
+
+
+    .tr-body {
+        line-height: 1;
+      }
+    
+      .tr-body:first-child {
+        font-size: 12px;
+      }
+    
+      .feature-service {
+        padding: 20px 5px;
+      }
+
+      .modal-section div{
+        padding: 0;
+      }
+    
+      .head-div h3 {
+        font-size: 15px;
+      }
+
+      .button-get-started {
+        display: none;
+      }
+
+      .first-heading-text {
+        margin: 0px;
+    }
+    .feature-service-table td:first-child {
+        padding: 18px;
+    }
+
+    .section-heading {
+        color: #282A2C;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        text-transform: uppercase;       
     }
 
 }
