@@ -612,22 +612,23 @@ input[id="name"]:focus {
     }
     
     /* Define the text styles for the first line */
-    .first-line {
+     .first-line {
         color: #000;
+        text-align: center;
         font-family: Manrope;
-        font-size: 14.727px;
+        font-size: 34px;
         font-style: normal;
         font-weight: 700;
-        line-height: 14.219px; /* 96.552% */
-        letter-spacing: 0.265px;
+        line-height: 34px; /* 100% */
+        letter-spacing: 0.612px;
         text-transform: uppercase;
-        position: absolute;
+        /* position: absolute;
         white-space: nowrap;
         left: 100%;
-        margin: -9px;
+        margin: -9px; */
         padding: 0px;
     }
-
+/*
     .second-line {
         color: #000;
         text-align: right;
@@ -635,7 +636,7 @@ input[id="name"]:focus {
         font-size: 14.727px;
         font-style: normal;
         font-weight: 700;
-        line-height: 14.219px; /* 96.552% */
+        line-height: 14.219px; 
         letter-spacing: 0.265px;
         text-transform: uppercase;
         position: absolute;
@@ -643,10 +644,11 @@ input[id="name"]:focus {
         right: 100%;
         padding: 0px;
         margin: -43px;
-    }
+    } */
 
     .form-title {
         font-size: 30px;
+        text-align: left;
     }
 
     .form {

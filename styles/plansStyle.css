@@ -353,11 +353,317 @@ table {
     padding: 10px;
     /* Add padding for better spacing */
   }
-  
-  .tr-body:nth-child(odd) {
-    background-color: #1B1D1E;
-  }
 
+  .feature-service-table tbody tr:nth-child(odd):not(:first-child) {
+    background-color: #1B1D1E; /* будет применяться к каждой нечетной строке, начиная с третьей */
+}
+
+  /* popup.css */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.modal-content {
+    width: 77vw;      /* Длина */
+    height: 77vh;     /* Высота */
+    background: #1B1D1E;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    padding: 55px 78px;
+}
+.close {
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    color: #FBFBFB;
+    text-align: left;
+    font-family: Manrope;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px; 
+    text-transform: uppercase;
+    margin-bottom: 66px;
+    margin-top: 0;
+}
+
+.modal-text p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.package-name {
+    color: #101011;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px; /* 125% */
+    text-transform: uppercase;
+    padding: 4px 7px; /* 4px сверху и снизу, 7px слева и справа */
+    border-radius: 8px;
+    background-color: #BEFF54; /* Это зеленый цвет, который вы ранее упоминали */
+}
+
+.modal-text li {
+    margin-bottom: 13px; /* Расстояние между элементами списка */
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+}
+
+.modal-text ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.modal-text ul li {
+    color: #FBFBFB;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+    position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
+    padding-left: 30px; /* Создаем пространство для SVG иконки */
+}
+
+.modal-text ul li::before {
+    content: ''; /* Очищаем содержимое ::before */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем SVG иконку по вертикали */
+    width: 26px; /* Размер SVG иконки */
+    height: 26px; /* Размер SVG иконки */
+    background: url('../src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
+}
+
+.service-hint {
+    position: relative;
+    display: inline-block; 
+}
+
+.service-icon {
+    cursor: pointer;
+    margin-bottom: -7px;
+}
+
+.service-icon:hover {
+    content: url('../src/QuestionWhite.svg');
+}
+
+.hint-text {
+    display: none; 
+    position: absolute;
+    left: 100%; /* Позиционируем слева от иконки */
+    top: 50%; 
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    width: 256px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #FBFBFB;
+    background: #1B1D1E;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.service-icon:hover + .hint-text {
+    display: block;
+}
+
+
+
+
+
+input[id="email-pop-up"],
+input[id="phone-pop-up"],
+input[id="name-pop-up"],
+input[id="company-name-pop-up"]{
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    color: var(--input-text-color, #fff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[id="email-pop-up"]:focus,
+input[id="phone-pop-up"]:focus,
+input[id="name-pop-up"]:focus,
+input[id="company-name-pop-up"]:focus {
+    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
+    caret-color: var(--input-focus-underline, #BEFF54); 
+}
+
+.submit-button-pop-up {
+    width: 90%;
+    height: 60px;
+    flex-shrink: 0;
+    background: var(--button-background, #BEFF54);
+    color: var(--button-text-color, #000);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.submit-button-pop-up:hover {
+    background: var(--button-hover-background, #5A5F62);
+    color: var(--button-hover-text-color, #fff);
+}
+
+
+.contact-details h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 90%;
+}
+
+.modal-text {
+    display: flex;
+    align-items: start;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 20px; /* Расстояние от линии до формы */
+    max-width: 50%;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 300px;
+    background-color: #5A5F62;
+    margin: 0 15px; /* Отступы по бокам линии */
+}
+.text-packge-name {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.text-details {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.additional-services {
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.additional-services h2 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-right: 4px;
+}
+
+.services-options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: left;
+    margin-left: -24px;
+}
+
+.services-text-and-icon{
+    display: flex; /* Изменяем на flex для горизонтального размещения элементов */
+    justify-content: start; /* Выравнивание элементов слева */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
+    width: 100%;
+}
+
+/* Новые стили для кнопок */
+.service-button {
+    padding: 10px 20px; 
+    border: 1px solid #5A5F62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 20px;
+    color: #5A5F62;
+}
+
+.service-button[data-active="true"] {
+    border-color: #BEFF54;
+    color: #FBFBFB;
+}
+.service-button:hover {
+    background-color: #5A5F62; /* Цвет фона при наведении */
+    color: #FBFBFB;
+}
+.service-button:hover::before {
+    content: url('../src/cyrcleWhite.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+}
+.service-button::before {
+    content: url('../src/GroupCyrcle.svg'); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
+    margin-right: 10px; /* Расстояние между текстом и изображением */
+    vertical-align: middle;
+}
+.service-button[data-active="true"]::before {
+    content: url('../src/CyrcleGreen.svg'); 
+}
 
 
 
@@ -563,5 +869,291 @@ table {
         line-height: 28px; /* 116.667% */
         text-transform: uppercase;       
     }
+
+  /* pop up */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.modal-content {
+    background: #1B1D1E;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    padding: 30px 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 90vh; /* Set a maximum height */
+}
+.close {
+    margin-bottom: 41px;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    color: #FBFBFB;
+    text-align: left;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+    text-transform: uppercase;
+    margin-bottom: 37px;
+    margin-top: 0;
+}
+
+.modal-text p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.package-name {
+    color: #101011;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+    padding: 4px 7px; /* 4px сверху и снизу, 7px слева и справа */
+    border-radius: 8px;
+    background-color: #BEFF54; /* Это зеленый цвет, который вы ранее упоминали */
+}
+
+.modal-text li {
+    margin-bottom: 13px; /* Расстояние между элементами списка */
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+}
+
+.modal-text ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.modal-text ul li {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
+    position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
+    padding-left: 30px; /* Создаем пространство для SVG иконки */
+}
+
+.modal-text ul li::before {
+    content: ''; /* Очищаем содержимое ::before */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем SVG иконку по вертикали */
+    width: 26px; /* Размер SVG иконки */
+    height: 26px; /* Размер SVG иконки */
+    background: url('../src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
+}
+
+.service-hint {
+    position: relative;
+    display: inline-block; 
+}
+
+.service-icon {
+    cursor: pointer;
+    margin-bottom: -7px;
+}
+
+.service-icon:hover {
+    content: url('../src/QuestionWhite.svg');
+}
+
+.hint-text {
+    display: none;
+    position: absolute;
+    bottom: -168px;
+    left: -255px;
+    top: auto;
+    transform: translateY(-50%);
+    width: 256px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #FBFBFB;
+    background: #1B1D1E;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.service-icon:hover + .hint-text {
+    display: block;
+}
+
+.additional-services h2 {
+    color: #FBFBFB;
+    text-align: left;
+    margin-right: 4px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.additional-services {
+    width: 72vw;
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 68vw;
+    margin-top: 14px;
+    margin-left: 0px;
+}
+
+.service-button {
+    padding: 10px 20px;
+    border: 1px solid #5A5F62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 20px;
+    color: #5A5F62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}
+
+
+input[id="email-pop-up"],
+input[id="phone-pop-up"],
+input[id="name-pop-up"],
+input[id="company-name-pop-up"]{
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    color: var(--input-text-color, #fff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[id="email-pop-up"]:focus,
+input[id="phone-pop-up"]:focus,
+input[id="name-pop-up"]:focus,
+input[id="company-name-pop-up"]:focus {
+    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
+    caret-color: var(--input-focus-underline, #BEFF54); 
+}
+
+.submit-button-pop-up {
+    width: 96%;
+    height: 46px;
+    flex-shrink: 0;
+    background: var(--button-background, #BEFF54);
+    color: var(--button-text-color, #000);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.submit-button-pop-up:hover {
+    background: var(--button-hover-background, #5A5F62);
+    color: var(--button-hover-text-color, #fff);
+}
+
+
+.contact-details h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 90%;
+}
+
+.modal-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 0px;
+    max-width: 94%;
+}
+
+.vertical-line {
+    display: none;
+}
+.text-packge-name {
+    margin-top: 0;
+    margin-bottom: 33px;
+}
+.text-details {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
 
 }
