@@ -207,7 +207,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.service-button');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var isActive = this.getAttribute('data-active') === 'true';
+            this.setAttribute('data-active', !isActive);
+        });
+    });
+});
 
+// Находим элемент иконки и текста подсказки
+var serviceIcon = document.querySelector('.service-icon');
+var hintText = document.querySelector('.hint-text');
+
+// Обработчик клика для иконки
+serviceIcon.addEventListener('click', function() {
+  // Переключаем отображение текста подсказки
+  hintText.style.display = hintText.style.display === 'block' ? 'none' : 'block';
+});
 
 
 const form = document.getElementById('validation-form');
