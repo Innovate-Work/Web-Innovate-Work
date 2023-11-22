@@ -313,16 +313,16 @@ label {
     display: none; 
 }
 
-input[id="email"],
-input[id="phone"],
-input[id="name"] {
+.page-container .contact-form .data-entrance #email,
+.page-container .contact-form .data-entrance #phone,
+.page-container .contact-form .data-entrance #name {
     width: 538px;
     height: 40px;
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    border-bottom: 1px solid var(--input-underline, #5a5f62);
     color: var(--input-text-color, #fff);
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -333,11 +333,11 @@ input[id="name"] {
     transition: border-color 0.3s ease-in-out;
 }
 
-input[id="email"]:focus,
-input[id="phone"]:focus,
-input[id="name"]:focus {
+.page-container .contact-form .data-entrance #email:focus,
+.page-container .contact-form .data-entrance #phone:focus,
+.page-container .contact-form .data-entrance #name:focus {
     border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
-    caret-color: var(--input-focus-underline, #BEFF54); /* Change caret color on focus */
+    caret-color: var(--input-focus-underline, #BEFF54); /* Изменение цвета курсора при фокусе */
 }
 
 .submit-button {
