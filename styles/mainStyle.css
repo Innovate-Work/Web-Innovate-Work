@@ -190,7 +190,6 @@ body {
     border-radius: 8px;
     transform: translateX(100px) scale(1);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cell:hover {
@@ -709,3 +708,12 @@ input[id="name"]:focus {
     margin-top: 48px;
 }
 }
+
+@media (hover: none) {
+    a:hover, button:hover, .class:hover {
+      /* Сброс стилей для hover здесь */
+      background-color: inherit; /* Пример сброса фонового цвета */
+      color: inherit; /* Пример сброса стиля текста */
+      /* Другие свойства, которые вы хотите сбросить */
+    }
+  }

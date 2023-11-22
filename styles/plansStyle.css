@@ -991,12 +991,12 @@ input[id="company-name-pop-up"]:focus {
 .hint-text {
     display: none;
     position: absolute;
-    bottom: -168px;
-    left: -255px;
+    bottom: -219px;
+    left: -163px;
     top: auto;
     transform: translateY(-50%);
-    width: 256px;
-    height: 82px;
+    width: 156px;
+    height: 116px;
     flex-shrink: 0;
     border-radius: 12px;
     border: 1px solid #FBFBFB;
@@ -1008,7 +1008,7 @@ input[id="company-name-pop-up"]:focus {
     font-weight: 400;
     line-height: 18px;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .service-icon:hover + .hint-text {
@@ -1155,5 +1155,18 @@ input[id="company-name-pop-up"]:focus {
     margin-top: 15px;
     margin-bottom: 20px;
 }
-
 }
+
+@media (hover: none) {
+    a:hover, button:hover, .class:hover {
+      /* Сброс стилей для hover здесь */
+      background-color: inherit; /* Пример сброса фонового цвета */
+      color: inherit; /* Пример сброса стиля текста */
+      /* Другие свойства, которые вы хотите сбросить */
+    }
+
+    .service-button:hover {
+        background: #1B1D1E;
+      }
+
+  }
