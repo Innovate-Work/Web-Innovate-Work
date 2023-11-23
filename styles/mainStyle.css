@@ -402,19 +402,6 @@ label {
     left: 100%; /* Начать текст с правой стороны контейнера */
 }
 
-.first-line.animate-first {
-    animation: scrollFirstText 6s linear forwards;
-}
-
-@keyframes scrollFirstText {
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: 0; /* Остановить на левом крае */
-    }
-}
-
 /* Define the text styles for the second line */
 .second-line {
     color: var(--_, #101011);
@@ -430,18 +417,7 @@ label {
     right: 100%; /* Начать текст с левой стороны контейнера */
 }
 
-.second-line.animate-second {
-    animation: scrollSecondText 6s linear forwards;
-}
 
-@keyframes scrollSecondText {
-    0% {
-        right: 100%;
-    }
-    100% {
-        right: 0; /* Остановить на правом крае */
-    }
-}
 
 
 
@@ -549,6 +525,8 @@ label {
     .container {
         flex-direction: column;
         height: auto;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .headline {
@@ -578,7 +556,6 @@ label {
         font-weight: 600;
         line-height: 24px;
         text-align: left; 
-        padding-left: 10px;
     }
 
     .description {
@@ -588,7 +565,6 @@ label {
         font-style: normal;
         font-weight: 500;
         line-height: 20px;
-        padding-left: 10px; /* Add padding for better readability */
         padding-top: 10px;
     }
 
@@ -599,7 +575,7 @@ label {
 
     .container-animation-text {
         width: 100%;
-        height: 87px;
+        height: 114px;
         flex-shrink: 0;
         background: #BEFF54;
         display: flex;
@@ -608,6 +584,7 @@ label {
         position: relative;
         justify-content: center;
         align-items: center;
+        border-radius: 20px;
     }
     
     /* Define the text styles for the first line */
@@ -621,29 +598,15 @@ label {
         line-height: 34px; /* 100% */
         letter-spacing: 0.612px;
         text-transform: uppercase;
-        /* position: absolute;
-        white-space: nowrap;
-        left: 100%;
-        margin: -9px; */
         padding: 0px;
+        white-space: unset;
+        top: 6px;
+        position: static;
     }
-/*
+
     .second-line {
-        color: #000;
-        text-align: right;
-        font-family: Manrope;
-        font-size: 14.727px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 14.219px; 
-        letter-spacing: 0.265px;
-        text-transform: uppercase;
-        position: absolute;
-        white-space: nowrap;
-        right: 100%;
-        padding: 0px;
-        margin: -43px;
-    } */
+        display: none;
+    }
 
     .form-title {
         font-size: 30px;

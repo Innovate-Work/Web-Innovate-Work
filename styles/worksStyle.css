@@ -147,3 +147,131 @@ body {
 
 
 
+@media (max-width: 576px) { 
+    .works-section {
+        margin-left: 0px;
+        margin-top: 44px;
+        padding: 15px 25px;
+    }
+
+    .works-title {
+        color: #BEFF54;
+        font-family: 'Manrope', sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+
+    .works-textbox {
+        margin-top: 32px;
+        width: auto;
+        color: #5A5F62;
+        font-family: 'Manrope', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    
+
+    .tabs {
+        display: flex;
+        padding: 4px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        margin: 25px 60px 0 60px;
+        margin-top: 88px;
+        border-radius: 12px;
+        background: #1B1D1E;
+    }
+
+    .tabs div {
+        display: flex;
+        width: 95%;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+        background: #1B1D1E;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .tabs {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        margin: 25px 20px;
+        margin-top: 48px;
+        border-radius: 12px;
+        background: #1B1D1E;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .tabs div p {
+        color: #BEFF54;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .works-packages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .work-package {
+        background-color: #1B1D1E;
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 20px;
+    }
+
+    .content-works {
+        background: #FBFBFB;
+        border-radius: 20px;
+        width: 100%;
+        height: 207px;
+    }
+
+    .name-example {
+        color: #FBFBFB;
+        font-family: Manrope;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16.689px;
+        padding-left: 15px;
+    }
+
+    .link-example {
+        color: #BEFF54;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15.646px;
+        padding-left: 17px;
+    }
+
+
+
+}
