@@ -98,11 +98,11 @@ body {
 }
 
 .work-package {
+    background-color: #1B1D1E;
     width: 650px;
     height: 480px;
     flex-shrink: 0;
     border-radius: 20px;
-    background: var(--, #1B1D1E);
 }
 
 
@@ -128,23 +128,43 @@ body {
 }
 
 .name-example {
-    color: var(--_, #FBFBFB);
+    color: #FBFBFB;
     font-family: Manrope;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px; 
+    padding-left: 15px;
 }
 
 .link-example {
-    color: var(--_, #BEFF54);
+    display: flex;
+    color: #BEFF54;
     font-family: Manrope;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px; /* 150% */
+    line-height: 30px; 
+    align-items: center;
+    text-decoration: none;
+    padding-bottom: 11px;
+    padding-left: 17px;
+    padding-bottom: 11px;
 }
 
+.link-example span {
+    padding-right: 7px;
+}
+
+.link-example img {
+    height: 20px;
+    width: 20px;
+}
+
+.link-example img {
+    /* width: 100%;  
+    height: auto; */
+}
 
 
 @media (max-width: 576px) { 
@@ -270,8 +290,19 @@ body {
         font-weight: 500;
         line-height: 15.646px;
         padding-left: 17px;
+        display: flex; /* Для выравнивания текста и SVG */
+        align-items: center; /* Центрирование SVG по вертикали */
+        text-decoration: none;
+        padding-bottom: 11px;
+    }
+    
+    .link-example span {
+        padding-right: 4px;
     }
 
-
+    .link-example img {
+        /* width: 100%;  /* Занимает всю ширину родительского элемента */
+        /* height: auto;  */
+    }
 
 }

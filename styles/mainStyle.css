@@ -188,7 +188,7 @@ body {
     opacity: 0;
     background-color: #1B1D1E;
     border-radius: 8px;
-    transform: translateX(100px) scale(1);
+    transform: translateY(100px) scale(1); /* Изменено с translateX на translateY */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
 }
 
@@ -202,7 +202,7 @@ body {
 
 .cell.animate-in {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateY(0) scale(1);
 }
 
 .cell .svg-container {
@@ -592,7 +592,7 @@ label {
         color: #000;
         text-align: center;
         font-family: Manrope;
-        font-size: 34px;
+        font-size: 31px;
         font-style: normal;
         font-weight: 700;
         line-height: 34px; /* 100% */
@@ -671,12 +671,3 @@ label {
     margin-top: 48px;
 }
 }
-
-@media (hover: none) {
-    a:hover, button:hover, .class:hover {
-      /* Сброс стилей для hover здесь */
-      background-color: inherit; /* Пример сброса фонового цвета */
-      color: inherit; /* Пример сброса стиля текста */
-      /* Другие свойства, которые вы хотите сбросить */
-    }
-  }

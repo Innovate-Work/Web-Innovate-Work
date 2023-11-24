@@ -20,6 +20,16 @@ button.addEventListener('click', function() {
 });
 
 
+// Функция обратного вызова для первого наблюдателя
+function handleIntersectionFirst(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelector('.first-line').classList.add('animate-first');
+            entry.target.querySelector('.second-line').classList.add('animate-second');
+            observer.unobserve(entry.target); // Прекратить наблюдение
+        }
+    });
+}
 
 // Функция обратного вызова для второго наблюдателя
 function handleIntersectionSecond(entries, observer) {
