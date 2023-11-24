@@ -56,55 +56,35 @@ function initPackages() {
     updatePackages("Website"); // Инициализация с первой вкладкой
 }
 
-// function updatePackages(tabName) {
-//     const packages = document.querySelectorAll('.work-package');
-//     const data = tabData[tabName] || [];
-
-//     packages.forEach((packageElem, index) => {
-//         packageElem.classList.remove('active-package');
-
-//         if (data[index]) {
-//             const nameExample = packageElem.querySelector('.name-example');
-//             const linkExample = packageElem.querySelector('.link-example');
-
-//             nameExample.textContent = data[index].name;
-//             linkExample.textContent = data[index].link;
-
-//             packageElem.style.display = ""; // Ensure the element is visible
-
-//             // Delay adding the active class to create the slide effect
-//             setTimeout(() => {
-//                 packageElem.classList.add('active-package');
-//             }, 150 * (index + 1));
-//         } else {
-//             packageElem.style.display = "none";
-//         }
-//     });
-// }
-
 function updatePackages(tabName) {
     const packages = document.querySelectorAll('.work-package');
     const data = tabData[tabName] || [];
 
+    // Сначала удаляем класс 'active-package' у всех пакетов
+    packages.forEach(packageElem => {
+        packageElem.classList.remove('active-package');
+        packageElem.style.display = "none"; // Скрываем все элементы
+    });
+
+    // Теперь добавляем класс 'active-package' к нужным пакетам с большей задержкой
     packages.forEach((packageElem, index) => {
         if (data[index]) {
             const nameExample = packageElem.querySelector('.name-example');
-            const linkText = packageElem.querySelector('.link-example .link-text'); // Выбор элемента для текста ссылки
+            const linkText = packageElem.querySelector('.link-example .link-text');
 
             nameExample.textContent = data[index].name;
-            linkText.textContent = data[index].link; // Обновляем только текст ссылки
+            linkText.textContent = data[index].link;
 
-            packageElem.style.display = ""; // Ensure the element is visible
+            packageElem.style.display = ""; // Показываем элемент
 
-            // Delay adding the active class to create the slide effect
+            // Задержка перед добавлением класса для анимации
             setTimeout(() => {
                 packageElem.classList.add('active-package');
-            }, 150 * (index + 1));
-        } else {
-            packageElem.style.display = "none";
+            }, 100 + 150 * index); // Увеличиваем начальную задержку
         }
     });
 }
+
 
 
 

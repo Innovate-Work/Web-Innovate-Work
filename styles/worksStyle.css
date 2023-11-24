@@ -108,14 +108,14 @@ body {
 
 .work-package {
     transition: transform 0.5s, opacity 0.5s;
-    transform: translateY(100%); /* Updated from -100% to 100% */
-    opacity: 0;
+    transform: translateY(100%); /* Начальное положение */
+    opacity: 0; /* Начальная прозрачность */
     will-change: transform, opacity;
 }
 
 .work-package.active-package {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0); /* Конечное положение */
+    opacity: 1; /* Конечная прозрачность */
 }
 
 
@@ -160,6 +160,7 @@ body {
     height: 20px;
     width: 20px;
 }
+
 
 .link-example img {
     /* width: 100%;  

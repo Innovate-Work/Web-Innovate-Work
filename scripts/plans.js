@@ -194,6 +194,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 packageFeatures.appendChild(li);
             });
             modal.style.display = 'block';
+
+            // Проверка ширины экрана и прокрутка к модальному блоку на мобильных устройствах
+            if (window.innerWidth <= 576) {
+                const modalTop = modal.getBoundingClientRect().top + window.scrollY - 110; // Получаем позицию модального окна относительно верхнего края документа и вычитаем 60px
+                window.scrollTo({ top: modalTop, behavior: 'smooth' }); // Плавная прокрутка к вычисленной позиции
+            }
         });
     });
 
@@ -377,3 +383,42 @@ var dataForWebsite = [
     });
   });
   
+
+  // submit pop up close
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.modal');
+    const submitButton = document.querySelector('.submit-button-pop-up');
+    const openButtons = document.querySelectorAll('.button-view'); // Кнопки для открытия модального окна
+
+    // Функция для открытия модального окна
+    function openModal() {
+        if (window.innerWidth <= 768) {
+            modal.style.display = 'block';
+            modal.style.opacity = '1';
+            modal.style.transform = 'scale(1)';
+        }
+    }
+
+    // Функция для закрытия модального окна
+    function closeModal() {
+        if (window.innerWidth <= 768) {
+            modal.style.transition = 'transform 0.5s, opacity 0.5s';
+            modal.style.transform = 'scale(0)';
+            modal.style.opacity = '0';
+
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500);
+        }
+    }
+
+    // Обработчик событий для открытия модального окна
+    openButtons.forEach(button => {
+        button.addEventListener('click', openModal);
+    });
+
+    // Обработчик события для кнопки submit
+    submitButton.addEventListener('click', closeModal);
+});
+
