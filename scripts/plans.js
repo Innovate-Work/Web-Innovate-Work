@@ -223,15 +223,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Находим элемент иконки и текста подсказки
-var serviceIcon = document.querySelector('.service-icon');
-var hintText = document.querySelector('.hint-text');
-
-// Обработчик клика для иконки
-serviceIcon.addEventListener('click', function() {
-  // Переключаем отображение текста подсказки
-  hintText.style.display = hintText.style.display === 'block' ? 'none' : 'block';
-});
+// Функция для закрытия подсказки
+function closeHint() {
+    hintText.style.display = 'none';
+  }
+  
+  // Обработчик клика для иконки
+  serviceIcon.addEventListener('click', function(event) {
+    // Переключаем отображение текста подсказки
+    var isDisplayed = hintText.style.display === 'block';
+    closeHint();
+    if (!isDisplayed) {
+      hintText.style.display = 'block';
+      event.stopPropagation(); // Останавливаем всплытие, чтобы не срабатывало закрытие подсказки
+    }
+  });
+  
+  // Обработчик клика для всего документа
+  document.addEventListener('click', closeHint);
 
 
 const form = document.getElementById('validation-form');
