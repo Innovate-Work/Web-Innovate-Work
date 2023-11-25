@@ -534,3 +534,21 @@ nav {
     }
 
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* Стили для планшетов */
+    
+    /* header */
+    .company-name {
+        display: none;
+    }
+  
+    .nav a, .contacts a {
+        font-size: 18px;
+    }
+
+    /* footer */
+    .footer {
+    }
+}
+  
