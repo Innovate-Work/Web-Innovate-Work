@@ -1,638 +1,605 @@
 body {
-    font-family: 'Manrope', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #141515;
-    position: relative;
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #141515;
+  position: relative;
 }
 
 .text-content {
-    color: #FBFBFB;
-    font-family: 'Manrope', sans-serif;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 90px; 
-    letter-spacing: 0px;
-    padding-left: 20px; 
+  color: #fbfbfb;
+  font-family: "Manrope", sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90px;
+  letter-spacing: 0px;
+  padding-left: 20px;
 }
 
 .text-solutions {
-    margin-top: 10px;
-    color: var(--_, #BEFF54);
-    font-family: Manrope;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 90px;
-    letter-spacing: -1.92px;
+  margin-top: 10px;
+  color: var(--_, #beff54);
+  font-family: Manrope;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90px;
+  letter-spacing: -1.92px;
 }
 
 .animation-gif {
-    max-width: 45.21vw;
-    max-height: 42.99vw; /* высчитано как (619 / 653) * 45.21vw */
-    width: auto;
-    height: auto;
-    margin-top: -60px;
+  max-width: 45.21vw;
+  max-height: 42.99vw; /* высчитано как (619 / 653) * 45.21vw */
+  width: auto;
+  height: auto;
+  margin-top: -60px;
 }
 
 .text-content span {
-    color: #BEFF54;
+  color: #beff54;
 }
 
 .content-wrapper {
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 .description-main {
-    width: 538px;
-    font-family: Manrope;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px; /* 150% */
-    margin-top: 46px;
-    margin-right: 160px;
+  width: 538px;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  margin-top: 46px;
+  margin-right: 160px;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px 10px 0px; /* Я сохранил предыдущий отступ для текста, но вы можете изменить его по своему усмотрению */
-    background-color: black;
-    border-radius: 100px; /* Размер скругления для кнопки */
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    width: 223px; /* Ширина кнопки */
-    height: 70px; /* Высота кнопки */
-    margin-top: 56px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 0px; /* Я сохранил предыдущий отступ для текста, но вы можете изменить его по своему усмотрению */
+  background-color: black;
+  border-radius: 100px; /* Размер скругления для кнопки */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 223px; /* Ширина кнопки */
+  height: 70px; /* Высота кнопки */
+  margin-top: 56px;
 }
 
 .button .text {
-    margin-left: 24px; /* Отступ для текста слева от стрелки */
+  margin-left: 24px; /* Отступ для текста слева от стрелки */
 }
 
 .button .arrow-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #BEFF54;
-    width: 62px; /* Ширина круга */
-    height: 62px; /* Высота круга */
-    border-radius: 100px; /* Размер скругления для круга */
-    margin: 4px; /* Отступ в 4px со всех сторон для круга */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #beff54;
+  width: 62px; /* Ширина круга */
+  height: 62px; /* Высота круга */
+  border-radius: 100px; /* Размер скругления для круга */
+  margin: 4px; /* Отступ в 4px со всех сторон для круга */
 }
 
 /* Первоначальное состояние SVG внутри кнопки */
 .button .arrow-container svg {
-    transition: transform 0.3s; /* Плавное изменение за 0.3 секунды */
-    transform: rotate(0deg); /* Начальное положение (без поворота) */
+  transition: transform 0.3s; /* Плавное изменение за 0.3 секунды */
+  transform: rotate(0deg); /* Начальное положение (без поворота) */
 }
 
 /* Состояние SVG при наведении на кнопку */
 .button:hover .arrow-container svg {
-    transform: rotate(45deg); /* Поворот на 90 градусов */
+  transform: rotate(45deg); /* Поворот на 90 градусов */
 }
 
-
-
 .button {
-    position: relative;
-    overflow: hidden; /* Скрываем элементы, выходящие за границы кнопки. */
+  position: relative;
+  overflow: hidden; /* Скрываем элементы, выходящие за границы кнопки. */
 }
 
 @keyframes rollToEnd {
-    0% {
-        left: 4px; /* начальное положение круга */
-    }
-    100% {
-        left: calc(100% - 66px); /* 66px = 62px (ширина круга) + 4px (отступ) */
-    }
+  0% {
+    left: 4px; /* начальное положение круга */
+  }
+  100% {
+    left: calc(100% - 66px); /* 66px = 62px (ширина круга) + 4px (отступ) */
+  }
 }
 
 .button.pressed .arrow-container {
-    position: absolute; /* Абсолютное позиционирование для круга внутри кнопки. */
-    animation: rollToEnd 0.8s forwards;
+  position: absolute; /* Абсолютное позиционирование для круга внутри кнопки. */
+  animation: rollToEnd 0.8s forwards;
 }
 
 .button.pressed .text {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
-
-
-
-
 
 .container {
-    padding-left: 35px;  /* Отступ слева внутри контейнера */
-    padding-right: 35px;  /* Отступ справа внутри контейнера */
-    padding-top: 25px;    /* Отступ сверху внутри контейнера */
-    padding-bottom: 25px; /* Отступ снизу внутри контейнера */
-    margin: 0px 25px 0 25px;
-    width: calc(100% - 50px);
-    height: 550px;        /* Явно заданная высота контейнера */
-    border-radius: 20px;
-    background-color: #1B1D1E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    margin-bottom: 40px;
+  padding-left: 35px; /* Отступ слева внутри контейнера */
+  padding-right: 35px; /* Отступ справа внутри контейнера */
+  padding-top: 25px; /* Отступ сверху внутри контейнера */
+  padding-bottom: 25px; /* Отступ снизу внутри контейнера */
+  margin: 0px 25px 0 25px;
+  width: calc(100% - 50px);
+  height: 550px; /* Явно заданная высота контейнера */
+  border-radius: 20px;
+  background-color: #1b1d1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 40px;
 }
 
-
-
 .text-block {
-    flex: 1;
+  flex: 1;
 }
 
 .headline {
-    color: #BEFF54;
-    font-family: 'Manrope', sans-serif;
-    font-size: 100px;
-    max-width: 660px;
-    line-height: 110px;
-    text-transform: uppercase;
+  color: #beff54;
+  font-family: "Manrope", sans-serif;
+  font-size: 100px;
+  max-width: 660px;
+  line-height: 110px;
+  text-transform: uppercase;
 }
 
 .cells-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 34px;
 }
 
-
-
-
-
-
 .cell {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 650px;
-    box-sizing: border-box;
-    position: relative;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    opacity: 0;
-    background-color: #1B1D1E;
-    border-radius: 8px;
-    transform: translateY(100px) scale(1); /* Изменено с translateX на translateY */
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out, background 0.3s ease, border-radius 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 650px;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0;
+  background-color: #1b1d1e;
+  border-radius: 8px;
+  transform: translateY(100px) scale(1); /* Изменено с translateX на translateY */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out,
+    background 0.3s ease, border-radius 0.3s ease;
 }
 
 .cell:hover {
-    background: linear-gradient(45deg, #000504, #1B1D1E);
-    transform: translateX(0) scale(1.05) !important;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
-    animation: gradientAnimation 3s infinite;
+  background: linear-gradient(45deg, #000504, #1b1d1e);
+  transform: translateX(0) scale(1.05) !important;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  animation: gradientAnimation 3s infinite;
 }
 
 .cell.animate-in {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .cell .svg-container {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .cell:hover .svg-container {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(45deg, #000504, #1B1D1E);
-    }
-    50% {
-        background: linear-gradient(90deg, #000504, #1B1D1E);
-    }
-    100% {
-        background: linear-gradient(135deg, #000504, #1B1D1E);
-    }
+  0% {
+    background: linear-gradient(45deg, #000504, #1b1d1e);
+  }
+  50% {
+    background: linear-gradient(90deg, #000504, #1b1d1e);
+  }
+  100% {
+    background: linear-gradient(135deg, #000504, #1b1d1e);
+  }
 }
-
-
-
-
-
-
-
-
-
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
-.title, .description {
-    color: #FBFBFB;
-    font-family: 'Manrope', sans-serif;
-    margin: 0;  /* Убираем все отступы */
+.title,
+.description {
+  color: #fbfbfb;
+  font-family: "Manrope", sans-serif;
+  margin: 0; /* Убираем все отступы */
 }
 
 .title {
-    font-size: 42px;
-    font-style: normal;
-    max-width: 450px;
-    overflow-wrap: break-word;
+  font-size: 42px;
+  font-style: normal;
+  max-width: 450px;
+  overflow-wrap: break-word;
 }
 
 .description {
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 400px;
-    overflow-wrap: break-word;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 400px;
+  overflow-wrap: break-word;
 }
 
 .svg-container {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
-
-
-
-
-
-.page-container{
-    padding: 35px;
+.page-container {
+  padding: 35px;
 }
 
 .contact-form {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 290px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 290px;
 }
 
 .form-title {
-    color: var(--form-title-color, #BEFF54);
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-align: center;
+  color: var(--form-title-color, #beff54);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .contact-message {
-    padding-bottom: 70px;
-    margin-left: 170px;
-    color: #FBFBFB;
-    font-family: 'Manrope', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    max-width: 380px;
+  padding-bottom: 70px;
+  margin-left: 170px;
+  color: #fbfbfb;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  max-width: 380px;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    position: relative;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 label {
-    display: none; 
+  display: none;
 }
 
 .page-container .contact-form .data-entrance #email,
 .page-container .contact-form .data-entrance #phone,
 .page-container .contact-form .data-entrance #name {
-    width: 538px;
-    height: 40px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--input-underline, #5a5f62);
-    color: var(--input-text-color, #fff);
-    font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-    padding: 5px;
-    margin-top: 5px;
-    outline: none;
-    transition: border-color 0.3s ease-in-out;
+  width: 538px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--input-underline, #5a5f62);
+  color: var(--input-text-color, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .page-container .contact-form .data-entrance #email:focus,
 .page-container .contact-form .data-entrance #phone:focus,
 .page-container .contact-form .data-entrance #name:focus {
-    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
-    caret-color: var(--input-focus-underline, #BEFF54); /* Изменение цвета курсора при фокусе */
+  border-bottom: 1px solid var(--input-focus-underline, #beff54);
+  caret-color: var(
+    --input-focus-underline,
+    #beff54
+  ); /* Изменение цвета курсора при фокусе */
 }
 
 .submit-button {
-    width: 538px;
-    height: 70px;
-    flex-shrink: 0;
-    background: var(--button-background, #BEFF54);
-    color: var(--button-text-color, #000);
-    font-family: 'Manrope', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 48px;
+  width: 538px;
+  height: 70px;
+  flex-shrink: 0;
+  background: var(--button-background, #beff54);
+  color: var(--button-text-color, #000);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
 }
 
 .submit-button:hover {
-    background: var(--button-hover-background, #5A5F62);
-    color: var(--button-hover-text-color, #fff);
+  background: var(--button-hover-background, #5a5f62);
+  color: var(--button-hover-text-color, #fff);
 }
-
-
-
-
-
-
-
-
 
 /* Define the container styles */
 .container-animation-text {
-    width: 1439px;
-    height: 160px;  /* Высота, достаточная для двух строк текста */
-    flex-shrink: 0;
-    background: #BEFF54;
-    display: flex;
-    flex-direction: column; /* Для вертикального размещения строк */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;  /* Скрыть текст, который выходит за пределы контейнера */
-    position: relative; /* Необходимо для абсолютного позиционирования текста */
+  width: 1439px;
+  height: 160px; /* Высота, достаточная для двух строк текста */
+  flex-shrink: 0;
+  background: #beff54;
+  display: flex;
+  flex-direction: column; /* Для вертикального размещения строк */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Скрыть текст, который выходит за пределы контейнера */
+  position: relative; /* Необходимо для абсолютного позиционирования текста */
 }
 
 /* Define the text styles for the first line */
 .first-line {
-    color: #101011;
-    font-family: 'Manrope';
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    position: absolute;
-    white-space: nowrap;  /* Предотвратить перенос текста */
-    top: 20px;  /* Позиция первой строки */
-    left: 100%; /* Начать текст с правой стороны контейнера */
+  color: #101011;
+  font-family: "Manrope";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: absolute;
+  white-space: nowrap; /* Предотвратить перенос текста */
+  top: 20px; /* Позиция первой строки */
+  left: 100%; /* Начать текст с правой стороны контейнера */
 }
 
 /* Define the text styles for the second line */
 .second-line {
-    color: var(--_, #101011);
-    font-family: 'Manrope';
-    font-size: 60px;
+  color: var(--_, #101011);
+  font-family: "Manrope";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: absolute;
+  white-space: nowrap; /* Предотвратить перенос текста */
+  top: 90px; /* Позиция второй строки (с учетом пространства между строками) */
+  right: 100%; /* Начать текст с левой стороны контейнера */
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for tablets */
+  .text-content {
+    font-size: 48px; /* Adjust font size */
+    line-height: 56px; /* Adjust line height */
+    padding-left: 10px;
+  }
+
+  .text-solutions {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1px;
+  }
+
+  .description-main {
+    width: auto; /* Allow the text to flow naturally */
+    font-size: 18px;
+    line-height: 27px; /* 150% */
+    margin-right: 20px;
+  }
+
+  .button {
+    width: auto; /* Allow the button to fit content */
+    height: auto;
+    padding: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .text-content {
+    order: 1;
+    color: #fbfbfb;
+    font-family: Manrope;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px; /* 93.103% */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text-solutions {
+    order: 2;
+    color: #beff54;
+    font-family: Manrope;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+  }
+
+  .animation-gif {
+    order: 5; /* The GIF comes last */
+    max-width: 80vw;
+    max-height: 80vw;
+    margin-top: 0;
+  }
+
+  .description-main {
+    order: 3;
+    color: #fbfbfb;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    margin-top: 30px;
+  }
+
+  .button {
+    order: 4;
+    width: 175px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .button .arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #beff54;
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    margin: 4px;
+    margin-left: -7px;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .headline {
+    color: #beff54;
+    font-family: Manrope;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 36px;
     text-transform: uppercase;
-    position: absolute;
-    white-space: nowrap;  /* Предотвратить перенос текста */
-    top: 90px; /* Позиция второй строки (с учетом пространства между строками) */
-    right: 100%; /* Начать текст с левой стороны контейнера */
-}
+    text-align: center;
+    margin-top: 10px;
+  }
 
+  .cell {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    box-shadow: none;
+  }
 
+  .title {
+    color: #fbfbfb; /* Color for the title */
+    font-family: Manrope;
+    font-size: 20px; /* Adjusted font size */
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+  }
 
+  .description {
+    color: #fbfbfb; /* Color for the description */
+    font-family: Manrope;
+    font-size: 14px; /* Adjusted font size */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 10px;
+  }
 
+  .svg-container {
+    height: 65px; /* Adjusted height for svg */
+    margin-left: 5px;
+  }
 
+  .container-animation-text {
+    width: 100%;
+    height: 114px;
+    flex-shrink: 0;
+    background: #beff54;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
 
-@media (max-width: 768px) { /* Adjustments for tablets */
-    .text-content {
-        font-size: 48px; /* Adjust font size */
-        line-height: 56px; /* Adjust line height */
-        padding-left: 10px;
-    }
+  /* Define the text styles for the first line */
+  .first-line {
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px; /* 100% */
+    letter-spacing: 0.612px;
+    text-transform: uppercase;
+    padding: 0px;
+    white-space: unset;
+    top: 6px;
+    position: static;
+  }
 
-    .text-solutions {
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: -1px;
-    }
+  .second-line {
+    display: none;
+  }
 
-    .description-main {
-        width: auto; /* Allow the text to flow naturally */
-        font-size: 18px;
-        line-height: 27px; /* 150% */
-        margin-right: 20px;
-    }
+  .form-title {
+    font-size: 30px;
+    text-align: left;
+  }
 
-    .button {
-        width: auto; /* Allow the button to fit content */
-        height: auto;
-        padding: 10px;
-        margin-top: 30px;
-    }
-}
+  .form {
+    display: block;
+    margin-top: 0em;
+  }
 
-@media (max-width: 576px) { 
+  .contact-message {
+    display: none;
+  }
 
-    .content-wrapper {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        height: auto;
-    }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px !important;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    .text-content {
-        order: 1;
-        color: #FBFBFB;
-        font-family: Manrope;
-        font-size: 58px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 54px; /* 93.103% */
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .text-solutions {
-        order: 2;
-        color: #BEFF54;
-        font-family: Manrope;
-        font-size: 58px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 54px;
-    }
-
-    .animation-gif {
-        order: 5; /* The GIF comes last */
-        max-width: 80vw;
-        max-height: 80vw;
-        margin-top: 0;
-    }
-
-    .description-main {
-        order: 3;
-        color: #FBFBFB;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 23px;
-        margin-top: 30px;
-    }
-
-    .button {
-        order: 4;
-        width: 175px;
-        height: 50px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .button .arrow-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #BEFF54;
-        width: 48px;
-        height: 48px;
-        border-radius: 100px;
-        margin: 4px;
-        margin-left: -7px;
-    }
-
-    .container {
-        flex-direction: column;
-        height: auto;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .headline {
-        color: #BEFF54; 
-        font-family: Manrope;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 36px;
-        text-transform: uppercase;
-        text-align: center; 
-        margin-top: 10px;
-    }
-
-    .cell {
-        display: flex; 
-        flex-direction: row;
-        width: auto;
-        box-shadow: none;
-    }
-
-    .title {
-        color: #FBFBFB; /* Color for the title */
-        font-family: Manrope;
-        font-size: 20px; /* Adjusted font size */
-        font-style: normal ;
-        font-weight: 600;
-        line-height: 24px;
-        text-align: left; 
-    }
-
-    .description {
-        color: #FBFBFB; /* Color for the description */
-        font-family: Manrope;
-        font-size: 14px; /* Adjusted font size */
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        padding-top: 10px;
-    }
-
-    .svg-container {
-        height: 65px; /* Adjusted height for svg */
-        margin-left: 5px;
-    }
-
-    .container-animation-text {
-        width: 100%;
-        height: 114px;
-        flex-shrink: 0;
-        background: #BEFF54;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-    }
-    
-    /* Define the text styles for the first line */
-     .first-line {
-        color: #000;
-        text-align: center;
-        font-family: Manrope;
-        font-size: 31px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 34px; /* 100% */
-        letter-spacing: 0.612px;
-        text-transform: uppercase;
-        padding: 0px;
-        white-space: unset;
-        top: 6px;
-        position: static;
-    }
-
-    .second-line {
-        display: none;
-    }
-
-    .form-title {
-        font-size: 30px;
-        text-align: left;
-    }
-
-    .form {
-        display: block;
-        margin-top: 0em;
-    }
-
-    .contact-message {
-        display: none;
-    }
-
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 50px !important;
-        height: auto;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-   
-    input[id="email"], input[id="phone"], input[id="name"] {
+  input[id="email"],
+  input[id="phone"],
+  input[id="name"] {
     width: 80vw !important;
     height: 20px !important;
     background: transparent;
@@ -648,10 +615,9 @@ label {
     margin-top: 5px;
     outline: none;
     transition: border-color 0.3s ease-in-out;
-}
+  }
 
-
-.submit-button {
+  .submit-button {
     width: 100%;
     height: 48px;
     flex-shrink: 0;
@@ -669,5 +635,137 @@ label {
     justify-content: center;
     align-items: center;
     margin-top: 48px;
+  }
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Стили для планшетов */
+  /* hello section */
+  .animation-gif {
+    display: none;
+  }
+  
+  .content-wrapper {
+    justify-content: left;
+    height: auto;
+  }
+
+  .text-content {
+    width: 496px;
+    font-size: 82px;
+    margin-bottom: 70px;
+    padding-left: 35px;
+  }
+
+  .text-solutions {
+    font-size: 82px;
+  }
+
+  .description-main {
+    width: 462px;
+    font-size: 18px;
+  }
+
+  .button > .text {
+    font-size: 18px;
+  }
+
+  /* create your solutions section */
+  .container {
+    display: block;
+    height: auto;
+    width: auto;
+    margin: 0px 16px 68px;
+    padding: 28px 19px 0px;
+  }
+
+  .headline {
+    margin: 0px;
+    font-size: 64px;
+    line-height: 70px;
+    font-weight: 700;
+    max-width: 698px;
+  }
+
+  .cells-block {
+    margin-top: 32px;
+    gap: 0px
+  }
+
+  .cell {
+    display: flex;
+    padding: 12px 0px 24px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+    width: auto;
+    margin: 10px 0px;
+    border-radius: 0px;
+  }
+
+  .cell:not(:last-child) {
+    border-bottom: 1px solid #5a5f62;
+  }
+
+  .cell .text-container {
+    max-width: 494px;
+  }
+
+  .cell .title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 20px
+  }
+
+  .cell .description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 390px;
+  }
+
+  /* text animation line section */
+  /* пока похуй */
+
+  .container-animation-text {
+    width: 100%;
+  }
+
+  /* ready to transform  & form section */
+
+  .page-container {
+    width: 768px;
+  }
+
+  .page-container .form-title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .data-entrance, 
+  .data-entrance .form-group input,
+  .data-entrance .submit-button {
+    max-width: 359px;
+  }
+
+  .contact-form {
+    margin-bottom: 80px;
+    height: auto;
+  }
+
+  .contact-message {
+    margin-left: 51px;
+    width: 288px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+
+  /* footer section */
+
 }
