@@ -73,6 +73,7 @@ h1 {
 
 .tabs div.active-tab p {
     color: #000504; 
+    font-weight: 500;
 }
 
 .tabs div:hover {
@@ -678,6 +679,7 @@ input[id="company-name-pop-up"]:focus {
         text-transform: uppercase;
         margin-top: 59px;
         padding: 1px 15px;
+        letter-spacing: normal;
     }
 
     .description {
@@ -717,9 +719,15 @@ input[id="company-name-pop-up"]:focus {
         font-family: Manrope;
         font-size: 14px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 20px;
     }
+
+    .tabs div.active-tab p {
+        color: #000504; 
+        font-weight: 600;
+    }
+    
 
     .package-container {
         display: flex;

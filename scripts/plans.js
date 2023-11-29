@@ -228,6 +228,9 @@ function closeHint() {
     hintText.style.display = 'none';
   }
   
+
+// fix this!!!!!!
+
   // Обработчик клика для иконки
   serviceIcon.addEventListener('click', function(event) {
     // Переключаем отображение текста подсказки
@@ -238,6 +241,8 @@ function closeHint() {
       event.stopPropagation(); // Останавливаем всплытие, чтобы не срабатывало закрытие подсказки
     }
   });
+
+
   
   // Обработчик клика для всего документа
   document.addEventListener('click', closeHint);

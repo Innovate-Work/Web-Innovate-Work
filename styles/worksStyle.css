@@ -226,7 +226,7 @@ body {
 
     .tabs div {
         display: flex;
-        width: 95%;
+        width: 98%;
         height: 52px;
         justify-content: center;
         align-items: center;
@@ -257,8 +257,13 @@ body {
         font-family: Manrope;
         font-size: 14px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 20px;
+    }
+
+    .tabs div.active-tab p {
+        color: #000504; /* Черный текст для активного div */
+        font-weight: 600;
     }
 
     .works-packages {
