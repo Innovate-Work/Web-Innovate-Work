@@ -137,6 +137,7 @@
     font-weight: 400;
     line-height: 30px; 
     margin-top: 5px;
+    margin-left: 16px;
 }
 
 nav {
@@ -187,11 +188,11 @@ nav {
 
 /* footer */
 .logo-footer{
-    margin-left: 35px;
-    margin-top: 58px;
-    width: 80px;
-    height: 80px;
-    margin-right: 60px;
+    margin-left: 53px;
+    margin-top: 45px;
+    width: 60px;
+    height: 60px;
+    margin-right: 121px;
 }
 
 .mobile-logo-text {
@@ -199,13 +200,13 @@ nav {
 }
 
 .about-links{
-    width: 504px;
-    margin-top:58px;
+    width: 47%;
+    margin-top: 46px;
     display: flex;
 }
 
 .link-group{
-    margin-right: 40px;
+    margin-right: 44px;
     display: flex;
     flex-direction: column;
 }
@@ -223,7 +224,7 @@ nav {
     transition: transform 0.2s, color 0.2s;
     transform: scale(1); /* Установите начальный размер */
 }
-.main-link{
+.main-link {
     color:white;
 }
 .about-link{
@@ -300,12 +301,10 @@ nav {
 }
 
 .social-network-link-group {
-    margin-top: 58px;
-    margin-right: 58px;
-    margin-left: auto;
+    margin-top: 46px;
+    margin-right: 46px;
 }
 
-/* брат, здесь футтер) */
 .footer {
     margin-left: 25px;
     margin-right: 25px;
@@ -315,6 +314,7 @@ nav {
     height: 230px;
     border-radius: 12px;
     display: flex;
+    justify-content: space-between;
 }
 
 

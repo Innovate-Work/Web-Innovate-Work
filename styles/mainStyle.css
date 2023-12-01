@@ -15,6 +15,7 @@ body {
   line-height: 90px;
   letter-spacing: 0px;
   padding-left: 20px;
+  width: 57%;
 }
 
 .text-solutions {
@@ -45,17 +46,17 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
+  justify-content: space-between;
 }
 
 .description-main {
-  width: 538px;
+  width: 64%;
   font-family: Manrope;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px; /* 150% */
   margin-top: 46px;
-  margin-right: 160px;
 }
 
 .button {
@@ -65,7 +66,7 @@ body {
   background-color: black;
   border-radius: 100px; /* Размер скругления для кнопки */
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   border: none;
   outline: none;
@@ -75,7 +76,7 @@ body {
 }
 
 .button .text {
-  margin-left: 24px; /* Отступ для текста слева от стрелки */
+  margin-left: 30px; /* Отступ для текста слева от стрелки */
 }
 
 .button .arrow-container {
@@ -142,16 +143,21 @@ body {
 }
 
 .text-block {
-  flex: 1;
+    display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .headline {
-  color: #beff54;
-  font-family: "Manrope", sans-serif;
-  font-size: 100px;
-  max-width: 660px;
-  line-height: 110px;
-  text-transform: uppercase;
+    font-size: 87px;
+    max-width: 90%;
+    color: #BEFF54;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110px;
+    text-transform: uppercase;
+    margin: 0px;
 }
 
 .cells-block {
@@ -160,18 +166,20 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 34px;
+  margin-top: 0px;
 }
 
 .cell {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 650px;
+  width: 100%;
   box-sizing: border-box;
   position: relative;
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 10px;
   opacity: 0;
   background-color: #1b1d1e;
   border-radius: 8px;
@@ -218,6 +226,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  padding-left: 0px;
 }
 
 .title,
@@ -345,8 +354,8 @@ label {
 
 /* Define the container styles */
 .container-animation-text {
-  width: 1439px;
-  height: 160px; /* Высота, достаточная для двух строк текста */
+  width: 100%;
+  height: auto; /* Высота, достаточная для двух строк текста */
   flex-shrink: 0;
   background: #beff54;
   display: flex;
@@ -366,26 +375,9 @@ label {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  position: absolute;
-  white-space: nowrap; /* Предотвратить перенос текста */
-  top: 20px; /* Позиция первой строки */
-  left: 100%; /* Начать текст с правой стороны контейнера */
+  text-align: center;
 }
 
-/* Define the text styles for the second line */
-.second-line {
-  color: var(--_, #101011);
-  font-family: "Manrope";
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  position: absolute;
-  white-space: nowrap; /* Предотвратить перенос текста */
-  top: 90px; /* Позиция второй строки (с учетом пространства между строками) */
-  right: 100%; /* Начать текст с левой стороны контейнера */
-}
 
 @media (max-width: 768px) {
   /* Adjustments for tablets */
@@ -438,6 +430,7 @@ label {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: -30px;
+    width: auto;
   }
 
   .text-solutions {
@@ -478,6 +471,10 @@ label {
     margin-bottom: 20px;
   }
 
+  .button .text {
+    margin-left: 22px;
+}
+
   .button .arrow-container {
     display: flex;
     align-items: center;
@@ -514,7 +511,17 @@ label {
     flex-direction: row;
     width: auto;
     box-shadow: none;
+    padding-left: 5px;
   }
+
+  .cells-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 25px;
+}
 
   .title {
     color: #fbfbfb; /* Color for the title */
@@ -570,6 +577,14 @@ label {
     white-space: unset;
     top: 6px;
     position: static;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-left: 10px;
   }
 
   .second-line {
@@ -728,6 +743,8 @@ label {
     line-height: 24px;
     max-width: 390px;
   }
+
+
 
   /* text animation line section */
   /* пока похуй */
