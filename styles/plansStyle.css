@@ -544,8 +544,8 @@ input[id="company-name-pop-up"]:focus {
     width: 90%;
     height: 60px;
     flex-shrink: 0;
-    background: var(--button-background, #BEFF54);
-    color: var(--button-text-color, #000);
+    background: var(--button-background, #5A5F62);
+    color: var(--button-text-color, #fff);
     font-family: 'Manrope', sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -561,8 +561,8 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .submit-button-pop-up:hover {
-    background: var(--button-hover-background, #5A5F62);
-    color: var(--button-hover-text-color, #fff);
+    background: var(--button-hover-background, #BEFF54);
+    color: var(--button-hover-text-color, #000);
 }
 
 
@@ -1007,6 +1007,7 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .service-icon {
+    display: none;
     cursor: pointer;
     margin-bottom: -7px;
 }
@@ -1016,17 +1017,13 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .hint-text {
-    display: none;
-    position: absolute;
-    bottom: -219px;
-    left: -163px;
-    top: auto;
-    transform: translateY(-50%);
-    width: 156px;
-    height: 116px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    border: 1px solid #FBFBFB;
+    display: block;
+    position: unset;
+    transform: none;
+    width: auto;
+    height: auto;
+    border-radius: 0px;
+    border: none;
     background: #1B1D1E;
     color: #FBFBFB;
     font-family: Manrope;
@@ -1038,14 +1035,19 @@ input[id="company-name-pop-up"]:focus {
     margin-left: 0px;
 }
 
-.service-icon:hover + .hint-text {
-    display: block;
+.services-text-and-icon {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    flex-direction: column;
 }
 
 .additional-services h2 {
     color: #FBFBFB;
     text-align: left;
-    margin-right: 4px;
+    margin-right: 0px;
     font-family: Manrope;
     font-size: 16px;
     font-style: normal;
@@ -1123,8 +1125,8 @@ input[id="company-name-pop-up"]:focus {
     width: 96%;
     height: 46px;
     flex-shrink: 0;
-    background: var(--button-background, #BEFF54);
-    color: var(--button-text-color, #000);
+    background: var(--button-background, #5A5F62); 
+    color: var(--button-text-color, #fff);
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -1140,8 +1142,8 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .submit-button-pop-up:hover {
-    background: var(--button-hover-background, #5A5F62);
-    color: var(--button-hover-text-color, #fff);
+    background: var(--button-hover-background, #BEFF54);
+    color: var(--button-hover-text-color, #000);
 }
 
 

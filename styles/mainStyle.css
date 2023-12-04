@@ -331,8 +331,8 @@ label {
   width: 538px;
   height: 70px;
   flex-shrink: 0;
-  background: var(--button-background, #beff54);
-  color: var(--button-text-color, #000);
+  background: var(--button-background, #5a5f62); 
+  color: var(--button-text-color, #fff);
   font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -348,8 +348,8 @@ label {
 }
 
 .submit-button:hover {
-  background: var(--button-hover-background, #5a5f62);
-  color: var(--button-hover-text-color, #fff);
+  background: var(--button-hover-background, #beff54);
+  color: var(--button-hover-text-color, #000);
 }
 
 /* Define the container styles */
@@ -640,8 +640,8 @@ label {
     width: 100%;
     height: 48px;
     flex-shrink: 0;
-    background: var(--button-background, #beff54);
-    color: var(--button-text-color, #000);
+    background: var(--button-background, #5A5F62);
+    color: var(--button-text-color, #fff);
     font-family: "Manrope", sans-serif;
     font-size: 20px;
     font-style: normal;

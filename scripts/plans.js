@@ -49,7 +49,7 @@ const tabData = {
     ],
     "Application and Website": [
         {
-            title: "WEB & APP solution",
+            title: "WEB & APP",
             features: ["Custom website and mobile app development", "Tailored design to match brand identity", "Enhanced features for both web and app (e.g., user authentication, e-commerce)", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
             price: "$5400"
         }
@@ -223,29 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Функция для закрытия подсказки
-function closeHint() {
-    hintText.style.display = 'none';
-  }
-  
-
-// fix this!!!!!!
-
-  // Обработчик клика для иконки
-  serviceIcon.addEventListener('click', function(event) {
-    // Переключаем отображение текста подсказки
-    var isDisplayed = hintText.style.display === 'block';
-    closeHint();
-    if (!isDisplayed) {
-      hintText.style.display = 'block';
-      event.stopPropagation(); // Останавливаем всплытие, чтобы не срабатывало закрытие подсказки
-    }
-  });
-
-
-  
-  // Обработчик клика для всего документа
-  document.addEventListener('click', closeHint);
 
 
 const form = document.getElementById('validation-form');
