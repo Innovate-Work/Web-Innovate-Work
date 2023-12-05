@@ -186,16 +186,27 @@ nav {
 
 
 /* footer */
+
+.logo-div-footer {
+    display: flex;
+    flex-direction: row;
+    width: 52%;
+    align-items: center;
+    margin-top: 37px;
+    gap: 12px;
+    margin-left: 35px;
+}
+
 .logo-footer{
-    margin-left: 53px;
-    margin-top: 45px;
-    width: 60px;
-    height: 60px;
-    margin-right: 121px;
+    width: 45px;
+    height: 45px;
 }
 
 .mobile-logo-text {
-    display: none;
+    display: flex;
+    width: 57%;
+    margin-left: 35px;
+    margin-top: 28px;
 }
 
 .about-links{
@@ -258,6 +269,16 @@ nav {
 .about-link:hover, .main-link:hover {
     color: #BEFF54; /* Зеленый цвет текста при наведении */
     transform: scale(1.1); /* Увеличение на 10% при наведении */
+}
+
+.company-name-footer {
+    color: #FBFBFB;
+    font-family: Michroma;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 13px;
 }
 
 .social-network-link {
@@ -473,9 +494,10 @@ nav {
 }
 
 @media (max-width: 576px) {
+
     .about-links {
         width: auto;
-        margin-top: 25px;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
     }
@@ -486,6 +508,16 @@ nav {
         text-align: start;
         height: auto;
         margin: 0px;
+    }
+
+    .company-name-footer { 
+        color: #FBFBFB;
+        font-family: Michroma;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+        margin-top: 5px;
     }
 
     .social-network-link-group {
@@ -523,6 +555,8 @@ nav {
         font-weight: 400;
         line-height: 22px;
         padding-right: 100px;
+        width: auto;
+        margin: 0px;
     }
 
     .logo-div-footer {
@@ -530,6 +564,10 @@ nav {
         flex-direction: row;
         margin-bottom: 25px;
         gap: 5px;
+        width: auto;
+        margin: 0px;
+        margin-bottom: 25px;
+        align-items: baseline;
     }
 
 }
