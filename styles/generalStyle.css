@@ -116,6 +116,12 @@
     margin-bottom: 0px;
 }
 
+.contact-popup p span {
+   color: #5A5F62;
+   font-size: 16px;
+   font-weight: 400;
+}
+
 .contact-popup a {
     color: #5A5F62; /* Set a different text color for email links */
     text-decoration: none; /* Optional: removes the underline from links */
@@ -237,7 +243,7 @@ nav {
 .main-link {
     color:white;
 }
-.about-link{
+.about-link {
     font-family: Poppins;
 }
 
@@ -455,6 +461,7 @@ nav {
 
 .contact-value {
     color: #5A5F62; /* Замените на желаемый цвет для значений, таких как 'lalalla@net.com' и номер телефона */
+    text-decoration: none;
 }
 
 

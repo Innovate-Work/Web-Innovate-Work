@@ -168,6 +168,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// pop up for table
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработчик для кнопок "Get started" в планах и в таблице
+    document.querySelectorAll('.button-view, .button-get-started').forEach(button => {
+        button.addEventListener('click', function() {
+            const planName = this.getAttribute('data-plan');
+            openModalWithPlanInfo(planName);
+        });
+    });
+});
+
+
+function openModalWithPlanInfo(planName) {
+    // Получаем текущую активную вкладку
+    const activeTab = document.querySelector('.tabs .active-tab p').textContent.trim();
+    let planData;
+
+    if (tabData[activeTab]) {
+        planData = tabData[activeTab].find(plan => plan.title === planName);
+    }
+
+    if (planData) {
+        fillModalWithPlanData(planData);
+        document.querySelector('#myModal').style.display = 'block';
+    }
+}
+
+
+
 
 // pop up action
 document.addEventListener('DOMContentLoaded', function() {
