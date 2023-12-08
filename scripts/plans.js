@@ -168,33 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// pop up for table
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Обработчик для кнопок "Get started" в планах и в таблице
-    document.querySelectorAll('.button-view, .button-get-started').forEach(button => {
-        button.addEventListener('click', function() {
-            const planName = this.getAttribute('data-plan');
-            openModalWithPlanInfo(planName);
-        });
-    });
-});
-
-
-function openModalWithPlanInfo(planName) {
-    // Получаем текущую активную вкладку
-    const activeTab = document.querySelector('.tabs .active-tab p').textContent.trim();
-    let planData;
-
-    if (tabData[activeTab]) {
-        planData = tabData[activeTab].find(plan => plan.title === planName);
-    }
-
-    if (planData) {
-        fillModalWithPlanData(planData);
-        document.querySelector('#myModal').style.display = 'block';
-    }
-}
 
 
 
@@ -347,62 +321,151 @@ var dataForWebsite = [
   ];
   
 
-  function updateTable(dataArray) {
-    var table = document.querySelector('.feature-service-table tbody');
+  var dataForWebAndApp = [
+    ['Application and Website', '$20,000'],
+    ['Custom website and mobile app development', '<i class="fa-solid fa-check" style="color: #c5ff68"></i>'],
+    ['Tailored design to match brand identity', '<i class="fa-solid fa-check" style="color: #c5ff68"></i>'],
+    ['Enhanced features for both web and app', '<i class="fa-solid fa-check" style="color: #c5ff68"></i>'],
+    ['Comprehensive SEO, performance optimization, and app testing', '<i class="fa-solid fa-check" style="color: #c5ff68"></i>']
+];
 
+  
+
+//   function updateTable(dataArray) {
+//     var table = document.querySelector('.feature-service-table tbody');
+
+//     var headerDivs = document.querySelectorAll('.feature-service-table .head-div');
+//     headerDivs.forEach((div, index) => {
+//       // Убедитесь, что есть соответствующие данные перед попыткой обновления
+//       if (dataArray[index]) {
+//         var pricePara = div.querySelector('p');
+//         pricePara.innerHTML = `<span>from</span> ${dataArray[index][1]}`;
+//       }
+//     });
+  
+//     // Очищаем текущее содержимое таблицы
+//     while (table.rows.length > 1) {
+//       table.deleteRow(1);
+//     }
+  
+//     dataArray.forEach(function (rowItems, rowIndex) {
+//         // Пропускаем строки, которые предназначены для заголовков
+//         if (rowIndex < headerDivs.length) return;
+    
+//         var row = table.insertRow();
+//         rowItems.forEach(function (item) {
+//           var cell = row.insertCell();
+//           cell.innerHTML = item;
+//         });
+//       });
+//     }
+
+
+
+//   document.addEventListener('DOMContentLoaded', function() {
+//     // Заполнение таблицы по умолчанию данными для "Website"
+//     updateTable(dataForWebsite);
+  
+//     // Получаем все вкладки и добавляем к ним обработчики событий
+//     var tabs = document.querySelectorAll('#tabs div');
+//     tabs.forEach(function(tab) {
+//       tab.addEventListener('click', function() {
+//         // Получаем текст внутри вкладки
+//         var tabText = tab.textContent.trim();
+  
+//         // Выбираем данные на основе текста вкладки
+//         if (tabText === "Website") {
+//           updateTable(dataForWebsite);
+//         } else if (tabText === "Application") {
+//           updateTable(dataForApplication);
+//         } else if (tabText === "Application and Website") {
+//           updateTable(dataForWebAndApp);
+//         }
+  
+//         // Сброс и установка активного класса для вкладок
+//         tabs.forEach(t => t.classList.remove('active-tab'));
+//         tab.classList.add('active-tab');
+//       });
+//     });
+//   });
+
+
+function updateTable(dataArray) {
+    var table = document.querySelector('.feature-service-table tbody');
+    var headers = document.querySelectorAll('.feature-service-table th');
     var headerDivs = document.querySelectorAll('.feature-service-table .head-div');
+  
+    // Определяем, используем ли мы массив данных для Web and App
+    var isWebAndApp = dataArray === dataForWebAndApp;
+  
+    // Скрываем или показываем заголовки столбцов
+    headers.forEach((header, index) => {
+      header.style.display = isWebAndApp && index > 0 ? 'none' : '';
+    });
+  
+    // Скрываем или показываем блоки заголовков
     headerDivs.forEach((div, index) => {
-      // Убедитесь, что есть соответствующие данные перед попыткой обновления
       if (dataArray[index]) {
+        var titleName = div.querySelector('h3')
         var pricePara = div.querySelector('p');
         pricePara.innerHTML = `<span>from</span> ${dataArray[index][1]}`;
+        titleName.innerHTML = `${dataArray[index][0]}`;
+        div.parentNode.style.display = isWebAndApp && index > 0 ? 'none' : ''; // Скрываем или показываем родительский элемент
       }
     });
   
-    // Очищаем текущее содержимое таблицы
+    // Удаляем старые строки
     while (table.rows.length > 1) {
       table.deleteRow(1);
     }
   
+    // Добавляем новые строки
     dataArray.forEach(function (rowItems, rowIndex) {
-        // Пропускаем строки, которые предназначены для заголовков
-        if (rowIndex < headerDivs.length) return;
-    
-        var row = table.insertRow();
-        rowItems.forEach(function (item) {
+      // Пропускаем строки заголовков
+      if (rowIndex < (isWebAndApp ? 1 : headerDivs.length)) return;
+  
+      var row = table.insertRow();
+      rowItems.forEach(function (item, cellIndex) {
+        // Если мы в режиме Web and App, добавляем только первый столбец
+        if (!isWebAndApp || cellIndex < 2) {
           var cell = row.insertCell();
           cell.innerHTML = item;
-        });
-      });
-    }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    // Заполнение таблицы по умолчанию данными для "Website"
-    updateTable(dataForWebsite);
-  
-    // Получаем все вкладки и добавляем к ним обработчики событий
-    var tabs = document.querySelectorAll('#tabs div');
-    tabs.forEach(function(tab) {
-      tab.addEventListener('click', function() {
-        // Получаем текст внутри вкладки
-        var tabText = tab.textContent.trim();
-  
-        // Выбираем данные на основе текста вкладки
-        if (tabText === "Website") {
-          updateTable(dataForWebsite);
-        } else if (tabText === "Application") {
-          updateTable(dataForApplication);
-        } else if (tabText === "Application and Website") {
-          // Здесь должен быть код для обновления таблицы данными "Application and Website"
-          // updateTable(dataForBoth);
         }
-  
-        // Сброс и установка активного класса для вкладок
-        tabs.forEach(t => t.classList.remove('active-tab'));
-        tab.classList.add('active-tab');
       });
     });
+  
+    // Если мы не в режиме Web and App, добавляем пустые ячейки для остальных столбцов
+    if (!isWebAndApp) {
+      var rows = table.querySelectorAll('tr');
+      rows.forEach(function(row) {
+        while (row.cells.length < headers.length) {
+          var cell = row.insertCell();
+          cell.innerHTML = ''; // или '&nbsp;' для добавления неразрывного пробела
+        }
+      });
+    }
+  }
+  
+  
+  // Получаем все вкладки и добавляем к ним обработчики событий
+var tabs = document.querySelectorAll('#tabs div');
+tabs.forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var tabText = tab.textContent.trim();
+
+    if (tabText === "Website") {
+      updateTable(dataForWebsite);
+    } else if (tabText === "Application") {
+      updateTable(dataForApplication);
+    } else if (tabText === "Application and Website") {
+      updateTable(dataForWebAndApp);
+    }
+
+    tabs.forEach(t => t.classList.remove('active-tab'));
+    tab.classList.add('active-tab');
   });
+});
+
   
 
   // submit pop up close
@@ -442,4 +505,120 @@ var dataForWebsite = [
     // Обработчик события для кнопки submit
     submitButton.addEventListener('click', closeModal);
 });
+
+
+
+// get started table
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Определяем данные пакетов услуг из массива
+    const tabData = {
+        "Website": [
+            {
+                title: "Basic",
+                features: ["Basic website development", "Pre-designed templates", "Limited customization", "Standard features", "Ideal for small businesses"],
+                price: "$500"
+            },
+            {
+                title: "Professional",
+                features: ["Custom website development", "Tailored design", "Enhanced features", "Basic SEO optimization", "Suitable for growing businesses"],
+                price: "$1000"
+            },
+            {
+                title: "Business",
+                features: ["Complex website development", "Highly customized solution", "Advanced features", "Comprehensive SEO", "Designed for large corporations"],
+                price: "$5000"
+            }
+        ],
+        "Application": [
+            {
+                title: "Basic",
+                features: ["Basic mobile app for iOS/Android", "Pre-designed app templates", "Limited customization", "Standard features", "Ideal for individuals/small businesses"],
+                price: "$5000"
+            },
+            {
+                title: "Professional",
+                features: ["Custom mobile app development", "User-friendly interface design", "Integration with backend services", "App testing and deployment", "Suitable for growing businesses"],
+                price: "$10000"
+            },
+            {
+                title: "Business",
+                features: ["Complex app development", "Highly customized solution", "Advanced features", "Testing and optimization", "Designed for larger corporations and organizations"],
+                price: "$15000"
+            }
+        ],
+        "Application and Website": [
+            {
+                title: "WEB & APP",
+                features: ["Custom website and mobile app development", "Tailored design to match brand identity", "Enhanced features for both web and app (e.g., user authentication, e-commerce)", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
+                price: "$5400"
+            }
+        ],
+    };
+
+
+    function getFullPackageName(shortName) {
+        // Словарь соответствия сокращений и полных названий
+        const nameMapping = {
+            "Basic": "Basic",
+            "Pro": "Professional",
+            "Business": "Business",
+            "Application and Website": "WEB & APP"
+        };
+
+        return nameMapping[shortName] || shortName;
+    }
+
+
+    // Функция для заполнения модального окна данными выбранного пакета
+    function populateModal(packageName, category) {
+        const modal = document.querySelector('.modal');
+        const packageNameSpan = modal.querySelector('.package-name');
+        const packageFeatures = modal.querySelector('.left-section ul');
+
+        // Очищаем текущий список функций в модальном окне
+        while (packageFeatures.firstChild) {
+            packageFeatures.removeChild(packageFeatures.firstChild);
+        }
+
+        // Находим данные выбранного пакета
+        const packageData = tabData[category].find(p => p.title === packageName);
+
+        if (packageData) {
+            // Устанавливаем название пакета
+            packageNameSpan.innerText = packageData.title.toUpperCase();
+
+            // Добавляем функции пакета
+            packageData.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                packageFeatures.appendChild(li);
+            });
+
+            // Отображаем модальное окно
+            modal.style.display = 'block';
+        }
+    }
+
+    // Добавляем обработчики событий на кнопки в таблице
+    const tableButtons = document.querySelectorAll('.feature-service-table .button-get-started');
+    tableButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const shortPackageName = this.parentNode.querySelector('h3').innerText;
+            const category = document.querySelector('.tabs .active-tab p').innerText;
+            const fullPackageName = getFullPackageName(shortPackageName);
+
+            populateModal(fullPackageName, category);
+        });
+    });
+
+    // Обработчик для закрытия модального окна
+    const closeButton = document.querySelector('.modal .close');
+    closeButton.addEventListener('click', function() {
+        document.querySelector('.modal').style.display = 'none';
+    });
+});
+
+
+
 
