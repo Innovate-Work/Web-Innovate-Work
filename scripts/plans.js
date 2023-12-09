@@ -329,67 +329,6 @@ var dataForWebsite = [
     ['Comprehensive SEO, performance optimization, and app testing', '<i class="fa-solid fa-check" style="color: #c5ff68"></i>']
 ];
 
-  
-
-//   function updateTable(dataArray) {
-//     var table = document.querySelector('.feature-service-table tbody');
-
-//     var headerDivs = document.querySelectorAll('.feature-service-table .head-div');
-//     headerDivs.forEach((div, index) => {
-//       // Убедитесь, что есть соответствующие данные перед попыткой обновления
-//       if (dataArray[index]) {
-//         var pricePara = div.querySelector('p');
-//         pricePara.innerHTML = `<span>from</span> ${dataArray[index][1]}`;
-//       }
-//     });
-  
-//     // Очищаем текущее содержимое таблицы
-//     while (table.rows.length > 1) {
-//       table.deleteRow(1);
-//     }
-  
-//     dataArray.forEach(function (rowItems, rowIndex) {
-//         // Пропускаем строки, которые предназначены для заголовков
-//         if (rowIndex < headerDivs.length) return;
-    
-//         var row = table.insertRow();
-//         rowItems.forEach(function (item) {
-//           var cell = row.insertCell();
-//           cell.innerHTML = item;
-//         });
-//       });
-//     }
-
-
-
-//   document.addEventListener('DOMContentLoaded', function() {
-//     // Заполнение таблицы по умолчанию данными для "Website"
-//     updateTable(dataForWebsite);
-  
-//     // Получаем все вкладки и добавляем к ним обработчики событий
-//     var tabs = document.querySelectorAll('#tabs div');
-//     tabs.forEach(function(tab) {
-//       tab.addEventListener('click', function() {
-//         // Получаем текст внутри вкладки
-//         var tabText = tab.textContent.trim();
-  
-//         // Выбираем данные на основе текста вкладки
-//         if (tabText === "Website") {
-//           updateTable(dataForWebsite);
-//         } else if (tabText === "Application") {
-//           updateTable(dataForApplication);
-//         } else if (tabText === "Application and Website") {
-//           updateTable(dataForWebAndApp);
-//         }
-  
-//         // Сброс и установка активного класса для вкладок
-//         tabs.forEach(t => t.classList.remove('active-tab'));
-//         tab.classList.add('active-tab');
-//       });
-//     });
-//   });
-
-
 function updateTable(dataArray) {
     var table = document.querySelector('.feature-service-table tbody');
     var headers = document.querySelectorAll('.feature-service-table th');

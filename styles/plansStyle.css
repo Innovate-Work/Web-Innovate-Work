@@ -633,12 +633,13 @@ input[id="company-name-pop-up"]:focus {
     margin-left: -24px;
 }
 
-.services-text-and-icon{
+.services-text-and-icon {
     display: flex; /* Изменяем на flex для горизонтального размещения элементов */
     justify-content: start; /* Выравнивание элементов слева */
     align-items: center; /* Выравнивание элементов по вертикали по центру */
     gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
     width: 100%;
+
 }
 
 /* Новые стили для кнопок */
@@ -1025,14 +1026,15 @@ input[id="company-name-pop-up"]:focus {
     border-radius: 0px;
     border: none;
     background: #1B1D1E;
-    color: #FBFBFB;
+    color: #5A5F62;
     font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    padding: 10px;
+    padding: 0px;
     margin-left: 0px;
+    margin-bottom: 11px;
 }
 
 .services-text-and-icon {
@@ -1042,6 +1044,7 @@ input[id="company-name-pop-up"]:focus {
     gap: 4px;
     width: 100%;
     flex-direction: column;
+    padding-left: 12px;
 }
 
 .additional-services h2 {
@@ -1088,7 +1091,7 @@ input[id="company-name-pop-up"]:focus {
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    text-align: left;
+    text-align: start;
 }
 
 
