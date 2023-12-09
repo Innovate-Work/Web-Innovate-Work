@@ -1084,13 +1084,11 @@ input[id="company-name-pop-up"]:focus {
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
-    font-size: 20px;
     color: #5A5F62;
     font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px;
     text-align: start;
 }
 
