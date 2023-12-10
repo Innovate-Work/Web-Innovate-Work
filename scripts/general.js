@@ -132,3 +132,20 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
       });
       
 
+// transition 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash; // получаем якорь из URL
+    if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+            setTimeout(function() {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth"
+                });
+            }, 100); // небольшая задержка для учета загрузки страницы
+        }
+    }
+});

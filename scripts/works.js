@@ -9,6 +9,30 @@ $(document).ready(function(){
         $(this).addClass('active-tab');
         updatePackages($(this).text().trim()); // Обновляем пакеты при клике
     });
+
+    function checkUrlAndScroll() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tab = urlParams.get('tab');
+
+        if (tab) {
+            const tabElement = $('.tabs div').filter(function() {
+                return $(this).text().trim() === tab;
+            });
+
+            if (tabElement.length) {
+                $('.tabs div').removeClass('active-tab');
+                tabElement.addClass('active-tab');
+                updatePackages(tab); // Обновляем пакеты
+
+                $('html, body').animate({
+                    scrollTop: $('.tabs').offset().top - 100
+                }, 1000);
+            }
+        }
+    }
+
+    checkUrlAndScroll();
+
 });
 
 document.addEventListener('DOMContentLoaded', initPackages);

@@ -8,6 +8,27 @@ $(document).ready(function(){
         // Добавляем класс 'active-tab' к нажатому div
         $(this).addClass('active-tab');
     });
+
+    function checkUrlAndScroll() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tabName = urlParams.get('tab');
+
+        if (tabName) {
+            $('.tabs div').each(function() {
+                if ($(this).text().trim() === tabName) {
+                    $('.tabs div').removeClass('active-tab');
+                    $(this).addClass('active-tab');
+
+                    $('html, body').animate({
+                        scrollTop: $('#tabs').offset().top - 100
+                    }, 1000);
+                }
+            });
+        }
+    }
+
+    // Вызываем функцию при загрузке страницы
+    checkUrlAndScroll();
 });
 
 document.addEventListener('DOMContentLoaded', initPackages);
@@ -153,24 +174,6 @@ document.querySelectorAll('.tabs div').forEach(tab => {
         tab.classList.add('active-tab');
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
-        const element = document.querySelector('.tabs');
-        if (element) {
-            setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
-                element.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }, 100);
-        }
-    }
-});
-
-
-
-
 
 
 // pop up action
@@ -561,3 +564,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+// transmition 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
+        const element = document.querySelector('.tabs');
+        if (element) {
+            setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    }
+});
+
+
+
+
+
+// test 
+
+
+
+
+  
+  
+  
+  
