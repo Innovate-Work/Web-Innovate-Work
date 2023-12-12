@@ -1,14 +1,29 @@
 $(document).ready(function(){
-    // Сделаем первый div активным при инициализации
     $('.tabs div:first-child').addClass('active-tab');
 
-    $('.tabs div').click(function(){
-        // Сначала удаляем класс 'active-tab' у всех div
+    $('.tabs div').click(function() {
         $('.tabs div').removeClass('active-tab');
-        // Добавляем класс 'active-tab' к нажатому div
         $(this).addClass('active-tab');
+        updatePackages($(this).find('p').text().trim());
     });
 
+    // Assuming you have three cells corresponding to the three tabs
+    $('.cells-block .cell').click(function() {
+        const index = $(this).index(); // Get the index of the clicked cell
+        console.log("Cell index clicked:", index); // Debugging
+
+        const tabDiv = $('.tabs div').eq(index); // Get the corresponding tab
+        if (tabDiv.length) {
+            tabDiv.click(); // Trigger the click event on the corresponding tab
+            $('html, body').animate({
+                scrollTop: $('.tabs').offset().top
+            }, 1000);
+        }
+    });
+    
+
+
+    // Function to check URL and scroll to the appropriate tab
     function checkUrlAndScroll() {
         const urlParams = new URLSearchParams(window.location.search);
         const tabName = urlParams.get('tab');
@@ -16,22 +31,27 @@ $(document).ready(function(){
         if (tabName) {
             $('.tabs div').each(function() {
                 if ($(this).text().trim() === tabName) {
-                    $('.tabs div').removeClass('active-tab');
-                    $(this).addClass('active-tab');
-
+                    $(this).click(); // Trigger click event to handle tab switch
                     $('html, body').animate({
-                        scrollTop: $('#tabs').offset().top - 100
+                        scrollTop: $('.tabs').offset().top - 100
                     }, 1000);
                 }
             });
         }
     }
 
-    // Вызываем функцию при загрузке страницы
+    // Call the function when the page loads
     checkUrlAndScroll();
 });
 
-document.addEventListener('DOMContentLoaded', initPackages);
+document.addEventListener('DOMContentLoaded', function() {
+    initPackages();
+    // Call updatePackages with the first tab's name to initialize content
+    updatePackages($('.tabs div:first-child').text().trim());
+});
+
+
+
 
 const tabData = {
     "Website": [
@@ -570,19 +590,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // transmition 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
-        const element = document.querySelector('.tabs');
-        if (element) {
-            setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
-                element.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }, 100);
-        }
-    }
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
+//         const element = document.querySelector('.tabs');
+//         if (element) {
+//             setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
+//                 element.scrollIntoView({
+//                     behavior: 'smooth'
+//                 });
+//             }, 100);
+//         }
+//     }
+// });
 
 
 
@@ -591,6 +611,32 @@ document.addEventListener("DOMContentLoaded", function() {
 // test 
 
 
+// $(document).ready(function() {
+//     // Проверка параметров URL и выполнение скроллинга
+//     function checkUrlAndScroll() {
+//         const urlParams = new URLSearchParams(window.location.search);
+//         const tabName = urlParams.get('tab');
+
+//         if (tabName) {
+//             // Находим соответствующий заголовок вкладки
+//             $('#tabs div').each(function() {
+//                 if ($(this).find('p').text().trim() === tabName) {
+//                     // Активируем вкладку
+//                     $('#tabs div').removeClass('active-tab');
+//                     $(this).addClass('active-tab');
+
+//                     // Плавная прокрутка
+//                     $('html, body').animate({
+//                         scrollTop: $('#tabs').offset().top - 100
+//                     }, 1000);
+//                 }
+//             });
+//         }
+//     }
+
+//     // Вызов функции при загрузке страницы
+//     checkUrlAndScroll();
+// });
 
 
   

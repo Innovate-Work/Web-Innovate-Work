@@ -94,9 +94,50 @@ document.getElementById('validation-form').addEventListener('submit', function(e
     }
 });
 
-document.querySelectorAll('.cell').forEach(function(cell) {
-    cell.addEventListener('click', function() {
-        window.location.href = 'plans.html?scrollTo=tabs';
+
+
+
+$(document).ready(function() {
+    // Обработчик клика для каждого text-container
+    $('.cell .text-container').each(function(index) {
+        $(this).click(function() {
+            var tabName;
+            switch (index) {
+                case 0:
+                    tabName = 'Web Development';
+                    break;
+                case 1:
+                    tabName = 'App Development';
+                    break;
+                case 2:
+                    tabName = 'Application & website';
+                    break;
+                // Добавьте дополнительные случаи здесь, если нужно
+            }
+            // Перенаправление на страницу plans.html с параметром tab
+            window.location.href = 'plans.html?tab=' + encodeURIComponent(tabName);
+        });
     });
 });
+
+
+
+// transmition
+
+// $(document).ready(function() {
+//     // Обработчик клика на каждый text-container
+//     $('.text-container').each(function(index) {
+//         $(this).click(function() {
+//             // Удаляем класс active-tab у всех вкладок
+//             $('#tabs div').removeClass('active-tab');
+//             // Добавляем класс active-tab к соответствующей вкладке
+//             $('#tabs div').eq(index).addClass('active-tab');
+
+//             // Плавный скролл к контейнеру tabs, с учетом смещения вверх на 100px
+//             $('html, body').animate({
+//                 scrollTop: $('#tabs').offset().top - 100
+//             }, 1000);
+//         });
+//     });
+// });
 

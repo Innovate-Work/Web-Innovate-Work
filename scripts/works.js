@@ -13,6 +13,7 @@ $(document).ready(function(){
     function checkUrlAndScroll() {
         const urlParams = new URLSearchParams(window.location.search);
         const tab = urlParams.get('tab');
+        console.log("URL tab parameter:", tab);
 
         if (tab) {
             const tabElement = $('.tabs div').filter(function() {
