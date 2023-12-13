@@ -7,31 +7,24 @@ $(document).ready(function(){
         updatePackages($(this).find('p').text().trim());
     });
 
-    // Assuming you have three cells corresponding to the three tabs
     $('.cells-block .cell').click(function() {
-        const index = $(this).index(); // Get the index of the clicked cell
-        console.log("Cell index clicked:", index); // Debugging
-
-        const tabDiv = $('.tabs div').eq(index); // Get the corresponding tab
-        if (tabDiv.length) {
-            tabDiv.click(); // Trigger the click event on the corresponding tab
-            $('html, body').animate({
-                scrollTop: $('.tabs').offset().top
-            }, 1000);
-        }
+        const targetTab = $(this).data('target-tab');
+        window.location.href = 'your_new_page_url.html?tab=' + encodeURIComponent(targetTab);
     });
     
-
+    
 
     // Function to check URL and scroll to the appropriate tab
     function checkUrlAndScroll() {
         const urlParams = new URLSearchParams(window.location.search);
         const tabName = urlParams.get('tab');
-
+    
         if (tabName) {
             $('.tabs div').each(function() {
+                console.log("Tab text:", $(this).text().trim());
+                console.log("Target tab:", tabName);
                 if ($(this).text().trim() === tabName) {
-                    $(this).click(); // Trigger click event to handle tab switch
+                    $(this).click(); // Activate the tab
                     $('html, body').animate({
                         scrollTop: $('.tabs').offset().top - 100
                     }, 1000);
@@ -39,6 +32,7 @@ $(document).ready(function(){
             });
         }
     }
+    
 
     // Call the function when the page loads
     checkUrlAndScroll();
@@ -91,7 +85,7 @@ const tabData = {
     "Application and Website": [
         {
             title: "WEB & APP",
-            features: ["Custom website and mobile app development", "Tailored design to match brand identity", "Enhanced features for both web and app (e.g., user authentication, e-commerce)", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
+            features: ["Custom website and mobile app development", "Tailored design to match brand identity", "User authentication, e-commerce", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
             price: "$5400"
         }
     ]
@@ -512,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Application and Website": [
             {
                 title: "WEB & APP",
-                features: ["Custom website and mobile app development", "Tailored design to match brand identity", "Enhanced features for both web and app (e.g., user authentication, e-commerce)", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
+                features: ["Custom website and mobile app development", "Tailored design to match brand identity", "User authentication, e-commerce", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
                 price: "$5400"
             }
         ],
@@ -582,61 +576,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-
-
-
-// transmition 
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     if (urlParams.has('scrollTo') && urlParams.get('scrollTo') === 'tabs') {
-//         const element = document.querySelector('.tabs');
-//         if (element) {
-//             setTimeout(function() { // задержка, чтобы дать странице полностью загрузиться
-//                 element.scrollIntoView({
-//                     behavior: 'smooth'
-//                 });
-//             }, 100);
-//         }
-//     }
-// });
-
-
-
-
-
-// test 
-
-
-// $(document).ready(function() {
-//     // Проверка параметров URL и выполнение скроллинга
-//     function checkUrlAndScroll() {
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const tabName = urlParams.get('tab');
-
-//         if (tabName) {
-//             // Находим соответствующий заголовок вкладки
-//             $('#tabs div').each(function() {
-//                 if ($(this).find('p').text().trim() === tabName) {
-//                     // Активируем вкладку
-//                     $('#tabs div').removeClass('active-tab');
-//                     $(this).addClass('active-tab');
-
-//                     // Плавная прокрутка
-//                     $('html, body').animate({
-//                         scrollTop: $('#tabs').offset().top - 100
-//                     }, 1000);
-//                 }
-//             });
-//         }
-//     }
-
-//     // Вызов функции при загрузке страницы
-//     checkUrlAndScroll();
-// });
 
 
   

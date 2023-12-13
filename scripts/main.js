@@ -104,13 +104,13 @@ $(document).ready(function() {
             var tabName;
             switch (index) {
                 case 0:
-                    tabName = 'Web Development';
+                    tabName = 'Website';
                     break;
                 case 1:
-                    tabName = 'App Development';
+                    tabName = 'Application';
                     break;
                 case 2:
-                    tabName = 'Application & website';
+                    tabName = 'Application and Website';
                     break;
                 // Добавьте дополнительные случаи здесь, если нужно
             }
@@ -124,20 +124,4 @@ $(document).ready(function() {
 
 // transmition
 
-// $(document).ready(function() {
-//     // Обработчик клика на каждый text-container
-//     $('.text-container').each(function(index) {
-//         $(this).click(function() {
-//             // Удаляем класс active-tab у всех вкладок
-//             $('#tabs div').removeClass('active-tab');
-//             // Добавляем класс active-tab к соответствующей вкладке
-//             $('#tabs div').eq(index).addClass('active-tab');
-
-//             // Плавный скролл к контейнеру tabs, с учетом смещения вверх на 100px
-//             $('html, body').animate({
-//                 scrollTop: $('#tabs').offset().top - 100
-//             }, 1000);
-//         });
-//     });
-// });
 
