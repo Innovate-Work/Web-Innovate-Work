@@ -329,23 +329,23 @@ label {
 }
 
 .submit-button {
-  width: 538px;
-  height: 70px;
-  flex-shrink: 0;
-  background: var(--button-background, #5a5f62); 
-  color: var(--button-text-color, #fff);
-  font-family: "Manrope", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 48px;
+    width: 538px;
+    height: 70px;
+    flex-shrink: 0;
+    background: #282A2C;
+    color: #5A5F62;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
 }
 
 .submit-button:hover {
@@ -627,7 +627,7 @@ label {
     border-bottom: 1px solid var(--input-underline, #5a5f62);
     color: var(--input-text-color, #fff);
     font-family: "Manrope", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
@@ -641,13 +641,13 @@ label {
     width: 100%;
     height: 48px;
     flex-shrink: 0;
-    background: var(--button-background, #5A5F62);
-    color: var(--button-text-color, #fff);
+    background: #1B1D1E;
+    color: #5A5F62;
     font-family: "Manrope", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
+    font-weight: 600;
+    line-height: 20px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -655,7 +655,7 @@ label {
     justify-content: center;
     align-items: center;
     margin-top: 48px;
-  }
+}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

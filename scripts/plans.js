@@ -84,7 +84,7 @@ const tabData = {
     ],
     "Application and Website": [
         {
-            title: "WEB & APP",
+            title: "Web and App",
             features: ["Custom website and mobile app development", "Tailored design to match brand identity", "User authentication, e-commerce", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
             price: "$5400"
         }
@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         "Application and Website": [
             {
-                title: "WEB & APP",
+                title: "Web and App",
                 features: ["Custom website and mobile app development", "Tailored design to match brand identity", "User authentication, e-commerce", "Comprehensive SEO, performance optimization, and app testing", "Suitable for businesses requiring both web and mobile presence"],
                 price: "$5400"
             }
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Basic": "Basic",
             "Pro": "Professional",
             "Business": "Business",
-            "Application and Website": "WEB & APP"
+            "Application and Website": "Web and App"
         };
 
         return nameMapping[shortName] || shortName;

@@ -544,13 +544,13 @@ input[id="company-name-pop-up"]:focus {
     width: 90%;
     height: 60px;
     flex-shrink: 0;
-    background: var(--button-background, #5A5F62);
-    color: var(--button-text-color, #fff);
+    background: #282A2C;
+    color: #5A5F62;
     font-family: 'Manrope', sans-serif;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
+    font-weight: 600;
+    line-height: 32px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -1090,8 +1090,25 @@ input[id="company-name-pop-up"]:focus {
     font-style: normal;
     font-weight: 400;
     text-align: start;
+    transform: translateY(-50%);
 }
 
+.service-button:hover {
+    background-color: transparent; /* Цвет фона при наведении */
+    color:  #5A5F62;
+}
+.service-button:hover::before {
+    content: url('../src/GroupCyrcle.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+}
+
+.service-button[data-active="true"] {
+    border-color: #BEFF54;
+    color: #FBFBFB;
+}
+
+.service-button[data-active="true"]::before {
+    content: url('../src/CyrcleGreen.svg'); 
+}
 
 input[id="email-pop-up"],
 input[id="phone-pop-up"],
@@ -1126,8 +1143,8 @@ input[id="company-name-pop-up"]:focus {
     width: 96%;
     height: 46px;
     flex-shrink: 0;
-    background: var(--button-background, #5A5F62); 
-    color: var(--button-text-color, #fff);
+    background: #282A2C;
+    color: #5A5F62;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -1186,17 +1203,3 @@ input[id="company-name-pop-up"]:focus {
     margin-bottom: 20px;
 }
 }
-
-@media (hover: none) {
-    a:hover, button:hover, .class:hover {
-      /* Сброс стилей для hover здесь */
-      background-color: inherit; /* Пример сброса фонового цвета */
-      color: inherit; /* Пример сброса стиля текста */
-      /* Другие свойства, которые вы хотите сбросить */
-    }
-
-    .service-button:hover {
-        background: #1B1D1E;
-      }
-
-  }

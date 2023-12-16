@@ -348,6 +348,7 @@ nav {
 
 @media (max-width: 768px) {
     .staticHeader {
+        border-radius: inherit;
         justify-content: left; 
         border-bottom-left-radius: 15px; /* Закругляем нижние углы */
         border-bottom-right-radius: 15px;
