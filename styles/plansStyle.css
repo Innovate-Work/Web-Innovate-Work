@@ -668,6 +668,7 @@ input[id="company-name-pop-up"]:focus {
 .service-button::before {
     content: url('../src/GroupCyrcle.svg'); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
     margin-right: 10px; /* Расстояние между текстом и изображением */
+    vertical-align: middle;
 }
 .service-button[data-active="true"]::before {
     content: url('../src/CyrcleGreen.svg'); 
@@ -1227,6 +1228,6 @@ input[id="company-name-pop-up"]:focus {
 }
 .text-details {
     margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 }
