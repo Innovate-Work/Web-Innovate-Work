@@ -1080,6 +1080,7 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .service-button {
+    line-height: 1.5;
     padding: 10px 20px;
     border: 1px solid #5A5F62;
     border-radius: 50px;
@@ -1092,7 +1093,7 @@ input[id="company-name-pop-up"]:focus {
     font-style: normal;
     font-weight: 400;
     text-align: start;
-    vertical-align: middle;
+    justify-content: center;
 }
 
 .service-button:hover {
