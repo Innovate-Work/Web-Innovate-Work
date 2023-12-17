@@ -657,13 +657,16 @@ input[id="company-name-pop-up"]:focus {
 .service-button[data-active="true"] {
     border-color: #BEFF54;
     color: #FBFBFB;
+    vertical-align: middle;
 }
 .service-button:hover {
     background-color: #5A5F62; /* Цвет фона при наведении */
     color: #FBFBFB;
+    vertical-align: middle;
 }
 .service-button:hover::before {
     content: url('../src/cyrcleWhite.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+    vertical-align: middle;
 }
 .service-button::before {
     content: url('../src/GroupCyrcle.svg'); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
@@ -672,6 +675,7 @@ input[id="company-name-pop-up"]:focus {
 }
 .service-button[data-active="true"]::before {
     content: url('../src/CyrcleGreen.svg'); 
+    vertical-align: middle;
 }
 
 
@@ -915,8 +919,6 @@ input[id="company-name-pop-up"]:focus {
     top: 0;
     left: 0;
     padding: 30px 25px;
-    margin-left: 20px;
-    margin-right: 20px;
     margin-bottom: 40px;
 }
 
@@ -1059,7 +1061,7 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .additional-services {
-    width: 72vw;
+    width: 100%;
     margin-top: 20px;
     padding: 10px 0;
     display: flex;
@@ -1072,7 +1074,7 @@ input[id="company-name-pop-up"]:focus {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    width: 68vw;
+    width: 100%;
     margin-top: 14px;
     margin-left: 0px;
 }
@@ -1096,18 +1098,22 @@ input[id="company-name-pop-up"]:focus {
 .service-button:hover {
     background-color: transparent; /* Цвет фона при наведении */
     color:  #5A5F62;
+    vertical-align: middle;
 }
 .service-button:hover::before {
     content: url('../src/GroupCyrcle.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+    vertical-align: middle;
 }
 
 .service-button[data-active="true"] {
     border-color: #BEFF54;
     color: #FBFBFB;
+    vertical-align: middle;
 }
 
 .service-button[data-active="true"]::before {
     content: url('../src/CyrcleGreen.svg'); 
+    vertical-align: middle;
 }
 
 input[id="email-pop-up"],
