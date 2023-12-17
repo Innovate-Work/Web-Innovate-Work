@@ -657,25 +657,20 @@ input[id="company-name-pop-up"]:focus {
 .service-button[data-active="true"] {
     border-color: #BEFF54;
     color: #FBFBFB;
-    vertical-align: middle;
 }
 .service-button:hover {
     background-color: #5A5F62; /* Цвет фона при наведении */
     color: #FBFBFB;
-    vertical-align: middle;
 }
 .service-button:hover::before {
     content: url('../src/cyrcleWhite.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
-    vertical-align: middle;
 }
 .service-button::before {
     content: url('../src/GroupCyrcle.svg'); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
     margin-right: 10px; /* Расстояние между текстом и изображением */
-    vertical-align: middle;
 }
 .service-button[data-active="true"]::before {
     content: url('../src/CyrcleGreen.svg'); 
-    vertical-align: middle;
 }
 
 
@@ -1099,21 +1094,46 @@ input[id="company-name-pop-up"]:focus {
 .service-button:hover {
     background-color: transparent; /* Цвет фона при наведении */
     color:  #5A5F62;
-    vertical-align: middle;
 }
 .service-button:hover::before {
-    content: url('../src/GroupCyrcle.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+    /* content: url('../src/GroupCyrcle.svg');  */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/GroupCyrcle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.service-button::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/GroupCyrcle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
     vertical-align: middle;
 }
 
 .service-button[data-active="true"] {
     border-color: #BEFF54;
     color: #FBFBFB;
-    vertical-align: middle;
 }
 
 .service-button[data-active="true"]::before {
-    content: url('../src/CyrcleGreen.svg'); 
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/CyrcleGreen.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
     vertical-align: middle;
 }
 
