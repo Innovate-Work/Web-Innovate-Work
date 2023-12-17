@@ -515,3 +515,18 @@ body {
 
     
 }
+
+@media (max-width: 390px) { 
+[class^="reason-number-"] {
+    color: #282A2C;
+    max-width: none;
+    order: 2;
+    font-family: Manrope;
+    font-size: 250px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 269.1px;
+    text-transform: uppercase;
+
+}
+}
