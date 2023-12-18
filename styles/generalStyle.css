@@ -227,7 +227,7 @@ nav {
     flex-direction: column;
 }
 
-.about-link, .main-link{
+.about-link {
     color: #5A5F62;
     font-size: 16px;
     font-style: normal;
@@ -242,9 +242,39 @@ nav {
 }
 .main-link {
     color:white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-decoration: none;
 }
 .about-link {
     font-family: Poppins;
+}
+
+.menu-list li {
+    width: 100%;
+    text-align: start;
+    margin-left: 44px;
+    position: relative;
+}
+
+.menu-list li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: calc(90% - 44px);
+    border-bottom: 1px solid #5A5F62;
+    padding-top: 25px; 
+}
+
+.menu-list li a, .menu-list li {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact, .contacts-title{
@@ -272,7 +302,7 @@ nav {
     color:white;
 }
 
-.about-link:hover, .main-link:hover {
+.about-link:hover {
     color: #BEFF54; /* Зеленый цвет текста при наведении */
     transform: scale(1.1); /* Увеличение на 10% при наведении */
 }
@@ -341,12 +371,13 @@ nav {
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
+    margin-top: 120px;
 }
 
 
 /* adaptive */
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .staticHeader {
         border-radius: inherit;
         justify-content: left; 
@@ -419,13 +450,16 @@ nav {
   }
 
   .menu-list {
-    list-style: none;
-    padding: 0;
     text-align: left;
+    width: 100%; /* Устанавливаем ширину списка */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0;
+    height: auto;
   }
   
   .menu-list li {
-    padding: 13px 0;
+    padding: 24px 0;
   }
   
   .menu-list li a {
@@ -446,14 +480,22 @@ nav {
   }
   
   .contacts-info {
-    /* Скрываем, но не через display, чтобы позволить анимацию */
-    visibility: hidden; 
+    visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0.5s, opacity 0.5s linear;
     background: #1B1D1E;
     color: #FBFBFB;
-    margin-top: -20px;
-    margin-left: 10px;
+    margin-top: -6px;
+    margin-left: 86px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: inherit;
+}
+
+.contacts-info p {
+    margin: 3px;
 }
 
 .contact-label {
@@ -465,11 +507,14 @@ nav {
     text-decoration: none;
 }
 
-
 .contacts-info.show {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: inherit;
 }
 
 .arrow-rotate {
@@ -516,6 +561,7 @@ nav {
         text-align: start;
         height: auto;
         margin: 0px;
+        margin-top: 60px;
     }
 
     .company-name-footer { 
@@ -592,8 +638,6 @@ nav {
         font-size: 18px;
     }
 
-    /* footer */
-    .footer {
-    }
+
 }
   

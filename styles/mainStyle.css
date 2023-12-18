@@ -139,7 +139,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .text-block {
@@ -348,10 +348,6 @@ label {
     margin-top: 48px;
 }
 
-.submit-button:hover {
-  background: var(--button-hover-background, #beff54);
-  color: var(--button-hover-text-color, #000);
-}
 
 /* Define the container styles */
 .container-animation-text {
@@ -494,6 +490,7 @@ label {
     height: auto;
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 35px
   }
 
   .headline {
@@ -595,7 +592,7 @@ label {
 
   .form-title {
     font-size: 30px;
-    text-align: left;
+    text-align: center;
   }
 
   .form {
@@ -625,9 +622,9 @@ label {
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--input-underline, #5a5f62);
-    color: var(--input-text-color, #fff);
+    color: #fff;
     font-family: "Manrope", sans-serif;
-    font-size: 15px;
+    font-size: 15px !important;
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
@@ -656,6 +653,8 @@ label {
     align-items: center;
     margin-top: 48px;
 }
+
+
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

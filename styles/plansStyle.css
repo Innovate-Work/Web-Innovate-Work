@@ -560,11 +560,6 @@ input[id="company-name-pop-up"]:focus {
     margin-top: 40px;
 }
 
-.submit-button-pop-up:hover {
-    background: var(--button-hover-background, #BEFF54);
-    color: var(--button-hover-text-color, #000);
-}
-
 
 .contact-details h3 {
     color: #FBFBFB;
@@ -1186,12 +1181,6 @@ input[id="company-name-pop-up"]:focus {
     align-items: center;
     margin-top: 40px;
 }
-
-.submit-button-pop-up:hover {
-    background: var(--button-hover-background, #BEFF54);
-    color: var(--button-hover-text-color, #000);
-}
-
 
 .contact-details h3 {
     color: #FBFBFB;

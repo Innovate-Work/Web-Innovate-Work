@@ -74,7 +74,7 @@ body {
 }
 
 .tabs div.active-tab {
-    background-color: #C5FF68; /* Зеленый фон для активного div */
+    background-color: #BEFF54; /* Зеленый фон для активного div */
 }
 
 .tabs div.active-tab p {
@@ -175,10 +175,7 @@ body {
 }
 
 
-.link-example img {
-    /* width: 100%;  
-    height: auto; */
-}
+
 
 
 
@@ -346,9 +343,5 @@ body {
         padding-right: 4px;
     }
 
-    .link-example img {
-        /* width: 100%;  /* Занимает всю ширину родительского элемента */
-        /* height: auto;  */
-    }
 
 }
