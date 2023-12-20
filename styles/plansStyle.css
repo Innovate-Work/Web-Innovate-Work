@@ -920,6 +920,12 @@ input[id="company-name-pop-up"]:focus {
     margin-bottom: 40px;
 }
 
+.left-section {
+    flex: 1;
+    margin-top: -16px;
+    max-width: none;
+}
+
 
 .modal-header {
     display: flex;
@@ -1092,6 +1098,8 @@ input[id="company-name-pop-up"]:focus {
     font-weight: 400;
     text-align: start;
     justify-content: center;
+    height: auto;
+    width: 90%;
 }
 
 .service-button:hover {
