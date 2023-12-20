@@ -402,5 +402,30 @@ body {
         padding-right: 4px;
     }
 
+    .prev, .next {
+        /* display: none; */
+    }
+
+    .modal-slider-indicators {
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+    }
+    
+    .indicator-dot {
+        height: 7px; /* 2 * r */
+        width: 7px; /* 2 * r */
+        border-radius: 50%; /* Делаем круг */
+        background-color: #bbb; /* Цвет заливки */
+        display: inline-block;
+        margin: 5px; /* Регулируем пространство вокруг кругов */
+        cursor: pointer;
+    }
+    
+    .indicator-dot.active {
+        background-color: #0f0;
+    }
 
 }

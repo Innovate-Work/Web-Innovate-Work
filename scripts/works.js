@@ -300,13 +300,19 @@ function updatePackages(tabName) {
     
         function showImage(index) {
             if (index < 0) {
-                index = currentImages.length - 1; // Переход к последнему изображению
+                index = currentImages.length - 1;
             } else if (index >= currentImages.length) {
-                index = 0; // Возврат к первому изображению
+                index = 0;
             }
             modalImg.src = currentImages[index];
             currentIndex = index; // Обновляем текущий индекс
+        
+            // // Обновление активных индикаторов
+            // const dots = document.querySelectorAll('.indicator-dot');
+            // dots.forEach(dot => dot.classList.remove('active'));
+            // dots[index].classList.add('active');
         }
+        
         
         $('.prev').click(function(){
             showImage(currentIndex - 1); // Предыдущее изображение
@@ -335,6 +341,31 @@ function updateGallery(tabName, packageElem, packageData) {
     });
 }
 
+// function createIndicators(currentIndex, totalImages) {
+//     const indicatorsContainer = document.querySelector('.modal-slider-indicators');
+//     indicatorsContainer.innerHTML = ''; // Очистка предыдущих индикаторов
+//     for (let i = 0; i < totalImages; i++) {
+//         const dot = document.createElement('div');
+//         dot.className = 'indicator-dot' + (i === currentIndex ? ' active' : '');
+//         indicatorsContainer.appendChild(dot);
+//     }
+// }
+
+// function updateActiveIndicator(currentIndex) {
+//     const dots = document.querySelectorAll('.modal-slider-indicators .indicator-dot');
+//     dots.forEach(dot => dot.classList.remove('active'));
+//     dots[currentIndex].classList.add('active');
+// }
+
+// indicatorsContainer.addEventListener('click', function(e) {
+//     if (e.target.matches('.indicator-dot')) {
+//         const newIndex = Array.from(indicatorsContainer.children).indexOf(e.target);
+//         showImage(newIndex);
+//     }
+// });
+
+
+
 
 // Функция для проверки параметров URL и выполнения прокрутки страницы
 function checkUrlAndScroll() {
@@ -357,3 +388,6 @@ function checkUrlAndScroll() {
         }
     }
 }
+
+// swipe
+
