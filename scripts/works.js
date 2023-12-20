@@ -146,6 +146,7 @@ $(document).ready(function() {
 
     // Проверяем параметры URL и выполняем прокрутку, если необходимо
     checkUrlAndScroll();
+    initPackages();
 });
 
 // Событие загрузки контента
@@ -159,8 +160,8 @@ const tabData = {
             link: "www.nike.com",
             images: [
                 'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
+                'src/dle1.png',
+                'src/dle3.png'
             ]
         },
         {
@@ -215,9 +216,9 @@ const tabData = {
             name: "Mobile App for Meditation",
             link: "www.nike.com",
             images: [
+                'src/dle3.png',
                 'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
+                'src/dle1.png'
             ]
         },
         {
@@ -266,6 +267,55 @@ function updatePackages(tabName) {
             updateGallery(tabName, packageElem, data[index]);
         }
     });
+
+        // Получаем элементы для модального окна
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var span = document.getElementsByClassName("close")[0];
+        var currentImages = []; // Массив для хранения изображений текущего пакета
+        var currentIndex = 0; // Индекс текущего изображения в модальном окне
+        
+        // Добавляем обработчик клика на изображение
+        $('.image-example').click(function(){
+            var index = $(this).data('index'); // Получаем индекс изображения
+            var parentGallery = $(this).closest('.content-works');
+            currentImages = []; // Очищаем массив
+        
+            parentGallery.find('.image-example').each(function() {
+                currentImages.push(this.src); // Заполняем массив текущими изображениями
+            });
+        
+            currentIndex = index; // Устанавливаем текущий индекс
+            modal.style.display = "block";
+            modalImg.src = currentImages[currentIndex];
+            captionText.innerHTML = this.alt;
+        });
+    
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    
+        function showImage(index) {
+            if (index < 0) {
+                index = currentImages.length - 1; // Переход к последнему изображению
+            } else if (index >= currentImages.length) {
+                index = 0; // Возврат к первому изображению
+            }
+            modalImg.src = currentImages[index];
+            currentIndex = index; // Обновляем текущий индекс
+        }
+        
+        $('.prev').click(function(){
+            showImage(currentIndex - 1); // Предыдущее изображение
+        });
+        
+        $('.next').click(function(){
+            showImage(currentIndex + 1); // Следующее изображение
+        });
+        
 }
 
 // Функция для обновления галереи изображений в пакете
@@ -275,14 +325,16 @@ function updateGallery(tabName, packageElem, packageData) {
 
     var packageImages = packageData.images || [];
 
-    packageImages.forEach(function(imageSrc) {
+    packageImages.forEach(function(imageSrc, index) {
         var img = document.createElement('img');
         img.classList.add('image-example');
         img.src = imageSrc;
         img.alt = "Example image";
+        img.setAttribute('data-index', index); // Добавление атрибута data-index
         galleryDiv.appendChild(img);
     });
 }
+
 
 // Функция для проверки параметров URL и выполнения прокрутки страницы
 function checkUrlAndScroll() {
