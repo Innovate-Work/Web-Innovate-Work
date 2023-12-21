@@ -1,134 +1,3 @@
-// $(document).ready(function(){
-//     // Сделаем первый div активным при инициализации
-//     $('.tabs div:first-child').addClass('active-tab');
-
-//     $('.tabs div').click(function(){
-//         // Сначала удаляем класс 'active-tab' у всех div
-//         $('.tabs div').removeClass('active-tab');
-//         // Добавляем класс 'active-tab' к нажатому div
-//         $(this).addClass('active-tab');
-//         updatePackages($(this).text().trim()); // Обновляем пакеты при клике
-//     });
-
-//     function checkUrlAndScroll() {
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const tab = urlParams.get('tab');
-//         console.log("URL tab parameter:", tab);
-
-//         if (tab) {
-//             const tabElement = $('.tabs div').filter(function() {
-//                 return $(this).text().trim() === tab;
-//             });
-
-//             if (tabElement.length) {
-//                 $('.tabs div').removeClass('active-tab');
-//                 tabElement.addClass('active-tab');
-//                 updatePackages(tab); // Обновляем пакеты
-
-//                 $('html, body').animate({
-//                     scrollTop: $('.tabs').offset().top - 100
-//                 }, 1000);
-//             }
-//         }
-//     }
-
-//     function updateGallery(tabName, packageElem, packageData) {
-//         var galleryDiv = packageElem.querySelector('.content-works'); // Получить элемент, где будут отображаться изображения
-//         galleryDiv.innerHTML = ''; // Очистить содержимое галереи
-
-//         // Предположим, что у вас есть объект с массивами изображений для каждого пакета
-//         var packageImages = packageData.images || [];
-
-//         // Создать и добавить изображения в div
-//         packageImages.forEach(function(imageSrc) {
-//             var img = document.createElement('img');
-//             img.classList.add('image-example');
-//             img.src = imageSrc;
-//             img.alt = "Example image";
-//             galleryDiv.appendChild(img);
-//         });
-//     }
-
-//     checkUrlAndScroll();
-
-// });
-
-// document.addEventListener('DOMContentLoaded', initPackages);
-
-// const tabData = {
-//     "Website": [
-//         {
-//             name: "Web site online shop for Nike",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Web site online shop for Adidas",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Web site online shop for Puma",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Web site online shop for Reebok",
-//             link: "www.nike.com"
-//         }
-//     ],
-//     "Application": [
-//         {
-//             name: "Mobile App for Fitness",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Mobile App for Nutrition",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Mobile App for Meditation",
-//             link: "www.nike.com"
-//         },
-//         {
-//             name: "Mobile App for Running",
-//             link: "www.nike.com"
-//         }
-//     ]
-// };
-
-// function initPackages() {
-//     updatePackages("Website"); // Инициализация с первой вкладкой
-// }
-
-// function updatePackages(tabName) {
-//     const packages = document.querySelectorAll('.work-package');
-//     const data = tabData[tabName] || [];
-
-//     // Сначала удаляем класс 'active-package' у всех пакетов
-//     packages.forEach(packageElem => {
-//         packageElem.classList.remove('active-package');
-//         packageElem.style.display = "none"; // Скрываем все элементы
-//     });
-
-//     // Теперь добавляем класс 'active-package' к нужным пакетам с большей задержкой
-//     packages.forEach((packageElem, index) => {
-//         if (data[index]) {
-//             const nameExample = packageElem.querySelector('.name-example');
-//             const linkText = packageElem.querySelector('.link-example .link-text');
-
-//             nameExample.textContent = data[index].name;
-//             linkText.textContent = data[index].link;
-
-//             packageElem.style.display = ""; // Показываем элемент
-
-//             // Задержка перед добавлением класса для анимации
-//             setTimeout(() => {
-//                 packageElem.classList.add('active-package');
-//             }, 100 + 150 * index); // Увеличиваем начальную задержку
-//         }
-//     });
-// }
-
-
-
 
 $(document).ready(function() {
     // Инициализация первой вкладки как активной
@@ -267,61 +136,6 @@ function updatePackages(tabName) {
             updateGallery(tabName, packageElem, data[index]);
         }
     });
-
-        // Получаем элементы для модального окна
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        var span = document.getElementsByClassName("close")[0];
-        var currentImages = []; // Массив для хранения изображений текущего пакета
-        var currentIndex = 0; // Индекс текущего изображения в модальном окне
-        
-        // Добавляем обработчик клика на изображение
-        $('.image-example').click(function(){
-            var index = $(this).data('index'); // Получаем индекс изображения
-            var parentGallery = $(this).closest('.content-works');
-            currentImages = []; // Очищаем массив
-        
-            parentGallery.find('.image-example').each(function() {
-                currentImages.push(this.src); // Заполняем массив текущими изображениями
-            });
-        
-            currentIndex = index; // Устанавливаем текущий индекс
-            modal.style.display = "block";
-            modalImg.src = currentImages[currentIndex];
-            captionText.innerHTML = this.alt;
-        });
-    
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    
-        function showImage(index) {
-            if (index < 0) {
-                index = currentImages.length - 1;
-            } else if (index >= currentImages.length) {
-                index = 0;
-            }
-            modalImg.src = currentImages[index];
-            currentIndex = index; // Обновляем текущий индекс
-        
-            // // Обновление активных индикаторов
-            // const dots = document.querySelectorAll('.indicator-dot');
-            // dots.forEach(dot => dot.classList.remove('active'));
-            // dots[index].classList.add('active');
-        }
-        
-        
-        $('.prev').click(function(){
-            showImage(currentIndex - 1); // Предыдущее изображение
-        });
-        
-        $('.next').click(function(){
-            showImage(currentIndex + 1); // Следующее изображение
-        });
-        
 }
 
 // Функция для обновления галереи изображений в пакете
@@ -336,36 +150,96 @@ function updateGallery(tabName, packageElem, packageData) {
         img.classList.add('image-example');
         img.src = imageSrc;
         img.alt = "Example image";
-        img.setAttribute('data-index', index); // Добавление атрибута data-index
+        img.setAttribute('data-index', index);
         galleryDiv.appendChild(img);
     });
 }
 
-// function createIndicators(currentIndex, totalImages) {
-//     const indicatorsContainer = document.querySelector('.modal-slider-indicators');
-//     indicatorsContainer.innerHTML = ''; // Очистка предыдущих индикаторов
-//     for (let i = 0; i < totalImages; i++) {
-//         const dot = document.createElement('div');
-//         dot.className = 'indicator-dot' + (i === currentIndex ? ' active' : '');
-//         indicatorsContainer.appendChild(dot);
-//     }
-// }
-
-// function updateActiveIndicator(currentIndex) {
-//     const dots = document.querySelectorAll('.modal-slider-indicators .indicator-dot');
-//     dots.forEach(dot => dot.classList.remove('active'));
-//     dots[currentIndex].classList.add('active');
-// }
-
-// indicatorsContainer.addEventListener('click', function(e) {
-//     if (e.target.matches('.indicator-dot')) {
-//         const newIndex = Array.from(indicatorsContainer.children).indexOf(e.target);
-//         showImage(newIndex);
-//     }
-// });
 
 
 
+// Получаем элементы для модального окна
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var currentImages = []; // Массив для хранения изображений текущего пакета
+var currentIndex = 0; // Индекс текущего изображения в модальном окне
+
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('image-example')) {
+        var parentGallery = event.target.closest('.content-works');
+        currentImages = [];
+
+        // Получение всех изображений в галерее
+        parentGallery.querySelectorAll('.image-example').forEach(function(img) {
+            currentImages.push(img.src);
+        });
+
+        // Переворачиваем массив, чтобы последний элемент стал первым
+        currentImages.reverse();
+
+        // Устанавливаем currentIndex в 0, чтобы начать с первого элемента перевернутого массива
+        currentIndex = 0;
+
+        modal.style.display = "block";
+        modalImg.src = currentImages[currentIndex];
+        updateArrowsAndDots(currentIndex, currentImages.length);
+    }
+});
+
+
+
+
+
+function showImage(index) {
+    if (index < 0) {
+        index = currentImages.length - 1;
+    } else if (index >= currentImages.length) {
+        index = 0;
+    }
+    
+    modalImg.src = currentImages[index];
+    currentIndex = index;
+    updateArrowsAndDots(currentIndex, currentImages.length);
+}
+
+function updateArrowsAndDots(currentIndex, totalImages) {
+    const isMobile = window.matchMedia("(max-width: 576px)").matches;
+
+    if (!isMobile) {
+        const prevArrow = document.querySelector('.prev');
+        const nextArrow = document.querySelector('.next');
+        prevArrow.style.display = currentIndex === 0 ? 'none' : 'block';
+        nextArrow.style.display = currentIndex === totalImages - 1 ? 'none' : 'block';
+    }
+
+    createIndicators(currentIndex, totalImages);
+}
+
+
+function createIndicators(currentIndex, totalImages) {
+    const indicatorsContainer = document.querySelector('.modal-slider-indicators');
+    indicatorsContainer.innerHTML = '';
+    for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'indicator-dot' + (i === currentIndex ? ' active' : '');
+        indicatorsContainer.appendChild(dot);
+    }
+}
+
+modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+document.querySelector('.prev').addEventListener('click', function(){
+    showImage(currentIndex - 1);
+});
+
+document.querySelector('.next').addEventListener('click', function(){
+    showImage(currentIndex + 1);
+});
 
 // Функция для проверки параметров URL и выполнения прокрутки страницы
 function checkUrlAndScroll() {
@@ -373,21 +247,49 @@ function checkUrlAndScroll() {
     const tab = urlParams.get('tab');
 
     if (tab) {
-        const tabElement = $('.tabs div').filter(function() {
-            return $(this).text().trim() === tab;
+        const tabElement = document.querySelector('.tabs div').filter(function() {
+            return this.textContent.trim() === tab;
         });
 
-        if (tabElement.length) {
-            $('.tabs div').removeClass('active-tab');
-            tabElement.addClass('active-tab');
+        if (tabElement) {
+            document.querySelectorAll('.tabs div').forEach(elem => elem.classList.remove('active-tab'));
+            tabElement.classList.add('active-tab');
             updatePackages(tab);
 
-            $('html, body').animate({
-                scrollTop: $('.tabs').offset().top - 100
-            }, 1000);
+            window.scrollTo({
+                top: document.querySelector('.tabs').offsetTop - 100,
+                behavior: 'smooth'
+            });
         }
     }
 }
 
+document.addEventListener('DOMContentLoaded', initPackages);
+
 // swipe
 
+var touchStartX = 0;
+var touchEndX = 0;
+
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+    if (touchEndX < touchStartX - 30) {
+        // Свайп влево
+        showImage(currentIndex + 1);
+    }
+    if (touchEndX > touchStartX + 30) {
+        // Свайп вправо
+        showImage(currentIndex - 1);
+    }
+}
+
+modal.addEventListener('touchstart', handleTouchStart, false);
+modal.addEventListener('touchmove', handleTouchMove, false);
+modal.addEventListener('touchend', handleTouchEnd, false);
