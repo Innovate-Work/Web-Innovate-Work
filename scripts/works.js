@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     // Инициализация первой вкладки как активной
     $('.tabs div:first-child').addClass('active-tab');
@@ -265,94 +264,54 @@ function checkUrlAndScroll() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', initPackages);
 
 // swipe
 
-// var touchStartX = 0;
-// var touchEndX = 0;
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+document.addEventListener('touchend', handleTouchEnd, false);
 
-// function handleTouchStart(event) {
-//     touchStartX = event.touches[0].clientX;
-// }
+var touchStartX = 0;
+var touchEndX = 0;
 
-// function handleTouchMove(event) {
-//     touchEndX = event.touches[0].clientX;
-// }
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+}
 
-// function handleTouchEnd() {
-//     if (touchEndX < touchStartX - 30) {
-//         // Свайп влево
-//         showImage(currentIndex + 1);
-//     }
-//     if (touchEndX > touchStartX + 30) {
-//         // Свайп вправо
-//         showImage(currentIndex - 1);
-//     }
-// }
+function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX;
+}
 
-modal.addEventListener('touchstart', handleTouchStart, false);
-modal.addEventListener('touchmove', handleTouchMove, false);
-modal.addEventListener('touchend', handleTouchEnd, false);
+function handleTouchEnd() {
+    const distance = touchEndX - touchStartX;
+    if (Math.abs(distance) > 30) {
+        // Свайп влево или вправо
+        scrollImages(distance);
+    }
+}
 
-function updateModalForMobile() {
+function scrollImages(distance) {
     const isMobile = window.matchMedia("(max-width: 576px)").matches;
+    if (!isMobile) return;
 
-    const modalContent = document.getElementById("img01");
-    if (isMobile) {
-        modalContent.classList.add('swiper-container');
-
-        // Создаем обертку слайдера
-        const swiperWrapper = document.createElement('div');
-        swiperWrapper.classList.add('swiper-wrapper');
-        modalContent.appendChild(swiperWrapper);
-
-        // Перемещаем изображения внутрь обертки слайдера
-        currentImages.forEach((src) => {
-            const slide = document.createElement('div');
-            slide.classList.add('swiper-slide');
-            const img = document.createElement('img');
-            img.src = src;
-            img.classList.add('modal-image');
-            slide.appendChild(img);
-            swiperWrapper.appendChild(slide);
-        });
-
-        // Инициализация слайдера
-        initializeSlider();
-    } else {
-        // Возвращаем к исходному виду для не мобильных устройств
-        resetModalToOriginal();
+    let newCurrentIndex = currentIndex - Math.sign(distance);
+    if (newCurrentIndex < 0) {
+        newCurrentIndex = currentImages.length - 1;
+    } else if (newCurrentIndex >= currentImages.length) {
+        newCurrentIndex = 0;
     }
+    currentIndex = newCurrentIndex;
+    modalImg.style.transform = `translateX(${-100 * currentIndex}%)`;
+    updateArrowsAndDots(currentIndex, currentImages.length);
+
 }
 
-var swiperInstance = null; // Глобальная переменная для хранения экземпляра Swiper
+// Обновляем стили для изображений при изменении currentIndex
+function updateImagesPosition() {
+    const isMobile = window.matchMedia("(max-width: 576px)").matches;
+    if (!isMobile) return;
 
-function initializeSlider() {
-    if (!swiperInstance) { // Проверка, существует ли экземпляр Swiper
-        swiperInstance = new Swiper('.swiper-container', {
-            loop: true,
-            spaceBetween: 10,
-            slidesPerView: 1,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    }
+    modalImg.style.transition = 'transform 0.3s ease';
+    modalImg.style.transform = `translateX(${-100 * currentIndex}%)`;
 }
-
-function resetModalToOriginal() {
-    const modalContent = document.getElementById("img01");
-    modalContent.classList.remove('swiper-container');
-    modalContent.innerHTML = ''; // Очищаем содержимое
-    swiperInstance = null;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    initPackages();
-    updateModalForMobile();
-});
-
-window.addEventListener('resize', updateModalForMobile);

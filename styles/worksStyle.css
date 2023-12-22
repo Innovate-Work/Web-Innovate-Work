@@ -457,4 +457,14 @@ body {
         height: auto;
     }
 
+    .modal-img-container {
+        display: flex;
+        overflow: hidden;
+    }
+    .modal-img {
+        flex: 0 0 100%;
+        transition: transform 0.3s ease;
+    }
+    
+
 }
