@@ -164,32 +164,6 @@ var currentImages = []; // Массив для хранения изображе
 var currentIndex = 0; // Индекс текущего изображения в модальном окне
 
 
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('image-example')) {
-        var parentGallery = event.target.closest('.content-works');
-        currentImages = [];
-
-        // Получение всех изображений в галерее
-        parentGallery.querySelectorAll('.image-example').forEach(function(img) {
-            currentImages.push(img.src);
-        });
-
-        // Переворачиваем массив, чтобы последний элемент стал первым
-        currentImages.reverse();
-
-        // Устанавливаем currentIndex в 0, чтобы начать с первого элемента перевернутого массива
-        currentIndex = 0;
-
-        modal.style.display = "block";
-        modalImg.src = currentImages[currentIndex];
-        updateArrowsAndDots(currentIndex, currentImages.length);
-    }
-});
-
-
-
-
-
 function showImage(index) {
     if (index < 0) {
         index = currentImages.length - 1;
@@ -228,7 +202,7 @@ function createIndicators(currentIndex, totalImages) {
 
 modal.addEventListener('click', function(event) {
     if (event.target === modal) {
-        modal.style.display = 'none';
+        closeModal();
     }
 });
 
@@ -244,74 +218,143 @@ document.querySelector('.next').addEventListener('click', function(){
 function checkUrlAndScroll() {
     const urlParams = new URLSearchParams(window.location.search);
     const tab = urlParams.get('tab');
+    const tabs = Array.from(document.querySelectorAll('.tabs div'));
 
     if (tab) {
-        const tabs = Array.from(document.querySelectorAll('.tabs div'));
-        const tabElement = tabs.find(function(elem) {
-            return elem.textContent.trim() === tab;
-        });
+        const tabElement = tabs.find(elem => elem.textContent.trim() === tab);
 
         if (tabElement) {
             tabs.forEach(elem => elem.classList.remove('active-tab'));
             tabElement.classList.add('active-tab');
             updatePackages(tab);
 
-            window.scrollTo({
-                top: document.querySelector('.tabs').offsetTop - 100,
-                behavior: 'smooth'
-            });
+            // Добавляем небольшую задержку перед скроллом
+            setTimeout(() => {
+                const targetElement = document.querySelector('.tabs');
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100); // Задержка в 100 миллисекунд
         }
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', initPackages);
 
 // swipe
 
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-document.addEventListener('touchend', handleTouchEnd, false);
-
-var touchStartX = 0;
-var touchEndX = 0;
-
-function handleTouchStart(event) {
-    touchStartX = event.touches[0].clientX;
-}
-
-function handleTouchMove(event) {
-    touchEndX = event.touches[0].clientX;
-}
-
-function handleTouchEnd() {
-    const distance = touchEndX - touchStartX;
-    if (Math.abs(distance) > 30) {
-        // Свайп влево или вправо
-        scrollImages(distance);
+function setupMobileImagesForModal(images) {
+    // Удаляем старый контент изображения, если он есть
+    if (modalImg) {
+        modalImg.remove();
+        modalImg = null; // Удаляем ссылку на старое изображение
     }
-}
 
-function scrollImages(distance) {
-    const isMobile = window.matchMedia("(max-width: 576px)").matches;
-    if (!isMobile) return;
-
-    let newCurrentIndex = currentIndex - Math.sign(distance);
-    if (newCurrentIndex < 0) {
-        newCurrentIndex = currentImages.length - 1;
-    } else if (newCurrentIndex >= currentImages.length) {
-        newCurrentIndex = 0;
+    let imagesContainer = document.querySelector('.images-container');
+    if (!imagesContainer) {
+        imagesContainer = document.createElement('div');
+        imagesContainer.classList.add('images-container');
+        document.querySelector('.modal-content-wrapper').appendChild(imagesContainer);
+    } else {
+        imagesContainer.innerHTML = '';
     }
-    currentIndex = newCurrentIndex;
-    modalImg.style.transform = `translateX(${-100 * currentIndex}%)`;
-    updateArrowsAndDots(currentIndex, currentImages.length);
 
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.classList.add('modal-content');
+        img.src = src;
+        imagesContainer.appendChild(img);
+    });
+
+    imagesContainer.scrollLeft = 0;
+
+    // Теперь добавляем обработчик событий 'scroll'
+    imagesContainer.addEventListener('scroll', updateActiveIndicator);
+
+    // Вызываем функцию для установки начального активного индикатора
+    updateActiveIndicator();
 }
 
-// Обновляем стили для изображений при изменении currentIndex
-function updateImagesPosition() {
-    const isMobile = window.matchMedia("(max-width: 576px)").matches;
-    if (!isMobile) return;
+// ...
 
-    modalImg.style.transition = 'transform 0.3s ease';
-    modalImg.style.transform = `translateX(${-100 * currentIndex}%)`;
+// Проверяем, существует ли элемент .images-container перед добавлением обработчика событий
+if (document.querySelector('.images-container')) {
+    document.querySelector('.images-container').addEventListener('scroll', updateActiveIndicator);
+}
+
+
+function openModal() {
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Отключаем скролл на основной странице
+}
+
+// Функция для закрытия модального окна
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = ""; // Восстанавливаем скролл
+}
+
+// Модифицируем обработчик клика для открытия модального окна
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('image-example')) {
+        var parentGallery = event.target.closest('.content-works');
+        currentImages = [];
+
+        parentGallery.querySelectorAll('.image-example').forEach(function(img) {
+            currentImages.push(img.src);
+        });
+
+        currentImages.reverse();
+        currentIndex = 0;
+
+        // Показываем модальное окно
+        modal.style.display = "block";
+
+        // Проверяем, нужно ли настраивать галерею для мобильных устройств
+        const isMobile = window.matchMedia("(max-width: 576px)").matches;
+        if (isMobile) {
+            setupMobileImagesForModal(currentImages);
+        } else {
+            // Для не мобильных устройств просто устанавливаем src для одного изображения
+            if (modalImg) {
+                modalImg.src = currentImages[currentIndex];
+            }
+        }
+        openModal();
+        updateArrowsAndDots(currentIndex, currentImages.length);
+    }
+});
+
+function updateActiveIndicator() {
+    // Находим контейнер и вычисляем центр экрана
+    const container = document.querySelector('.images-container');
+    const centerPoint = container.scrollLeft + container.offsetWidth / 2;
+
+    // Определяем, какое изображение находится в центре
+    let minDistance = Infinity;
+    let closestChild = 0;
+    container.childNodes.forEach((child, index) => {
+        // Ищем центр каждого изображения
+        const childCenter = child.offsetLeft + child.offsetWidth / 2;
+        // Вычисляем, насколько близко центр изображения к центру контейнера
+        const distance = Math.abs(childCenter - centerPoint);
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestChild = index;
+        }
+    });
+
+    // Обновляем индикаторы
+    const dots = document.querySelectorAll('.indicator-dot');
+    dots.forEach((dot, index) => {
+        if (index === closestChild) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
 }

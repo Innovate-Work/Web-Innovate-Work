@@ -467,4 +467,39 @@ body {
     }
     
 
+    .images-container {
+        display: flex;
+        gap: 10px;
+        overflow-x: hidden; /* Скрыть горизонтальный скроллбар */
+        position: relative; /* Для позиционирования индикаторов */
+    }
+    
+    .images-container img {
+        flex: 0 0 auto; /* Элементы не сжимаются и не растягиваются */
+        transition: transform 0.3s ease; /* Плавная анимация при смене изображений */
+        max-width: 100%; /* Ограничение максимальной ширины изображения */
+    }
+
+    .images-container {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding: 0px 10px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .images-container img {
+        flex: 0 0 auto; /* Запрещаем элементам растягиваться или сжиматься */
+        scroll-snap-align: center; /* Центрируем изображение при скроллинге */
+        transition: transform 0.3s ease; /* Плавная анимация при смене изображений */
+        max-width: 100%; /* Ограничиваем максимальную ширину изображения */
+    }
+
+    .images-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+
 }
