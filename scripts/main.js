@@ -121,7 +121,52 @@ $(document).ready(function() {
 });
 
 
+ // animation for text
+ document.addEventListener("scroll", function() {
+    var headline = document.querySelector(".headline");
+    var headlinePosition = headline.getBoundingClientRect().left;
+    var screenPosition = window.innerWidth / 1.3;
 
-// transmition
+    if (headlinePosition < screenPosition) {
+        headline.classList.add("visible");
+    }
+});
+
+
+function typeWriter(element, text, i, interval) {
+    if (i < text.length) {
+        element.innerHTML = text.substring(0, i + 1);
+        setTimeout(function() {
+            typeWriter(element, text, i + 1, interval);
+        }, interval);
+    }
+}
+
+document.addEventListener("scroll", function() {
+    var title = document.querySelector('.form-title');
+    var titlePosition = title.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight;
+
+    if (titlePosition < screenPosition) {
+        // Удаляем обработчик событий, чтобы анимация не повторялась при каждой прокрутке
+        document.removeEventListener("scroll", arguments.callee);
+        // Запускаем эффект печатания
+        typeWriter(title, title.textContent, 0, 100); // 100 - скорость печатания в миллисекундах
+    }
+});
+
+document.addEventListener("scroll", function() {
+    var message = document.querySelector('.contact-message');
+    var messagePosition = message.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.3; // Вы можете настроить это значение
+
+    if (messagePosition < screenPosition) {
+        // Удаляем обработчик событий, чтобы анимация не повторялась при каждой прокрутке
+        document.removeEventListener("scroll", arguments.callee);
+        // Добавляем класс 'visible', чтобы начать анимацию
+        message.classList.add("visible");
+    }
+});
+
 
 

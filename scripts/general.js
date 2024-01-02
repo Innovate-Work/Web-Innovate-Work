@@ -149,3 +149,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+
+
+// document.querySelectorAll('.nav-item').forEach(link => {
+//     link.addEventListener('click', function(e) {
+//         e.preventDefault(); // Предотвращаем стандартный переход по ссылке
+//         const href = this.getAttribute('href');
+
+//         // Анимация выхода
+//         document.querySelector('.page-transition-overlay').classList.add('visible');
+
+//         // Загружаем новую страницу после анимации
+//         setTimeout(() => {
+//             window.location.href = href;
+//         }, 500); // 500 мс - время анимации выхода
+//     });
+// });
+
+// window.addEventListener('load', () => {
+//     // Анимация входа
+//     document.querySelector('.page-transition-overlay').classList.remove('visible');
+// });

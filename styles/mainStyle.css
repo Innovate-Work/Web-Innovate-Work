@@ -50,7 +50,7 @@ body {
 }
 
 .description-main {
-  width: 64%;
+  width: 90%;
   font-family: Manrope;
   font-size: 20px;
   font-style: normal;
@@ -209,6 +209,8 @@ body {
 .cell:hover .svg-container {
   transform: rotate(45deg);
 }
+
+
 
 @keyframes gradientAnimation {
   0% {
@@ -375,6 +377,105 @@ label {
   text-align: center;
 }
 
+
+ /* animation  */
+
+@media (min-width: 576px) {
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.main-text {
+  /* Применяем анимацию к тексту "Innovative web and app" */
+  animation: slideRight 1s ease-out;
+}
+
+.text-solutions {
+  /* Применяем анимацию к "/solutions/" с задержкой */
+  animation: slideUp 1s ease-out 0.5s;
+  animation-fill-mode: backwards; /* Чтобы элемент оставался невидимым до начала анимации */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-content {
+  animation: slideRight 1s ease-out;
+}
+
+.text-solutions {
+  animation: slideUp 1s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.description-main {
+  /* Анимация для текста "Turning dreams into reality..." */
+  animation: slideUp 1s ease-out 1s; /* Задержка после анимации "/solutions/" */
+  animation-fill-mode: backwards;
+}
+
+.button {
+  /* Анимация для кнопки */
+  animation: slideUp 1s ease-out 1.5s; /* Задержка, чтобы появилась после текста */
+  animation-fill-mode: backwards;
+}
+
+.headline {
+  transform: translateX(-100%); /* Начальное положение за пределами экрана слева */
+  transition: transform 1s ease-out; /* Увеличиваем длительность анимации */
+  transition-delay: 0.5s; /* Задержка в полсекунды перед началом анимации */
+  opacity: 0; /* Начальная прозрачность */
+}
+
+.headline.visible {
+  transform: translateX(0); /* Конечное положение в нормальном состоянии */
+  opacity: 1; /* Полная видимость */
+}
+
+.form-title {
+  /* Стили для заголовка, возможно, добавьте переходы или другие эффекты по вкусу */
+  overflow: hidden; /* Обрезает текст, чтобы создать эффект печатания */
+  white-space: nowrap; /* Предотвращает перенос текста на новую строку */
+}
+
+.contact-message {
+  opacity: 0; /* Начальная прозрачность, элемент невидим */
+  transition: opacity 1s ease-in-out; /* Плавная анимация появления */
+}
+
+.contact-message.visible {
+  opacity: 1; /* Полная видимость при добавлении класса 'visible' */
+}
+
+
+}
 
 @media (max-width: 768px) {
   /* Adjustments for tablets */
