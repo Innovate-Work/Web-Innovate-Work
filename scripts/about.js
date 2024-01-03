@@ -49,5 +49,20 @@ window.addEventListener('load', rearrangeElements);
 window.addEventListener('resize', rearrangeElements);
 
   
+// animation
   
-  
+function checkVisible() {
+    var elements = document.querySelectorAll('.value-card');
+    elements.forEach(function(el) {
+        var elementPosition = el.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight;
+
+        if (elementPosition < screenPosition) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+document.addEventListener("scroll", checkVisible);
+window.onload = checkVisible; // Проверяем видимость элементов при загрузке страницы
+

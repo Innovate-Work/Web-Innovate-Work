@@ -378,7 +378,47 @@ label {
 }
 
 
+
+
+
  /* animation  */
+
+ @media (max-width: 576px) { /* Анимации для экранов шириной до 600px */
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px); /* Начальное смещение вниз */
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .main-text, .text-solutions, .description-main, .button {
+      opacity: 0; /* Начальное состояние: невидимые */
+      animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .main-text {
+      animation-delay: 0.5s; /* Задержка для "Innovative web and app" */
+  }
+
+  .text-solutions {
+      animation-delay: 1s; /* Задержка для "/solutions/" */
+  }
+
+  .description-main {
+      animation-delay: 1.5s; /* Задержка для описания */
+  }
+
+  .button {
+      animation-delay: 2s; /* Задержка для кнопки */
+  }
+}
+
+
+
 
 @media (min-width: 576px) {
 

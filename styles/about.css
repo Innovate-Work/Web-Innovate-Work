@@ -528,3 +528,60 @@ body {
 
 }
 }
+
+
+/* animation */
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px); /* Начальное смещение вниз */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-heading, .textbox, .textbox2 {
+    opacity: 0; /* Начальное состояние: невидимые */
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+.about-heading {
+    animation-delay: 0.5s; /* Задержка для заголовка "About" */
+}
+
+.textbox {
+    animation-delay: 1s; /* Задержка для первого абзаца */
+}
+
+.textbox2 {
+    animation-delay: 1.5s; /* Задержка для второго абзаца */
+}
+
+
+@media (min-width: 576px) {
+    @keyframes slideInRight {
+        from {
+            transform: translateX(30px); /* Начальное смещение вправо */
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .value-card {
+        opacity: 0; /* Начальное состояние: невидимые */
+        transform: translateX(30px);
+        transition: all 0.5s ease-out;
+    }
+    
+    .visible {
+        animation: slideInRight 1s ease-out forwards; /* Увеличиваем длительность до 1 секунды */
+    }
+    
+    
+}
