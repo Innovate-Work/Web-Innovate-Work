@@ -66,3 +66,22 @@ function checkVisible() {
 document.addEventListener("scroll", checkVisible);
 window.onload = checkVisible; // Проверяем видимость элементов при загрузке страницы
 
+document.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY + window.innerHeight;
+    
+    var elements = document.querySelectorAll('.reason-container-1, .reason-container-2, .reason-container-3, .reason-container-4');
+    
+    elements.forEach(function(el) {
+        if (el.offsetTop < scrollPosition) {
+            if (window.innerWidth <= 576) { // assuming 768px as a breakpoint for mobile devices
+                el.classList.add('animated-bottom');
+            } else {
+                if (el.classList.contains('reason-container-1') || el.classList.contains('reason-container-3')) {
+                    el.classList.add('animated-left');
+                } else {
+                    el.classList.add('animated-right');
+                }
+            }
+        }
+    });
+});
