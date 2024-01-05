@@ -223,6 +223,7 @@ table {
 
 .feature-service {
     padding: 100px 50px;
+    padding-bottom: 0px;
   }
   
   .section-heading {

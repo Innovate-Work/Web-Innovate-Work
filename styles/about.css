@@ -5,8 +5,6 @@ body {
     background-color: #141515;
 }
 
-
-
 .container {
     display: flex;
     align-items: start;  /* Align items to the top */

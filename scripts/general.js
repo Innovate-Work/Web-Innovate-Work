@@ -61,32 +61,6 @@ window.onload = function() {
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     var modal = document.getElementById('myModal');
-//     var btns = document.querySelectorAll('.next-button');
-//     var closeBtn = document.querySelector('.close');
-    
-//     btns.forEach(function(btn) {
-//         btn.onclick = function() {
-//             modal.style.display = "block";
-//         }
-//     });
-
-//     closeBtn.onclick = function() {
-//         modal.style.display = "none";
-//     }
-
-//     window.onclick = function(event) {
-//         if (event.target === modal) {
-//             modal.style.display = "none";
-//         }
-//     }
-// });
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     let currentPath = window.location.pathname.split('/').pop().replace('.html', ''); // получаем имя текущего файла без расширения
     let navLinks = document.querySelectorAll('.nav-item');
