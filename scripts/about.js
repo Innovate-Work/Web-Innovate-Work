@@ -52,7 +52,7 @@ window.addEventListener('resize', rearrangeElements);
 // animation
   
 function checkVisible() {
-    var elements = document.querySelectorAll('.value-card');
+    var elements = document.querySelectorAll('.value-card:not(.visible)'); // Select only elements that don't have the 'visible' class
     elements.forEach(function(el) {
         var elementPosition = el.getBoundingClientRect().top;
         var screenPosition = window.innerHeight;
@@ -64,7 +64,8 @@ function checkVisible() {
 }
 
 document.addEventListener("scroll", checkVisible);
-window.onload = checkVisible; // Проверяем видимость элементов при загрузке страницы
+window.onload = checkVisible; // Check visibility of elements on page load
+
 
 document.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY + window.innerHeight;
