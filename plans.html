@@ -261,8 +261,10 @@
                     </div>                     
                 </div>
                 <div class="services-options">
-                    <button class="service-button" data-active="false">Custom interface design</button>
-                    <button class="service-button" data-active="false">Maintenance</button>
+                    <!-- <button class="service-button" data-active="false">Custom interface design</button>
+                    <button class="service-button" data-active="false">Maintenance</button> -->
+                    <button class="service-button custom-interface-design" data-active="false">Custom interface design</button>
+                    <button class="service-button maintenance" data-active="false">Maintenance</button>
                 </div>                
                 </div>
             </div>
@@ -282,10 +284,10 @@
                         <input type="tel" id="phone-pop-up" placeholder="Phone Number *" required pattern="\d+" autocomplete="off">
                         <div class="error-alert" id="phone-error"></div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <input type="text" id="company-name-pop-up" placeholder="Company Name" autocomplete="off">
                         <div class="error-alert" id="company-name-error"></div>
-                    </div>
+                    </div> -->
                     <button class="submit-button-pop-up" type="submit">Submit</button>
                 </form>
                               
@@ -295,11 +297,28 @@
 </div>
 
 
+
+
+<div class="error-box">
+  <div class="error-message">
+      <h1>O<span>ops...</span></h1>
+      <p class="HTTP-error">HTTP Error <span>504</span>: Gateway Timeout</p>
+      <p class="HTTP-description">The server didn't respond in time. Please try again.</p>
+      <button class="reload-button">Close</button>
+  </div>
+  <div class="error-image">
+      <img src="src/mobileError.svg" alt="Error message">
+  </div>
+</div>
+
+
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/plans.js"></script>
     <script src="scripts/general.js"></script>
+    <script src="scripts/backend.js"></script>
 </body>
 
 <footer class="footer">

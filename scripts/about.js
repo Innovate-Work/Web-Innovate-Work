@@ -45,8 +45,6 @@ function rearrangeElements() {
 // Вызов функции при загрузке страницы
 window.addEventListener('load', rearrangeElements);
 
-// Вызов функции при изменении размера окна
-window.addEventListener('resize', rearrangeElements);
 
   
 // animation

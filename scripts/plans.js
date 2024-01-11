@@ -21,8 +21,6 @@ $(document).ready(function(){
     
         if (tabName) {
             $('.tabs div').each(function() {
-                console.log("Tab text:", $(this).text().trim());
-                console.log("Target tab:", tabName);
                 if ($(this).text().trim() === tabName) {
                     $(this).click(); // Activate the tab
                     $('html, body').animate({
@@ -225,22 +223,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    var buttons = document.querySelectorAll('.service-button');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Получаем текущее состояние и переключаем его
+            var isActive = this.getAttribute('data-active') === 'true';
+            this.setAttribute('data-active', String(!isActive)); // Преобразуем булево значение в строку
+            // Если нужно, изменяем классы для визуального отображения состояния
+            this.classList.toggle('active-button-class', !isActive);
+        });
+    });
+
     modal.querySelector('.close').addEventListener('click', function() {
         modal.style.display = 'none';
         customInterfaceButton.setAttribute('data-active', 'false');
         maintenanceButton.setAttribute('data-active', 'false');
+    
+        // Удаляем классы, которые могли быть добавлены для визуального отображения активного состояния
         customInterfaceButton.classList.remove('active-button-class');
         maintenanceButton.classList.remove('active-button-class');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.querySelectorAll('.service-button');
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var isActive = this.getAttribute('data-active') === 'true';
-            this.setAttribute('data-active', !isActive);
-        });
     });
 });
 
@@ -267,38 +268,38 @@ function showInputError(input) {
     }
 }
 
-function validateForm(e) {
-    e.preventDefault();
+// function validateForm(e) {
+//     e.preventDefault();
 
-    let valid = true;
-    let errorMessage = "";
+//     let valid = true;
+//     let errorMessage = "";
 
-    inputs.forEach(input => {
-        if (!input.validity.valid) {
-            valid = false;
-            if (input.validity.valueMissing) {
-                errorMessage += `Field ${input.placeholder} is required.\n`;
-            } else if (input.validity.patternMismatch) {
-                if (input.type === "email") {
-                    errorMessage += 'Please enter a valid email.\n';
-                } else if (input.type === "tel") {
-                    errorMessage += 'Please enter a valid phone number.\n';
-                }
-            }
-            showInputError(input);
-        } else {
-            document.getElementById(input.id + '-error').style.display = 'none';
-        }
-    });
+//     inputs.forEach(input => {
+//         if (!input.validity.valid) {
+//             valid = false;
+//             if (input.validity.valueMissing) {
+//                 errorMessage += `Field ${input.placeholder} is required.\n`;
+//             } else if (input.validity.patternMismatch) {
+//                 if (input.type === "email") {
+//                     errorMessage += 'Please enter a valid email.\n';
+//                 } else if (input.type === "tel") {
+//                     errorMessage += 'Please enter a valid phone number.\n';
+//                 }
+//             }
+//             showInputError(input);
+//         } else {
+//             document.getElementById(input.id + '-error').style.display = 'none';
+//         }
+//     });
 
-    if (!valid) {
-        alert(errorMessage);
-    } else {
-        form.submit();
-    }
-}
+//     if (!valid) {
+//         alert(errorMessage);
+//     } else {
+//         form.submit();
+//     }
+// }
 
-form.addEventListener('submit', validateForm);
+// form.addEventListener('submit', validateForm);
 
 // for table swith
 
