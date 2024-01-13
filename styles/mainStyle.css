@@ -114,7 +114,6 @@ body {
     left: calc(100% - 66px); /* 66px = 62px (ширина круга) + 4px (отступ) */
   }
 }
-
 .button.pressed .arrow-container {
   position: absolute; /* Абсолютное позиционирование для круга внутри кнопки. */
   animation: rollToEnd 0.8s forwards;
@@ -143,21 +142,21 @@ body {
 }
 
 .text-block {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .headline {
-    font-size: 87px;
-    max-width: 90%;
-    color: #BEFF54;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110px;
-    text-transform: uppercase;
-    margin: 0px;
+  font-size: 87px;
+  max-width: 90%;
+  color: #beff54;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110px;
+  text-transform: uppercase;
+  margin: 0px;
 }
 
 .cells-block {
@@ -210,8 +209,6 @@ body {
   transform: rotate(45deg);
 }
 
-
-
 @keyframes gradientAnimation {
   0% {
     background: linear-gradient(45deg, #000504, #1b1d1e);
@@ -223,7 +220,6 @@ body {
     background: linear-gradient(135deg, #000504, #1b1d1e);
   }
 }
-
 .text-container {
   display: flex;
   flex-direction: column;
@@ -324,32 +320,28 @@ label {
 .page-container .contact-form .data-entrance #phone:focus,
 .page-container .contact-form .data-entrance #name:focus {
   border-bottom: 1px solid var(--input-focus-underline, #beff54);
-  caret-color: var(
-    --input-focus-underline,
-    #beff54
-  ); /* Изменение цвета курсора при фокусе */
+  caret-color: var(--input-focus-underline, #beff54); /* Изменение цвета курсора при фокусе */
 }
 
 .submit-button {
-    width: 538px;
-    height: 70px;
-    flex-shrink: 0;
-    background: #282A2C;
-    color: #5A5F62;
-    font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 48px;
+  width: 538px;
+  height: 70px;
+  flex-shrink: 0;
+  background: #282a2c;
+  color: #5a5f62;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
 }
-
 
 /* Define the container styles */
 .container-animation-text {
@@ -377,175 +369,120 @@ label {
   text-align: center;
 }
 
-
-
-
-
- /* animation  */
-
- @media (max-width: 576px) { /* Анимации для экранов шириной до 600px */
+/* animation  */
+@media (max-width: 576px) {
+  /* Анимации для экранов шириной до 600px */
   @keyframes fadeInUp {
-      from {
-          opacity: 0;
-          transform: translateY(20px); /* Начальное смещение вниз */
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Начальное смещение вниз */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-
-  .main-text, .text-solutions, .description-main, .button {
-      opacity: 0; /* Начальное состояние: невидимые */
-      animation: fadeInUp 0.5s ease-out forwards;
+  .main-text,
+  .text-solutions,
+  .description-main,
+  .button {
+    opacity: 0; /* Начальное состояние: невидимые */
+    animation: fadeInUp 0.5s ease-out forwards;
   }
-
   .main-text {
-      animation-delay: 0.5s; /* Задержка для "Innovative web and app" */
+    animation-delay: 0.5s; /* Задержка для "Innovative web and app" */
   }
-
   .text-solutions {
-      animation-delay: 1s; /* Задержка для "/solutions/" */
+    animation-delay: 1s; /* Задержка для "/solutions/" */
   }
-
   .description-main {
-      animation-delay: 1.5s; /* Задержка для описания */
+    animation-delay: 1.5s; /* Задержка для описания */
   }
-
   .button {
-      animation-delay: 2s; /* Задержка для кнопки */
+    animation-delay: 2s; /* Задержка для кнопки */
   }
 }
-
-
-
-
 @media (min-width: 576px) {
-
-@keyframes slideRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
+  @keyframes slideRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
+  .main-text {
+    /* Применяем анимацию к тексту "Innovative web and app" */
+    animation: slideRight 1s ease-out;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.main-text {
-  /* Применяем анимацию к тексту "Innovative web and app" */
-  animation: slideRight 1s ease-out;
-}
-
-.text-solutions {
-  /* Применяем анимацию к "/solutions/" с задержкой */
-  animation: slideUp 1s ease-out 0.5s;
-  animation-fill-mode: backwards; /* Чтобы элемент оставался невидимым до начала анимации */
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.text-content {
-  animation: slideRight 1s ease-out;
-}
-
-.text-solutions {
-  animation: slideUp 1s ease-out 0.5s;
-  animation-fill-mode: backwards;
-}
-
-.description-main {
-  /* Анимация для текста "Turning dreams into reality..." */
-  animation: slideUp 1s ease-out 1s; /* Задержка после анимации "/solutions/" */
-  animation-fill-mode: backwards;
-}
-
-.button {
-  /* Анимация для кнопки */
-  animation: slideUp 1s ease-out 1.5s; /* Задержка, чтобы появилась после текста */
-  animation-fill-mode: backwards;
-}
-
-.headline {
-  transform: translateX(-100%); /* Начальное положение за пределами экрана слева */
-  transition: transform 1s ease-out; /* Увеличиваем длительность анимации */
-  transition-delay: 0.5s; /* Задержка в полсекунды перед началом анимации */
-  opacity: 0; /* Начальная прозрачность */
-}
-
-.headline.visible {
-  transform: translateX(0); /* Конечное положение в нормальном состоянии */
-  opacity: 1; /* Полная видимость */
-}
-
-.form-title {
-  /* Стили для заголовка, возможно, добавьте переходы или другие эффекты по вкусу */
-  overflow: hidden; /* Обрезает текст, чтобы создать эффект печатания */
-  white-space: nowrap; /* Предотвращает перенос текста на новую строку */
-}
-
-.contact-message {
-  opacity: 0; /* Начальная прозрачность, элемент невидим */
-  transition: opacity 1s ease-in-out; /* Плавная анимация появления */
-}
-
-.contact-message.visible {
-  opacity: 1; /* Полная видимость при добавлении класса 'visible' */
-}
-
-
-}
-
-@media (max-width: 768px) {
-  /* Adjustments for tablets */
-  .text-content {
-    font-size: 48px; /* Adjust font size */
-    line-height: 56px; /* Adjust line height */
-    padding-left: 10px;
-  }
-
   .text-solutions {
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -1px;
+    /* Применяем анимацию к "/solutions/" с задержкой */
+    animation: slideUp 1s ease-out 0.5s;
+    animation-fill-mode: backwards; /* Чтобы элемент оставался невидимым до начала анимации */
   }
-
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .text-content {
+    animation: slideRight 1s ease-out;
+  }
+  .text-solutions {
+    animation: slideUp 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
+  }
   .description-main {
-    width: auto; /* Allow the text to flow naturally */
-    font-size: 18px;
-    line-height: 27px; /* 150% */
-    margin-right: 20px;
+    /* Анимация для текста "Turning dreams into reality..." */
+    animation: slideUp 1s ease-out 1s; /* Задержка после анимации "/solutions/" */
+    animation-fill-mode: backwards;
   }
-
   .button {
-    width: auto; /* Allow the button to fit content */
-    height: auto;
-    padding: 10px;
-    margin-top: 30px;
+    /* Анимация для кнопки */
+    animation: slideUp 1s ease-out 1.5s; /* Задержка, чтобы появилась после текста */
+    animation-fill-mode: backwards;
+  }
+  .headline {
+    transform: translateX(-100%); /* Начальное положение за пределами экрана слева */
+    transition: transform 1s ease-out; /* Увеличиваем длительность анимации */
+    transition-delay: 0.5s; /* Задержка в полсекунды перед началом анимации */
+    opacity: 0; /* Начальная прозрачность */
+  }
+  .headline.visible {
+    transform: translateX(0); /* Конечное положение в нормальном состоянии */
+    opacity: 1; /* Полная видимость */
+  }
+  .form-title {
+    /* Стили для заголовка, возможно, добавьте переходы или другие эффекты по вкусу */
+    overflow: hidden; /* Обрезает текст, чтобы создать эффект печатания */
+    white-space: nowrap; /* Предотвращает перенос текста на новую строку */
+  }
+  .contact-message {
+    opacity: 0; /* Начальная прозрачность, элемент невидим */
+    transition: opacity 1s ease-in-out; /* Плавная анимация появления */
+  }
+  .contact-message.visible {
+    opacity: 1; /* Полная видимость при добавлении класса 'visible' */
   }
 }
-
+/* forMainStyle.css */
 @media (max-width: 576px) {
   .content-wrapper {
     display: flex;
@@ -556,7 +493,6 @@ label {
     justify-content: flex-start;
     height: auto;
   }
-
   .text-content {
     order: 1;
     color: #fbfbfb;
@@ -570,7 +506,6 @@ label {
     margin-top: -30px;
     width: auto;
   }
-
   .text-solutions {
     order: 2;
     color: #beff54;
@@ -580,14 +515,12 @@ label {
     font-weight: 600;
     line-height: 54px;
   }
-
   .animation-gif {
     order: 5; /* The GIF comes last */
     max-width: 80vw;
     max-height: 80vw;
     margin-top: 0;
   }
-
   .description-main {
     order: 3;
     color: #fbfbfb;
@@ -600,7 +533,6 @@ label {
     margin-bottom: 32px;
     margin-right: 0px;
   }
-
   .button {
     order: 4;
     width: 175px;
@@ -608,12 +540,10 @@ label {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   .button .text {
     margin-left: 22px;
     font-size: 16px;
-}
-
+  }
   .button .arrow-container {
     display: flex;
     align-items: center;
@@ -625,15 +555,13 @@ label {
     margin: 4px;
     margin-left: -7px;
   }
-
   .container {
     flex-direction: column;
     height: auto;
     padding-left: 25px;
     padding-right: 25px;
-    margin-bottom: 35px
+    margin-bottom: 35px;
   }
-
   .headline {
     color: #beff54;
     font-family: Manrope;
@@ -645,7 +573,6 @@ label {
     text-align: center;
     margin-top: 10px;
   }
-
   .cell {
     display: flex;
     flex-direction: row;
@@ -653,7 +580,6 @@ label {
     box-shadow: none;
     padding-left: 5px;
   }
-
   .cells-block {
     display: flex;
     flex-direction: column;
@@ -661,8 +587,7 @@ label {
     align-items: flex-start;
     gap: 14px;
     margin-top: 25px;
-}
-
+  }
   .title {
     color: #fbfbfb; /* Color for the title */
     font-family: Manrope;
@@ -672,7 +597,6 @@ label {
     line-height: 24px;
     text-align: left;
   }
-
   .description {
     color: #fbfbfb; /* Color for the description */
     font-family: Manrope;
@@ -682,12 +606,10 @@ label {
     line-height: 20px;
     padding-top: 10px;
   }
-
   .svg-container {
     height: 65px; /* Adjusted height for svg */
     margin-left: 5px;
   }
-
   .container-animation-text {
     width: 100%;
     height: 114px;
@@ -701,7 +623,6 @@ label {
     align-items: center;
     border-radius: 20px;
   }
-
   /* Define the text styles for the first line */
   .first-line {
     color: #000;
@@ -718,7 +639,6 @@ label {
     top: 6px;
     position: static;
   }
-
   .text-container {
     display: flex;
     flex-direction: column;
@@ -726,25 +646,20 @@ label {
     flex-grow: 1;
     padding-left: 10px;
   }
-
   .second-line {
     display: none;
   }
-
   .form-title {
     font-size: 30px;
     text-align: center;
   }
-
   .form {
     display: block;
     margin-top: 0em;
   }
-
   .contact-message {
     display: none;
   }
-
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -754,10 +669,9 @@ label {
     flex-wrap: wrap;
     align-items: center;
   }
-
-  input[id="email"],
-  input[id="phone"],
-  input[id="name"] {
+  input[id=email],
+  input[id=phone],
+  input[id=name] {
     width: 80vw !important;
     height: 20px !important;
     background: transparent;
@@ -774,13 +688,12 @@ label {
     outline: none;
     transition: border-color 0.3s ease-in-out;
   }
-
   .submit-button {
     width: 100%;
     height: 48px;
     flex-shrink: 0;
-    background: #1B1D1E;
-    color: #5A5F62;
+    background: #1b1d1e;
+    color: #5a5f62;
     font-family: "Manrope", sans-serif;
     font-size: 15px;
     font-style: normal;
@@ -793,43 +706,42 @@ label {
     justify-content: center;
     align-items: center;
     margin-top: 48px;
+  }
 }
-
-
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  /* Стили для планшетов */
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Стили для планшетов поменьше */
+  /* Временно для футера */
+  footer {
+    display: none !important;
+  }
   /* hello section */
   .animation-gif {
     display: none;
   }
-  
   .content-wrapper {
     justify-content: left;
     height: auto;
   }
-
-  .text-content {
-    width: 496px;
+  .main-text, .text-solutions {
+    line-height: 76px;
     font-size: 82px;
+    letter-spacing: -1.64px;
+  }
+  .text-content {
+    min-width: 496px;
     margin-bottom: 70px;
     padding-left: 35px;
   }
-
   .text-solutions {
-    font-size: 82px;
+    margin-top: 0px;
   }
-
   .description-main {
     width: 462px;
     font-size: 18px;
   }
-
   .button > .text {
     font-size: 18px;
   }
-
   /* create your solutions section */
   .container {
     display: block;
@@ -838,7 +750,6 @@ label {
     margin: 0px 16px 68px;
     padding: 28px 19px 0px;
   }
-
   .headline {
     margin: 0px;
     font-size: 64px;
@@ -846,79 +757,100 @@ label {
     font-weight: 700;
     max-width: 698px;
   }
-
   .cells-block {
     margin-top: 32px;
-    gap: 0px
+    gap: 0px;
   }
-
   .cell {
     display: flex;
     padding: 12px 0px 24px;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 20px;
     align-self: stretch;
     width: auto;
     margin: 10px 0px;
     border-radius: 0px;
   }
-
-  .cell:not(:last-child) {
-    border-bottom: 1px solid #5a5f62;
-  }
-
   .cell .text-container {
-    max-width: 494px;
+    /* max-width: 494px; */
+    max-width: 100%;
   }
-
   .cell .title {
     font-size: 32px;
     font-weight: 600;
     line-height: 32px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
-
   .cell .description {
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
     max-width: 390px;
   }
-
-
-
   /* text animation line section */
-  /* пока похуй */
-
   .container-animation-text {
     width: 100%;
+    height: 114px;
+    flex-shrink: 0;
+    background: #beff54;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
   }
-
-  /* ready to transform  & form section */
-
-  .page-container {
-    width: 768px;
-  }
-
-  .page-container .form-title {
-    font-size: 36px;
+  /* Define the text styles for the first line */
+  .first-line {
+    color: #000;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 29px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 34px; /* 100% */
+    letter-spacing: 0.612px;
+    text-transform: uppercase;
+    padding: 0px;
+    white-space: unset;
+    top: 6px;
+    position: static;
   }
-
-  .data-entrance, 
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-left: 10px;
+  }
+  /* ready to transform  & form section */
+  .page-container {
+    /* width: 704px; */
+    padding: 0px 32px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .page-container .form-title {
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: wrap; /* Предотвращает перенос текста на новую строку */
+  }
+  .data-entrance,
   .data-entrance .form-group input,
   .data-entrance .submit-button {
     max-width: 359px;
   }
-
   .contact-form {
     margin-bottom: 80px;
     height: auto;
   }
-
   .contact-message {
     margin-left: 51px;
     width: 288px;
@@ -927,7 +859,147 @@ label {
     line-height: 24px;
     letter-spacing: 0em;
   }
-
+  .data-entrance {
+    max-width: 50%;
+  }
+  .data-entrance .form-group {
+    max-width: 100%;
+  }
+  .data-entrance .form-group input {
+    max-width: 100%;
+  }
+  .submit-button {
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    background: #282a2c;
+    color: #5a5f62;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+  }
   /* footer section */
-
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Стили для планшетов побольше */
+  /* hello section */
+  .animation-gif {
+    display: none;
+  }
+  .content-wrapper {
+    justify-content: left;
+    height: auto;
+  }
+  .text-content {
+    min-width: 496px;
+    font-size: 82px;
+    margin-bottom: 70px;
+    padding-left: 35px;
+  }
+  .text-solutions {
+    font-size: 82px;
+  }
+  .description-main {
+    width: 462px;
+    font-size: 18px;
+  }
+  .button > .text {
+    font-size: 18px;
+  }
+  /* create your solutions section */
+  .container {
+    display: block;
+    height: auto;
+    width: auto;
+    margin: 0px 16px 68px;
+    padding: 28px 19px 0px;
+  }
+  .headline {
+    margin: 0px;
+    font-size: 64px;
+    line-height: 70px;
+    font-weight: 700;
+    max-width: 698px;
+  }
+  .cells-block {
+    margin-top: 32px;
+    gap: 0px;
+  }
+  .cell {
+    display: flex;
+    padding: 12px 0px 24px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+    width: auto;
+    margin: 10px 0px;
+    border-radius: 0px;
+  }
+  .cell .text-container {
+    max-width: 494px;
+  }
+  .cell .title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .cell .description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 390px;
+  }
+  /* text animation line section */
+  .first-line {
+    font-size: 29px;
+    line-height: 29px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .container-animation-text {
+    width: 100%;
+    border-radius: 20px;
+  }
+  /* ready to transform  & form section */
+  .page-container {
+    /* width: 704px; */
+    padding: 0px 32px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .page-container .form-title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .data-entrance,
+  .data-entrance .form-group input,
+  .data-entrance .submit-button {
+    max-width: 359px;
+  }
+  .contact-form {
+    margin-bottom: 80px;
+    height: auto;
+  }
+  .contact-message {
+    margin-left: 51px;
+    width: 288px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+  /* footer section */
+}/*# sourceMappingURL=mainStyle.css.map */
