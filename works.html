@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Innovate Work</title>
+        <link rel="stylesheet" href="styles/worksStyle.css">
+        <link rel="stylesheet" href="styles/generalStyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Kanit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <header class="staticHeader">
+                <div class="logo-container">
+                    <a href="main.html"> 
+                        <img src="src/Logo.svg" alt="Logo" class="logo">
+                    <div class="company-name">Innovate Work</div>
+                    </a>
+                </div>
+                <nav>
+                    <a href="works.html" class="nav-item" data-link="works">Works</a>
+                    <a href="plans.html" class="nav-item" data-link="plans">Plans</a>
+                    <a href="about.html" class="nav-item" data-link="about">About</a>
+                </nav>            
+                <div class="contacts">
+                    <a href=#>Contacts</a>
+                </div>
+                <div class="menu-icon">
+                    <img src="src/menu-2.svg" alt="Menu">
+                </div>
+                
+            </header>
+            
+            <!-- Мобильное меню -->
+            <div id="menu" class="mobile-menu">
+            <div class="menu-header">
+            <img class="close-menu" src="src/menu-2-2.svg">
+            </div>
+        <ul class="menu-list">
+          <li><a href="plans.html">Plans <img src="src/arrows.svg" alt=""></a></li>
+          <li><a href="works.html">Works <img src="src/arrows.svg" alt=""></a></li>
+          <li><a href="about.html">About <img src="src/arrows.svg" alt=""></a></li>
+          <!-- При клике на этот li будут показываться контакты -->
+          <li class="contacts-trigger">Contacts <img src="src/arrows.svg" alt=""></li>
+        </ul>
+        <!-- Блок с контактной информацией -->
+        <div class="contacts-info">
+            <p><span class="contact-label">email:</span> <a class="contact-value" href="mailto:contact@innovatework.net">contact@innovatework.net</a></p>
+            <p><span class="contact-label">phone:</span> <a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a></p>
+        </div>
+      </div>
+      
+      <div id="contact-popup" class="contact-popup">
+        <p>email: <a href="mailto:contact@innovatework.net">contact@innovatework.net</a></p>
+        <p>phone: <span><a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a></span> </p>
+    </div>
+        
+
+        <section class="works-section">
+            <h2 class="works-title">Works</h2>
+            <div class="works-textbox">You can choose any ready-made package at the appropriate level and add customization and accompanying maintenance.</div>
+        </section>
+
+        <div class="tabs">
+            <div><p>Website</p></div>
+            <div><p>Application</p></div>
+        </div>
+
+        
+    <div class="works-packages">
+
+        <div class="work-package">
+            <div class="content-works" id="gallery-lives">
+                <!-- Изображения будут добавлены здесь с помощью JavaScript -->
+              </div>
+            <p class="name-example">Web site online shop for Nike</p>
+            <a href="http://www.nike.com" class="link-example">
+                <span class="link-text">www.nike</span> <!-- Элемент для текста ссылки -->
+                <img src="src/ArrowForWorks.svg" alt="arrow"> <!-- Стрелка (статическое изображение) -->
+            </a>
+        </div>
+        
+        
+        
+        
+        <div class="work-package">
+            <div class="content-works" id="gallery-hm">
+                <!-- Изображения будут добавлены здесь с помощью JavaScript -->
+              </div>
+            <p class="name-example">Web site online shop for Nike</p>
+            <a href="http://www.nike.com" class="link-example">
+                <span class="link-text">www.nike</span> <!-- Элемент для текста ссылки -->
+                <img src="src/ArrowForWorks.svg" alt="arrow"> <!-- Стрелка (статическое изображение) -->
+            </a>
+        </div>
+        
+        
+        
+
+        <div class="work-package">
+            <div class="content-works" id="gallery-adidas">
+                <!-- Изображения будут добавлены здесь с помощью JavaScript -->
+              </div>
+            <p class="name-example">Web site online shop for Nike</p>
+            <a href="http://www.nike.com" class="link-example">
+                <span class="link-text">www.nike</span> <!-- Элемент для текста ссылки -->
+                <img src="src/ArrowForWorks.svg" alt="arrow"> <!-- Стрелка (статическое изображение) -->
+            </a>
+        </div>
+        
+        
+        
+        
+        <div class="work-package">
+            <div class="content-works" id="gallery-nike">
+                <!-- Изображения будут добавлены здесь с помощью JavaScript -->
+              </div>
+            <p class="name-example">Web site online shop for Nike</p>
+            <a href="http://www.nike.com" class="link-example">
+                <span class="link-text">www.nike</span> <!-- Элемент для текста ссылки -->
+                <img src="src/ArrowForWorks.svg" alt="arrow"> <!-- Стрелка (статическое изображение) -->
+            </a>
+        </div>
+        
+    </div>
+
+
+ <!-- Модальное окно для полноэкранного просмотра -->
+<div id="myModal" class="modal">
+
+    <a class="prev">
+        <img src="src/leftGroup 87.svg" alt="Previous">
+    </a>
+
+    <!-- Стрелка "следующее изображение" -->
+    <a class="next">
+        <img src="src/rightGroup 85.svg" alt="Next">
+    </a>
+
+    <div class="modal-content-wrapper">
+        <img class="modal-content" id="img01">
+        <div class="modal-slider-indicators"></div>
+    </div>
+</div>
+ 
+
+
+   </main>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/works.js"></script>
+    <script src="scripts/general.js"></script>
+    </body>
+    <footer class="footer">
+        <div>
+            <div class="logo-div-footer">
+                <img src="src/Logo.svg" class="logo-footer"/>
+                <div class="company-name">Innovate Work</div>
+            </div>
+            <div class="mobile-logo-text">Innovate works your gateway to the technological future!</div>
+        </div>
+        <div class="about-links">
+            <div class="link-group">
+                <div class="main-link">Works</div>
+                <a href="works.html?tab=Website" class="about-link">Website</a>
+                <a href="works.html?tab=Application" class="about-link">Application</a>
+            </div>
+            <div class="link-group">
+                <div class="main-link">Plans</div>
+                <a href="plans.html?tab=Website" class="about-link">Website</a>
+                <a href="plans.html?tab=Application" class="about-link">Application</a>
+                <a href="plans.html?tab=Application and Website" class="about-link">Web and App</a>
+            </div>
+            <div class="link-group">
+                <div class="main-link">About</div>
+                <a href="about.html?section=our-values" class="about-link">Our values</a>
+                <a href="about.html?section=why-choose-us" class="about-link">Why choose us</a>
+            </div>
+        </div>
+        <div class="social-network-link-group">
+            <a href="https://www.facebook.com/innovatework.net/"><img class="social-network-link facebook" src="src/Facebook.svg" alt="Facebook"/></a>
+        <a href="https://twitter.com/InnovateWork"><img class="social-network-link twitter" src="src/Twitter.svg" alt="Twitter"/></a>
+        <a href="https://www.instagram.com/innovateworknet/"><img class="social-network-link instagram" src="src/Instagram.svg" alt="Instagram"/></a>
+            
+            <div class="contact-info">
+                <p class="contact-wrapper">
+                    <span class="contact">
+                      <a class="contact-value" href="mailto:contact@innovatework.net">contact@innovatework.net</a>
+                    </span>
+                  </p>
+                  <p class="contact-wrapper">
+                    <span class="contact">
+                      <a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a>
+                    </span>
+                  </p>
+            </div>
+            
+        </div>
+    </footer>
+    </html>
+
+
+

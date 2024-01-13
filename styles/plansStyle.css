@@ -1,0 +1,1593 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141515;
+}
+
+.main-text-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 65px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #BEFF54;
+}
+
+.description {
+    display: flex;
+    text-align: center;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 30px; /* 150% */ 
+    height: 60px;
+    margin-bottom: 88px;
+    width: 46%;
+}
+
+
+
+
+
+.tabs {
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 25px 25px 0 25px;
+    border-radius: 12px;
+    background: #1B1D1E;
+}
+
+.tabs div {
+    display: flex;
+    width: 459px;
+    height: 62px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #1B1D1E; /* Изначальный темный фон */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabs div p {
+    color: #BEFF54; /* Зеленый текст */
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.tabs div.active-tab {
+    background-color: #BEFF54; 
+}
+
+.tabs div.active-tab p {
+    color: #000504; 
+    font-weight: 500;
+}
+
+.tabs div:hover {
+    transform: scale(1.03);  
+}
+
+
+
+
+
+
+
+.package-container {
+    display: flex;          /* Включает Flexbox */
+    flex-wrap: wrap;        /* Позволяет элементам переноситься на новую строку */
+    justify-content: space-evenly; /* Распределяет пространство между пакетами равномерно */
+    gap: 35px;   
+    margin-top: 60px;
+    margin-left: 46px;
+    margin-right: 46px;         
+}
+
+.package {
+    background-color: #fff;
+    width: 340px;
+    height: 410px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+.package {
+    transition: transform 0.3s ease; 
+}
+
+.package h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.package ul {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0;
+}
+
+.package ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.package ul li::before {
+    content: url('../src/CheckCircle.svg');
+    margin-right: 10px;
+    font-size: 20px;
+    width: 26px; /* Задайте необходимый размер */
+    height: 26px;
+}
+
+.package .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* fix here */
+.button-view {
+    display: block;
+    background-color: #141515;
+    color: #BEFF54;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border: none;
+    border-radius: 60px;
+    width: 156px;
+    height: 50px;
+    margin: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+
+
+.button-view::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.button-view:hover {
+    background-color: #2d2e2e;
+}
+
+.line {
+    height: 1px;
+    background-color: #BABCC0;
+    margin: 33px 0;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package .price {
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.price span {
+    color: #BABCC0;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+/* table */
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.feature-service {
+    padding: 100px 50px;
+    padding-bottom: 0px;
+  }
+  
+  .section-heading {
+    color: #282A2C;
+    font-size: 45px;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  
+  .first-heading {
+    color: #beff54;
+  }
+  
+  .feature-service-table {
+    width: 100%;
+    /* Set the table width as needed */
+    color: white;
+    table-layout: fixed;
+    /* Set table layout to fixed */
+  }
+
+  .fa-check:before {
+    content: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTUgMTJMMTAgMTdMMjAgNyIgc3Ryb2tlPSIjQkVGRjU0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+  }
+
+  .first-heading-text {
+    margin-bottom: -45px;
+    color: #BEFF54;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;   
+  }
+  
+  .fa-solid, .fas {
+    font-weight: 900;
+}
+  
+  .feature-service-table td {
+    width: 25%;
+    /* Divide the table into 4 equal parts (since you have 4 columns) */
+    text-align: center;
+    /* Center align content within cells */
+  }
+
+  .first-heading {
+    padding-bottom: 0px;
+  }
+  
+  .head-div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #1B1D1E;
+    padding-bottom: 10px;
+    border-top-left-radius: 14px; 
+    border-top-right-radius: 14px;
+  }
+
+  .head-div h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: auto;
+  }
+  
+  .head-div p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; 
+    margin-top: 13px
+  }
+
+  .head-div p span {
+    color: #5A5F62;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 5px;
+    margin-top: 13px;
+  }
+
+  .button-get-started {
+    display: block;
+    background-color: #141515;
+    color: #BEFF54;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 137px;
+    height: 40px;
+    margin: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  .button-get-started:hover {
+    background-color: #2d2e2e;
+}
+
+  .tr-body {
+    line-height: 2.5;
+  }
+  
+  .feature-service-table td {
+    width: 20%;
+    /* Set the width for the other columns */
+    text-align: center;
+  }
+  
+  .feature-service-table td:first-child {
+    width: 30%;
+    /* Set a different width for the first column */
+    text-align: left;
+    /* Align text in the first column to the left */
+    padding: 10px;
+    /* Add padding for better spacing */
+  }
+
+  .feature-service-table tbody tr:nth-child(odd):not(:first-child) {
+    background-color: #1B1D1E; /* будет применяться к каждой нечетной строке, начиная с третьей */
+}
+
+  /* popup.css */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal-content {
+    width: 83vw;
+    height: 77vh;
+    background: #1B1D1E;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    padding: 45px 60px;
+    overflow: auto;
+}
+
+.close {
+    margin-bottom: 90px;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    color: #FBFBFB;
+    text-align: left;
+    font-family: Manrope;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px; 
+    text-transform: uppercase;
+    margin-bottom: 66px;
+    margin-top: 0;
+}
+
+.modal-text p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.package-name {
+    color: #101011;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px; /* 125% */
+    text-transform: uppercase;
+    padding: 4px 7px; /* 4px сверху и снизу, 7px слева и справа */
+    border-radius: 8px;
+    background-color: #BEFF54; /* Это зеленый цвет, который вы ранее упоминали */
+}
+
+.modal-text li {
+    margin-bottom: 13px; /* Расстояние между элементами списка */
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+}
+
+.modal-text ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+    padding-right: 25px
+}
+
+.modal-text ul li {
+    color: #FBFBFB;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px; /* 125% */
+    position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
+    padding-left: 30px; /* Создаем пространство для SVG иконки */
+}
+
+.modal-text ul li::before {
+    content: ''; /* Очищаем содержимое ::before */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем SVG иконку по вертикали */
+    width: 26px; /* Размер SVG иконки */
+    height: 26px; /* Размер SVG иконки */
+    background: url('../src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
+}
+
+.service-hint {
+    position: relative;
+    display: inline-block; 
+}
+
+.service-icon {
+    cursor: pointer;
+    margin-bottom: -7px;
+}
+
+.service-icon:hover {
+    content: url('../src/QuestionWhite.svg');
+}
+
+.hint-text {
+    display: none; 
+    position: absolute;
+    left: 100%; /* Позиционируем слева от иконки */
+    top: 50%; 
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    width: 256px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #FBFBFB;
+    background: #1B1D1E;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.service-icon:hover + .hint-text {
+    display: block;
+}
+
+
+
+
+
+input[id="email-pop-up"],
+input[id="phone-pop-up"],
+input[id="name-pop-up"],
+input[id="company-name-pop-up"]{
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    color: var(--input-text-color, #fff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[id="email-pop-up"]:focus,
+input[id="phone-pop-up"]:focus,
+input[id="name-pop-up"]:focus,
+input[id="company-name-pop-up"]:focus {
+    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
+    caret-color: var(--input-focus-underline, #BEFF54); 
+}
+
+.submit-button-pop-up {
+    width: 90%;
+    height: 60px;
+    flex-shrink: 0;
+    background: #282A2C;
+    color: #5A5F62;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+.contact-details h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 90%;
+}
+
+.modal-text {
+    display: flex;
+    align-items: start;
+}
+
+.left-section {
+    flex: 1;
+    margin-top: -16px;
+    max-width: 50%;
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 20px;
+    max-width: 50%;
+    margin-top: -7px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 415px;
+    background-color: #5A5F62;
+    margin: 0 15px; /* Отступы по бокам линии */
+}
+.text-packge-name {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.text-details {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.additional-services {
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.additional-services h2 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-right: 4px;
+}
+
+.services-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+    text-align: left;
+    width: 100%;
+}
+
+.services-text-and-icon {
+    display: flex; /* Изменяем на flex для горизонтального размещения элементов */
+    justify-content: start; /* Выравнивание элементов слева */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
+    width: 100%;
+
+}
+
+/* Новые стили для кнопок */
+.service-button {
+    padding: 10px 20px;
+    border: 1px solid #5A5F62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 20px;
+    color: #5A5F62;
+    text-align: left;
+    height: 60px;
+    width: 90%;
+}
+.service-button[data-active="true"] {
+    border-color: #BEFF54;
+    color: #FBFBFB;
+}
+.service-button:hover {
+    color: #FBFBFB;
+}
+.service-button:hover::before {
+    content: url('../src/cyrcleWhite.svg'); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+}
+.service-button::before {
+    content: url('../src/GroupCyrcle.svg'); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
+    margin-right: 10px; /* Расстояние между текстом и изображением */
+    vertical-align: middle;
+}
+.service-button[data-active="true"]::before {
+    content: url('../src/CyrcleGreen.svg'); 
+}
+
+
+
+
+.error-box {
+    display: none;
+    width: 780px;
+    height: 412px;
+    border-radius: 24.607px;
+    background: var(--_, #FBFBFB);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding-left: 60px; /* Align error message from the left */
+    overflow: hidden;
+    z-index: 1003;
+}
+
+.error-message {
+    display: flow;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -25px;
+}
+
+.error-message h1 {
+    color: var(--_, #101011);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.error-message h1 span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: lowercase;
+}
+
+.error-message p {
+    color: var(--_, #5A5F62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 311px;
+    text-align: left;
+}
+
+.error-message p span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.HTTP-error{
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.HTTP-description{
+    margin-bottom: 42px;
+}
+
+.reload-button {
+    width: 198px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #BEFF54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Spacing between text and button */
+}
+
+.error-image {
+    width: 479px;
+    height: 479px;
+    flex-shrink: 0;
+ /* Higher z-index value */
+    /* Optional: Add styles for image alignment */
+}
+
+.error-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain; /* This will ensure the image keeps its aspect ratio */
+}
+
+
+
+@media (max-width: 576px) {
+
+    .main-text-header {
+        display: block;
+    }
+
+
+    h1 {
+        color: #BEFF54;
+        font-family: Manrope;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-top: 59px;
+        padding: 1px 15px;
+        letter-spacing: normal;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        color: #FBFBFB;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 0px;
+        padding: 10px 24px;
+        width: auto;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tabs div {
+        display: flex;
+        width: 84vw;
+        text-align: center;
+        margin: auto;
+        height: 51px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 14px;
+        background: #1b1d1e;
+    }
+
+    .tabs div p {
+        color: #BEFF54;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .tabs div.active-tab p {
+        color: #000504; 
+        font-weight: 600;
+    }
+    
+
+    .package-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 35px;
+        margin: 0px;
+        margin-top: 30px;
+        padding: 25px;
+        height: auto;
+    }
+
+    element.style {
+        transform: translateY(0px);
+        opacity: 1;
+        display: block;
+        width: 707px;
+        height: 435px;
+        margin: 0px auto;
+    }
+
+    .package {
+        background-color: #FBFBFB;
+        width: 100vw !important; 
+        height: auto;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .package h2 {
+        color: #101011;
+        font-family: Manrope;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .package ul li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        color: var(--_, #101011);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .price span {
+        color: #BABCC0;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-right: 10px;
+    }
+
+    .package .price {
+        display: flex;
+        color: #101011;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+    }
+
+    .button-view {
+        display: block;
+        background-color: #141515;
+        color: #BEFF54;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        border: none;
+        border-radius: 50px;
+        width: 120px;
+        height: 40px;
+        margin: 0px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        position: relative;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #BABCC0;
+        margin: 20px 0;
+    }
+
+
+    .tr-body {
+        line-height: 1;
+      }
+    
+      .tr-body:first-child {
+        font-size: 12px;
+      }
+    
+      .feature-service {
+        padding: 20px 5px;
+      }
+
+      .modal-section div{
+        padding: 0;
+      }
+    
+      .head-div h3 {
+        font-size: 15px;
+      }
+
+      .button-get-started {
+        display: none;
+      }
+
+      .first-heading-text {
+        margin: 0px;
+    }
+    .feature-service-table td:first-child {
+        padding: 18px;
+    }
+
+    .section-heading {
+        color: #282A2C;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        text-transform: uppercase;       
+    }
+
+  /* pop up */
+
+  .modal {
+    position: relative; /* Изменяем позиционирование */
+    width: auto; /* Автоширина */
+    height: auto; /* Автовысота */
+    background-color: transparent; /* Прозрачный фон */
+    z-index: 1; /* Нижний z-index для нормального потока документа */
+    border-radius: 0; /* Убираем скругления углов */
+}
+
+.modal-content {
+    position: relative;
+    transform: none;
+    /* margin: 0 auto; */
+    height: auto;
+    width: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 30px 25px;
+    margin-bottom: 40px;
+}
+
+.left-section {
+    flex: 1;
+    margin-top: -16px;
+    max-width: none;
+}
+
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.close {
+    margin-bottom: 41px;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    color: #FBFBFB;
+    text-align: left;
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+    text-transform: uppercase;
+    margin-bottom: 37px;
+    margin-top: 0;
+}
+
+.modal-text p {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.package-name {
+    color: #101011;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+    padding: 4px 7px; /* 4px сверху и снизу, 7px слева и справа */
+    border-radius: 8px;
+    background-color: #BEFF54; /* Это зеленый цвет, который вы ранее упоминали */
+}
+
+.modal-text li {
+    margin-bottom: 13px; /* Расстояние между элементами списка */
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+}
+
+.modal-text ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.modal-text ul li {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
+    position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
+    padding-left: 30px; /* Создаем пространство для SVG иконки */
+}
+
+.modal-text ul li::before {
+    content: ''; /* Очищаем содержимое ::before */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем SVG иконку по вертикали */
+    width: 26px; /* Размер SVG иконки */
+    height: 26px; /* Размер SVG иконки */
+    background: url('../src/CheckCircle-2.svg') no-repeat center center; /* Укажите путь к вашему SVG файлу */
+}
+
+.service-hint {
+    position: relative;
+    display: inline-block; 
+}
+
+.service-icon {
+    display: none;
+    cursor: pointer;
+    margin-bottom: -7px;
+}
+
+.service-icon:hover {
+    content: url('../src/QuestionWhite.svg');
+}
+
+.hint-text {
+    display: block;
+    position: unset;
+    transform: none;
+    width: auto;
+    height: auto;
+    border-radius: 0px;
+    border: none;
+    background: #1B1D1E;
+    color: #5A5F62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-bottom: 11px;
+}
+
+.services-text-and-icon {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 12px;
+}
+
+.additional-services h2 {
+    color: #FBFBFB;
+    text-align: left;
+    margin-right: 0px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.additional-services {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+    margin-left: 0px;
+}
+
+.service-button {
+    line-height: 1.5;
+    padding: 10px 20px;
+    border: 1px solid #5A5F62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: #5A5F62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    justify-content: center;
+    height: auto;
+    width: 90%;
+}
+
+.service-button:hover {
+    background-color: transparent; /* Цвет фона при наведении */
+    color:  #5A5F62;
+}
+.service-button:hover::before {
+    /* content: url('../src/GroupCyrcle.svg');  */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/GroupCyrcle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.service-button::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/GroupCyrcle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.service-button[data-active="true"] {
+    border-color: #BEFF54;
+    color: #FBFBFB;
+}
+
+.service-button[data-active="true"]::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url(../src/CyrcleGreen.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+input[id="email-pop-up"],
+input[id="phone-pop-up"],
+input[id="name-pop-up"],
+input[id="company-name-pop-up"]{
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--input-underline, #5A5F62);
+    color: var(--input-text-color, #fff);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[id="email-pop-up"]:focus,
+input[id="phone-pop-up"]:focus,
+input[id="name-pop-up"]:focus,
+input[id="company-name-pop-up"]:focus {
+    border-bottom: 1px solid var(--input-focus-underline, #BEFF54);
+    caret-color: var(--input-focus-underline, #BEFF54); 
+}
+
+.submit-button-pop-up {
+    width: 96%;
+    height: 46px;
+    flex-shrink: 0;
+    background: #282A2C;
+    color: #5A5F62;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contact-details h3 {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 90%;
+}
+
+.modal-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 0px;
+    max-width: 94%;
+}
+
+.vertical-line {
+    display: none;
+}
+.text-packge-name {
+    margin-top: 0;
+    margin-bottom: 33px;
+}
+.text-details {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.error-box {
+    width: 390px;
+    height: auto;
+    border-radius: 20px;
+    background: var(--_, #FBFBFB);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 0px;
+    overflow: hidden;
+}
+
+.error-message {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -25px;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-message h1 {
+    color: var(--_, #101011);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.error-message h1 span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: lowercase;
+}
+
+.error-message p {
+    color: var(--_, #5A5F62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 311px;
+    text-align: center;
+}
+
+.error-message p span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.HTTP-error{
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+.HTTP-description{
+    margin-bottom: 32px;
+    margin-top: 0px;
+}
+
+.reload-button {
+    width: 270px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #BEFF54);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px; 
+    margin-bottom: 60px;/* Spacing between text and button */
+}
+
+.error-image {
+    width: 390px;
+    height: 390px;
+    flex-shrink: 0;
+ /* Higher z-index value */
+    /* Optional: Add styles for image alignment */
+}
+
+.error-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+    order: 1; /* This will ensure the image keeps its aspect ratio */
+}
+}
+
+@media (max-width:992px) {
+    .error-box {
+        width: 736px;
+        height: auto;
+        border-radius: 24.607px;
+        background: var(--_, #FBFBFB);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2000; /* Ensure it's above other content */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .error-message {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        margin-top: -25px;
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .error-message h1 {
+        color: var(--_, #101011);
+        text-align: center;
+        font-family: Manrope;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin: 0px;
+    }
+    
+    .error-message h1 span {
+        color: var(--_, #101011);
+        font-family: Manrope;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+        text-transform: lowercase;
+    }
+
+    .error-message p {
+        color: var(--_, #5A5F62);
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 347px;
+        text-align: center;
+    }
+    
+    .error-message p span {
+        color: var(--_, #101011);
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    
+    .HTTP-error{
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+    
+    .HTTP-description{
+        margin-bottom: 42px;
+        margin-top: 0px;
+    }
+    
+    .reload-button {
+        width: 270px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 100px;
+        background: var(--_, #000504);
+        color: var(--_, #BEFF54);
+        text-align: center;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px; 
+        margin-bottom: 66px;/* Spacing between text and button */
+    }
+    
+    .error-image {
+        width: 390px;
+        height: 390px;
+        flex-shrink: 0;
+     /* Higher z-index value */
+        /* Optional: Add styles for image alignment */
+    }
+    
+    .error-image img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        object-fit: contain;
+        order: 1; /* This will ensure the image keeps its aspect ratio */
+    }
+}
