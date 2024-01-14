@@ -134,7 +134,12 @@ body {
   height: 550px; /* Явно заданная высота контейнера */
   border-radius: 20px;
   background-color: #1b1d1e;
-  display: flex;
+  /* пока футер пилю уберу */
+
+  /* display: flex; */
+
+  display: none;
+  
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -263,7 +268,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 290px;
 }
 
 .form-title {
@@ -341,6 +345,7 @@ label {
   justify-content: center;
   align-items: center;
   margin-top: 48px;
+  margin-bottom: 48px
 }
 
 /* Define the container styles */
@@ -711,9 +716,9 @@ label {
 @media (min-width: 576px) and (max-width: 768px) {
   /* Стили для планшетов поменьше */
   /* Временно для футера */
-  footer {
+  /* footer {
     display: none !important;
-  }
+  } */
   /* hello section */
   .animation-gif {
     display: none;
@@ -1002,4 +1007,4 @@ label {
     letter-spacing: 0em;
   }
   /* footer section */
-}/*# sourceMappingURL=mainStyle.css.map */
+}

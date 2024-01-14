@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('nav-item-active'); // Add the 'nav-item-active' class
         }
     });
-});
+}); 
 
 window.onload = function() {
     var contactLink = document.querySelector('.contacts a');
