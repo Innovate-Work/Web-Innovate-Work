@@ -134,12 +134,7 @@ body {
   height: 550px; /* Явно заданная высота контейнера */
   border-radius: 20px;
   background-color: #1b1d1e;
-  /* пока футер пилю уберу */
-
-  /* display: flex; */
-
-  display: none;
-  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
