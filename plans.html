@@ -1,379 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plans</title>
-    <link rel="stylesheet" href="styles/plansStyle.css">
-    <link rel="stylesheet" href="styles/generalStyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Kanit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/generalStyle.css" />
+    <link rel="stylesheet" href="styles/plansStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Kanit:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <header class="staticHeader">
-        <div class="logo-container">
-            <a href="main.html"> 
-                <img src="src/Logo.svg" alt="Logo" class="logo">
-            <div class="company-name">Innovate Work</div>
-            </a>
-        </div>
-        <nav>
-            <a href="works.html" class="nav-item" data-link="works">Works</a>
-            <a href="plans.html" class="nav-item" data-link="plans">Plans</a>
-            <a href="about.html" class="nav-item" data-link="about">About</a>
-        </nav>            
-        <div class="contacts">
-            <a href=#>Contacts</a>
-        </div>
-        <div class="menu-icon">
-            <img src="src/menu-2.svg" alt="Menu">
-        </div>
-        
+      <div class="logo-container">
+        <a href="main.html">
+          <img src="src/Logo.svg" alt="Logo" class="logo" />
+          <div class="company-name">Innovate Work</div>
+        </a>
+      </div>
+      <nav>
+        <a href="works.html" class="nav-item" data-link="works">Works</a>
+        <a href="plans.html" class="nav-item" data-link="plans">Plans</a>
+        <a href="about.html" class="nav-item" data-link="about">About</a>
+      </nav>
+      <div class="contacts">
+        <a href="#">Contacts</a>
+      </div>
+      <div class="menu-icon">
+        <img src="src/menu-2.svg" alt="Menu" />
+      </div>
     </header>
-    
+
     <!-- Мобильное меню -->
     <div id="menu" class="mobile-menu">
-    <div class="menu-header">
-    <img class="close-menu" src="src/menu-2-2.svg">
+      <div class="menu-header">
+        <img class="close-menu" src="src/menu-2-2.svg" />
+      </div>
+      <ul class="menu-list">
+        <li>
+          <a href="plans.html">Plans <img src="src/arrows.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="works.html">Works <img src="src/arrows.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="about.html">About <img src="src/arrows.svg" alt="" /></a>
+        </li>
+        <!-- При клике на этот li будут показываться контакты -->
+        <li class="contacts-trigger">
+          Contacts <img src="src/arrows.svg" alt="" />
+        </li>
+      </ul>
+      <!-- Блок с контактной информацией -->
+      <div class="contacts-info">
+        <p>
+          <span class="contact-label">email:</span>
+          <a class="contact-value" href="mailto:contact@innovatework.net"
+            >contact@innovatework.net</a
+          >
+        </p>
+        <p>
+          <span class="contact-label">phone:</span>
+          <a class="contact-value" href="tel:+17149075027"
+            >+1 (714) 907 50 27</a
+          >
+        </p>
+      </div>
     </div>
-<ul class="menu-list">
-  <li><a href="plans.html">Plans <img src="src/arrows.svg" alt=""></a></li>
-  <li><a href="works.html">Works <img src="src/arrows.svg" alt=""></a></li>
-  <li><a href="about.html">About <img src="src/arrows.svg" alt=""></a></li>
-  <!-- При клике на этот li будут показываться контакты -->
-  <li class="contacts-trigger">Contacts <img src="src/arrows.svg" alt=""></li>
-</ul>
-<!-- Блок с контактной информацией -->
-<div class="contacts-info">
-    <p><span class="contact-label">email:</span> <a class="contact-value" href="mailto:contact@innovatework.net">contact@innovatework.net</a></p>
-    <p><span class="contact-label">phone:</span> <a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a></p>
-</div>
-</div>
 
-<div id="contact-popup" class="contact-popup">
-<p>email: <a href="mailto:contact@innovatework.net">contact@innovatework.net</a></p>
-<p>phone: <span><a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a></span> </p>
-</div>
-    
+    <div id="contact-popup" class="contact-popup">
+      <p>
+        email:
+        <a href="mailto:contact@innovatework.net">contact@innovatework.net</a>
+      </p>
+      <p>
+        phone:
+        <span
+          ><a class="contact-value" href="tel:+17149075027"
+            >+1 (714) 907 50 27</a
+          ></span
+        >
+      </p>
+    </div>
+
     <main>
-        <div class="main-text-header"> 
-            <h1>OUR SUGGESTIONS</h1>
+      <div class="main-text-header">
+        <h1>OUR SUGGESTIONS</h1>
 
-            <div class="description">
-                You can choose any ready-made package at the appropriate level and add customization and accompanying maintenance.
-            </div>
+        <div class="description">
+          You can choose any ready-made package at the appropriate level and add
+          customization and accompanying maintenance.
         </div>
-        
+      </div>
 
-<div id="tabs" class="tabs">
-    <div><p>Website</p></div>
-    <div><p>Application</p></div>
-    <div><p>Application and Website</p></div>
-</div>
+      <div id="tabs" class="tabs">
+        <div>
+          <p>Website</p>
+        </div>
+        <div>
+          <p>Application</p>
+        </div>
+        <div>
+          <p>Application and Website</p>
+        </div>
+      </div>
 
-<div class="package-container">
-<div class="package">
-    <h2>Basic</h2>
-    <div class="line"></div>
-    <ul>
-        <li>Basic website development</li>
-        <li>Pre-designed templates</li>
-        <li>Limited customization</li>
-        <li>Standard features</li>
-        <li>Ideal for small businesses</li>
-    </ul>
-    <div class="line"></div> <!-- Добавлена линия -->
-        <div class="bottom-container">
+      <div class="package-container">
+        <div class="package">
+          <h2>Basic</h2>
+          <div class="line"></div>
+          <ul>
+            <li>Basic website development</li>
+            <li>Pre-designed templates</li>
+            <li>Limited customization</li>
+            <li>Standard features</li>
+            <li>Ideal for small businesses</li>
+          </ul>
+          <div class="line"></div>
+          <!-- Добавлена линия -->
+          <div class="bottom-container">
             <div class="price"><span>from</span> $500</div>
             <button class="button-view">Get started</button>
+          </div>
         </div>
-</div>
 
-<div class="package">
-    <h2>Professional</h2>
-    <div class="line"></div>
-    <ul>
-        <li>Custom website development</li>
-        <li>Tailored design</li>
-        <li>Enhanced features</li>
-        <li>Basic SEO optimization</li>
-        <li>Suitable for growing businesses</li>
-    </ul>
-    <div class="line"></div> <!-- Добавлена линия -->
-        <div class="bottom-container">
+        <div class="package">
+          <h2>Professional</h2>
+          <div class="line"></div>
+          <ul>
+            <li>Custom website development</li>
+            <li>Tailored design</li>
+            <li>Enhanced features</li>
+            <li>Basic SEO optimization</li>
+            <li>Suitable for growing businesses</li>
+          </ul>
+          <div class="line"></div>
+          <!-- Добавлена линия -->
+          <div class="bottom-container">
             <div class="price"><span>from</span> $500</div>
             <button class="button-view">Get started</button>
+          </div>
         </div>
-</div>
 
-<div class="package">
-    <h2>Business</h2>
-    <div class="line"></div>
-    <ul>
-        <li>Complex website development</li>
-        <li>Highly customized solution</li>
-        <li>Advanced features</li>
-        <li>Comprehensive SEO</li>
-        <li>Designed for larger corporations</li>
-    </ul>
-    <div class="line"></div> 
-        <div class="bottom-container">
+        <div class="package">
+          <h2>Business</h2>
+          <div class="line"></div>
+          <ul>
+            <li>Complex website development</li>
+            <li>Highly customized solution</li>
+            <li>Advanced features</li>
+            <li>Comprehensive SEO</li>
+            <li>Designed for larger corporations</li>
+          </ul>
+          <div class="line"></div>
+          <div class="bottom-container">
             <div class="price"><span>from</span> $500</div>
             <button class="button-view">Get started</button>
+          </div>
         </div>
-</div>
-</div>
+      </div>
 
+      <section class="feature-service">
+        <div class="section-heading">
+          COMPARE OUR SUGGESTIONS <br />
+          AND CHOSSE THE BEST ONE <br />
+          FOR YOU
+        </div>
+        <table class="feature-service-table">
+          <tr>
+            <td class="first-heading">
+              <p class="first-heading-text">Feature and Service</p>
+            </td>
+            <td>
+              <div class="head-div">
+                <h3>Basic</h3>
+                <p><span>from</span> $500</p>
+                <button class="button-get-started">Get started</button>
+              </div>
+            </td>
+            <td>
+              <div class="head-div">
+                <h3>Pro</h3>
+                <p><span>from</span> $500</p>
+                <button class="button-get-started">Get started</button>
+              </div>
+            </td>
+            <td>
+              <div class="head-div">
+                <h3>Business</h3>
+                <p><span>from</span> $500</p>
+                <button class="button-get-started">Get started</button>
+              </div>
+            </td>
+          </tr>
 
-<section class="feature-service">
-    <div class="section-heading">
-      COMPARE OUR SUGGESTIONS <br />
-      AND CHOSSE THE BEST ONE <br />
-      FOR YOU
-    </div>
-    <table class="feature-service-table">
-      <tr>
-        <td class="first-heading"> <p class="first-heading-text"> Feature and Service </p> </td>
-        <td>
-          <div class="head-div">
-            <h3>Basic</h3>
-            <p> <span>from</span> $500</p>
-            <button class="button-get-started">Get started</button>
-          </div>
-        </td>
-        <td>
-          <div class="head-div">
-            <h3>Pro</h3>
-            <p><span>from</span> $500</p>
-            <button class="button-get-started">Get started</button>
-          </div>
-        </td>
-        <td>
-          <div class="head-div">
-            <h3>Business</h3>
-            <p><span>from</span> $500</p>
-            <button class="button-get-started">Get started</button>
-          </div>
-        </td>
-      </tr>
+          <tr class="tr-body">
+            <td>Basic website development</td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
 
-      <tr class="tr-body">
-        <td>Basic website development</td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
+          <tr class="tr-body">
+            <td>Pre designed Template</td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Limited customization</td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Standered feature (e.g. about us )</td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Tailored Design to match brand identity</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Enhance Featuring (e.g contact form , blog)</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Best SEO Optimization</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Complex Website Development</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Highly customized solution</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>Advanced Feature (user custmizatiuon , ecommerce)</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+          <tr class="tr-body">
+            <td>ComprehensiveSEo & performace optimiztion</td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-horizontal-rule">--</i></td>
+            <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
+          </tr>
+        </table>
+      </section>
 
-      <tr class="tr-body">
-        <td>Pre designed Template</td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Limited customization</td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Standered feature (e.g. about us )</td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Tailored Design to match brand identity</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Enhance Featuring (e.g contact form , blog)</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Best SEO Optimization</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Complex Website Development</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Highly customized solution</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>Advanced Feature (user custmizatiuon , ecommerce)</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-      <tr class="tr-body">
-        <td>ComprehensiveSEo & performace optimiztion</td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-horizontal-rule">--</i></td>
-        <td><i class="fa-solid fa-check" style="color: #c5ff68"></i></td>
-      </tr>
-    </table>
-  </section>
-
-
-
-
-<div class="modal" id="myModal">
-    <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <div class="modal-header">
             <h2>LET'S GET STARTED!</h2>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M25.7071 24.2924C25.8 24.3854 25.8737 24.4957 25.924 24.6171C25.9743 24.7384 26.0001 24.8686 26.0001 24.9999C26.0001 25.1313 25.9743 25.2614 25.924 25.3828C25.8737 25.5042 25.8 25.6145 25.7071 25.7074C25.6142 25.8004 25.5039 25.8741 25.3825 25.9243C25.2611 25.9746 25.131 26.0005 24.9996 26.0005C24.8682 26.0005 24.7381 25.9746 24.6167 25.9243C24.4953 25.8741 24.385 25.8004 24.2921 25.7074L15.9996 17.4137L7.70708 25.7074C7.51944 25.8951 7.26494 26.0005 6.99958 26.0005C6.73422 26.0005 6.47972 25.8951 6.29208 25.7074C6.10444 25.5198 5.99902 25.2653 5.99902 24.9999C5.99902 24.7346 6.10444 24.4801 6.29208 24.2924L14.5858 15.9999L6.29208 7.70745C6.10444 7.5198 5.99902 7.26531 5.99902 6.99995C5.99902 6.73458 6.10444 6.48009 6.29208 6.29245C6.47972 6.1048 6.73422 5.99939 6.99958 5.99939C7.26494 5.99939 7.51944 6.1048 7.70708 6.29245L15.9996 14.5862L24.2921 6.29245C24.4797 6.10481 24.7342 5.99939 24.9996 5.99939C25.2649 5.99939 25.5194 6.1048 25.7071 6.29245C25.8947 6.48009 26.0001 6.73458 26.0001 6.99995C26.0001 7.26531 25.8947 7.5198 25.7071 7.70745L17.4133 15.9999L25.7071 24.2924Z" fill="#BEFF54"/>
-              </svg>
-        </div>
-        <div class="modal-text">
+            <svg
+              class="close"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                d="M25.7071 24.2924C25.8 24.3854 25.8737 24.4957 25.924 24.6171C25.9743 24.7384 26.0001 24.8686 26.0001 24.9999C26.0001 25.1313 25.9743 25.2614 25.924 25.3828C25.8737 25.5042 25.8 25.6145 25.7071 25.7074C25.6142 25.8004 25.5039 25.8741 25.3825 25.9243C25.2611 25.9746 25.131 26.0005 24.9996 26.0005C24.8682 26.0005 24.7381 25.9746 24.6167 25.9243C24.4953 25.8741 24.385 25.8004 24.2921 25.7074L15.9996 17.4137L7.70708 25.7074C7.51944 25.8951 7.26494 26.0005 6.99958 26.0005C6.73422 26.0005 6.47972 25.8951 6.29208 25.7074C6.10444 25.5198 5.99902 25.2653 5.99902 24.9999C5.99902 24.7346 6.10444 24.4801 6.29208 24.2924L14.5858 15.9999L6.29208 7.70745C6.10444 7.5198 5.99902 7.26531 5.99902 6.99995C5.99902 6.73458 6.10444 6.48009 6.29208 6.29245C6.47972 6.1048 6.73422 5.99939 6.99958 5.99939C7.26494 5.99939 7.51944 6.1048 7.70708 6.29245L15.9996 14.5862L24.2921 6.29245C24.4797 6.10481 24.7342 5.99939 24.9996 5.99939C25.2649 5.99939 25.5194 6.1048 25.7071 6.29245C25.8947 6.48009 26.0001 6.73458 26.0001 6.99995C26.0001 7.26531 25.8947 7.5198 25.7071 7.70745L17.4133 15.9999L25.7071 24.2924Z"
+                fill="#BEFF54"
+              />
+            </svg>
+          </div>
+          <div class="modal-text">
             <div class="left-section">
-                <p class="text-packge-name">You have selected the <span class="package-name">BASIC WEB</span> package</p>
-                <ul>
-                    <li>Basic website development</li>
-                    <li>Pre-designed templates</li>
-                    <li>Limited customization</li>
-                    <li>Standard features</li>
-                    <li>Ideal for small businesses</li>
-                </ul>
+              <p class="text-packge-name">
+                You have selected the
+                <span class="package-name">BASIC WEB</span> package
+              </p>
+              <ul>
+                <li>Basic website development</li>
+                <li>Pre-designed templates</li>
+                <li>Limited customization</li>
+                <li>Standard features</li>
+                <li>Ideal for small businesses</li>
+              </ul>
 
-                <div class="additional-services">
+              <div class="additional-services">
                 <div class="services-text-and-icon">
-                    <h2>Additional services you can add</h2>
-                    <div class="service-hint">
-                        <img class="service-icon" src="src/Question.svg" alt="Service Icon"> 
-                        <div class="hint-text">
-                            Examples: custom graphics, content creation, advanced SEO, and security audits.
-                        </div>
-                    </div>                     
+                  <h2>Additional services you can add</h2>
+                  <div class="service-hint">
+                    <img
+                      class="service-icon"
+                      src="src/Question.svg"
+                      alt="Service Icon"
+                    />
+                    <div class="hint-text">
+                      Examples: custom graphics, content creation, advanced SEO,
+                      and security audits.
+                    </div>
+                  </div>
                 </div>
                 <div class="services-options">
-                    <!-- <button class="service-button" data-active="false">Custom interface design</button>
+                  <!-- <button class="service-button" data-active="false">Custom interface design</button>
                     <button class="service-button" data-active="false">Maintenance</button> -->
-                    <button class="service-button custom-interface-design" data-active="false">Custom interface design</button>
-                    <button class="service-button maintenance" data-active="false">Maintenance</button>
-                </div>                
+                  <button
+                    class="service-button custom-interface-design"
+                    data-active="false"
+                  >
+                    Custom interface design
+                  </button>
+                  <button
+                    class="service-button maintenance"
+                    data-active="false"
+                  >
+                    Maintenance
+                  </button>
                 </div>
+              </div>
             </div>
             <div class="vertical-line"></div>
             <div class="right-section">
-                <p class="text-details">Please send your details and we will contact you to discuss your chosen package</p>
-                <form class="data-entrance" id="validation-form">
-                    <div class="form-group">
-                        <input type="text" id="name-pop-up" placeholder="Name *" required autocomplete="off">
-                        <div class="error-alert" id="name-error"></div>
-                    </div>
-                    <div class="pop-up-form">
-                        <input type="email" id="email-pop-up" placeholder="Email *" required pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}" autocomplete="off">
-                        <div class="error-alert" id="email-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone-pop-up" placeholder="Phone Number *" required pattern="\d+" autocomplete="off">
-                        <div class="error-alert" id="phone-error"></div>
-                    </div>
-                    <!-- <div class="form-group">
+              <p class="text-details">
+                Please send your details and we will contact you to discuss your
+                chosen package
+              </p>
+              <form class="data-entrance" id="validation-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name-pop-up"
+                    placeholder="Name *"
+                    required
+                    autocomplete="off"
+                  />
+                  <div class="error-alert" id="name-error"></div>
+                </div>
+                <div class="pop-up-form">
+                  <input
+                    type="email"
+                    id="email-pop-up"
+                    placeholder="Email *"
+                    required
+                    pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}"
+                    autocomplete="off"
+                  />
+                  <div class="error-alert" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    id="phone-pop-up"
+                    placeholder="Phone Number *"
+                    required
+                    pattern="\d+"
+                    autocomplete="off"
+                  />
+                  <div class="error-alert" id="phone-error"></div>
+                </div>
+                <!-- <div class="form-group">
                         <input type="text" id="company-name-pop-up" placeholder="Company Name" autocomplete="off">
                         <div class="error-alert" id="company-name-error"></div>
                     </div> -->
-                    <button class="submit-button-pop-up" type="submit">Submit</button>
-                </form>
-                              
+                <button class="submit-button-pop-up" type="submit">
+                  Submit
+                </button>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-
-
-
-<div class="error-box">
-  <div class="error-message">
-      <h1>O<span>ops...</span></h1>
-      <p class="HTTP-error">HTTP Error <span>504</span>: Gateway Timeout</p>
-      <p class="HTTP-description">The server didn't respond in time. Please try again.</p>
-      <button class="reload-button">Close</button>
-  </div>
-  <div class="error-image">
-      <img src="src/mobileError.svg" alt="Error message">
-  </div>
-</div>
-
-
-
+      <div class="error-box">
+        <div class="error-message">
+          <h1>O<span>ops...</span></h1>
+          <p class="HTTP-error">HTTP Error <span>504</span>: Gateway Timeout</p>
+          <p class="HTTP-description">
+            The server didn't respond in time. Please try again.
+          </p>
+          <button class="reload-button">Close</button>
+        </div>
+        <div class="error-image">
+          <img src="src/mobileError.svg" alt="Error message" />
+        </div>
+      </div>
     </main>
 
     <footer>
       <div class="footer-container">
-          <div class="footer-flex-parent">
-
-              <div class="company-info-column">
-                  <div class="logo-wrapper">
-                      <img src="src/Logo.svg" class="logo-image" />
-                      <span class="logo-company-name">Innovate Work
-                  </div>
-                  <div class="company-description">Innovate works your gateway to the technological future!</div>
-              </div>
-              
-              <div class="about-links-columns">
-                  <div class="link-group-column">
-                      <ul class="link-list">
-                          <li><h5 class="link-group-title">Works</h5></li>
-                          <li><a href="works.html?tab=Website" class="about-link">Website</a></li>
-                          <li><a href="works.html?tab=Application" class="about-link">Application</a></li>
-                      </ul>
-                  </div>
-                  <div class="link-group-column">
-                      <ul class="link-list">
-                          <li><h5 class="link-group-title">Plans</h5></li>
-                          <li> <a href="plans.html?tab=Website" class="about-link">Website</a></li>
-                          <li><a href="plans.html?tab=Application" class="about-link">Application</a></li>
-                          <li><a href="plans.html?tab=Application and Website" class="about-link">Web and App</a></li>
-                      </ul>
-                  </div>
-                  <div class="link-group-column">
-                      <ul class="link-list">
-                          <li><h5 class="link-group-title">About</h5></li>
-                          <li><a href="about.html?section=our-values" class="about-link">Our values</a></li>
-                          <li><a href="about.html?section=why-choose-us" class="about-link">Why choose us</a></li>
-                      </ul>
-                  </div>
-              </div>
-
-
-              <div class="social-network-link-group">
-                  <div class="icons-group-wrapper">
-                      <a href="https://www.facebook.com/innovatework.net/"><img class="social-network-link facebook" src="src/Facebook.svg" alt="Facebook" /></a>
-                      <a href="https://twitter.com/InnovateWork"><img class="social-network-link twitter" src="src/Twitter.svg" alt="Twitter" /></a>
-                      <a href="https://www.instagram.com/innovateworknet/"><img class="social-network-link instagram" src="src/Instagram.svg" alt="Instagram" /></a>
-                  </div>
-                  <div class="contact-info-wrapper">
-                      <ul class="contact-link-list">
-                          <li><a class="contact-value" href="mailto:contact@innovatework.net">contact@innovatework.net</a></li>
-                          <li><a class="contact-value" href="tel:+17149075027">+1 (714) 907 50 27</a></li>
-                      </ul>
-                  </div>
-              </div>
-
+        <div class="footer-flex-parent">
+          <div class="company-info-column">
+            <div class="logo-wrapper">
+              <img src="src/Logo.svg" class="logo-image" />
+              <span class="logo-company-name">Innovate Work</span>
+            </div>
+            <div class="company-description">
+              Innovate works your gateway to the technological future!
+            </div>
           </div>
+
+          <div class="about-links-columns">
+            <div class="link-group-column">
+              <ul class="link-list">
+                <li>
+                  <h5 class="link-group-title">Works</h5>
+                </li>
+                <li>
+                  <a href="works.html?tab=Website" class="about-link"
+                    >Website</a
+                  >
+                </li>
+                <li>
+                  <a href="works.html?tab=Application" class="about-link"
+                    >Application</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="link-group-column">
+              <ul class="link-list">
+                <li>
+                  <h5 class="link-group-title">Plans</h5>
+                </li>
+                <li>
+                  <a href="plans.html?tab=Website" class="about-link"
+                    >Website</a
+                  >
+                </li>
+                <li>
+                  <a href="plans.html?tab=Application" class="about-link"
+                    >Application</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="plans.html?tab=Application and Website"
+                    class="about-link"
+                    >Web and App</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="link-group-column">
+              <ul class="link-list">
+                <li>
+                  <h5 class="link-group-title">About</h5>
+                </li>
+                <li>
+                  <a href="about.html?section=our-values" class="about-link"
+                    >Our values</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html?section=why-choose-us" class="about-link"
+                    >Why choose us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="social-network-link-group">
+            <div class="icons-group-wrapper">
+              <a href="https://www.facebook.com/innovatework.net/"
+                ><img
+                  class="social-network-link facebook"
+                  src="src/Facebook.svg"
+                  alt="Facebook"
+              /></a>
+              <a href="https://twitter.com/InnovateWork"
+                ><img
+                  class="social-network-link twitter"
+                  src="src/Twitter.svg"
+                  alt="Twitter"
+              /></a>
+              <a href="https://www.instagram.com/innovateworknet/"
+                ><img
+                  class="social-network-link instagram"
+                  src="src/Instagram.svg"
+                  alt="Instagram"
+              /></a>
+            </div>
+            <div class="contact-info-wrapper">
+              <ul class="contact-link-list">
+                <li>
+                  <a
+                    class="contact-value"
+                    href="mailto:contact@innovatework.net"
+                    >contact@innovatework.net</a
+                  >
+                </li>
+                <li>
+                  <a class="contact-value" href="tel:+17149075027"
+                    >+1 (714) 907 50 27</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-  </footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/plans.js"></script>
     <script src="scripts/general.js"></script>
     <script src="scripts/backend.js"></script>
-</body>
+  </body>
 </html>

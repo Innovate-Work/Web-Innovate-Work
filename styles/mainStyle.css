@@ -20,7 +20,7 @@ body {
 
 .text-solutions {
   margin-top: 10px;
-  color: var(--_, #beff54);
+  color: #beff54;
   font-family: Manrope;
   font-size: 96px;
   font-style: normal;
@@ -134,12 +134,7 @@ body {
   height: 550px; /* Явно заданная высота контейнера */
   border-radius: 20px;
   background-color: #1b1d1e;
-  /* пока футер пилю уберу */
-
-  /* display: flex; */
-
-  display: none;
-  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
