@@ -3,6 +3,12 @@
 По хорошему надо вынести в отдельный файл и прописать сброс стилей под все элементы страницы.
 Пропишу лишь некоторые из них, мне сейчас нужные */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 ul,
 h5 {
   margin: 0;
@@ -34,7 +40,6 @@ a:hover {
 }
 
 .staticHeader {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +104,6 @@ a:hover {
   display: none; /* Скрыть пока не будет активирован */
   flex-direction: column;
   padding: 25px;
-  box-sizing: border-box;
   z-index: 100; /* Убедитесь, что окно поверх остального контента */
   transition: top 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
@@ -415,19 +419,6 @@ footer {
   font-weight: 400;
   line-height: 27px;
   margin-left: 16px;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .logo-company-name {
-    font-size: 12px;
-    line-height: 30px;
-  }
-}
-
-@media (width: 768px) {
-  .logo-company-name {
-    font-size: 14px !important;
-  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
