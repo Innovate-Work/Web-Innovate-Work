@@ -167,6 +167,3 @@ document.addEventListener("scroll", function() {
         message.classList.add("visible");
     }
 });
-
-
-
