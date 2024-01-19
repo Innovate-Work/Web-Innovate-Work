@@ -99,6 +99,7 @@ function initPackages() {
     });
 }
 
+const overTableText = document.querySelector('#overTableText');
 
 function updatePackages(tabName) {
     const packages = document.querySelectorAll('.package');
@@ -112,8 +113,10 @@ function updatePackages(tabName) {
 
         if (tabName === "Application and Website" && index > 0) {
             packageElem.style.display = "none";
+            overTableText.style.width = '40%';
         } else {
             packageElem.style.display = "block";
+            overTableText.style.width = '66.5%';
         }
     });
 
