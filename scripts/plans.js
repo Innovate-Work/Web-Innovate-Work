@@ -190,6 +190,8 @@ document.querySelectorAll('.tabs div').forEach(tab => {
     });
 });
 
+// temp code
+document.querySelector('#myModal').style.display = 'block';
 
 // pop up action
 document.addEventListener('DOMContentLoaded', function() {

@@ -770,7 +770,34 @@ table {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+}
+
+
+@media (min-width: 390px) {
+  .modal-header-container {
+    padding: 0px
+  }
+}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .modal-header-container {
+    padding: 0px 60px;
+    margin-bottom: 34px;
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .modal-header-container {
+    padding: 0px 78px;
+    margin-bottom: 66px;
+  }
+}
+@media (min-width: 1920px) {
+  .modal-header-container {
+    padding: 0px 138px;
+    margin-bottom: 66px;
+  }
 }
 
 .modal-content {
@@ -782,11 +809,9 @@ table {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1001;
-  padding: 45px 60px;
+  padding: 45px 0px;
   overflow: auto;
   width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -794,6 +819,7 @@ table {
 @media (min-width: 390px) {
   .modal-content {
     max-width: 100%;
+    padding: 20px 0px 32px;
   }
 }
 @media (min-width: 576px) {
@@ -804,68 +830,75 @@ table {
 @media (min-width: 768px) {
   .modal-content {
     max-width: 736px;
+    padding: 56px 0px 60px;
   }
 }
 @media (min-width: 992px) {
   .modal-content {
-    max-width: 736px;
+    max-width: 962px;
   }
 }
 @media (min-width: 1200px) {
   .modal-content {
-    max-width: 736px;
+    max-width: 1150px;
   }
 }
 @media (min-width: 1440px) {
   .modal-content {
     max-width: 1390px;
-		padding: 56px 78px;
+    padding: 56px 0px 47px;
   }
 }
 @media (min-width: 1920px) {
   .modal-content {
     max-width: 1870px;
+    padding: 56px 0px 84px;
   }
 }
 
 .close {
-  margin-bottom: 90px;
   cursor: pointer;
 }
 
-.modal-header h2 {
-  color: #fbfbfb;
-  text-align: left;
-  font-family: Manrope;
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 60px;
-  text-transform: uppercase;
+@media (min-width: 390px) {
+  .modal-header {
+    color: var(--_, #FBFBFB);
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+    text-transform: uppercase;
+  }
 }
-
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .modal-header h2 {
+    font-size: 56px;
+    line-height: 60px; /* 107.143% */
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
 @media (min-width: 1440px) {
   .modal-header h2 {
 		font-size: 56px;
-		line-height: 60px;
-		margin-bottom: 65px;
+    line-height: 60px; /* 107.143% */
+
 	}
 }
-
-.modal-text p {
-  color: #fbfbfb;
-  font-family: Manrope;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
+@media (min-width: 1920px) {
+  .modal-header {
+    font-size: 56px;
+    line-height: 60px; /* 107.143% */
+  }
+} 
 
 .package-name {
   color: #101011;
   font-family: "Manrope", sans-serif;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 30px; /* 125% */
   text-transform: uppercase;
   padding: 4px 7px; /* 4px сверху и снизу, 7px слева и справа */
@@ -873,29 +906,92 @@ table {
   background-color: #beff54; /* Это зеленый цвет, который вы ранее упоминали */
 }
 
-.modal-text li {
+@media (min-width: 390px) {
+  .package-name {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .package-name {
+    font-size: 22px;
+    line-height: 30px; /* 136.364% */
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .package-name {
+    font-size: 24px;
+    line-height: 30px; /* 125% */
+  }
+}
+@media (min-width: 1920px) {
+  .package-name {
+    font-size: 28px;
+    line-height: 34px; /* 121.429% */
+  }
+}
+
+.modal-body li {
   margin-bottom: 13px; /* Расстояние между элементами списка */
   list-style-type: none; /* Убираем стандартные маркеры списка */
 }
 
-.modal-text ul {
+.modal-body ul {
   list-style-type: none; /* Убираем стандартные маркеры списка */
   padding: 0;
   margin: 0;
-  padding-right: 25px;
 }
 
-.modal-text ul li {
+.modal-body ul li {
   color: #fbfbfb;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 25px; /* 125% */
   position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
-  padding-left: 30px; /* Создаем пространство для SVG иконки */
+  padding-left: 40px; /* Создаем пространство для SVG иконки */
+}
+@media (min-width: 390px) {
+  .modal-body ul li {
+    color: var(--_, #FBFBFB);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
+}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .modal-body ul li {
+    font-size: 18px;
+    line-height: 25px; /* 138.889% */
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .modal-body ul li {
+    font-size: 20px;
+    line-height: 25px; /* 125% */
+  }
+}
+@media (min-width: 1920px) {
+  .modal-body ul li {
+    font-size: 22px;
+    line-height: 25px; /* 113.636% */
+  }
 }
 
-.modal-text ul li::before {
+.modal-body ul li::before {
   content: ""; /* Очищаем содержимое ::before */
   display: block;
   position: absolute;
@@ -951,7 +1047,6 @@ input[id="email-pop-up"],
 input[id="phone-pop-up"],
 input[id="name-pop-up"],
 input[id="company-name-pop-up"] {
-  width: 90%;
   height: 30px;
   background: transparent;
   border: none;
@@ -963,9 +1058,10 @@ input[id="company-name-pop-up"] {
   font-weight: 500;
   line-height: 30px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 29px;
   outline: none;
   transition: border-color 0.3s ease-in-out;
+  width: 100%;
 }
 
 input[id="email-pop-up"]:focus,
@@ -977,9 +1073,8 @@ input[id="company-name-pop-up"]:focus {
 }
 
 .submit-button-pop-up {
-  width: 90%;
-  height: 60px;
-  flex-shrink: 0;
+  width: 100%;
+  padding: 19px 0px;
   background: #282a2c;
   color: #5a5f62;
   font-family: "Manrope", sans-serif;
@@ -1006,64 +1101,147 @@ input[id="company-name-pop-up"]:focus {
   width: 90%;
 }
 
-.modal-text {
+.modal-body {
   display: flex;
-  align-items: start;
 }
 
-.left-section {
+@media (min-width: 390px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .modal-body {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1920px) {}
+
+.modal-cell {
   flex: 1;
-  margin-top: -16px;
-  max-width: 50%;
 }
-
-.right-section {
-  flex: 2;
-  padding-left: 20px;
-  max-width: 50%;
-  margin-top: -7px;
-}
+@media (min-width: 390px) {.modal-cell-container {}}
+@media (min-width: 576px) {.modal-cell-container {}}
+@media (min-width: 768px) {.modal-cell-container {
+  padding: 0px 60px;
+}}
+@media (min-width: 992px) {.modal-cell-container {}}
+@media (min-width: 1200px) {.modal-cell-container {}}
+@media (min-width: 1440px) {.modal-cell-container {
+  padding: 0px 78px;
+}}
+@media (min-width: 1920px) {.modal-cell-container {
+  padding: 0px 138px;
+}}
 
 .vertical-line {
   width: 1px;
-  height: 415px;
   background-color: #5a5f62;
-  margin: 0 15px; /* Отступы по бокам линии */
-}
-.text-packge-name {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-.text-details {
-  margin-top: -10px;
-  margin-bottom: 20px;
 }
 
+.horizontal-line {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  display: none;
+}
+
+@media (min-width: 390px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .text-packge-name {
+    margin-bottom: 34px;
+  }
+  .horizontal-line {
+    font-size: block;
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .text-packge-name {
+    margin-bottom: 40px;
+  }
+  .horizontal-line {
+    font-size: none;
+  }
+}
+@media (min-width: 1920px) {}
+
+
+@media (min-width: 390px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {
+  .text-details {
+    margin-bottom: 34px;
+  }
+}
+@media (min-width: 1920px) {}
+
+
+@media (min-width: 390px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+}
+@media (min-width: 576px) {.text-packge-name, .services-text-and-icon h2, .text-details {}}
+@media (min-width: 768px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    font-size: 22px;
+    line-height: 30px; /* 136.364% */
+  }
+}
+@media (min-width: 992px) {.text-packge-name, .services-text-and-icon h2, .text-details {}}
+@media (min-width: 1200px) {.text-packge-name, .services-text-and-icon h2, .text-details {}}
+@media (min-width: 1440px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    font-size: 24px;
+    line-height: 30px; /* 125% */
+  }
+}
+@media (min-width: 1920px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    font-size: 28px;
+    line-height: 34px; /* 121.429% */
+  }
+}
+
+
 .additional-services {
-  margin-top: 20px;
-  padding: 10px 0;
+  /* margin-top: 40px; */
+  margin-top: 66px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
 }
-
-.additional-services h2 {
-  color: #fbfbfb;
-  font-family: Manrope;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: left;
-  margin-right: 4px;
+@media (min-width: 390px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .additional-services {
+    margin-top: 42px;
+  }
 }
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {}
+@media (min-width: 1920px) {}
 
 .services-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: left;
-  text-align: left;
   width: 100%;
 }
 
@@ -1073,21 +1251,22 @@ input[id="company-name-pop-up"]:focus {
   align-items: center; /* Выравнивание элементов по вертикали по центру */
   gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
   width: 100%;
+  margin-bottom: 22px;
 }
 
 /* Новые стили для кнопок */
 .service-button {
-  padding: 10px 20px;
+  padding: 20px 25px;
   border: 1px solid #5a5f62;
   border-radius: 50px;
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
   font-size: 20px;
+  line-height: 30px; /* 150% */
+  font-weight: 400;
   color: #5a5f62;
   text-align: left;
-  height: 60px;
-  width: 90%;
 }
 .service-button[data-active="true"] {
   border-color: #beff54;
@@ -1368,8 +1547,6 @@ input[id="company-name-pop-up"]:focus {
     line-height: 20px;
     border: none;
     border-radius: 50px;
-    width: 120px;
-    height: 40px;
     margin: 0px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -1429,14 +1606,8 @@ input[id="company-name-pop-up"]:focus {
     z-index: 1;
     top: 0;
     left: 0;
-    padding: 30px 25px;
+    padding: 20px 20px 32px;
     margin-bottom: 40px;
-  }
-
-  .left-section {
-    flex: 1;
-    margin-top: -16px;
-    max-width: none;
   }
 
   .modal-header {
@@ -1464,15 +1635,6 @@ input[id="company-name-pop-up"]:focus {
     margin-top: 0;
   }
 
-  .modal-text p {
-    color: #fbfbfb;
-    font-family: Manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
   .package-name {
     color: #101011;
     font-family: Manrope;
@@ -1486,18 +1648,18 @@ input[id="company-name-pop-up"]:focus {
     background-color: #beff54; /* Это зеленый цвет, который вы ранее упоминали */
   }
 
-  .modal-text li {
+  .modal-body li {
     margin-bottom: 13px; /* Расстояние между элементами списка */
     list-style-type: none; /* Убираем стандартные маркеры списка */
   }
 
-  .modal-text ul {
+  .modal-body ul {
     list-style-type: none; /* Убираем стандартные маркеры списка */
     padding: 0;
     margin: 0;
   }
 
-  .modal-text ul li {
+  .modal-body ul li {
     color: #fbfbfb;
     font-family: Manrope;
     font-size: 14px;
@@ -1508,7 +1670,7 @@ input[id="company-name-pop-up"]:focus {
     padding-left: 30px; /* Создаем пространство для SVG иконки */
   }
 
-  .modal-text ul li::before {
+  .modal-body ul li::before {
     content: ""; /* Очищаем содержимое ::before */
     display: block;
     position: absolute;
@@ -1664,7 +1826,6 @@ input[id="company-name-pop-up"]:focus {
   input[id="phone-pop-up"],
   input[id="name-pop-up"],
   input[id="company-name-pop-up"] {
-    width: 90%;
     height: 30px;
     background: transparent;
     border: none;
@@ -1690,7 +1851,6 @@ input[id="company-name-pop-up"]:focus {
   }
 
   .submit-button-pop-up {
-    width: 96%;
     height: 46px;
     flex-shrink: 0;
     background: #282a2c;
@@ -1719,7 +1879,7 @@ input[id="company-name-pop-up"]:focus {
     width: 90%;
   }
 
-  .modal-text {
+  .modal-body {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1727,12 +1887,6 @@ input[id="company-name-pop-up"]:focus {
 
   .left-section {
     flex: 1;
-  }
-
-  .right-section {
-    flex: 2;
-    padding-left: 0px;
-    max-width: 94%;
   }
 
   .vertical-line {
