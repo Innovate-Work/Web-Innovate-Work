@@ -795,7 +795,6 @@ label {
     height: 48px;
     border-radius: 100px;
     margin: 4px;
-    margin-left: -7px;
   }
   .business-solution-section {
     flex-direction: column;
