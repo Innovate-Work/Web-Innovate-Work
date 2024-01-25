@@ -1,10 +1,11 @@
-/* @media (min-width: 390px) {}
+@media (max-width: 390px) {}
+@media (min-width: 390px) {}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {}
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
 @media (min-width: 1440px) {}
-@media (min-width: 1920px) {} */
+@media (min-width: 1920px) {}
 
 body {
   font-family: "Manrope", sans-serif;
@@ -775,10 +776,16 @@ table {
 
 @media (min-width: 390px) {
   .modal-header-container {
-    padding: 0px
+    padding: 0px 30px;
+    margin-bottom: 24px;
   }
 }
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .modal-header-container {
+    padding: 0px 30px;
+    margin-bottom: 34px;
+  }
+}
 @media (min-width: 768px) {
   .modal-header-container {
     padding: 0px 60px;
@@ -824,7 +831,8 @@ table {
 }
 @media (min-width: 576px) {
   .modal-content {
-    max-width: 100%;
+    max-width: 526px;
+    padding: 30px 0px 42px;
   }
 }
 @media (min-width: 768px) {
@@ -862,7 +870,7 @@ table {
 }
 
 @media (min-width: 390px) {
-  .modal-header {
+  .modal-header h2 {
     color: var(--_, #FBFBFB);
     font-family: Manrope;
     font-size: 28px;
@@ -872,7 +880,11 @@ table {
     text-transform: uppercase;
   }
 }
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .modal-header h2 {
+    font-size: 42px;
+  }
+}
 @media (min-width: 768px) {
   .modal-header h2 {
     font-size: 56px;
@@ -889,7 +901,7 @@ table {
 	}
 }
 @media (min-width: 1920px) {
-  .modal-header {
+  .modal-header h2 {
     font-size: 56px;
     line-height: 60px; /* 107.143% */
   }
@@ -970,7 +982,12 @@ table {
     line-height: 18px; /* 128.571% */
   }
 }
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .modal-body ul li {
+    font-size: 18px;
+    line-height: 25px; /* 138.889% */
+  }
+}
 @media (min-width: 768px) {
   .modal-body ul li {
     font-size: 18px;
@@ -1004,11 +1021,6 @@ table {
   background: url("../src/CheckCircle-2.svg") no-repeat center center; /* Укажите путь к вашему SVG файлу */
 }
 
-.service-hint {
-  position: relative;
-  display: inline-block;
-}
-
 .service-icon {
   cursor: pointer;
   margin-bottom: -7px;
@@ -1040,18 +1052,7 @@ table {
   margin-left: 10px;
 }
 
-.service-icon:hover + .hint-text {
-  display: block;
-}
-
-
-
-
-
-
-@media (min-width: 390px) {}
-@media (min-width: 576px) {}
-@media (min-width: 768px) {
+@media (min-width: 390px) {
   .submit-button-pop-up {
     width: 100%;
     padding: 19px 0px;
@@ -1068,6 +1069,12 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 47px;
+  }
+}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+  .submit-button-pop-up {
     margin-top: 52px;
   }
 }
@@ -1075,21 +1082,6 @@ table {
 @media (min-width: 1200px) {}
 @media (min-width: 1440px) {
   .submit-button-pop-up {
-    width: 100%;
-    padding: 19px 0px;
-    background: #282a2c;
-    color: #5a5f62;
-    font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 40px;
   }
 }
@@ -1112,7 +1104,11 @@ table {
 }
 
 @media (min-width: 390px) {}
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .modal-body {
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) {
   .modal-body {
     flex-direction: column;
@@ -1134,7 +1130,9 @@ table {
 .modal-cell {
   flex: 1;
 }
-@media (min-width: 390px) {.modal-cell-container {}}
+@media (min-width: 390px) {.modal-cell-container {
+  padding: 0px 30px;
+}}
 @media (min-width: 576px) {.modal-cell-container {}}
 @media (min-width: 768px) {.modal-cell-container {
   padding: 0px 60px;
@@ -1149,8 +1147,12 @@ table {
 }}
 
 
-@media (min-width: 390px) {.modal-line-container {}}
-@media (min-width: 576px) {.modal-line-container {}}
+@media (min-width: 390px) {.modal-line-container {
+  padding: 20px 30px 28px;
+}}
+@media (min-width: 576px) {.modal-line-container {
+  padding: 42px 30px;
+}}
 @media (min-width: 768px) {.modal-line-container {
   padding: 42px 60px;
 }}
@@ -1167,6 +1169,7 @@ table {
 @media (min-width: 390px) {
   .vertical-line {
     height: 1px;
+    width: 100%;
     background-color: #5a5f62;
   }
 }
@@ -1193,7 +1196,11 @@ table {
 @media (min-width: 1920px) {}
 
 
-@media (min-width: 390px) {}
+@media (min-width: 390px) {
+  .text-packge-name {
+    margin-bottom: 26px;
+  }
+}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .text-packge-name {
@@ -1210,7 +1217,11 @@ table {
 @media (min-width: 1920px) {}
 
 
-@media (min-width: 390px) {}
+@media (min-width: 390px) {
+  .text-details {
+    margin-bottom: 27px;
+  }
+}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .text-details {
@@ -1249,12 +1260,22 @@ table {
 
 @media (min-width: 390px) {
   .input-wrapper input {
-    
+    width: 100%;
+  }
+  .input-wrapper input:first-child {
+    margin: 0px;
   }
 }
-@media (min-width: 576px) {.input-wrapper{}}
+@media (min-width: 576px) {
+  .input-wrapper input {
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 29px 0px 0px 0px;
+  }
+}
 @media (min-width: 768px) {
-  .input-wrapper{
+  .input-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1263,9 +1284,10 @@ table {
     width: 293px;
     line-height: 30px;
     font-size: 20px;
+    margin: 0px
   }
   .input-wrapper input:last-child {
-    margin: 32px 0px 0px; 
+    margin: 32px 0px 0px 0px;
   }
 }
 @media (min-width: 992px) {}
@@ -1313,7 +1335,12 @@ table {
     line-height: 20px; /* 125% */
   }
 }
-@media (min-width: 576px) {.text-packge-name, .services-text-and-icon h2, .text-details {}}
+@media (min-width: 576px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    font-size: 22px;
+    line-height: 30px; /* 136.364% */
+  }
+}
 @media (min-width: 768px) {
   .text-packge-name, .services-text-and-icon h2, .text-details {
     font-size: 22px;
@@ -1344,7 +1371,11 @@ table {
   align-items: baseline;
 }
 @media (min-width: 390px) {}
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .additional-services {
+    margin-top: 42px;
+  }
+}
 @media (min-width: 768px) {
   .additional-services {
     margin-top: 42px;
@@ -1356,13 +1387,38 @@ table {
 @media (min-width: 1920px) {}
 
 
+.services-text-and-icon {
+  display: flex; /* Изменяем на flex для горизонтального размещения элементов */
+  justify-content: start; /* Выравнивание элементов слева */
+  align-items: center; /* Выравнивание элементов по вертикали по центру */
+  gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
+  width: 100%;
+}
+
+@media (min-width: 390px) {.services-text-and-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}}
+@media (min-width: 576px) {.services-text-and-icon {}}
+@media (min-width: 768px) {.services-text-and-icon {
+  margin-bottom: 22px;
+}}
+@media (min-width: 992px) {.services-text-and-icon {}}
+@media (min-width: 1200px) {.services-text-and-icon {}}
+@media (min-width: 1440px) {.services-text-and-icon {}}
+@media (min-width: 1920px) {.services-text-and-icon {}}
+
+
 
 @media (min-width: 390px) {.services-options {
   display: flex;
   flex-direction: column;
   width: 100%;
 }}
-@media (min-width: 576px) {}
+@media (min-width: 576px) {.services-options {
+  gap: 12px;
+}}
 @media (min-width: 768px) {.services-options {
   gap: 12px;
 }}
@@ -1373,29 +1429,59 @@ table {
 }}
 @media (min-width: 1920px) {}
 
-.services-text-and-icon {
-  display: flex; /* Изменяем на flex для горизонтального размещения элементов */
-  justify-content: start; /* Выравнивание элементов слева */
-  align-items: center; /* Выравнивание элементов по вертикали по центру */
-  gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
-  width: 100%;
-  margin-bottom: 22px;
-}
+
 
 /* Новые стили для кнопок */
-.service-button {
-  padding: 20px 25px;
-  border: 1px solid #5a5f62;
-  border-radius: 50px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
-  font-size: 20px;
-  line-height: 30px; /* 150% */
-  font-weight: 400;
-  color: #5a5f62;
-  text-align: left;
+@media (min-width: 390px) {
+  .service-button {
+    line-height: 1.5;
+    padding: 10px 20px;
+    border: 1px solid #5a5f62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: #5a5f62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    justify-content: center;
+    height: auto;
+  }
 }
+@media (min-width: 576px) {
+  .service-button {
+    padding: 20px 25px;
+    border: 1px solid #5a5f62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 20px;
+    line-height: 30px; /* 150% */
+    font-weight: 400;
+    color: #5a5f62;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .service-button {
+    padding: 20px 25px;
+    border: 1px solid #5a5f62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 20px;
+    line-height: 30px; /* 150% */
+    font-weight: 400;
+    color: #5a5f62;
+    text-align: left;
+  }
+}
+
 .service-button[data-active="true"] {
   border-color: #beff54;
   color: #fbfbfb;
@@ -1734,7 +1820,6 @@ table {
     z-index: 1;
     top: 0;
     left: 0;
-    padding: 20px 20px 32px;
     margin-bottom: 40px;
   }
 
@@ -1743,25 +1828,6 @@ table {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-  }
-
-  .close {
-    width: 20px;
-    margin-bottom: 41px;
-    cursor: pointer;
-  }
-
-  .modal-header h2 {
-    color: #fbfbfb;
-    text-align: left;
-    font-family: Manrope;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px; /* 128.571% */
-    text-transform: uppercase;
-    margin-bottom: 37px;
-    margin-top: 0;
   }
 
   .package-name {
@@ -1811,11 +1877,6 @@ table {
     background: url("../src/CheckCircle-2.svg") no-repeat center center; /* Укажите путь к вашему SVG файлу */
   }
 
-  .service-hint {
-    position: relative;
-    display: inline-block;
-  }
-
   .service-icon {
     display: none;
     cursor: pointer;
@@ -1827,8 +1888,6 @@ table {
   }
 
   .hint-text {
-    display: block;
-    position: unset;
     transform: none;
     width: auto;
     height: auto;
@@ -1846,27 +1905,6 @@ table {
     margin-bottom: 11px;
   }
 
-  .services-text-and-icon {
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    gap: 4px;
-    width: 100%;
-    flex-direction: column;
-    padding-left: 12px;
-  }
-
-  .additional-services h2 {
-    color: #fbfbfb;
-    text-align: left;
-    margin-right: 0px;
-    font-family: Manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-  }
-
   .additional-services {
     width: 100%;
     margin-top: 20px;
@@ -1882,27 +1920,7 @@ table {
     gap: 10px;
     justify-content: center;
     width: 100%;
-    margin-top: 14px;
     margin-left: 0px;
-  }
-
-  .service-button {
-    line-height: 1.5;
-    padding: 10px 20px;
-    border: 1px solid #5a5f62;
-    border-radius: 50px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    color: #5a5f62;
-    font-family: Manrope;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: start;
-    justify-content: center;
-    height: auto;
-    width: 90%;
   }
 
   .service-button:hover {
@@ -2010,24 +2028,11 @@ table {
 
   .modal-body {
     display: flex;
-    align-items: center;
     flex-direction: column;
   }
 
   .left-section {
     flex: 1;
-  }
-
-  .vertical-line {
-    display: none;
-  }
-  .text-packge-name {
-    margin-top: 0;
-    margin-bottom: 33px;
-  }
-  .text-details {
-    margin-top: 15px;
-    margin-bottom: 10px;
   }
 
   .error-box {
