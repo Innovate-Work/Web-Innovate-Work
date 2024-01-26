@@ -1021,36 +1021,24 @@ table {
   background: url("../src/CheckCircle-2.svg") no-repeat center center; /* Укажите путь к вашему SVG файлу */
 }
 
-.service-icon {
-  cursor: pointer;
-  margin-bottom: -7px;
+@media (max-width: 390px) {
+  .service-icon {
+    display: none;
+    cursor: pointer;
+  }
 }
+@media (min-width: 390px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {
+  .service-icon:hover {
+    content: url("../src/QuestionWhite.svg");
+  }
+}
+@media (min-width: 1200px) {}
+@media (min-width: 1440px) {}
+@media (min-width: 1920px) {}
 
-.service-icon:hover {
-  content: url("../src/QuestionWhite.svg");
-}
-
-.hint-text {
-  display: none;
-  position: absolute;
-  left: 100%; /* Позиционируем слева от иконки */
-  top: 50%;
-  transform: translateY(-50%); /* Центрируем по вертикали */
-  width: 256px;
-  height: 82px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  border: 1px solid #fbfbfb;
-  background: #1b1d1e;
-  color: #fbfbfb;
-  font-family: Manrope;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  padding: 10px;
-  margin-left: 10px;
-}
 
 @media (min-width: 390px) {
   .submit-button-pop-up {
@@ -1070,6 +1058,7 @@ table {
     justify-content: center;
     align-items: center;
     margin-top: 47px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 @media (min-width: 576px) {}
@@ -1086,8 +1075,6 @@ table {
   }
 }
 @media (min-width: 1920px) {}
-
-
 
 .contact-details h3 {
   color: #fbfbfb;
@@ -1440,7 +1427,6 @@ table {
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
     color: #5a5f62;
     font-family: Manrope;
     font-size: 14px;
@@ -1449,6 +1435,7 @@ table {
     text-align: start;
     justify-content: center;
     height: auto;
+    transition: border-color 0.3s ease, color 0.3s ease;
   }
 }
 @media (min-width: 576px) {
@@ -1458,7 +1445,6 @@ table {
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
     font-size: 20px;
     line-height: 30px; /* 150% */
     font-weight: 400;
@@ -1473,7 +1459,6 @@ table {
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
     font-size: 20px;
     line-height: 30px; /* 150% */
     font-weight: 400;
@@ -1481,16 +1466,19 @@ table {
     text-align: left;
   }
 }
+@media (min-width: 992px) {
+  .service-button:hover {
+    color: #fbfbfb;
+  }
+  .service-button:hover::before {
+    content: url("../src/cyrcleWhite.svg"); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+  }
+}
 
 .service-button[data-active="true"] {
   border-color: #beff54;
   color: #fbfbfb;
-}
-.service-button:hover {
-  color: #fbfbfb;
-}
-.service-button:hover::before {
-  content: url("../src/cyrcleWhite.svg"); /* замените 'OtherImage.svg' на имя вашего другого SVG файла */
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 .service-button::before {
   content: url("../src/GroupCyrcle.svg"); /* замените 'path_to_your_svg.svg' на путь к вашему SVG файлу */
@@ -1877,34 +1865,6 @@ table {
     background: url("../src/CheckCircle-2.svg") no-repeat center center; /* Укажите путь к вашему SVG файлу */
   }
 
-  .service-icon {
-    display: none;
-    cursor: pointer;
-    margin-bottom: -7px;
-  }
-
-  .service-icon:hover {
-    content: url("../src/QuestionWhite.svg");
-  }
-
-  .hint-text {
-    transform: none;
-    width: auto;
-    height: auto;
-    border-radius: 0px;
-    border: none;
-    background: #1b1d1e;
-    color: #5a5f62;
-    font-family: Manrope;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    padding: 0px;
-    margin-left: 0px;
-    margin-bottom: 11px;
-  }
-
   .additional-services {
     width: 100%;
     margin-top: 20px;
@@ -2273,3 +2233,88 @@ table {
     order: 1; /* This will ensure the image keeps its aspect ratio */
   }
 }
+
+.highlight {
+  background-color: #BEFF54;
+  color: #000504;
+}
+
+
+/* tooltip */
+
+@media (max-width: 390px) {}
+@media (min-width: 390px) {
+  .tooltip-trigger {
+    display: none;
+  }
+  .tooltip {
+    white-space: nowrap;
+    border-radius: 5px;
+    white-space: normal;
+    color: #5a5f62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: 390px;
+  }
+}
+@media (min-width: 576px) {
+  .tooltip {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .tooltip {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+  .tooltip-trigger {
+    display: block;
+  }
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 1;
+    padding: 20px 20px;
+    width: 400px;
+    border-radius: 5px;
+  
+    white-space: normal;
+    text-align: center;
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tooltip.show {
+    top: -100px;
+    transform: translateX(-50%); 
+    opacity: 1; 
+    visibility: visible;
+  }
+}
+@media (min-width: 1440px) {}
+@media (min-width: 1920px) {}

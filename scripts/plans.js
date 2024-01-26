@@ -240,7 +240,9 @@ document.querySelectorAll(".tabs div").forEach((tab) => {
 const packetsData = [
 	{
 		'name': 'basic',
-		'price': 500
+		'price': 500,
+    // можно добавить какие хочешь поля
+    // можно в json переместить, оттуда читать
 	},
 	{
 		'name': 'professional',
@@ -255,65 +257,136 @@ const packetsData = [
 
 
 // new pop up action code
-const checkInputs = () => {
-	console.log();
-	// ...
+
+// tooltip
+const tooltipTrigger = document.querySelector('#tooltip-trigger');
+const tooltip = document.querySelector('#tooltip');
+
+tooltipTrigger.addEventListener('mouseover', () => {
+  tooltip.classList.add('show');
+});
+
+tooltipTrigger.addEventListener('mouseout', () => {
+  tooltip.classList.remove('show');
+});
+
+
+// очистка формы
+const clearForm = (serviceButtonList, inputList, submitButton) => {
+  serviceButtonList.forEach(button => {
+    button.setAttribute('data-active', 'false');
+  });
+
+  inputList.forEach(input => {
+    input.value = '';  
+  });
+
+  submitButton.classList.remove('highlight');
+}
+
+// поля формы заполнены?
+const isFormFilled = (inputList) => {
+  for (let input of inputList) {
+    if (input.value.trim() === '') {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// подсветить кнопку отправки если форма не содержит пустых полей
+const highlightSubmitButton = (inputList, submitButton) => {
+  isFormFilled(inputList) 
+    ? submitButton.classList.add('highlight') 
+    : submitButton.classList.remove('highlight'); 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// modal window
-	const modal = document.querySelector('#myModal');
-	const closeCrossIcon = document.querySelector('.close');
+  // modal window
+  const modal = document.querySelector('#myModal');
 
-	closeCrossIcon.addEventListener('click', () => {
-		modal.style.display = 'none';
-	})
+  // получаем со страницы кнопки и помещаем их в массив
+  const buttonsPacket1 = document.querySelectorAll('.show-handle-button-packet-1');
+  const buttonsPacket2 = document.querySelectorAll('.show-handle-button-packet-2');
+  const buttonsPacket3 = document.querySelectorAll('.show-handle-button-packet-3');
+  const buttonsPacketList = [buttonsPacket1, buttonsPacket2, buttonsPacket3];
 
-	const buttonsPacket1 = document.querySelectorAll('.show-handle-button-packet-1');
-	const buttonsPacket2 = document.querySelectorAll('.show-handle-button-packet-2');
-	const buttonsPacket3 = document.querySelectorAll('.show-handle-button-packet-3');
-	const buttonsPacketList = [buttonsPacket1, buttonsPacket2, buttonsPacket3];
+  // перебираем кнопки
+  buttonsPacketList.forEach(buttonsPacket => {
+    buttonsPacket.forEach(button => {
+      button.addEventListener('click', (e) => {
 
-	buttonsPacketList.forEach(buttonsPacket => {
-		buttonsPacket.forEach(button => {
-			button.addEventListener('click', (e) => {
-				// вытаскиваем из названия класса номер пакета
-				const className = e.target.className.match(/show-handle-button-packet-\d+/g)[0];
-				const packetNumber = Number(className.charAt(className.length - 1));
+        // вытаскиваем из названия класса номер пакета
+        const className = e.target.className.match(/show-handle-button-packet-\d+/g)[0];
+        const packetNumber = Number(className.charAt(className.length - 1));
 
-				// берем данные выбранного пакета
-				const packetData = packetsData[packetNumber - 1];
+        // берем данные выбранного пакета
+        const packetData = packetsData[packetNumber - 1];
 
-				// пример подстановки данных в пакет, можно добавить другие
-				document.querySelector('.package-name').textContent = packetData.name;
+        // пример подстановки данных в пакет, можно добавить другие
+        document.querySelector('.package-name').textContent = packetData.name;
 
-				// опциональные инпуты
-				const serviceButtonList = document.querySelectorAll('.service-button');
-				serviceButtonList.forEach(button => {
-					button.addEventListener('click', () => {
-						const isActive = button.getAttribute('data-active') === 'true';
-						button.setAttribute('data-active', String(!isActive));
-					});
-				});
-				
-				
-				// проверка на незаполненость инпутов перед подсвечиванием кнопки на отправку
-				checkInputs();
+        // тоггл для опциональных импутов
+        function toggleServiceButton() {
+          const isActive = this.getAttribute('data-active') === 'true';
+          this.setAttribute('data-active', String(!isActive));
+        }
 
+        // опциональные инпуты
+        const serviceButtonList = document.querySelectorAll('.service-button');
+        serviceButtonList.forEach(button => {
+          button.addEventListener('click', toggleServiceButton);
+        });
 
-				// отображение на странице модального окна
-				modal.style.display = 'block';
+        // получаем элементы формы 
+        // потом подсвечиваем кнопку отправки если поля формы не пустые 
+        const inputList = document.querySelectorAll('.input-wrapper > input');
+        const submitButton = document.querySelector('.submit-button-pop-up');
 
-				// Проверка ширины экрана и прокрутка к модальному блоку на мобильных устройствах
-				if (window.innerWidth <= 576) {
-					const modalTop = modal.getBoundingClientRect().top + window.scrollY - 110; // Получаем позицию модального окна относительно верхнего края документа и вычитаем 60px
-					window.scrollTo({ top: modalTop, behavior: "smooth" }); // Плавная прокрутка к вычисленной позиции
-				}
-			});
-		});
-	});
+        function handleInput() {
+          highlightSubmitButton(inputList, submitButton);
+        }
+
+        inputList.forEach(input => {
+          input.addEventListener('input', handleInput);
+        });
+
+        // отображение на странице модального окна
+        modal.style.display = 'block';
+
+        // крестик для скрытия модального окна и очистки формы
+        const closeCrossIcon = document.querySelector('.close');
+
+        closeCrossIcon.addEventListener('click', () => {
+          // Скрытие модального окна и очистка формы
+          modal.style.display = 'none';
+
+          // очистка формы 
+          clearForm(serviceButtonList, inputList, submitButton);
+
+          // Удаление обработчиков событий
+          serviceButtonList.forEach(button => {
+            button.removeEventListener('click', toggleServiceButton);
+          });
+
+          inputList.forEach(input => {
+            input.removeEventListener('input', handleInput);
+          });
+
+        });
+
+        // Проверка ширины экрана и прокрутка к модальному блоку на мобильных устройствах
+        if (window.innerWidth <= 576) {
+          const modalTop = modal.getBoundingClientRect().top + window.scrollY - 110;
+          window.scrollTo({ top: modalTop, behavior: "smooth" });
+        }
+      });
+    });
+  });
 });
+
 
 // // pop up action
 // document.addEventListener("DOMContentLoaded", function () {
