@@ -182,21 +182,21 @@
               <div class="head-div">
                 <h3>Basic</h3>
                 <p><span>from</span> $500</p>
-                <button class="button-get-started show-toggle-button-packet-1">Get started</button>
+                <button class="button-get-started show-handle-button-packet-1">Get started</button>
               </div>
             </td>
             <td>
               <div class="head-div">
                 <h3>Pro</h3>
                 <p><span>from</span> $500</p>
-                <button class="button-get-started show-toggle-button-packet-2">Get started</button>
+                <button class="button-get-started show-handle-button-packet-2">Get started</button>
               </div>
             </td>
             <td>
               <div class="head-div">
                 <h3>Business</h3>
                 <p><span>from</span> $500</p>
-                <button class="button-get-started show-toggle-button-packet-3">Get started</button>
+                <button class="button-get-started show-handle-button-packet-3">Get started</button>
               </div>
             </td>
           </tr>
@@ -310,29 +310,27 @@
                 <div class="additional-services">
                   <div class="services-text-and-icon">
                     <h2>Additional services you can add</h2>
-                    <div class="service-hint">
-                      <img
-                        class="service-icon"
-                        src="src/Question.svg"
-                        alt="Service Icon"
-                      />
-                      <div class="hint-text">
-                        Examples: custom graphics, content creation, advanced
-                        SEO, and security audits.
-                      </div>
+                    <div class="tooltip-container">
+                        <img
+                          class="service-icon tooltip-trigger"
+                          id="tooltip-trigger"
+                          src="src/Question.svg"
+                          alt="Service Icon"
+                        />
+                        <div class="tooltip" id="tooltip">Examples: custom graphics, content creation, advanced SEO, and security audits.</div>                  
                     </div>
                   </div>
                   <div class="services-options">
                     <!-- <button class="service-button" data-active="false">Custom interface design</button>
                     <button class="service-button" data-active="false">Maintenance</button> -->
                     <button
-                      class="service-button custom-interface-design"
+                      class="service-button"
                       data-active="false"
                     >
                       Custom interface design
                     </button>
                     <button
-                      class="service-button maintenance"
+                      class="service-button"
                       data-active="false"
                     >
                       Maintenance
