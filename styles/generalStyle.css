@@ -468,7 +468,7 @@ footer {
 .about-links-columns {
   flex-basis: 710px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -496,6 +496,7 @@ footer {
     padding-right: 0px;
     margin-bottom: 36px;
     width: 100%;
+
   }
 }
 
