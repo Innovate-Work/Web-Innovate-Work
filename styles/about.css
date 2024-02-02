@@ -166,11 +166,16 @@ body {
   flex-direction: column;
 }
 @media (max-width: 390px) {}
-@media (min-width: 390px) {}
+@media (min-width: 390px) {
+  .about-content {
+    margin-top: 44px;
+  }
+}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .about-content {
     order: 1;
+    margin-top: 0;
   }
 }
 @media (min-width: 992px) {}
