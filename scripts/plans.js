@@ -258,6 +258,9 @@ const packetsData = [
 
 // new pop up action code
 
+// scroll options
+// ...
+
 // tooltip
 const tooltipTrigger = document.querySelector('#tooltip-trigger');
 const tooltip = document.querySelector('#tooltip');
@@ -318,6 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonsPacket.forEach(button => {
       button.addEventListener('click', (e) => {
 
+        // отключаем скролл на body при открытии модального окна
+        window.innerWidth >= 576 ? document.body.classList.add('modal-open') : null;
+        
+        // ???????????????????????????
+        window.innerWidth < 1200 ? modal.style.overflow = 'scroll' : null;
+        
+
         // вытаскиваем из названия класса номер пакета
         const className = e.target.className.match(/show-handle-button-packet-\d+/g)[0];
         const packetNumber = Number(className.charAt(className.length - 1));
@@ -362,6 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
         closeCrossIcon.addEventListener('click', () => {
           // Скрытие модального окна и очистка формы
           modal.style.display = 'none';
+
+          // отключаем скролл на body при открытии модального окна
+          window.innerWidth >= 576 ? document.body.classList.remove('modal-open') : null;  
 
           // очистка формы 
           clearForm(serviceButtonList, inputList, submitButton);
