@@ -21,7 +21,7 @@ document.getElementById('validation-form').addEventListener('submit', function(e
     console.log('Data object:', data);
     console.log('JSON representation:', JSON.stringify(data));
     // Отправляем запрос
-    fetch('http://innovatework.net:8080/api/clients', {
+    fetch('http://api.innovatework.net/api/clients', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

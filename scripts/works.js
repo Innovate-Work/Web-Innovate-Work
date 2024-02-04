@@ -66,18 +66,18 @@ const tabData = {
             name: "Mobile App for Fitness",
             link: "www.nike.com",
             images: [
+                'src/store_1.svg',
                 'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
+                'src/store_1.svg'
             ]
         },
         {
             name: "Mobile App for Nutrition",
             link: "www.nike.com",
             images: [
+                'src/store_1.svg',
                 'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
+                'src/store_1.svg'
             ]
         },
         {
@@ -86,7 +86,7 @@ const tabData = {
             images: [
                 'src/dle3.png',
                 'src/dle2.png',
-                'src/dle1.png'
+                'src/store_1.svg'
             ]
         },
         {
@@ -95,7 +95,7 @@ const tabData = {
             images: [
                 'src/dle2.png',
                 'src/dle2.png',
-                'src/dle2.png'
+                'src/store_1.svg'
             ]
         }
     ]
