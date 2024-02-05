@@ -223,7 +223,7 @@ nav {
 
 @media (min-width: 1440px) {
   .nav-item, .contacts > a {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -417,7 +417,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: 27px;
-  margin-left: 16px;
+  margin-left: 4px;
 }
 
 @media (min-width: 576px) and (max-width: 768px) {

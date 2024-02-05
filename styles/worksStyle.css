@@ -608,7 +608,8 @@ body {
     .modal-content {
         margin: auto;
         display: block;
-        width: 80%;
+        width: 97%;
+        height: auto;
         border-radius: 20px;
     }
 
