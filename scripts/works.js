@@ -66,8 +66,8 @@ const tabData = {
             name: "Mobile App for Fitness",
             link: "www.nike.com",
             images: [
-                'src/store_1.svg',
-                'src/dle2.png',
+                'src/work1_3.svg',
+                'src/work1_2.svg',
                 'src/store_1.svg'
             ]
         },
@@ -75,29 +75,28 @@ const tabData = {
             name: "Mobile App for Nutrition",
             link: "www.nike.com",
             images: [
-                'src/store_1.svg',
-                'src/dle2.png',
-                'src/store_1.svg'
+                'src/work2_3.svg',
+                'src/work2_2.svg',
+                'src/works2.svg'
             ]
         },
         {
             name: "Mobile App for Meditation",
             link: "www.nike.com",
             images: [
-                'src/dle3.png',
-                'src/dle2.png',
-                'src/store_1.svg'
+                'src/work3_2.svg',
+                'src/work3.svg'
             ]
         },
-        {
-            name: "Mobile App for Running",
-            link: "www.nike.com",
-            images: [
-                'src/dle2.png',
-                'src/dle2.png',
-                'src/store_1.svg'
-            ]
-        }
+        // {
+        //     name: "Mobile App for Running",
+        //     link: "www.nike.com",
+        //     images: [
+        //         'src/dle2.png',
+        //         'src/dle2.png',
+        //         'src/work3.svg'
+        //     ]
+        // }
     ]
 
 };
