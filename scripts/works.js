@@ -30,7 +30,8 @@ const tabData = {
                 'src/dle2.png',
                 'src/dle1.png',
                 'src/dle3.png'
-            ]
+            ],
+            description: ""
         },
         {
             name: "Web site online shop for Adidas",
@@ -39,7 +40,8 @@ const tabData = {
                 'src/dle2.png',
                 'src/dle2.png',
                 'src/dle2.png'
-            ]
+            ],
+            description: ""
         },
         {
             name: "Web site online shop for Puma",
@@ -48,7 +50,8 @@ const tabData = {
                 'src/dle2.png',
                 'src/dle2.png',
                 'src/dle2.png'
-            ]
+            ],
+            description: ""
         },
         {
             name: "Web site online shop for Reebok",
@@ -57,36 +60,40 @@ const tabData = {
                 'src/dle2.png',
                 'src/dle2.png',
                 'src/dle2.png'
-            ]
+            ],
+            description: ""
         }
     
     ],
     "Application": [
         {
-            name: "Mobile App for Fitness",
+            name: "Natural cosmetics store apps",
             link: "www.nike.com",
             images: [
                 'src/work1_3.svg',
                 'src/work1_2.svg',
                 'src/store_1.svg'
-            ]
+            ],
+            description: "This application features a database of actual items, the ability to add them to favorites and shoppingcart. Registration and payment for purchase"
         },
         {
-            name: "Mobile App for Nutrition",
+            name: "Planning app",
             link: "www.nike.com",
             images: [
                 'src/work2_3.svg',
                 'src/work2_2.svg',
                 'src/works2.svg'
-            ]
+            ],
+            description: "This is a task management app that offers features like task prioritization, recurring tasks, and habit tracking"
         },
         {
-            name: "Mobile App for Meditation",
+            name: "Fitness app",
             link: "www.nike.com",
             images: [
                 'src/work3_2.svg',
                 'src/work3.svg'
-            ]
+            ],
+            description: "This app helps users track their diet and exercise, offering a vast database of foods and exercises to monitor calorie intake and expenditure"
         },
         // {
         //     name: "Mobile App for Running",
@@ -95,7 +102,8 @@ const tabData = {
         //         'src/dle2.png',
         //         'src/dle2.png',
         //         'src/work3.svg'
-        //     ]
+        //     ],
+        //   description: ""
         // }
     ]
 
@@ -120,9 +128,11 @@ function updatePackages(tabName) {
         if (data[index]) {
             const nameExample = packageElem.querySelector('.name-example');
             const linkText = packageElem.querySelector('.link-example .link-text');
+            const descriptionWorks = packageElem.querySelector('.description-works');
 
             nameExample.textContent = data[index].name;
             linkText.textContent = data[index].link;
+            descriptionWorks.innerHTML = data[index].description;
 
             packageElem.style.display = "";
 

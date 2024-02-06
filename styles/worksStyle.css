@@ -102,7 +102,7 @@ body {
 .work-package {
     background-color: #1B1D1E;
     width: 650px;
-    height: 488px;
+    height: 528px;
     flex-shrink: 0;
     border-radius: 20px;
 }
@@ -174,6 +174,13 @@ body {
 .link-example img {
     height: 20px;
     width: 20px;
+}
+
+.description-works {
+    color: #5A5F62;
+    font-weight: 500;
+    size: 24px;
+    line-height: 32px;
 }
 
 /* gallary */
@@ -304,6 +311,11 @@ body {
         width: auto;
     }
 
+    .description-works {
+        padding: 14px 32px 0px 14px;
+
+    }
+
   }
 
   @media (max-width: 1920px) { 
@@ -320,6 +332,10 @@ body {
         transform: translate(-50%, -50%);
         left: 50%;
         width: auto;
+    }
+
+    .description-works {
+        padding: 14px 32px 0px 14px;
     }
 
   }
@@ -350,6 +366,10 @@ body {
         width: auto;
     }
 
+    .description-works {
+        padding: 14px 32px 0px 14px;
+    }
+
   }
 
 
@@ -360,12 +380,16 @@ body {
 
     .work-package {
         width: 650px;
-        height: 488px;
+        height: 528px;
     }
 
     .content-works {
         width: 650px;
         height: 365px;
+    }
+
+    .description-works {
+        padding: 14px 32px 0px 14px;
     }
 
   }
@@ -389,7 +413,7 @@ body {
 
     .work-package {
         width: 548px;
-        height: 488px;
+        height: 542px;
     }
 
     .content-works {
@@ -401,6 +425,10 @@ body {
         width: 423px;
         height: 442px;
         border-radius: 20px;
+    }
+
+    .description-works {
+        padding: 14px 0px 32px 0px 14px;
     }
 
   }
@@ -505,7 +533,7 @@ body {
     .work-package {
         background-color: #1B1D1E;
         width: 100%;
-        height: 486px;
+        height: 558px;
         flex-shrink: 0;
         border-radius: 20px;
     }
@@ -551,6 +579,10 @@ body {
         font-weight: 400;
         line-height: 16.689px;
         padding-left: 15px;
+    }
+
+    .description-works {
+        padding: 14px 32px 0px 14px;
     }
 
     .link-example {
@@ -669,5 +701,10 @@ body {
 
 }
 
+@media (max-width: 390px) {
+    .work-package {
+        height: auto;
+    }
+}
 
 
