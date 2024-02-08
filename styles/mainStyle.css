@@ -348,6 +348,7 @@ body {
     padding-top: 25px; /* Отступ сверху внутри контейнера */
     padding-bottom: 25px; /* Отступ снизу внутри контейнера */
     justify-content: space-between;
+    max-width: 1440px;
   }
 }
 
@@ -606,6 +607,8 @@ label {
   align-items: center;
   overflow: hidden; /* Скрыть текст, который выходит за пределы контейнера */
   position: relative; /* Необходимо для абсолютного позиционирования текста */
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Define the text styles for the first line */
