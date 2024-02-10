@@ -28,6 +28,10 @@ h1 {
   color: #beff54;
 }
 
+h2 {
+  color: #101011;
+}
+
 .description {
   display: flex;
   text-align: center;

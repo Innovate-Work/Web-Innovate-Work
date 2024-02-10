@@ -4,6 +4,8 @@
   
 WARNING */
 
+/* dev temp code ... */
+/* mobile first */
 @media (max-width: 390px) {}
 @media (min-width: 390px) {}
 @media (min-width: 576px) {}
@@ -12,37 +14,50 @@ WARNING */
 @media (min-width: 1200px) {}
 @media (min-width: 1440px) {}
 @media (min-width: 1920px) {}
+
+/* desktop first (kill me pls) */
+@media (min-width: 1920px) {} 
+@media (max-width: 1919px) {} 
+@media (max-width: 1439px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}
+@media (max-width: 389px) {}
+
+/* containers for SOME sections */
 .container {
   width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
-@media (max-width: 390px) {}
-@media (min-width: 390px) {}
-@media (min-width: 576px) {}
-@media (min-width: 768px) {
-  .container {
-    max-width: 698px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {}
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1320px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
 @media (min-width: 1920px) {
-  .container {
+	.container {
     max-width: 1720px;
   }
+} 
+@media (max-width: 1919px) {
+	.container {
+    max-width: 1320px;
+  }
+} 
+@media (max-width: 1439px) {
+	.container {
+    max-width: 698px;
+  }
 }
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {
+	.container {
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+}
+@media (max-width: 575px) {}
+@media (max-width: 389px) {}
 
 body {
   font-family: "Manrope", sans-serif;
@@ -188,30 +203,17 @@ body {
 @media (min-width: 1920px) {}
 
 
-.about-heading {
-  color: #beff54;
-  font-family: Manrope, sans-serif;
-  text-transform: uppercase;
-  font-style: normal;
-  order: 1;
-  letter-spacing: 0em;
-}
+.about-heading {}
 @media (max-width: 390px) {}
 @media (min-width: 390px) {
   .about-heading {
     order: 1;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
     margin-bottom: 12px;
   }
 }
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .about-heading {
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 38px;
     margin-bottom: 27px;
   }
 }
@@ -219,17 +221,11 @@ body {
 @media (min-width: 1200px) {}
 @media (min-width: 1440px) {
   .about-heading {
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 60px;
     margin-bottom: 27px;
   }
 }
 @media (min-width: 1920px) {
   .about-heading {
-    font-size: 58px;
-    font-weight: 600;
-    line-height: 60px;
     margin-bottom: 52px;
   }
 }
