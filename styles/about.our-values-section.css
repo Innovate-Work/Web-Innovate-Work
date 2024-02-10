@@ -1,0 +1,103 @@
+/* dev temp code ... */
+@media (min-width: 1920px) {} 
+@media (max-width: 1919px) {} 
+@media (max-width: 1439px) {}
+@media (max-width: 1199px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}
+@media (max-width: 389px) {}
+
+/* styles ... */
+
+.our-values-section {
+  color: coral;
+}
+
+
+
+.cell-first-heading-description {
+	font-family: Manrope;
+	font-weight: 500;
+	letter-spacing: 0em;
+	color: #5A5F62;
+}
+@media (min-width: 1920px) {.cell-first-heading-description {
+	font-size: 24px;
+	line-height: 32px;
+}} 
+@media (max-width: 1919px) {.cell-first-heading-description {
+	font-size: 20px;
+	line-height: 30px;
+}} 
+@media (max-width: 1439px) {.cell-first-heading-description {
+	font-size: 16px;
+	line-height: 22px;
+}}
+@media (max-width: 1199px) {.cell-first-heading-description {}}
+@media (max-width: 991px) {.cell-first-heading-description {
+}}
+@media (max-width: 767px) {.cell-first-heading-description {
+	font-size: 14px;
+	line-height: 20px;
+}}
+@media (max-width: 575px) {.cell-first-heading-description {}}
+@media (max-width: 389px) {.cell-first-heading-description {}}
+
+
+
+.cell-heading {
+	font-family: Manrope;
+	font-weight: 600;
+	letter-spacing: 0em;
+	color: #BEFF54;
+}
+@media (min-width: 1920px) {.cell-heading {
+	font-size: 32px;
+	line-height: 30px;
+}} 
+@media (max-width: 1919px) {.cell-heading {
+	font-size: 24px;
+	line-height: 30px;
+}} 
+@media (max-width: 1439px) {.cell-heading {
+	font-size: 20px;
+	line-height: 24px;
+}}
+@media (max-width: 1199px) {.cell-heading {}}
+@media (max-width: 991px) {.cell-heading {}}
+@media (max-width: 767px) {.cell-heading {
+	font-size: 16px;
+	line-height: 22px;
+}}
+@media (max-width: 575px) {.cell-heading {}}
+@media (max-width: 389px) {.cell-heading {}}
+
+
+
+.cell-description {
+	font-family: Manrope;
+	font-weight: 500;
+	letter-spacing: 0em;
+	color: #FBFBFB;
+}
+@media (min-width: 1920px) {.cell-description {
+	font-size: 24px;
+	line-height: 32px;
+}} 
+@media (max-width: 1919px) {.cell-description {
+	font-size: 20px;
+	line-height: 30px;
+}} 
+@media (max-width: 1439px) {.cell-description {
+	font-size: 16px;
+	line-height: 22px;
+}}
+@media (max-width: 1199px) {.cell-description {}}
+@media (max-width: 991px) {.cell-description {}}
+@media (max-width: 767px) {.cell-description {
+	font-size: 14px;
+	line-height: 20px;
+}}
+@media (max-width: 575px) {.cell-description {}}
+@media (max-width: 389px) {.cell-description {}}
