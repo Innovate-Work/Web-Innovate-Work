@@ -22,187 +22,187 @@
   color: coral;
 }
 
-.cell-first-heading {
+.our-values-section .cell-first-heading {
 }
 @media (min-width: 1920px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
     margin-bottom: 32px;
   }
 }
 @media (max-width: 1919px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
     margin-bottom: 32px;
   }
 }
 @media (max-width: 1439px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
     margin-bottom: 22px;
   }
 }
 @media (max-width: 1199px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
   }
 }
 @media (max-width: 991px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
   }
 }
 @media (max-width: 767px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
     margin-bottom: 12px;
   }
 }
 @media (max-width: 575px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
   }
 }
 @media (max-width: 389px) {
-  .cell-first-heading {
+  .our-values-section .cell-first-heading {
   }
 }
 
-.cell-first-heading-description {
+.our-values-section .cell-first-heading-description {
   font-family: Manrope;
   font-weight: 500;
   letter-spacing: 0em;
   color: #5a5f62;
 }
 @media (min-width: 1920px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
     font-size: 24px;
     line-height: 32px;
   }
 }
 @media (max-width: 1919px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
     font-size: 20px;
     line-height: 30px;
   }
 }
 @media (max-width: 1439px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
     font-size: 16px;
     line-height: 22px;
   }
 }
 @media (max-width: 1199px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
   }
 }
 @media (max-width: 991px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
   }
 }
 @media (max-width: 767px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
     font-size: 14px;
     line-height: 20px;
   }
 }
 @media (max-width: 575px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
   }
 }
 @media (max-width: 389px) {
-  .cell-first-heading-description {
+  .our-values-section .cell-first-heading-description {
   }
 }
 
-.cell-heading {
+.our-values-section .cell-heading {
   font-family: Manrope;
   font-weight: 600;
   letter-spacing: 0em;
   color: #beff54;
 }
 @media (min-width: 1920px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
     font-size: 32px;
     line-height: 30px;
     margin-bottom: 32px;
   }
 }
 @media (max-width: 1919px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 32px;
   }
 }
 @media (max-width: 1439px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 16px;
   }
 }
 @media (max-width: 1199px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
   }
 }
 @media (max-width: 991px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
   }
 }
 @media (max-width: 767px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 12px;
   }
 }
 @media (max-width: 575px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
   }
 }
 @media (max-width: 389px) {
-  .cell-heading {
+  .our-values-section .cell-heading {
   }
 }
 
-.cell-description {
+.our-values-section .cell-description {
   font-family: Manrope;
   font-weight: 500;
   letter-spacing: 0em;
   color: #fbfbfb;
 }
 @media (min-width: 1920px) {
-  .cell-description {
+  .our-values-section .cell-description {
     font-size: 24px;
     line-height: 32px;
   }
 }
 @media (max-width: 1919px) {
-  .cell-description {
+  .our-values-section .cell-description {
     font-size: 20px;
     line-height: 30px;
   }
 }
 @media (max-width: 1439px) {
-  .cell-description {
+  .our-values-section .cell-description {
     font-size: 16px;
     line-height: 22px;
   }
 }
 @media (max-width: 1199px) {
-  .cell-description {
+  .our-values-section .cell-description {
   }
 }
 @media (max-width: 991px) {
-  .cell-description {
+  .our-values-section .cell-description {
   }
 }
 @media (max-width: 767px) {
-  .cell-description {
+  .our-values-section .cell-description {
     font-size: 14px;
     line-height: 20px;
   }
 }
 @media (max-width: 575px) {
-  .cell-description {
+  .our-values-section .cell-description {
   }
 }
 @media (max-width: 389px) {
-  .cell-description {
+  .our-values-section .cell-description {
   }
 }
 
@@ -253,19 +253,19 @@
 .our-values-section-grid-parent {
   display: grid;
 }
-.cell-1 {
+.our-values-section .cell-1 {
   grid-area: A;
 }
-.cell-2 {
+.our-values-section .cell-2 {
   grid-area: B;
 }
-.cell-3 {
+.our-values-section .cell-3 {
   grid-area: C;
 }
-.cell-4 {
+.our-values-section .cell-4 {
   grid-area: D;
 }
-.cell-5 {
+.our-values-section .cell-5 {
   grid-area: E;
 }
 @media (min-width: 1920px) {
@@ -276,15 +276,15 @@
     grid-template-columns: 725px calc(415px + 216px) 365px;
     row-gap: 67px;
   }
-  .cell-1 {
+  .our-values-section .cell-1 {
     width: 365px;
   }
-  .cell-2,
-  .cell-4 {
+  .our-values-section .cell-2,
+  .our-values-section .cell-4 {
     width: 415px;
   }
-  .cell-3,
-  .cell-5 {
+  .our-values-section .cell-3,
+  .our-values-section .cell-5 {
     max-width: 365px;
   }
 }
@@ -296,15 +296,15 @@
     grid-template-columns: calc(335px + 203px) calc(373px + 120px) 290px;
     row-gap: 67px;
   }
-  .cell-1 {
+  .our-values-section .cell-1 {
     width: 340px;
   }
-  .cell-2,
-  .cell-4 {
+  .our-values-section .cell-2,
+  .our-values-section .cell-4 {
     width: 373px;
   }
-  .cell-3,
-  .cell-5 {
+  .our-values-section .cell-3,
+  .our-values-section .cell-5 {
     width: 290px;
   }
 }
@@ -322,19 +322,19 @@
     column-gap: 60px;
     max-width: calc(273px + 239px + 60px);
   }
-  .cell-1 {
+  .our-values-section .cell-1 {
     width: 362px;
   }
-  .cell-2 {
+  .our-values-section .cell-2 {
     width: 251px;
   }
-  .cell-3 {
+  .our-values-section .cell-3 {
     width: 213px;
   }
-  .cell-4 {
+  .our-values-section .cell-4 {
     width: 273px;
   }
-  .cell-5 {
+  .our-values-section .cell-5 {
     width: 239px;
   }
 }
@@ -364,10 +364,10 @@
     [class^="cell-"] {
       width: 100%;
     }
-    .cell-1 {
-      width: 321px;
-      margin-bottom: 6px;
-    }
+  }
+  .our-values-section .cell-1 {
+    width: 321px;
+    margin-bottom: 6px;
   }
 }
 @media (max-width: 575px) {
