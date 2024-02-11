@@ -24,7 +24,7 @@ a {
   text-decoration: none;
   color: #5a5f62;
   transition: transform 0.2s, color 0.2s;
-  transform: scale(1); /* Установите начальный размер */
+  transform: scale(1); 
 }
 
 a:hover {
@@ -53,7 +53,7 @@ a:hover {
   margin: 25px 25px 0 25px; /* верхний отступ 25px, правый и левый 25px, нижний 0px */
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .logo-container a {
@@ -62,6 +62,8 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: none;
+  transform: none;
 }
 
 .logo-container {
@@ -103,7 +105,7 @@ a:hover {
   display: none; /* Скрыть пока не будет активирован */
   flex-direction: column;
   padding: 25px;
-  z-index: 100; /* Убедитесь, что окно поверх остального контента */
+  z-index: 6; /* Убедитесь, что окно поверх остального контента */
   transition: top 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -112,6 +114,17 @@ a:hover {
   display: flex;
   animation: slideIn 0.5s forwards; /* Имя анимации и её продолжительность */
   margin-right: 5px;
+}
+
+.overlay {
+  display: none; /* Скрыт по умолчанию */
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0;
+  left: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  background: rgba(0, 5, 4, 0.71); /* Цвет фона с прозрачностью */
+  z-index: 7; /* Убедитесь, что фон находится под pop-up */
 }
 
 /* Ключевые кадры для анимации */
@@ -147,6 +160,7 @@ a:hover {
   line-height: 20px; /* Set the default text color for email and phone text */
   margin-left: 30px;
   margin-bottom: 0px;
+  padding-top: 12px;
 }
 
 .contact-popup p span {
@@ -162,6 +176,9 @@ a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  padding-left: 5px;
+  transition: none;
+  transform: none;
 }
 
 .contact-popup a:hover {
@@ -817,7 +834,7 @@ footer {
   .logo-container {
     position: absolute;
     margin-left: 25px;
-    transform: translateX(-50%); /* Центрируем логотип */
+    transform: translateX(-50%); 
     margin-top: 22px;
     margin-left: 91px;
   }

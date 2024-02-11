@@ -18,6 +18,9 @@
   </head>
 
   <body>
+
+    <div class="overlay"></div>
+
     <header class="staticHeader">
       <div class="logo-container">
         <a href="main.html">
@@ -368,7 +371,6 @@
                       id="email-pop-up"
                       placeholder="Email *"
                       required
-                      pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}"
                       autocomplete="off"
                     />
                     <div class="error-alert" id="email-error"></div>
@@ -379,7 +381,6 @@
                       id="phone-pop-up"
                       placeholder="Phone Number *"
                       required
-                      pattern="\d+"
                       autocomplete="off"
                     />
                   </div>
@@ -402,7 +403,7 @@
       <div class="error-box">
         <div class="error-message">
           <h1>O<span>ops...</span></h1>
-          <p class="HTTP-error">HTTP Error <span>504</span>: Gateway Timeout</p>
+          <p class="HTTP-error"><span>504</span></p>
           <p class="HTTP-description">
             The server didn't respond in time. Please try again.
           </p>
@@ -412,6 +413,24 @@
           <img src="src/mobileError.svg" alt="Error message" />
         </div>
       </div>
+
+
+     
+      <div class="seccsess-box">
+        <div class="seccsess-message">
+          <div class="great-job">Great job!</div>
+          <p class="seccsess-description">
+            You are one step closer to your goal of improving your business.
+          </p>
+          <button class="close-button">Close</button>
+        </div>
+        <div class="seccsess-image">
+          <img src="src/seccsess-image.svg" alt="seccsess message" />
+        </div>
+      </div>
+      
+
+
     </main>
 
     <footer>
@@ -529,7 +548,6 @@
         </div>
       </div>
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/plans.js"></script>
     <script src="scripts/general.js"></script>

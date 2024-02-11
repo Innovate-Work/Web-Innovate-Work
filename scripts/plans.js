@@ -782,25 +782,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Функция для закрытия модального окна
-  function closeModal() {
-    if (window.innerWidth <= 768) {
-      modal.style.transition = "transform 0.5s, opacity 0.5s";
-      modal.style.transform = "scale(0)";
-      modal.style.opacity = "0";
+  // function closeModal() {
+  //   if (window.innerWidth <= 768) {
+  //     modal.style.transition = "transform 0.5s, opacity 0.5s";
+  //     modal.style.transform = "scale(0)";
+  //     modal.style.opacity = "0";
 
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 500);
-    }
-  }
+  //     setTimeout(() => {
+  //       modal.style.display = "none";
+  //     }, 500);
+  //   }
+  // }
 
   // Обработчик событий для открытия модального окна
   openButtons.forEach((button) => {
     button.addEventListener("click", openModal);
   });
 
-  // Обработчик события для кнопки submit
-  submitButton.addEventListener("click", closeModal);
 });
 
 // get started table
