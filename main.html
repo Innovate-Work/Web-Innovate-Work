@@ -20,6 +20,7 @@
   </head>
 
   <body>
+    <div class="overlay"></div>
     <header class="staticHeader">
       <div class="logo-container">
         <a href="main.html">
@@ -273,7 +274,6 @@
               id="phone"
               placeholder="Phone Number *"
               required
-              pattern="\d+"
               autocomplete="off"
             />
             <small class="error-message" style="color: red"></small>
@@ -284,6 +284,35 @@
           Contact us today and let's discuss how we can elevate your company to
           new heights!
         </div>
+      </div>
+    </div>
+
+    <div class="error-box">
+      <div class="error-message">
+        <h1>O<span>ops...</span></h1>
+        <p class="HTTP-error"><span>504</span></p>
+        <p class="HTTP-description">
+          The server didn't respond in time. Please try again.
+        </p>
+        <button class="reload-button">Close</button>
+      </div>
+      <div class="error-image">
+        <img src="src/mobileError.svg" alt="Error message" />
+      </div>
+    </div>
+
+
+   
+    <div class="seccsess-box">
+      <div class="seccsess-message">
+        <div class="great-job">Great job!</div>
+        <p class="seccsess-description">
+          You are one step closer to your goal of improving your business.
+        </p>
+        <button class="close-button">Close</button>
+      </div>
+      <div class="seccsess-image">
+        <img src="src/seccsess-image.svg" alt="seccsess message" />
       </div>
     </div>
 

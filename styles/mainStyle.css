@@ -1243,3 +1243,523 @@ label {
   }
   /* footer section */
 }
+
+
+@media (min-width: 1441px) {
+  .seccsess-box {
+    display: none;
+    width: 680px;
+    height: 322px;
+    border-radius: 24.607px;
+    background: var(--_, #fbfbfb);
+    position: fixed;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 40px 40px;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: space-between;
+  }
+  
+  .great-job {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .seccsess-message {
+    order: 0;
+}
+  
+  .seccsess-description {
+    color: var(--_, #5a5f62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 264px;
+    margin-bottom: 33px;
+    margin-top: 36px;
+  }
+  
+  .close-button {
+    width: 198px;
+    height: 70px;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #beff54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seccsess-image {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .seccsess-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+  } 
+
+  .error-box {
+    display: none;
+    width: 780px;
+    height: 412px;
+    border-radius: 24.607px;
+    background: var(--_, #fbfbfb);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding-left: 60px; /* Align error message from the left */
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .error-message {
+    display: flow;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -25px;
+  }
+  
+  .error-message h1 {
+    color: var(--_, #101011);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  
+  .error-message h1 span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: lowercase;
+  }
+  
+  .error-message p {
+    color: var(--_, #5a5f62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 311px;
+    text-align: left;
+  }
+  
+  .error-message p span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  
+  .HTTP-error {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  
+  .HTTP-description {
+    margin-bottom: 42px;
+  }
+  
+  .reload-button {
+    width: 198px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #beff54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Spacing between text and button */
+  }
+  
+  .error-image {
+    width: 479px;
+    height: 479px;
+    flex-shrink: 0;
+    /* Higher z-index value */
+    /* Optional: Add styles for image alignment */
+  }
+  
+  .error-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain; /* This will ensure the image keeps its aspect ratio */
+  }
+}
+
+@media (max-width: 1440px)  {
+  .seccsess-box {
+    display: none;
+    width: 680px;
+    height: 322px;
+    border-radius: 24.607px;
+    background: var(--_, #fbfbfb);
+    position: fixed;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 40px 40px;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: space-between;
+  }
+  
+  .great-job {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .seccsess-message {
+    order: 0;
+}
+  
+  .seccsess-description {
+    color: var(--_, #5a5f62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 264px;
+    margin-bottom: 33px;
+    margin-top: 36px;
+  }
+  
+  .close-button {
+    width: 198px;
+    height: 70px;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #beff54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seccsess-image {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .seccsess-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+  } 
+
+  .error-box {
+    display: none;
+    width: 780px;
+    height: 412px;
+    border-radius: 24.607px;
+    background: var(--_, #fbfbfb);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding-left: 60px; /* Align error message from the left */
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .error-message {
+    display: flow;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -25px;
+  }
+  
+  .error-message h1 {
+    color: var(--_, #101011);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  
+  .error-message h1 span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    text-transform: lowercase;
+  }
+  
+  .error-message p {
+    color: var(--_, #5a5f62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 311px;
+    text-align: left;
+  }
+  
+  .error-message p span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  
+  .HTTP-error {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  
+  .HTTP-description {
+    margin-bottom: 42px;
+  }
+  
+  .reload-button {
+    width: 198px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #beff54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Spacing between text and button */
+  }
+  
+  .error-image {
+    width: 479px;
+    height: 479px;
+    flex-shrink: 0;
+  }
+  
+  .error-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain; /* This will ensure the image keeps its aspect ratio */
+  }
+
+}
+
+
+@media (max-width: 768px) { 
+  .seccsess-box {
+    display: none;
+    width: auto;
+    height: auto;
+    border-radius: 24.607px;
+    background: var(--_, #fbfbfb);
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 40px 40px;
+    overflow: hidden;
+    z-index: 10;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .great-job {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .seccsess-message {
+    order: 2;
+}
+  
+  .seccsess-description {
+    color: var(--_, #5a5f62);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 264px;
+    margin-bottom: 33px;
+    margin-top: 36px;
+  }
+  
+  .close-button {
+    width: 198px;
+    height: 70px;
+    border-radius: 100px;
+    background: var(--_, #000504);
+    color: var(--_, #beff54);
+    text-align: left;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .seccsess-image {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+  }
+  
+  .seccsess-image img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+  } 
+
+  .error-box {
+    padding: 20px 15px;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .error-message {
+    display: flow;
+    padding: 0px;
+    margin: 0px;
+    order: 2;
+  }
+  
+  .error-message h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 40px;
+  }
+  
+  .error-message h1 span {
+    font-size: 37px;
+  }
+  
+  .error-message p {
+    font-size: 19px;
+  }
+  
+  .error-message p span {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  
+  .HTTP-error {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .HTTP-description {
+    margin-bottom: 42px;
+  }
+  
+  .reload-button {
+    height: 57px;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  
+  .error-image {
+    width: auto;
+    height: auto;
+    order: 0;
+  }
+  
+  .error-image img {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+}
