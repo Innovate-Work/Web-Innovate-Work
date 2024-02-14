@@ -124,8 +124,8 @@ $(document).ready(function() {
  // animation for text
  document.addEventListener("scroll", function() {
     var headline = document.querySelector(".headline");
-    var headlinePosition = headline.getBoundingClientRect().left;
-    var screenPosition = window.innerWidth / 1.3;
+    var headlinePosition = headline.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight;
 
     if (headlinePosition < screenPosition) {
         headline.classList.add("visible");

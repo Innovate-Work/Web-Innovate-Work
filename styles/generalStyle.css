@@ -916,7 +916,7 @@ footer {
   background: #1b1d1e;
   color: #fbfbfb;
   margin-top: -6px;
-  margin-left: 86px;
+  /* margin-left: 86px; */
   display: flex;
   flex-direction: column;
   align-content: flex-start;

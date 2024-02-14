@@ -1411,18 +1411,29 @@ table {
   display: flex;
   flex-direction: column;
   width: 100%;
-}}
+  }
+  .tabs {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
 @media (min-width: 576px) {.services-options {
   gap: 12px;
 }}
 @media (min-width: 768px) {.services-options {
   gap: 12px;
-}}
+}
+}
 @media (min-width: 992px) {}
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 @media (min-width: 1440px) {.services-options {
   gap: 10px;
-}}
+}
+.tabs {
+  margin: 0 auto;
+}
+}
 @media (min-width: 1920px) {}
 
 
