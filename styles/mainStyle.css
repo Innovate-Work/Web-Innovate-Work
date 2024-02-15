@@ -593,7 +593,8 @@ label {
   justify-content: center;
   align-items: center;
   margin-top: 48px;
-  margin-bottom: 48px
+  margin-bottom: 48px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Define the container styles */
@@ -1770,4 +1771,10 @@ label {
     height: 70%;
     margin: 0 auto;
 }
+}
+
+
+.highlight {
+  background-color: #BEFF54;
+  color: #000504;
 }
