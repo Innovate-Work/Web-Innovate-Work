@@ -1778,3 +1778,22 @@ label {
   background-color: #BEFF54;
   color: #000504;
 }
+
+
+
+.form-group {
+  display: flex;
+  align-items: center; /* Выравнивание элементов по центру */
+  gap: 8px; /* Отступ между элементами */
+}
+
+.form-group select,
+.form-group input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group label {
+  margin-right: 10px;
+}
