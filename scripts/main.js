@@ -207,13 +207,16 @@ document
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
+    let phoneCode = document.getElementById("phone-code").value;
     let phone = document.getElementById("phone").value;
+
+    let fullPhone = `+${phoneCode}${phone}`;
 
     // Создаем объект данных
     let data = {
       name: name,
       email: email,
-      phone: phone,
+      phone: fullPhone,
       withSubscription: false,
       isCustom: false,
     };
