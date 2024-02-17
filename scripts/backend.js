@@ -5,16 +5,19 @@ document.getElementById('validation-form').addEventListener('submit', function(e
     let name = document.getElementById('name-pop-up').value;
     let email = document.getElementById('email-pop-up').value;
     let phone = document.getElementById('phone-pop-up').value;
+    let phoneCode = document.getElementById("phone-code").value;
     let customInterfaceButton = document.querySelector('.custom-interface-design');
     let maintenanceButton = document.querySelector('.maintenance');
     let isCustom = customInterfaceButton ? customInterfaceButton.getAttribute('data-active') === 'true' : false;
     let withSubscription = maintenanceButton ? maintenanceButton.getAttribute('data-active') === 'true' : false;
 
+    let fullPhone = `+${phoneCode}${phone}`;
+
     // Создаем объект данных
     let data = {
         name: name,
         email: email,
-        phone: phone,
+        phone: fullPhone,
         withSubscription: withSubscription,
         isCustom: isCustom
     };
