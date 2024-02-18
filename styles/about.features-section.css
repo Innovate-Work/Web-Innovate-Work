@@ -269,6 +269,9 @@
 @media (max-width: 575px) {
 }
 @media (max-width: 389px) {
+  .features-section .container {
+    max-width: 100%;
+  }
 }
 
 /* вся сетка тут ... */

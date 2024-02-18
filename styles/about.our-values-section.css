@@ -377,6 +377,10 @@
 @media (max-width: 389px) {
   .our-values-section-grid-parent {
   }
+  .our-values-section .cell-1 {
+    width: auto;
+    margin-bottom: 6px;
+  }
 }
 
 /* the framing line styles */
