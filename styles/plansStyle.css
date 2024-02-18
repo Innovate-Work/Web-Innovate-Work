@@ -45,6 +45,11 @@ h2 {
   margin-bottom: 88px;
   width: 587px;
 }
+@media (max-width: 390px) {
+  .description {
+
+  }
+}
 
 .tabs {
   display: flex;
@@ -94,7 +99,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .tabs div p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     line-height: 20px; /* 142.857% */
   }
@@ -155,7 +160,11 @@ h2 {
   margin-right: auto;
   margin-left: auto;
 }
-
+@media (max-width: 390px) {
+  .package-container {
+    gap: 20px;
+  }
+}
 @media (min-width: 390px) {
   .package-container {
     display: flex;
@@ -214,6 +223,12 @@ h2 {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+}
+@media (max-width: 390px) {
+  .package {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 @media (min-width: 390px) {
   .package {
@@ -359,6 +374,7 @@ table {
   border-color: gray;
 }
 
+@media (max-width: 390px) {table { margin-bottom: 64px; }}
 @media (min-width: 390px) {table { margin-bottom: 64px; }}
 @media (min-width: 576px) {table { margin-bottom: 64px; }}
 @media (min-width: 768px) {table { margin-bottom: 80px; }}
@@ -383,7 +399,18 @@ table {
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-
+@media (max-width: 390px) {.section-heading {
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+  text-transform: uppercase;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}}
 @media (min-width: 390px) {.section-heading {
   text-align: center;
   font-size: 26px;
@@ -461,6 +488,10 @@ table {
   font-weight: 600;
   line-height: 32px;
 }
+@media (max-width: 390px) {.first-heading-text {
+  font-size: 16px;
+  line-height: 24px
+}}
 @media (min-width: 390px) {.first-heading-text {
   font-size: 18px;
   line-height: 24px; /* 120% */
@@ -511,7 +542,11 @@ table {
   background: #1B1D1E;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
-
+@media (max-width: 390px) {
+  .head-div {
+    padding: 10px 1px;
+  }
+}
 @media (min-width: 390px) {
   .head-div {
     padding: 20px 5px;
@@ -541,14 +576,22 @@ table {
   line-height: 32px;
   margin-bottom: auto;
 }
+@media (max-width: 390px) {
+  .head-div h3 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 @media (min-width: 390px) {
   .head-div h3 {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 22px;
   }
 }
 @media (min-width: 576px) {
   .head-div h3 {
     font-size: 18px;
+    line-height: 30px;
   }
 }
 @media (min-width: 768px) {
@@ -577,14 +620,22 @@ table {
 .head-div p {
   color: #fbfbfb;
   font-family: Manrope;
-  font-size: 17px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
   margin-top: 13px;
   margin-bottom: 16px;
 }
-@media (min-width: 390px) {}
+@media (max-width: 390px) {
+  .head-div p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 390px) {
+  .head-div p {
+    font-size: 17px;
+  }
+}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .head-div p {
@@ -611,14 +662,22 @@ table {
 .head-div p span {
   color: #5a5f62;
   font-family: Manrope;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
   margin-right: 5px;
   margin-top: 13px;
 }
-@media (min-width: 390px) {}
+@media (max-width: 390px) {
+  .head-div p span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 390px) {
+  .head-div p span {
+    font-size: 16px;
+  }
+}
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
   .head-div p span {
@@ -659,7 +718,11 @@ table {
   position: relative;
   padding: 13px 23px;
 } 
-
+@media (max-width: 390px) {
+  .button-get-started {
+    display: none;
+  }
+}
 @media (min-width: 390px) {
   .button-get-started {
     display: none;
@@ -707,7 +770,12 @@ table {
 .tr-body {
   line-height: 2.5;
 }
-
+@media (max-width: 390px) {
+  .tr-body td {
+    font-size: 12px;
+    line-height: 18px; /* 142.857% */
+  }
+}
 @media (min-width: 390px) {
   .tr-body td {
     font-size: 14px;
@@ -786,7 +854,12 @@ table {
   flex-direction: row;
 }
 
-
+@media (max-width: 390px) {
+  .modal-header-container {
+    padding: 0px 30px;
+    margin-bottom: 24px;
+  }
+}
 @media (min-width: 390px) {
   .modal-header-container {
     padding: 0px 30px;
@@ -835,7 +908,12 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-
+@media (max-width: 390px) {
+  .modal-content {
+    max-width: 100%;
+    padding: 20px 0px 32px;
+  }
+}
 @media (min-width: 390px) {
   .modal-content {
     max-width: 100%;
@@ -881,7 +959,17 @@ table {
 .close {
   cursor: pointer;
 }
-
+@media (max-width: 390px) {
+  .modal-header h2 {
+    color: var(--_, #FBFBFB);
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+    text-transform: uppercase;
+  }
+}
 @media (min-width: 390px) {
   .modal-header h2 {
     color: var(--_, #FBFBFB);
@@ -931,7 +1019,28 @@ table {
   border-radius: 8px;
   background-color: #beff54; /* Это зеленый цвет, который вы ранее упоминали */
 }
-
+@media (max-width: 390px) {
+  .package-name {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 390px) {
+  .package-name {
+    color: var(--_, #101011);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+  }
+}
 @media (min-width: 390px) {
   .package-name {
     color: var(--_, #101011);
@@ -984,6 +1093,16 @@ table {
   line-height: 25px; /* 125% */
   position: relative; /* Делаем li относительно позиционированным, чтобы мы могли абсолютно позиционировать ::before псевдоэлемент */
   padding-left: 40px; /* Создаем пространство для SVG иконки */
+}
+@media (max-width: 390px) {
+  .modal-body ul li {
+    color: var(--_, #FBFBFB);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
 }
 @media (min-width: 390px) {
   .modal-body ul li {
@@ -1052,7 +1171,27 @@ table {
 @media (min-width: 1440px) {}
 @media (min-width: 1920px) {}
 
-
+@media (max-width: 390px) {
+  .submit-button-pop-up {
+    width: 100%;
+    padding: 19px 0px;
+    background: #282a2c;
+    color: #5a5f62;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 47px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
 @media (min-width: 390px) {
   .submit-button-pop-up {
     width: 100%;
@@ -1130,6 +1269,9 @@ table {
 .modal-cell {
   flex: 1;
 }
+@media (max-width: 390px) {.modal-cell-container {
+  padding: 0px 20px;
+}}
 @media (min-width: 390px) {.modal-cell-container {
   padding: 0px 30px;
 }}
@@ -1146,7 +1288,9 @@ table {
   padding: 0px 138px;
 }} */
 
-
+@media (max-width: 390px) {.modal-line-container {
+  padding: 20px 20px 28px;
+}}
 @media (min-width: 390px) {.modal-line-container {
   padding: 20px 30px 28px;
 }}
@@ -1165,7 +1309,13 @@ table {
 }}
 /* @media (min-width: 1920px) {.modal-line-container {}} */
 
-
+@media (max-width: 390px) {
+  .vertical-line {
+    height: 1px;
+    width: 100%;
+    background-color: #5a5f62;
+  }
+}
 @media (min-width: 390px) {
   .vertical-line {
     height: 1px;
@@ -1195,7 +1345,11 @@ table {
 }
 @media (min-width: 1920px) {}
 
-
+@media (max-width: 390px) {
+  .text-packge-name {
+    margin-bottom: 26px;
+  }
+}
 @media (min-width: 390px) {
   .text-packge-name {
     margin-bottom: 26px;
@@ -1216,7 +1370,11 @@ table {
 }
 @media (min-width: 1920px) {}
 
-
+@media (max-width: 390px) {
+  .text-details {
+    margin-bottom: 27px;
+  }
+}
 @media (min-width: 390px) {
   .text-details {
     margin-bottom: 27px;
@@ -1258,6 +1416,14 @@ table {
   caret-color: var(--input-focus-underline, #beff54);
 }
 
+@media (max-width: 390px) {
+  .input-wrapper input {
+    width: 100%;
+  }
+  .input-wrapper input:first-child {
+    margin: 0px;
+  }
+}
 @media (min-width: 390px) {
   .input-wrapper input {
     width: 100%;
@@ -1324,7 +1490,17 @@ table {
 
 
 
-
+@media (max-width: 390px) {
+  .text-packge-name, .services-text-and-icon h2, .text-details {
+    color: #FBFBFB;
+    font-family: Manrope;
+    font-size: 16px;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+}
 @media (min-width: 390px) {
   .text-packge-name, .services-text-and-icon h2, .text-details {
     color: #FBFBFB;
@@ -1395,7 +1571,12 @@ table {
   gap: 4px; /* Устанавливаем расстояние между элементами в 4px */
   width: 100%;
 }
-
+@media (max-width: 390px) {.services-text-and-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  gap: 10px;
+}}
 @media (min-width: 390px) {.services-text-and-icon {
   display: flex;
   flex-wrap: wrap;
@@ -1412,7 +1593,16 @@ table {
 /* @media (min-width: 1920px) {.services-text-and-icon {}} */
 
 
-
+@media (max-width: 390px) {.services-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  }
+  .tabs {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 @media (min-width: 390px) {.services-options {
   display: flex;
   flex-direction: column;
@@ -1457,6 +1647,25 @@ table {
 
 
 /* Новые стили для кнопок */
+@media (max-width: 390px) {
+  .service-button {
+    line-height: 1.5;
+    padding: 10px 20px;
+    border: 1px solid #5a5f62;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #5a5f62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    justify-content: center;
+    height: auto;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+}
 @media (min-width: 390px) {
   .service-button {
     line-height: 1.5;
@@ -1569,7 +1778,7 @@ table {
 
   .tabs div {
     display: flex;
-    width: 84vw;
+    max-width: 100%;
     text-align: center;
     margin: auto;
     height: 51px;
@@ -2040,6 +2249,29 @@ table {
   }
 }
 
+@media (max-width: 390px) {
+  .feature-service-table td:first-child {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .tabs {
+    gap: 4px;
+  }
+  .tabs div {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    height: 51px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    background: #1b1d1e;
+  }
+}
 
 .highlight {
   background-color: #BEFF54;
@@ -2049,7 +2281,23 @@ table {
 
 /* tooltip */
 
-@media (max-width: 390px) {}
+@media (max-width: 390px) {
+    .tooltip-trigger {
+    display: none;
+  }
+  .tooltip {
+    white-space: nowrap;
+    border-radius: 5px;
+    white-space: normal;
+    color: #5a5f62;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: auto;
+  }
+}
 @media (min-width: 390px) {
   .tooltip-trigger {
     display: none;
@@ -2690,4 +2938,11 @@ table {
   .form-group select {
     width: 53%;
 }
+}
+
+@media (max-width: 390px) {
+  .description {
+    padding: 10px 5px;
+    width: 100%;
+  }
 }
