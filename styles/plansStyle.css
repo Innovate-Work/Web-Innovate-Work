@@ -839,7 +839,6 @@ table {
 /* popup.css */
 .modal {
   display: none;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -880,7 +879,7 @@ table {
 }
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .modal-header-container {
     padding: 0px 78px;
     margin-bottom: 66px;
@@ -891,7 +890,7 @@ table {
     padding: 0px 138px;
     margin-bottom: 66px;
   }
-}
+} */
 
 .modal-content {
   height: auto;
@@ -915,15 +914,31 @@ table {
   }
 }
 @media (min-width: 390px) {
+  .modal{
+    position: relative;
+  }
   .modal-content {
     max-width: 100%;
     padding: 20px 0px 32px;
+    
   }
 }
 @media (min-width: 576px) {
   .modal-content {
     max-width: 526px;
     padding: 30px 0px 42px;
+    position: relative;
+    transform: none;
+    height: auto;
+    width: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-bottom: 40px;
+  }
+  .modal {
+        background-color: unset;
+        z-index: 1;
   }
 }
 @media (min-width: 768px) {
@@ -938,12 +953,23 @@ table {
   }
 }
 @media (min-width: 1200px) {
+  .modal{
+    position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);;
+      z-index: 5;
+  }
   .modal-content {
-    /* max-width: 1150px; */
     max-width: 1150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    margin-left: unset;
+    margin-right: unset;
   }
 }
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .modal-content {
     max-width: 1390px;
     padding: 56px 0px 47px;
@@ -953,8 +979,8 @@ table {
   .modal-content {
     max-width: 1870px;
     padding: 56px 0px 84px;
-  }
-}
+  } 
+}*/
 
 .close {
   cursor: pointer;
@@ -994,19 +1020,19 @@ table {
 }
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .modal-header h2 {
 		font-size: 56px;
-    line-height: 60px; /* 107.143% */
+    line-height: 60px; 
 
 	}
 }
 @media (min-width: 1920px) {
   .modal-header h2 {
     font-size: 56px;
-    line-height: 60px; /* 107.143% */
-  }
-} 
+    line-height: 60px; 
+  } 
+} */
 
 .package-name {
   color: #101011;
@@ -1061,18 +1087,18 @@ table {
 }
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .package-name {
     font-size: 24px;
-    line-height: 30px; /* 125% */
+    line-height: 30px; 
   }
 }
 @media (min-width: 1920px) {
   .package-name {
     font-size: 28px;
-    line-height: 34px; /* 121.429% */
+    line-height: 34px; 
   }
-}
+} */
 
 .modal-body li {
   margin-bottom: 13px; /* Расстояние между элементами списка */
@@ -1128,18 +1154,18 @@ table {
 }
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .modal-body ul li {
     font-size: 20px;
-    line-height: 25px; /* 125% */
+    line-height: 25px; 
   }
 }
 @media (min-width: 1920px) {
   .modal-body ul li {
     font-size: 22px;
-    line-height: 25px; /* 113.636% */
+    line-height: 25px; 
   }
-}
+} */
 
 .modal-body ul li::before {
   content: ""; /* Очищаем содержимое ::before */
@@ -2950,3 +2976,4 @@ table {
 .modal-body input {
   border-radius: 0;
 }
+

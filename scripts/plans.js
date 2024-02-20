@@ -322,10 +322,10 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', (e) => {
 
         // отключаем скролл на body при открытии модального окна
-        window.innerWidth >= 576 ? document.body.classList.add('modal-open') : null;
+        window.innerWidth >= 1200 ? document.body.classList.add('modal-open') : null;
         
         // ???????????????????????????
-        window.innerWidth < 1200 ? modal.style.overflow = 'scroll' : null;
+        // window.innerWidth < 1200 ? modal.style.overflow = 'scroll' : null;
         
 
         // вытаскиваем из названия класса номер пакета
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
           modal.style.display = 'none';
 
           // отключаем скролл на body при открытии модального окна
-          window.innerWidth >= 576 ? document.body.classList.remove('modal-open') : null;  
+          window.innerWidth >= 1200 ? document.body.classList.remove('modal-open') : null;  
 
           // очистка формы 
           clearForm(serviceButtonList, inputList, submitButton);
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Проверка ширины экрана и прокрутка к модальному блоку на мобильных устройствах
-        if (window.innerWidth <= 576) {
+        if (window.innerWidth <= 1200) {
           const modalTop = modal.getBoundingClientRect().top + window.scrollY - 110;
           window.scrollTo({ top: modalTop, behavior: "smooth" });
         }
@@ -774,7 +774,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для открытия модального окна
   function openModal() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1200) {
       modal.style.display = "block";
       modal.style.opacity = "1";
       modal.style.transform = "scale(1)";

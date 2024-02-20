@@ -760,7 +760,6 @@ label {
   .form-title {
     /* Стили для заголовка, возможно, добавьте переходы или другие эффекты по вкусу */
     overflow: hidden; /* Обрезает текст, чтобы создать эффект печатания */
-    white-space: nowrap; /* Предотвращает перенос текста на новую строку */
   }
   .contact-message {
     opacity: 0; /* Начальная прозрачность, элемент невидим */
@@ -1853,4 +1852,10 @@ label {
 
 .form-group input {
   border-radius: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .contact-message.visible {
+    display: none;
+}
 }
