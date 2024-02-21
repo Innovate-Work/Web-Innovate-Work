@@ -214,7 +214,6 @@ body {
 @media (min-width: 1920px) {}
 
 
-.about-heading {}
 @media (max-width: 390px) {
   .about-heading {
     order: 1;

@@ -87,7 +87,10 @@ function checkVisible() {
 }
 
 document.addEventListener("scroll", checkVisible);
-window.onload = checkVisible; // Check visibility of elements on page load
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkVisible();
+});
 
 
 document.addEventListener('scroll', function() {
