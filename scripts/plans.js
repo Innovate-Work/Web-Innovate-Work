@@ -98,7 +98,7 @@ const tabData = {
         "User-friendly interface design",
         "Integration with backend services",
         "App testing and deployment",
-        "Suitable for growing businesses",
+        "Suitable for growing businesses and startups",
       ],
       price: "$10000",
     },
@@ -402,33 +402,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // // pop up action
-// document.addEventListener("DOMContentLoaded", function () {
-//   const modal = document.querySelector(".modal");
-//   const modalText = modal.querySelector(".modal-text");
-//   const packageNameSpan = modalText.querySelector(".package-name");
-//   const packageFeatures = modalText.querySelector("ul");
-//   const customInterfaceButton = document.querySelector(
-//     ".service-button:nth-child(1)"
-//   );
-//   const maintenanceButton = document.querySelector(
-//     ".service-button:nth-child(2)"
-//   );
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(".modal");
+  const modalText = modal.querySelector(".modal-cell");
+  const packageNameSpan = modalText.querySelector(".package-name"); // Убедитесь, что класс .package-name есть у элемента span внутри .modal-cell
+  const packageFeatures = modalText.querySelector("ul");
 
-//   document.querySelectorAll(".package .button-view").forEach((button) => {
-//     button.addEventListener("click", function (event) {
-//       const packageElem = event.target.closest(".package");
-//       const packageName = packageElem.querySelector("h2").innerText;
-//       // Clear existing features
-//       while (packageFeatures.firstChild) {
-//         packageFeatures.removeChild(packageFeatures.firstChild);
-//       }
-//       packageNameSpan.innerText = packageName.toUpperCase();
-//       const features = packageElem.querySelectorAll("ul li");
-//       features.forEach((feature) => {
-//         const li = document.createElement("li");
-//         li.textContent = feature.textContent;
-//         packageFeatures.appendChild(li);
-//       });
+  document.querySelectorAll(".package .button-view").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const packageElem = event.target.closest(".package");
+      const packageName = packageElem.querySelector("h2").innerText;
+      
+      // Clear existing features
+      while (packageFeatures.firstChild) {
+        packageFeatures.removeChild(packageFeatures.firstChild);
+      }
+      packageNameSpan.innerText = packageName.toUpperCase(); // Эта строка теперь не закомментирована
+      
+      // Добавляем новые особенности пакета
+      const features = packageElem.querySelectorAll("ul li");
+      features.forEach((feature) => {
+        const li = document.createElement("li");
+        li.textContent = feature.textContent;
+        packageFeatures.appendChild(li);
+      });
+  });
+});
+});
 //       modal.style.display = "block";
 
 //       // Проверка ширины экрана и прокрутка к модальному блоку на мобильных устройствах
