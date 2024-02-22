@@ -318,6 +318,7 @@ h2 {
   transition: background-color 0.3s;
   position: relative;
   padding: 13px 23px;
+  margin: 0 auto;
 }
 
 .button-view::after {
@@ -345,9 +346,11 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 
 .package .price {
+  display: none;
   margin: 0;
   flex-grow: 1;
   text-align: left;
@@ -574,7 +577,7 @@ table {
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-  margin-bottom: auto;
+  margin-bottom: 15px;
 }
 @media (max-width: 390px) {
   .head-div h3 {
@@ -618,6 +621,7 @@ table {
 /* @media (min-width: 1920px) {} */
 
 .head-div p {
+  display: none;
   color: #fbfbfb;
   font-family: Manrope;
   font-style: normal;
@@ -1884,7 +1888,7 @@ table {
   }
 
   .package .price {
-    display: flex;
+    display: none;
     color: #101011;
     font-family: Manrope;
     font-size: 20px;
@@ -1915,6 +1919,7 @@ table {
     cursor: pointer;
     transition: background-color 0.3s;
     position: relative;
+    margin: 0 auto;
   }
 
   .line {
