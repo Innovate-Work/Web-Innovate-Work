@@ -590,7 +590,7 @@ label {
   border-bottom: 1px solid var(--input-underline, #5a5f62);
   color: var(--input-text-color, #fff);
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
@@ -643,6 +643,13 @@ label {
   position: relative; /* Необходимо для абсолютного позиционирования текста */
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .container-animation-text {
+    max-width: 100%;
+    min-height: 164px;
+  }
 }
 
 /* Define the text styles for the first line */
@@ -1136,9 +1143,6 @@ label {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
-  }
-  .data-entrance {
-    max-width: 50%;
   }
   .data-entrance .form-group {
     max-width: 100%;
@@ -1854,8 +1858,8 @@ label {
   border-radius: 0;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+/* @media (min-width: 992px) and (max-width: 1200px) {
   .contact-message.visible {
     display: none;
 }
-}
+} */

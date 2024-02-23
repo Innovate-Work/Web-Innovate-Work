@@ -5,9 +5,9 @@ const aboutImageWrapper = document.querySelector(".about-image-wrapper");
 
 const changeHtmlStructureByScreenWidth = () => {
   const screenWidth = window.innerWidth;
-  if (screenWidth <= 768) {
+  if (screenWidth < 768) {
     aboutImageWrapper.appendChild(aboutImage);
-  } else if (screenWidth > 768) {
+  } else if (screenWidth >= 768) {
     aboutSectionContaier.insertBefore(
       aboutImage,
       aboutSectionContaier.firstChild
