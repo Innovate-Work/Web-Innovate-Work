@@ -24,45 +24,49 @@ document.addEventListener('DOMContentLoaded', initPackages);
 const tabData = {
     "Website": [
         {
-            name: "Web site online shop for Nike",
+            name: "Ceramic Studio",
             link: "www.nike.com",
             images: [
-                'src/dle2.png',
-                'src/dle1.png',
-                'src/dle3.png'
+                'src/work_web1_5.svg',
+                'src/work_web1_4.svg',
+                'src/work_web1_3.svg',
+                'src/work_web1_2.svg',
+                'src/work_web1_1.svg'
+            ],
+            description: "A database is used to display the product catalog. For successful payment, there are sessions and payment gateway integrations"
+        },
+        {
+            name: "Order accounting",
+            link: "www.nike.com",
+            images: [
+                'src/work_web2_4.svg',
+                'src/work_web2_3.svg',
+                'src/work_web2_2.svg',
+                'src/work_web2_1.svg'
+            ],
+            description: "This application features a database of actual items, the ability to add them to favorites and shopping cart. Registration and payment for purchase"
+        },
+        {
+            name: "Furniture store",
+            link: "www.nike.com",
+            images: [
+                'src/work_web3_4.svg',
+                'src/work_web3_3.svg',
+                'src/work_web3_2.svg',
+                'src/work_web3_1.svg'
             ],
             description: ""
         },
-        {
-            name: "Web site online shop for Adidas",
-            link: "www.nike.com",
-            images: [
-                'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
-            ],
-            description: ""
-        },
-        {
-            name: "Web site online shop for Puma",
-            link: "www.nike.com",
-            images: [
-                'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
-            ],
-            description: ""
-        },
-        {
-            name: "Web site online shop for Reebok",
-            link: "www.nike.com",
-            images: [
-                'src/dle2.png',
-                'src/dle2.png',
-                'src/dle2.png'
-            ],
-            description: ""
-        }
+        // {
+        //     name: "Web site online shop for Reebok",
+        //     link: "www.nike.com",
+        //     images: [
+        //         'src/dle2.png',
+        //         'src/dle2.png',
+        //         'src/dle2.png'
+        //     ],
+        //     description: ""
+        // }
     
     ],
     "Application": [
