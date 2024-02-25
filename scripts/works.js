@@ -55,7 +55,7 @@ const tabData = {
                 'src/work_web3_2.svg',
                 'src/work_web3_1.svg'
             ],
-            description: ""
+            description: "The site features a wishlist function for bookmarking favorite items. Secure payment integrations ensure a safe transactional experience"
         },
         // {
         //     name: "Web site online shop for Reebok",
