@@ -22,6 +22,16 @@
   color: coral;
 }
 
+.our-values-section.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+}
+
+.our-values-section.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+}
+
 .our-values-section .cell-first-heading {
 }
 @media (min-width: 1920px) {
