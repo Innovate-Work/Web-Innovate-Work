@@ -52,7 +52,7 @@ body {
 }
 
 .main-text {
-  color: #FBFBFB;
+  color: #fbfbfb;
   font-family: Manrope;
   font-size: 96px;
   font-style: normal;
@@ -186,9 +186,6 @@ body {
   }
 }
 
-
-
-
 .text-content span {
   color: #beff54;
 }
@@ -237,7 +234,7 @@ body {
 }
 
 .description-main {
-  color: #FBFBFB;
+  color: #fbfbfb;
   font-family: Manrope;
   font-size: 20px;
   font-style: normal;
@@ -369,7 +366,7 @@ body {
     height: auto;
     width: calc(100% - 50px);
     margin: 0px auto 68px;
-    padding: 28px 45px 28px
+    padding: 28px 45px 28px;
   }
 }
 @media (min-width: 1200px) {
@@ -390,13 +387,12 @@ body {
   justify-content: center;
   max-width: 700px;
 }
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .text-block {
     max-width: 800px;
     margin-bottom: 30px;
   }
 }
-
 
 .headline {
   font-size: 100px;
@@ -429,8 +425,6 @@ body {
     padding-left: 36px;
   }
 }
-
-
 
 .cells-block {
   display: flex;
@@ -604,7 +598,10 @@ label {
 .page-container .contact-form .data-entrance #phone:focus,
 .page-container .contact-form .data-entrance #name:focus {
   border-bottom: 1px solid var(--input-focus-underline, #beff54);
-  caret-color: var(--input-focus-underline, #beff54); /* Изменение цвета курсора при фокусе */
+  caret-color: var(
+    --input-focus-underline,
+    #beff54
+  ); /* Изменение цвета курсора при фокусе */
 }
 
 .submit-button {
@@ -755,7 +752,9 @@ label {
     animation-fill-mode: backwards;
   }
   .headline {
-    transform: translateY(20%); /* Начальное положение за пределами экрана слева */
+    transform: translateY(
+      20%
+    ); /* Начальное положение за пределами экрана слева */
     transition: transform 1s ease-out; /* Увеличиваем длительность анимации */
     transition-delay: 0.5s; /* Задержка в полсекунды перед началом анимации */
     opacity: 0; /* Начальная прозрачность */
@@ -953,11 +952,11 @@ label {
     flex-wrap: wrap;
     align-items: center;
   }
-  input[id=email],
-  input[id=phone],
-  input[id=name] {
+  input[id="email"],
+  input[id="phone"],
+  input[id="name"] {
     width: 100% !important;
-    height: 20px !important;
+    height: 24px !important;
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--input-underline, #5a5f62);
@@ -1002,7 +1001,8 @@ label {
   .animation-gif {
     display: none;
   }
-  .main-text, .text-solutions {
+  .main-text,
+  .text-solutions {
     line-height: 76px;
     font-size: 82px;
     letter-spacing: -1.64px;
@@ -1297,7 +1297,6 @@ label {
   }
 }
 
-
 @media (min-width: 1441px) {
   .seccsess-box {
     display: none;
@@ -1315,7 +1314,7 @@ label {
     z-index: 10;
     justify-content: space-between;
   }
-  
+
   .great-job {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1327,8 +1326,8 @@ label {
 
   .seccsess-message {
     order: 0;
-}
-  
+  }
+
   .seccsess-description {
     color: var(--_, #5a5f62);
     font-family: Manrope;
@@ -1340,7 +1339,7 @@ label {
     margin-bottom: 33px;
     margin-top: 36px;
   }
-  
+
   .close-button {
     width: 198px;
     height: 70px;
@@ -1359,19 +1358,19 @@ label {
     justify-content: center;
     align-items: center;
   }
-  
+
   .seccsess-image {
     width: auto;
     height: auto;
     flex-shrink: 0;
   }
-  
+
   .seccsess-image img {
     width: 100%;
     height: 100%;
     display: flex;
     object-fit: contain;
-  } 
+  }
 
   .error-box {
     display: none;
@@ -1387,11 +1386,11 @@ label {
     justify-content: space-between;
     padding-left: 60px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    padding-left: 60px; 
+    padding-left: 60px;
     overflow: hidden;
     z-index: 10;
   }
-/*   
+  /*   
   .error-message {
     display: flow;
     padding: 0px;
@@ -1409,7 +1408,7 @@ label {
     line-height: 40px;
     text-transform: uppercase;
   }
-  
+
   .error-message h1 span {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1419,7 +1418,7 @@ label {
     line-height: 40px;
     text-transform: lowercase;
   }
-  
+
   .error-message p {
     color: var(--_, #5a5f62);
     font-family: Manrope;
@@ -1430,7 +1429,7 @@ label {
     width: 311px;
     text-align: left;
   }
-  
+
   .error-message p span {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1439,16 +1438,16 @@ label {
     font-weight: 600;
     line-height: 24px;
   }
-  
+
   .HTTP-error {
     margin-top: 40px;
     margin-bottom: 16px;
   }
-  
+
   .HTTP-description {
     margin-bottom: 42px;
   }
-  
+
   .reload-button {
     width: 198px;
     height: 70px;
@@ -1469,22 +1468,22 @@ label {
     align-items: center;
     margin-top: 20px;
   }
-  
+
   .error-image {
     width: 479px;
     height: 479px;
     flex-shrink: 0;
   }
-  
+
   .error-image img {
     width: 100%;
     height: 100%;
     display: flex;
-    object-fit: contain; 
+    object-fit: contain;
   }
 }
 
-@media (max-width: 1440px)  {
+@media (max-width: 1440px) {
   .seccsess-box {
     display: none;
     width: 680px;
@@ -1501,7 +1500,7 @@ label {
     z-index: 10;
     justify-content: space-between;
   }
-  
+
   .great-job {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1513,8 +1512,8 @@ label {
 
   .seccsess-message {
     order: 0;
-}
-  
+  }
+
   .seccsess-description {
     color: var(--_, #5a5f62);
     font-family: Manrope;
@@ -1526,7 +1525,7 @@ label {
     margin-bottom: 33px;
     margin-top: 36px;
   }
-  
+
   .close-button {
     width: 198px;
     height: 70px;
@@ -1545,19 +1544,19 @@ label {
     justify-content: center;
     align-items: center;
   }
-  
+
   .seccsess-image {
     width: auto;
     height: auto;
     flex-shrink: 0;
   }
-  
+
   .seccsess-image img {
     width: 100%;
     height: 100%;
     display: flex;
     object-fit: contain;
-  } 
+  }
 
   .error-box {
     display: none;
@@ -1573,18 +1572,18 @@ label {
     justify-content: space-between;
     padding-left: 60px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    padding-left: 60px; 
+    padding-left: 60px;
     overflow: hidden;
     z-index: 10;
   }
-  
+
   .error-message {
     /* display: flow;
     padding: 0px;
     margin: 0px;
     margin-top: -25px; */
   }
-  
+
   .error-message h1 {
     color: var(--_, #101011);
     text-align: left;
@@ -1595,7 +1594,7 @@ label {
     line-height: 40px;
     text-transform: uppercase;
   }
-  
+
   .error-message h1 span {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1605,7 +1604,7 @@ label {
     line-height: 40px;
     text-transform: lowercase;
   }
-  
+
   .error-message p {
     color: var(--_, #5a5f62);
     font-family: Manrope;
@@ -1616,7 +1615,7 @@ label {
     width: 311px;
     text-align: left;
   }
-  
+
   .error-message p span {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1625,16 +1624,16 @@ label {
     font-weight: 600;
     line-height: 24px;
   }
-  
+
   .HTTP-error {
     margin-top: 40px;
     margin-bottom: 16px;
   }
-  
+
   .HTTP-description {
     margin-bottom: 42px;
   }
-  
+
   .reload-button {
     width: 198px;
     height: 70px;
@@ -1653,26 +1652,24 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
-  
+
   .error-image {
     width: 479px;
     height: 479px;
     flex-shrink: 0;
   }
-  
+
   .error-image img {
     width: 100%;
     height: 100%;
     display: flex;
-    object-fit: contain; 
+    object-fit: contain;
   }
-
 }
 
-
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .seccsess-box {
     display: none;
     width: auto;
@@ -1690,7 +1687,7 @@ label {
     justify-content: space-between;
     flex-direction: column;
   }
-  
+
   .great-job {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1702,8 +1699,8 @@ label {
 
   .seccsess-message {
     order: 2;
-}
-  
+  }
+
   .seccsess-description {
     color: var(--_, #5a5f62);
     font-family: Manrope;
@@ -1715,7 +1712,7 @@ label {
     margin-bottom: 33px;
     margin-top: 36px;
   }
-  
+
   .close-button {
     width: 198px;
     height: 70px;
@@ -1735,20 +1732,20 @@ label {
     align-items: center;
     margin: 0 auto;
   }
-  
+
   .seccsess-image {
     width: auto;
     height: auto;
     flex-shrink: 0;
     margin-bottom: 30px;
   }
-  
+
   .seccsess-image img {
     width: 100%;
     height: 100%;
     display: flex;
     object-fit: contain;
-  } 
+  }
 
   .error-box {
     padding: 20px 15px;
@@ -1756,28 +1753,28 @@ label {
     height: auto;
     flex-direction: column;
   }
-  
+
   .error-message {
     /* display: flow;
     padding: 0px;
     margin: 0px; */
     order: 2;
   }
-  
+
   .error-message h1 {
     margin: 0px;
     padding: 0px;
     font-size: 40px;
   }
-  
+
   .error-message h1 span {
     font-size: 37px;
   }
-  
+
   .error-message p {
     font-size: 19px;
   }
-  
+
   .error-message p span {
     color: var(--_, #101011);
     font-family: Manrope;
@@ -1786,42 +1783,39 @@ label {
     font-weight: 600;
     line-height: 24px;
   }
-  
+
   .HTTP-error {
     margin-top: 32px;
     margin-bottom: 16px;
   }
-  
+
   .HTTP-description {
     margin-bottom: 42px;
   }
-  
+
   .reload-button {
     height: 57px;
     font-size: 18px;
     margin: 0 auto;
   }
-  
+
   .error-image {
     width: auto;
     height: auto;
     order: 0;
   }
-  
+
   .error-image img {
     width: 70%;
     height: 70%;
     margin: 0 auto;
+  }
 }
-}
-
 
 .highlight {
-  background-color: #BEFF54;
+  background-color: #beff54;
   color: #000504;
 }
-
-
 
 .form-group {
   display: flex;
@@ -1829,37 +1823,61 @@ label {
   gap: 8px; /* Отступ между элементами */
 }
 
-.form-group select {
-  padding: 10px;
-  border-radius: 7px;
-  width: 40%;
-  background-color: #1B1D1E;
+.phone-code {
+  width: 100%;
+  background-color: #1b1d1e;
   color: white;
-}
-
-.form-group label {
-  margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .form-group select {
-    width: 63%;
-  }
-
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--input-underline, #5a5f62);
+  color: var(--input-text-color, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  border-radius: 0px;
 }
 
 @media (max-width: 576px) {
-  .form-group select {
-    width: 53%;
+  .phone-code {
+    font-size: 15px;
+    height: 24px;
+    padding: 0;
+  }
+  .phone-code option {
+    font-size: 12px;
+  }
 }
+
+.phone-code label {
+  margin-right: 10px;
+}
+
+.phone-code:focus {
+  border-bottom: 1px solid var(--input-focus-underline, #beff54);
+  caret-color: var(
+    --input-focus-underline,
+    #beff54
+  ); /* Изменение цвета курсора при фокусе */
+}
+
+.form-group option {
+  background-color: #141515;
 }
 
 .form-group input {
   border-radius: 0;
 }
 
-/* @media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .contact-message.visible {
     display: none;
+  }
 }
-} */
+

@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // получаем элементы формы 
         // потом подсвечиваем кнопку отправки если поля формы не пустые 
-        const inputList = document.querySelectorAll('.input-wrapper > input');
+        const inputList = document.querySelectorAll('.input-wrapper input');
         const submitButton = document.querySelector('.submit-button-pop-up');
 
         function handleInput() {
