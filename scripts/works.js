@@ -27,11 +27,11 @@ const tabData = {
             name: "Ceramic Studio",
             link: "www.nike.com",
             images: [
-                'src/work_web1_5.svg',
-                'src/work_web1_4.svg',
-                'src/work_web1_3.svg',
-                'src/work_web1_2.svg',
-                'src/work_web1_1.svg'
+                'src/work_web1_5.jpg',
+                'src/work_web1_4.jpg',
+                'src/work_web1_3.jpg',
+                'src/work_web1_2.jpg',
+                'src/work_web1_1.jpg'
             ],
             description: "A database is used to display the product catalog. For successful payment, there are sessions and payment gateway integrations"
         },
@@ -39,10 +39,10 @@ const tabData = {
             name: "Order accounting",
             link: "www.nike.com",
             images: [
-                'src/work_web2_4.svg',
-                'src/work_web2_3.svg',
-                'src/work_web2_2.svg',
-                'src/work_web2_1.svg'
+                'src/work_web2_4.jpg',
+                'src/work_web2_3.jpg',
+                'src/work_web2_2.jpg',
+                'src/work_web2_1.jpg'
             ],
             description: "This application features a database of actual items, the ability to add them to favorites and shopping cart. Registration and payment for purchase"
         },
@@ -50,10 +50,10 @@ const tabData = {
             name: "Furniture store",
             link: "www.nike.com",
             images: [
-                'src/work_web3_4.svg',
-                'src/work_web3_3.svg',
-                'src/work_web3_2.svg',
-                'src/work_web3_1.svg'
+                'src/work_web3_4.jpg',
+                'src/work_web3_3.jpg',
+                'src/work_web3_2.jpg',
+                'src/work_web3_1.jpg'
             ],
             description: "The site features a wishlist function for bookmarking favorite items. Secure payment integrations ensure a safe transactional experience"
         },
@@ -74,9 +74,9 @@ const tabData = {
             name: "Natural cosmetics store apps",
             link: "www.nike.com",
             images: [
-                'src/work1_3.svg',
-                'src/work1_2.svg',
-                'src/store_1.svg'
+                'src/work1_3.jpg',
+                'src/work1_2.jpg',
+                'src/work1_1.jpg'
             ],
             description: "This application features a database of actual items, the ability to add them to favorites and shoppingcart. Registration and payment for purchase"
         },
@@ -84,9 +84,9 @@ const tabData = {
             name: "Planning app",
             link: "www.nike.com",
             images: [
-                'src/work2_3.svg',
-                'src/work2_2.svg',
-                'src/works2.svg'
+                'src/work2_3.jpg',
+                'src/work2_2.jpg',
+                'src/work2_1.jpg'
             ],
             description: "This is a task management app that offers features like task prioritization, recurring tasks, and habit tracking"
         },
@@ -94,8 +94,8 @@ const tabData = {
             name: "Fitness app",
             link: "www.nike.com",
             images: [
-                'src/work3_2.svg',
-                'src/work3.svg'
+                'src/work3_2.jpg',
+                'src/work3_1.jpg'
             ],
             description: "This app helps users track their diet and exercise, offering a vast database of foods and exercises to monitor calorie intake and expenditure"
         },
