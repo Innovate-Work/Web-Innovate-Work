@@ -310,6 +310,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // modal window
   const modal = document.querySelector('#myModal');
 
+  // for dev temp code ...
+  // modal.style.display = 'block';
+
   // получаем со страницы кнопки и помещаем их в массив
   const buttonsPacket1 = document.querySelectorAll('.show-handle-button-packet-1');
   const buttonsPacket2 = document.querySelectorAll('.show-handle-button-packet-2');
