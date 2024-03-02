@@ -320,7 +320,7 @@
 }
 @media (max-width: 1439px) {
   .our-values-section .container {
-    margin-right: 16px;
+    /* margin-right: 16px; */
   }
   .our-values-section-grid-parent {
     grid-template-areas:

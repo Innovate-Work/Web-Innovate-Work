@@ -63,6 +63,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #141515;
+  overflow-x: hidden;
 }
 
 
@@ -819,36 +820,6 @@ body {
   .visible {
     animation: slideInRight 1s ease-out forwards; /* Увеличиваем длительность до 1 секунды */
   }
-
-  @keyframes leftToRight {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes rightToLeft {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .animated-left {
-    animation: leftToRight 1s ease-out;
-  }
-
-  .animated-right {
-    animation: rightToLeft 1s ease-out;
-  }
 }
 
 @media (max-width: 576px) {
@@ -866,16 +837,4 @@ body {
   .animated-bottom {
     animation: bottomToTop 1s ease-out;
   }
-}
-
-
-
-.element-animation {
-  /* Скроем элемент в начальном состоянии */
-  opacity: 0;
-}
-
-.element-animation.element-show {
-  opacity: 1;
-  transition: all 1s;
 }

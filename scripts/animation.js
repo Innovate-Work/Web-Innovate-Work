@@ -1,13 +1,16 @@
-function onEntry(entry) {
+const onEntry = (entry) => {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('element-show');
     }
   });
 }
-let options = { threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
-for (let elm of elements) {
+
+const options = { threshold: [0.5] };
+const observer = new IntersectionObserver(onEntry, options);
+const elements = document.querySelectorAll('[class*="animated-"]');
+console.log(elements)
+
+for (const elm of elements) {
   observer.observe(elm);
 }
