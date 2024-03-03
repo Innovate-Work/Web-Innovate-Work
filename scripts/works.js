@@ -115,8 +115,18 @@ const tabData = {
 
 // Функция для инициализации пакетов
 function initPackages() {
-    updatePackages("Website");
+    // Попытка получить параметр 'tab' из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get('tab');
+
+    // Проверяем, есть ли параметр 'tab' и соответствует ли он одной из вкладок
+    if (tab && tabData.hasOwnProperty(tab)) {
+        updatePackages(tab); // Инициализируем с этой вкладкой
+    } else {
+        updatePackages("Website"); // Или по умолчанию инициализируем вкладку "Website"
+    }
 }
+
 
 // Функция для обновления пакетов
 function updatePackages(tabName) {
@@ -254,6 +264,7 @@ function checkUrlAndScroll() {
         }
     }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', initPackages);

@@ -769,9 +769,24 @@ body {
 
 /* animation */
 
+.element-show {
+  animation: slideUp 0.5s ease forwards;
+}
+
 @keyframes slideUp {
   from {
-    transform: translateY(20px); /* Начальное смещение вниз */
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* @keyframes slideUp {
+  from {
+    transform: translateY(20px); 
     opacity: 0;
   }
   to {
@@ -783,26 +798,26 @@ body {
 .about-heading,
 .textbox,
 .textbox2 {
-  opacity: 0; /* Начальное состояние: невидимые */
+  opacity: 0; 
   animation: slideUp 0.5s ease-out forwards;
 }
 
 .about-heading {
-  animation-delay: 0.5s; /* Задержка для заголовка "About" */
+  animation-delay: 0.5s; 
 }
 
 .textbox {
-  animation-delay: 1s; /* Задержка для первого абзаца */
+  animation-delay: 1s;
 }
 
 .textbox2 {
-  animation-delay: 1.5s; /* Задержка для второго абзаца */
+  animation-delay: 1.5s; 
 }
 
 @media (min-width: 576px) {
   @keyframes slideInRight {
     from {
-      transform: translateX(30px); /* Начальное смещение вправо */
+      transform: translateX(30px);
       opacity: 0;
     }
     to {
@@ -812,13 +827,13 @@ body {
   }
 
   .value-card {
-    opacity: 0; /* Начальное состояние: невидимые */
+    opacity: 0; 
     transform: translateX(30px);
     transition: all 0.5s ease-out;
   }
 
   .visible {
-    animation: slideInRight 1s ease-out forwards; /* Увеличиваем длительность до 1 секунды */
+    animation: slideInRight 1s ease-out forwards; 
   }
 }
 
@@ -837,4 +852,4 @@ body {
   .animated-bottom {
     animation: bottomToTop 1s ease-out;
   }
-}
+} */
