@@ -1041,3 +1041,80 @@ h2 {
     line-height: 60px;
   }
 }
+
+
+
+.copyright {
+  font-size: 16px;
+  color: #5a5f62;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.copyright p {
+  margin-right: 5px;
+}
+
+.copyright a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.copyright a:hover {
+  transition: none;
+  transform: none;
+}
+
+
+@media (max-width: 390px) {
+  .copyright {
+    font-size: 14px;
+    margin-top: 15px;
+    display: block;
+  }
+}
+@media (min-width: 390px) {
+  .copyright {
+    font-size: 14px;
+    margin-top: 15px;
+    display: block;
+  }
+}
+@media (min-width: 576px) {
+  .copyright {
+    font-size: 14px;
+    margin-top: 15px;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .copyright {
+    font-size: 15px;
+    margin-top: 0px;
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .copyright {
+    font-size: 15px;
+    margin-top: 0px;
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  .copyright {
+    font-size: 16px;
+    margin-top: 0px;
+    display: flex;
+  }
+}
+@media (min-width: 1440px) {
+  .copyright {
+    font-size: 16px;
+    margin-top: 0px;
+    display: flex;
+  }
+}

@@ -22,6 +22,16 @@
   color: coral;
 }
 
+.our-values-section.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+}
+
+.our-values-section.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+}
+
 .our-values-section .cell-first-heading {
 }
 @media (min-width: 1920px) {
@@ -310,7 +320,7 @@
 }
 @media (max-width: 1439px) {
   .our-values-section .container {
-    margin-right: 16px;
+    /* margin-right: 16px; */
   }
   .our-values-section-grid-parent {
     grid-template-areas:

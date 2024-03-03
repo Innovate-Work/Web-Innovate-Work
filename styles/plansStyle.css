@@ -2106,7 +2106,7 @@ table {
     border-bottom: 1px solid var(--input-underline, #5a5f62);
     color: var(--input-text-color, #fff);
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
@@ -2130,7 +2130,7 @@ table {
     background: #282a2c;
     color: #5a5f62;
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -2934,49 +2934,120 @@ table {
 
 
 .input-wrapper input:last-child {
-  margin: 0px 0px 0px 0px;
+  margin: 0;
+  margin-top: 9px;
   width: 100%;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .input-wrapper input:last-child {
+    width: 293px;
+    margin-top: 15px;
+  }
+}
+
 
 .form-group {
   display: flex;
-  align-items: center; /* Выравнивание элементов по центру */
+  justify-content: space-between;
   gap: 8px; /* Отступ между элементами */
-  margin-top: 30px;
+  margin-top: 14px;
   width: 100%;
 }
 
-.form-group select {
-  padding: 10px;
-  border-radius: 7px;
-  width: 40%;
-  background-color: #1B1D1E;
-  color: white;
-}
-
-.form-group label {
-  margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .form-group select {
-    width: 63%;
+@media (min-width: 1440px) { 
+  .form-group {
+    margin-top: 20px;
   }
+}
 
+.phone-code {
+  width: 100%;
+  background-color: #1b1d1e;
+  color: white;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--input-underline, #5a5f62);
+  color: var(--input-text-color, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  border-radius: 0px;
+  background-color: #1B1D1E;
 }
 
 @media (max-width: 576px) {
-  .form-group select {
-    width: 53%;
-}
-}
-
-@media (max-width: 390px) {
-  .description {
-    padding: 10px 5px;
-    width: 100%;
+  .phone-code {
+    font-size: 15px;
+    height: 32px;
+    padding: 0;
+    margin-top: 7px;
+  }
+  .phone-code option {
+    font-size: 12px;
   }
 }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .phone-code {
+    margin: 0;
+    padding: 0;
+    margin-top: 9px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .phone-code {
+    width: 293px;
+    margin-top: 12px;
+    height: 33px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .phone-code {
+    width: 100%;
+    margin-top: 5px;
+    height: 34px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .phone-code {
+    width: 100%;
+    margin-top: 5px;
+    height: 34px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .phone-code {
+    width: 100%;
+    margin-top: 5px;
+    height: 34px;
+  }
+}
+
+.phone-code label {
+  margin-right: 10px;
+}
+
+.phone-code:focus {
+  border-bottom: 1px solid var(--input-focus-underline, #beff54);
+  caret-color: var(
+    --input-focus-underline,
+    #beff54
+  ); /* Изменение цвета курсора при фокусе */
+}
+
 
 .modal-body input {
   border-radius: 0;

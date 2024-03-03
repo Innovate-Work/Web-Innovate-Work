@@ -19,6 +19,16 @@
 /* styles ... */
 
 .features-section {
+  overflow: hidden;
+}
+.features-section.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+}
+
+.features-section.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
 }
 @media (min-width: 1920px) {
   .features-section {
