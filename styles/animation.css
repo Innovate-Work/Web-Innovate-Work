@@ -1,28 +1,25 @@
-.animated-smooth {
-	opacity: 0;
+/* .animated-smooth {
+  opacity: 0;
 }
 .animated-smooth.element-show {
   opacity: 1;
   transition: all 0.3s;
-}
+} */
 
-.animated-slide-right {
-	opacity: 0;
-	transform: translateX(-50px);
+/* .animated-slide-right {
+  transform: translateX(-20%);
 }
-
 .animated-slide-right.element-show {
-	opacity: 1;
-	transition: all 0.5s;
-	transform: translateX(0);
+  transition: all 0.5s;
+  transform: translateX(0);
+  animation-fill-mode: forwards;
 }
 
 .animated-slide-left {
-	opacity: 0;
   transform: translateX(50px);
 }
 .animated-slide-left.element-show {
-	opacity: 1;
   transition: all 0.5s;
-	transform: translateX(0);
-}
+  transform: translateX(0);
+  animation-fill-mode: forwards;
+} */
