@@ -160,7 +160,6 @@ function updatePackages(tabName) {
     });
 }
 
-// Функция для обновления галереи изображений в пакете
 function updateGallery(tabName, packageElem, packageData) {
     var galleryDiv = packageElem.querySelector('.content-works');
     galleryDiv.innerHTML = '';
@@ -170,9 +169,9 @@ function updateGallery(tabName, packageElem, packageData) {
     packageImages.forEach(function(imageSrc, index) {
         var img = document.createElement('img');
         img.classList.add('image-example');
-        img.src = imageSrc;
+        img.loading = 'lazy'; // Ленивая загрузка
+        img.src = imageSrc; // Обновите это, если используете data-src
         img.alt = "Example image";
-        img.setAttribute('data-index', index);
         galleryDiv.appendChild(img);
     });
 }
@@ -266,8 +265,6 @@ function checkUrlAndScroll() {
 }
 
 
-
-document.addEventListener('DOMContentLoaded', initPackages);
 
 // swipe
 
@@ -382,3 +379,5 @@ function updateActiveIndicator() {
         }
     });
 }
+
+

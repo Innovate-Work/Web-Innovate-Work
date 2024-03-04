@@ -73,3 +73,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // animation
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,
+    threshold: 0.1, // Элемент должен быть видим на 10% перед активацией анимации
+    rootMargin: "0px"
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Добавляем класс для начала анимации
+        entry.target.classList.add('animate-visible');
+        // Отменяем наблюдение после начала анимации
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Добавляем элементы для наблюдения
+  const elementsToAnimate = document.querySelectorAll('.about-image, .about-heading, .textbox, .textbox2, .framing-line, .cell-1, .cell-2, .cell-3, .cell-4, .cell-5');
+  elementsToAnimate.forEach(el => observer.observe(el));
+});
+

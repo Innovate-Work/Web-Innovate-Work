@@ -645,7 +645,7 @@ label {
 
 @media (min-width: 1440px) {
   .container-animation-text {
-    max-width: 100%;
+    max-width: 1440px;
     min-height: 164px;
   }
 }
@@ -751,18 +751,6 @@ label {
     /* Анимация для кнопки */
     animation: slideUp 1s ease-out 1.5s; /* Задержка, чтобы появилась после текста */
     animation-fill-mode: backwards;
-  }
-  .headline {
-    transform: translateY(
-      20%
-    ); /* Начальное положение за пределами экрана слева */
-    transition: transform 1s ease-out; /* Увеличиваем длительность анимации */
-    transition-delay: 0.5s; /* Задержка в полсекунды перед началом анимации */
-    opacity: 0; /* Начальная прозрачность */
-  }
-  .headline.visible {
-    transform: translateX(0); /* Конечное положение в нормальном состоянии */
-    opacity: 1; /* Полная видимость */
   }
   .form-title {
     /* Стили для заголовка, возможно, добавьте переходы или другие эффекты по вкусу */
