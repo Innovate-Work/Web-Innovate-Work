@@ -105,6 +105,23 @@ document.querySelector('.close-button').addEventListener('click', function() {
     if (seccsessBox) {
         seccsessBox.style.display = 'none'; // Скрываем pop-up
         overlay.style.display = 'none'; // Скрываем фон
+
+        clearFormFields();
     }
 });
 
+function clearFormFields() {
+    document.getElementById('name-pop-up').value = '';
+    document.getElementById('email-pop-up').value = '';
+    document.getElementById('phone-pop-up').value = '';
+    
+    if (customInterfaceButton) {
+        customInterfaceButton.setAttribute('data-active', 'false');
+        // Обновите визуальное отображение кнопки, если необходимо
+    }
+    
+    if (maintenanceButton) {
+        maintenanceButton.setAttribute('data-active', 'false');
+        // Обновите визуальное отображение кнопки, если необходимо
+    }
+}

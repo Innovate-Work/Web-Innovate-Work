@@ -304,5 +304,24 @@ document.querySelector(".close-button").addEventListener("click", function () {
   if (seccsessBox) {
     seccsessBox.style.display = "none"; // Скрываем pop-up
     overlay.style.display = "none"; // Скрываем фон
+
+    clearFormFields()
   }
 });
+
+
+function clearFormFields() {
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  
+  if (customInterfaceButton) {
+      customInterfaceButton.setAttribute('data-active', 'false');
+      // Обновите визуальное отображение кнопки, если необходимо
+  }
+  
+  if (maintenanceButton) {
+      maintenanceButton.setAttribute('data-active', 'false');
+      // Обновите визуальное отображение кнопки, если необходимо
+  }
+}
