@@ -1001,7 +1001,7 @@ footer {
 
 /* h2 heading */
 
-h2 {
+h1, h2 {
   color: #beff54;
   font-family: Manrope, sans-serif;
   text-transform: uppercase;
@@ -1010,7 +1010,7 @@ h2 {
 }
 @media (max-width: 390px) {}
 @media (min-width: 390px) {
-  h2 {
+  h1, h2 {
 
     font-size: 24px;
     font-weight: 700;
@@ -1019,7 +1019,7 @@ h2 {
 }
 @media (min-width: 576px) {}
 @media (min-width: 768px) {
-  h2 {
+  h1, h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 38px;
@@ -1028,14 +1028,14 @@ h2 {
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
 @media (min-width: 1440px) {
-  h2 {
+  h1, h2 {
     font-size: 56px;
     font-weight: 600;
     line-height: 60px;
   }
 }
 @media (min-width: 1920px) {
-  h2 {
+  h1, h2 {
     font-size: 58px;
     font-weight: 600;
     line-height: 60px;
