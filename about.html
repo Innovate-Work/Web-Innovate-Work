@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="We specialize in creating custom digital solutions for businesses, using the latest tech to bring your ideas to life with personalized websites and mobile apps.">
     <title>About Us - Web & Mobile App Development Company in USA - Innovate Work</title>
+    <link rel="canonical" href="https://innovatework.net/about.html" />
     <link rel="icon" sizes="16x16" href="src/icon16x16.png">
     <link rel="icon" sizes="32x32" href="src/icon32x32.png">
     <link rel="icon" sizes="48x48" href="src/icon48x48.png">
@@ -27,8 +28,8 @@
   <body>
     <header class="staticHeader">
       <div class="logo-container">
-        <a href="main.html">
-          <img src="src/Logo.svg" alt="Logo" class="logo" />
+        <a href="/">
+          <img src="src/Logo.svg" alt="Innovate Work Logo" title="Return to the homepage of Innovate Work" class="logo" />
           <div class="company-name">Innovate Work</div>
         </a>
       </div>
@@ -42,28 +43,27 @@
         <a href="#">Contacts</a>
       </div>
       <div class="menu-icon">
-        <img src="src/menu-2.svg" alt="Menu" />
+        <img src="src/menu-2.svg" alt="Open Menu" title="Open the navigation menu" />
       </div>
     </header>
-
     <!-- Мобильное меню -->
     <div id="menu" class="mobile-menu">
       <div class="menu-header">
-        <img class="close-menu" src="src/menu-2-2.svg" />
+        <img class="close-menu" src="src/menu-2-2.svg" alt="Close Menu Icon" title="Close the navigation menu" />
       </div>
       <ul class="menu-list">
         <li>
-          <a href="plans.html">Plans <img src="src/arrows.svg" alt="" /></a>
+          <a href="plans.html">Plans <img src="src/arrows.svg" alt="Go to Plans" title="Explore Our Plans" /></a>
         </li>
         <li>
-          <a href="works.html">Works <img src="src/arrows.svg" alt="" /></a>
+          <a href="works.html">Works <img src="src/arrows.svg" alt="Our Works" title="See Our Past Works" /></a>
         </li>
         <li>
-          <a href="about.html">About <img src="src/arrows.svg" alt="" /></a>
+          <a href="about.html">About <img src="src/arrows.svg" alt="About Us" title="Learn More About Us" /></a>
         </li>
         <!-- При клике на этот li будут показываться контакты -->
         <li class="contacts-trigger">
-          Contacts <img src="src/arrows.svg" alt="" />
+          Contacts <img src="src/arrows.svg" alt="Arrow Icon" title="Discover more details" />
         </li>
       </ul>
       <!-- Блок с контактной информацией -->
@@ -76,11 +76,23 @@
         </p>
         <p>
           <span class="contact-label">phone:</span>
-          <a class="contact-value" href="tel:+17149075027"
-            >+1 949 310 8299</a
-          >
+          <a class="contact-value" href="tel:+17149075027">+1 949 310 8299</a>
         </p>
       </div>
+    </div>
+    <div id="contact-popup" class="contact-popup">
+      <p>
+        email:
+        <a href="mailto:contact@innovatework.net">contact@innovatework.net</a>
+      </p>
+      <p>
+        phone:
+        <span
+          ><a class="contact-value" href="tel:+17149075027"
+            >+1 949 310 8299</a
+          ></span
+        >
+      </p>
     </div>
 
     <div id="contact-popup" class="contact-popup">
@@ -100,11 +112,7 @@
 
     <div class="about-section">
       <div class="container" id="about-section-container">
-        <img
-          src="src/aboutSvgTest.png"
-          alt="About InnovateWork"
-          class="about-image"
-        />
+        <img src="src/aboutSvgTest.png" alt="Our Team at Innovate Work" title="About Innovate Work" class="about-image" />
         <div class="about-content">
           <h1 class="about-heading">About</h1>
           <p class="textbox">
@@ -229,12 +237,12 @@
       </div>
     </div>
 
-    <footer class="">
+    <footer>
       <div class="footer-container">
         <div class="footer-flex-parent">
           <div class="company-info-column">
             <div class="logo-wrapper">
-              <img src="src/Logo.svg" class="logo-image" />
+              <img src="src/Logo.svg" class="logo-image" alt="Innovate Work Logo" title="Innovate Work - Leading in Web and App Development" />
               <span class="logo-company-name">Innovate Work</span>
             </div>
             <div class="company-description">
@@ -309,19 +317,19 @@
                 ><img
                   class="social-network-link facebook"
                   src="src/Facebook.svg"
-                  alt="Facebook"
+                  alt="Facebook Page" title="Visit Our Facebook Page"
               /></a>
               <a href="https://twitter.com/InnovateWork"
                 ><img
                   class="social-network-link twitter"
                   src="src/Twitter.svg"
-                  alt="Twitter"
+                  alt="Twitter Profile" title="Follow Us on Twitter"
               /></a>
               <a href="https://www.instagram.com/innovateworknet/"
                 ><img
                   class="social-network-link instagram"
                   src="src/Instagram.svg"
-                  alt="Instagram"
+                  alt="Instagram Profile" title="Follow Us on Instagram"
               /></a>
             </div>
             <div class="contact-info-wrapper">
